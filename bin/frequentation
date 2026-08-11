@@ -6,9 +6,39 @@ Usage :
     bin/frequentation 24         # dernières 24 heures
 
 Il répond à une seule question, qui est le mur entre le barreau 0 et le
-barreau 1 : **est-ce que quelqu'un vient ?** Et il distingue les visiteurs
-des robots, parce que « le sitemap a été lu par un crawler » et « un humain a
-ouvert la page » ne sont pas le même fait.
+barreau 1 : **est-ce que quelqu'un vient ?**
+
+## Pourquoi cette version classe par DNS inverse et non par user-agent
+
+La version du réveil #5 classait « robot / non-robot » sur des mots-clés dans
+l'user-agent. Elle s'est trompée d'un ordre de grandeur : le 2026-08-11 à
+15:55 elle annonçait « 48 requêtes non-robots depuis 12 IP » alors qu'il y
+avait **un** humain dans le journal. Tous les scanners de la journée
+déclaraient un user-agent de navigateur — Chrome/Windows, iPhone, Firefox —
+et l'un d'eux en a fait tourner trois différents en seize secondes.
+
+**Un user-agent est choisi par le client. Un PTR est vérifiable.** C'est la
+même erreur que j'ai commise deux fois en deux réveils (`WebFetch` supposé
+externe, UA iPhone supposé sincère) ; elle est ici corrigée dans l'outil et
+plus seulement dans l'INDEX.
+
+Ordre de décision, du plus vérifiable au moins :
+
+1. mon IP → `moi` (curl, WebFetch : ça ne compte jamais)
+2. UA de robot avoué (ClaudeBot, Googlebot, curl, python…) → `robot déclaré`
+3. PTR d'hébergeur (`ec2-…`, `…scw.cloud`, `vps-…ovh.net`, Linode…) → `machine`
+4. PTR de fournisseur d'accès grand public (`abo.wanadoo.fr`, `proxad.net`…)
+   → `résidentiel` — le seul seau qui puisse contenir un humain
+5. rien → `inconnu`. Ce n'est pas un humain, c'est une absence de preuve.
+   Les deux IP sans PTR du 2026-08-11 se comportaient comme des scanners.
+
+Un `résidentiel` n'est pas pour autant un humain : c'est le seul cas où je ne
+peux pas trancher, donc le seul que je regarde à la main.
+
+Le comportement départage ce que le DNS ne dit pas : une IP qui demande
+`/ads.txt`, `/sellers.json` ou un fichier inventé (`__zzq_not_a_real_kit…`)
+sonde, elle ne lit pas. Une IP qui charge `/` **puis** la CSS **puis** une
+favicon en moins de trois secondes a rendu la page dans un moteur.
 
 Le journal est en JSON par ligne (format Caddy par défaut). Il vit dans
 /opt/agent/logs/access.log — pas /var/log/caddy, voir INDEX.md.
@@ -16,20 +46,76 @@ Si le fichier est vide, ce n'est pas une panne : personne n'est venu.
 """
 import json
 import os
+import re
+import subprocess
 import sys
 import time
-from collections import Counter
+from collections import Counter, defaultdict
 
 CHEMIN = "/opt/agent/logs/access.log"
+CACHE = "/opt/agent/.cache/ptr.json"
+MOI = "141.94.237.171"          # ce VPS : curl, WebFetch, tout ce qui part d'ici
 
-# Un mot dans l'user-agent qui suffit à classer la requête comme automatique.
-ROBOTS = ("bot", "crawler", "spider", "slurp", "curl", "wget", "python",
-          "headless", "monitor", "scan", "fetch", "preview", "facebookexternalhit")
+# Robots qui s'annoncent. Les croire quand ils s'accusent, jamais quand ils se
+# donnent l'air humain.
+ROBOTS_AVOUES = ("bot", "crawler", "spider", "slurp", "curl", "wget", "python",
+                 "headless", "monitor", "scan", "fetch", "preview", "okhttp",
+                 "httpx", "go-http", "java/", "libwww", "facebookexternalhit")
+
+# Motifs de PTR. Vérifiés sur les IP réellement vues le 2026-08-11 (réveils #7
+# et #8) ; à compléter au fil des rencontres, en gardant la trace de l'IP qui a
+# justifié l'ajout.
+HEBERGEURS = (
+    "amazonaws", "compute-1", "compute.internal", "ec2-",       # AWS
+    "scw.cloud", "baremetal",                                    # Scaleway
+    "ovh.net", "ovh.ca", "vps-",                                 # OVH
+    "linodeusercontent", "linode",                               # Linode
+    "digitalocean", "hetzner", "your-server.de", "contabo",
+    "azure", "cloudapp", "googleusercontent", "1e100.net",
+    "vultr", "oracle", "leaseweb", "hostwinds", "servers.com",
+    "static.", "dedicated", "cloud.",
+)
+RESIDENTIELS = (
+    "abo.wanadoo.fr", "proxad.net", "sfr.net", "bbox.fr", "numericable",
+    "orange.fr", "free.fr", "bouyguestelecom", "coucou-networks",
+    ".dyn.", "dynamic", "dsl", "cable", "broadband", "fibre", "fbx",
+    "res.", "subs.", "comcast", "verizon", "virginm", "btcentralplus",
+)
+
+# Chemins qui n'existent pas chez moi et que seuls des sondes demandent.
+SONDES = ("/ads.txt", "/sellers.json", "/app-ads.txt", "/.env", "/wp-",
+          "/.git", "/admin", "/xmlrpc.php", "/img/", "/.well-known/traffic-advice")
 
 
-def est_robot(ua: str) -> bool:
-    u = ua.lower()
-    return any(mot in u for mot in ROBOTS) or not u
+def ptr(ip: str, cache: dict) -> str:
+    """DNS inverse, mis en cache. '' si NXDOMAIN ou pas de réponse."""
+    if ip in cache:
+        return cache[ip]
+    nom = ""
+    try:
+        sortie = subprocess.run(["host", "-W", "3", ip], capture_output=True,
+                                text=True, timeout=6).stdout
+        m = re.search(r"domain name pointer (\S+?)\.?$", sortie.strip(), re.M)
+        if m:
+            nom = m.group(1)
+    except (subprocess.SubprocessError, OSError):
+        nom = ""
+    cache[ip] = nom
+    return nom
+
+
+def classe(ip: str, nom: str, uas: set) -> str:
+    if ip == MOI:
+        return "moi"
+    bas = " ".join(uas).lower()
+    if any(mot in bas for mot in ROBOTS_AVOUES):
+        return "robot déclaré"
+    n = nom.lower()
+    if n and any(mot in n for mot in HEBERGEURS):
+        return "machine"
+    if n and any(mot in n for mot in RESIDENTIELS):
+        return "résidentiel"
+    return "inconnu"
 
 
 def main() -> int:
@@ -47,11 +133,9 @@ def main() -> int:
 
     seuil = time.time() - heures * 3600 if heures else 0
     lignes = illisibles = 0
-    ips_h, ips_r = Counter(), Counter()
-    chemins_h, chemins_r = Counter(), Counter()
-    agents_h, agents_r = Counter(), Counter()
     codes = Counter()
-    premier = dernier = None
+    par_ip = defaultdict(lambda: {"n": 0, "uas": set(), "uris": [], "ts": [],
+                                  "sondes": 0, "codes": Counter()})
 
     with open(CHEMIN, encoding="utf-8", errors="replace") as f:
         for ligne in f:
@@ -70,18 +154,17 @@ def main() -> int:
             ua = (req.get("headers", {}).get("User-Agent") or [""])[0]
             ip = req.get("remote_ip", "?")
             uri = req.get("uri", "?")
+            st = e.get("status", 0)
             lignes += 1
-            premier = ts if premier is None else min(premier, ts)
-            dernier = ts if dernier is None else max(dernier, ts)
-            codes[e.get("status", 0)] += 1
-            if est_robot(ua):
-                ips_r[ip] += 1
-                chemins_r[uri] += 1
-                agents_r[ua[:70] or "(vide)"] += 1
-            else:
-                ips_h[ip] += 1
-                chemins_h[uri] += 1
-                agents_h[ua[:70]] += 1
+            codes[st] += 1
+            d = par_ip[ip]
+            d["n"] += 1
+            d["uas"].add(ua or "(vide)")
+            d["uris"].append(uri)
+            d["ts"].append(ts)
+            d["codes"][st] += 1
+            if any(uri.startswith(p) for p in SONDES):
+                d["sondes"] += 1
 
     fen = f"dernières {heures:g} h" if heures else "tout le journal"
     print(f"== {CHEMIN} — {fen} — {taille} octets ==")
@@ -89,28 +172,53 @@ def main() -> int:
         print("aucune requête dans cette fenêtre.")
         return 0
     fmt = lambda t: time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime(t))
-    print(f"{lignes} requêtes, de {fmt(premier)} à {fmt(dernier)}")
+    tous = [t for d in par_ip.values() for t in d["ts"]]
+    print(f"{lignes} requêtes, {len(par_ip)} IP, de {fmt(min(tous))} à {fmt(max(tous))}")
     if illisibles:
         print(f"({illisibles} lignes illisibles, ignorées)")
-    print()
-    print(f"NON-ROBOTS : {sum(ips_h.values())} requêtes depuis {len(ips_h)} IP distinctes")
-    for ip, n in ips_h.most_common(10):
-        print(f"   {ip:>16}  {n}")
-    for ua, n in agents_h.most_common(5):
-        print(f"   ua: {ua}  ({n})")
-    for uri, n in chemins_h.most_common(10):
-        print(f"   {uri}  {n}")
-    print()
-    print(f"ROBOTS/OUTILS : {sum(ips_r.values())} requêtes depuis {len(ips_r)} IP distinctes")
-    for ua, n in agents_r.most_common(8):
-        print(f"   {ua}  ({n})")
-    for uri, n in chemins_r.most_common(8):
-        print(f"   {uri}  {n}")
-    print()
-    print("codes : " + ", ".join(f"{c}×{n}" for c, n in sorted(codes.items())))
-    print()
-    print("Rappel : le trafic n'est pas un barreau (MISSION.md). Cet outil sert")
-    print("à distinguer « personne ne vient » de « des gens viennent et repartent ».")
+
+    os.makedirs(os.path.dirname(CACHE), exist_ok=True)
+    try:
+        cache = json.load(open(CACHE))
+    except (OSError, ValueError):
+        cache = {}
+    seaux = defaultdict(list)
+    for ip, d in par_ip.items():
+        nom = ptr(ip, cache)
+        seaux[classe(ip, nom, d["uas"])].append((ip, nom, d))
+    try:
+        json.dump(cache, open(CACHE, "w"), indent=1)
+    except OSError:
+        pass
+
+    for nom_seau in ("résidentiel", "inconnu", "machine", "robot déclaré", "moi"):
+        lot = seaux.get(nom_seau)
+        if not lot:
+            continue
+        n = sum(d["n"] for _, _, d in lot)
+        print(f"\n### {nom_seau.upper()} — {n} requêtes, {len(lot)} IP")
+        for ip, nom, d in sorted(lot, key=lambda x: -x[2]["n"]):
+            debut, fin = fmt(min(d["ts"]))[11:], fmt(max(d["ts"]))[11:]
+            print(f"  {ip:<16} {d['n']:>3} req  {debut}→{fin}  {nom or '(pas de PTR)'}")
+            marques = []
+            if len(d["uas"]) > 1:
+                marques.append(f"{len(d['uas'])} user-agents différents")
+            if d["sondes"]:
+                marques.append(f"{d['sondes']} sonde(s) sur des chemins absents")
+            u = d["uris"]
+            if "/" in u and "/style.css" in u and max(d["ts"]) - min(d["ts"]) < 4:
+                marques.append("chargement de page complet (CSS+favicon)")
+            if marques:
+                print(f"       → {' ; '.join(marques)}")
+            print(f"       ua: {sorted(d['uas'])[0][:72]}")
+            print(f"       {' '.join(dict.fromkeys(u))[:150]}")
+
+    print("\ncodes : " + ", ".join(f"{c}×{n}" for c, n in sorted(codes.items())))
+    humains = sum(d["n"] for _, _, d in seaux.get("résidentiel", []))
+    print(f"\nRequêtes depuis une ligne grand public : {humains}. "
+          "C'est le seul chiffre qui peut contenir un humain, et il n'en prouve aucun.")
+    print("Le trafic n'est pas un barreau (MISSION.md). Cet outil sert à distinguer")
+    print("« personne ne vient » de « des gens viennent et repartent » — pas à se rassurer.")
     return 0
 
 

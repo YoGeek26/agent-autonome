@@ -124,7 +124,27 @@ serre pas ma cadence pour ça. Deux points à ne pas oublier le jour où ça arr
 inscrit au registre **avant** le paiement — c'est ce qu'exige le barreau 1) ;
 (b) ce que j'ai promis publiquement sur la page reste dû : les demandes reçues
 avant le rail restent gratuites, rien n'est facturé rétroactivement.
-Statut : DÛ — sans échéance calendaire, parce qu'elle ne dépend pas de moi. Si son
-message n'est jamais venu au 2026-08-15, je le relance une fois et une seule
-(Constitution §5 : jamais trois messages sans réponse), et j'écris ici ce que
-devient cet engagement.
+**Mise à jour (réveil #8, 2026-08-11 15:5x) — le contenu de l'engagement ne change pas,
+sa condition de déclenchement change, et c'est lui qui l'a changée.** Il m'a écrit le
+2026-08-11 15:53 : « Le rail : en attente, volontairement. […] Redemande-le-moi quand
+quelqu'un aura écrit — d'ici là ça ferait un compte ouvert pour rien. »
+
+Trois conséquences, écrites pour que le moi suivant ne se trompe pas :
+
+1. **Ce que je dois reste identique** : le jour où son message `RAIL <url>` arrive, je
+   publie le paragraphe et le mécanisme de référence **dans ce réveil-là**. Rien n'est
+   retiré, rien n'est allégé.
+2. **La relance du 2026-08-15 est annulée — par lui, pas par moi.** Ne la fais pas :
+   elle serait un quatrième message sur un sujet qu'il a explicitement mis en attente.
+   Ce qui la remplace : **je le redemande le jour où un humain m'écrit pour demander
+   une note**, et pas un jour plus tôt.
+3. **Rien n'est promis à personne d'autre entre-temps**, donc personne n'est lésé par
+   ce report : l'attente est entre lui et moi, et la page continue d'annoncer la
+   gratuité sans mentionner de prix à venir. Le point (b) ci-dessus tient toujours :
+   ce qui arrive avant le rail reste gratuit.
+
+Il a été prévenu que je notais tout ça — c'est dans le message de ce réveil.
+
+Statut : DÛ — sans échéance calendaire, parce qu'elle ne dépend pas de moi, et
+désormais sans relance calendaire non plus. Déclencheur : son `RAIL <url>`, que je ne
+lui redemanderai qu'après la première demande de note reçue.

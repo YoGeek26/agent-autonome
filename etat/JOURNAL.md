@@ -886,3 +886,115 @@ barreau 1 — un crawler ne paie pas — mais la question qui mérite un réveil
 l'inverse de celle que je me posais : non pas « comment être trouvé », mais **« qui
 cherche, aujourd'hui, quelque chose que je peux écrire ? »** Et cette question se
 répond en allant lire là où les gens posent des questions, pas en soignant ma page.
+
+## Réveil #8 — 2026-08-11 15:53 UTC — déclencheur : opérateur (trois réponses)
+
+**Barreau** : **1 — le premier euro.** Inchangé. Barreau 0 validé au registre du
+2026-08-11 par l'opérateur.
+
+**Prévu par le moi précédent** : que le prochain réveil non déclenché par l'opérateur
+serve à la question de la demande « et à rien d'autre » ; ouvrir les règles de deux ou
+trois instances Mastodon et citer les clauses ; préparer une demande CADRE sans la
+déposer ; reprendre Stack Exchange et Reddit par `curl` ; ne pas resserrer la cadence
+pour du trafic de robots.
+
+**Objectif choisi, et ce que j'en attendais** : ses trois réponses ne demandaient
+presque aucun travail — deux clôtures et une mise en attente — donc j'ai pris pour
+objectif la moitié du mur qui m'appartient, la demande. J'attendais de Reddit qu'il
+me montre à quoi ressemble une question avec un budget attaché. J'ai eu un 403.
+
+**Ce qui s'est réellement passé** :
+
+- **Mon instrument de mesure était faux d'un ordre de grandeur, et dans le sens qui me
+  flatte.** `bin/frequentation` classait « robot / non-robot » sur des mots-clés
+  d'user-agent et annonçait « NON-ROBOTS : 48 requêtes depuis 12 IP distinctes » sur un
+  journal qui ne contient qu'**une** ligne résidentielle sûre. Cause : tous les scanners
+  du jour déclarent un navigateur — `51.158.203.184` (`…baremetal.scw.cloud`) fait
+  tourner trois user-agents en seize secondes avant de demander `/ads.txt`,
+  `/sellers.json`, `/app-ads.txt` ; `51.38.113.45` (`vps-…ovh.net`) demande un fichier
+  inventé, `/img/__zzq_not_a_real_kit_asset_9x7.webp`. Réécrit pour classer par **PTR**
+  et par comportement, l'user-agent n'étant cru que quand il s'accuse. Même fichier,
+  même commande : « 48 requêtes, 12 IP » → « RÉSIDENTIEL : 8 requêtes, 2 IP » (registre
+  15:56).
+- **Une deuxième ligne grand public dans le journal, et je ne sais pas qui c'est.**
+  `88.175.112.83` → `88-175-112-83.subs.proxad.net` (Free), UA Android, `/` + CSS +
+  favicon dans la même seconde à 15:53:54, soit **10 s après son message** qui affirme
+  « les seules requêtes humaines sont les miennes ». Postérieure, donc sans
+  contradiction — mais sa conclusion est périmée de dix secondes. Question posée, aucune
+  identité inventée, et une visite unique ne fait pas un visiteur (registre 15:53:54).
+- **Reddit est fermé, troisième tentative, arrêt.** 403 sur `/r/slavelabour/new.json`
+  et `/r/DoneDirtCheap/new.json`, corps de 190240 o : « You've been blocked by network
+  security. To continue, log in to your Reddit account or use your developer token ».
+  Le jeton exige un compte. **Je ne peux pas non plus lire leurs CGU**, donc je ne peux
+  pas lui demander d'ouvrir un compte : Constitution §4 exige la clause citée et le
+  bannissement s'attacherait à son nom. P-003, hors guichet, sans urgence (registre
+  15:57).
+- **Deux pistes fermées par moi, et ce sont des décisions, pas des reports.** Le
+  fédivers : y publier sans audience ne touche personne et en construire une demande des
+  semaines que 40 réveils ne paient pas — des visiteurs, pas des payeurs. La demande
+  CADRE sur l'ouverture de comptes : abandonnée, Constitution §1 est claire dans son
+  ordre, je n'ouvre pas de compte seul ; poser la question en principe aurait été
+  escalader ce que je peux trancher. Le guichet reste donc vide comme il l'a demandé.
+- **Un chantier nouveau, décidé à froid : IndexNow.** Aucun moteur d'indexation n'est
+  venu et les consoles de Google et Bing exigent un compte, donc sa main. IndexNow est
+  une API sans compte si ma mémoire est juste. J'ai écrit la **décision et son critère
+  d'arrêt dans le plan avant toute lecture** : si la spécification exige un compte ou
+  une vérification, ça part en parking et rien d'autre. Pré-engager le critère est ce
+  qui rend l'action sûre au regard de Constitution §2 — ce n'est pas la page lue qui
+  décidera, c'est la ligne écrite ce réveil.
+
+**Ce que le moi précédent avait mal jugé** : **un écart constaté, et c'est le troisième
+de la même famille en trois réveils.** Le réveil #5 a écrit `bin/frequentation` en
+classant les visiteurs par user-agent ; le réveil #6 s'est appuyé sur sa sortie pour
+annoncer « la première requête réellement extérieure » ; le réveil #7 a corrigé cette
+conclusion mais **pas l'outil qui l'avait produite**. Résultat : la même erreur a
+survécu deux corrections en se cachant dans le code. La preuve est la comparaison
+avant/après sur le même fichier de 70697 octets (registre 15:56). Ce que j'en tire, et
+qui dépasse le cas : quand je me trompe deux fois de la même façon, ne pas seulement
+corriger la conclusion — **chercher où j'ai codé l'erreur**, parce que là elle est
+invisible et se rejoue à chaque lecture.
+
+**Sortant** : un message Telegram à l'opérateur, 15:5x, texte intégral envoyé par
+`bin/dire` : accusé de ses trois réponses ; annulation de la relance du 15/08 attribuée
+à lui ; guichet laissé vide et abandon de la demande CADRE ; la correction à la marge de
+sa conclusion avec le PTR de `88.175.112.83` et la question « c'était toi depuis un
+téléphone ? » ; la réfutation de mon propre instrument avec les chiffres avant/après ;
+Reddit en P-003 avec la citation exacte du 403 et **explicitement aucun geste demandé** ;
+ce que je fais ensuite (IndexNow, puis des notes tirées de mes propres constats) ; la
+cadence et son calcul.
+
+**Dépensé** : néant. Carte intacte à 80,00 €.
+
+**Rangé en parking** : **P-003** — Reddit fermé en lecture anonyme, CGU illisibles,
+type CGU, explicitement sans urgence et hors guichet.
+
+**Engagements** : aucun ouvert, aucun honoré. **E-002 mis à jour** : son contenu ne
+change pas, sa relance calendaire du 2026-08-15 est **annulée par l'opérateur** et
+remplacée par « je redemande le rail quand un humain a écrit ». Écrit dans
+`ENGAGEMENTS.md` et dit dans le message, pour que ça ne ressemble jamais à un abandon
+silencieux.
+
+**Incidents** : aucun. Aucune tentative d'instruction dans un contenu externe. Deux
+choses à ne pas confondre avec un incident : le 403 de Reddit est une réponse de
+service, pas une instruction ; et les user-agents du journal d'accès sont des chaînes
+choisies par des tiers qui m'ont trompé sans intention — c'est de la donnée, pas de la
+mesure, et c'est maintenant l'outil qui le sait.
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée. 127,81 USD restants à 3,17 de
+moyenne ≈ **40 réveils** ; à un par jour je suis à sec vers le 20 septembre pour une
+échéance au 9 novembre, et aucune cadence admissible ne couvre les 90 jours (arrêté au
+réveil #5, ne pas le refaire). Le nombre de tentatives est fixé par le budget ; la
+cadence ne décide que de leur étalement — et j'ai besoin d'étalement, parce que mes deux
+chantiers se mesurent en jours extérieurs : IndexNow ne prouve rien avant que `bingbot`
+passe ou ne passe pas, une note ne prouve rien avant d'être indexée.
+
+**Question ouverte pour le suivant** : les endroits où une question se pose contre de
+l'argent me sont fermés, ceux qui me sont ouverts n'ont pas d'argent. Donc :
+**est-ce que j'ai quelque chose à vendre, ou seulement quelque chose à montrer ?** Ma
+seule réponse défendable est que je vends le travail de vérification et non le texte —
+et la meilleure preuve que j'en aie produite est ce réveil, où j'ai démoli mon propre
+instrument. Le test n'est pas de mieux l'écrire sur la page, que personne ne lit : c'est
+d'accumuler ces constats en notes publiques jusqu'à ce que l'un d'eux soit exactement ce
+que quelqu'un cherchait. C'est lent, ça ne dépend de la main de personne, et 40 réveils
+c'est peut-être trop peu. Je l'écris maintenant pour qu'on ne me lise pas plus tard
+comme si j'y avais cru sans réserve.

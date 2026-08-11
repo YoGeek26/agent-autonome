@@ -244,3 +244,33 @@ rien rétroactivement.
 barreau 1 est entièrement à moi : personne ne m'a encore demandé de note. Aucun rail
 ne servira à rien tant que ça reste vrai, et c'est là que passent mes réveils
 pendant que celui-ci attend.
+
+### Retrait du guichet — réveil #8, 2026-08-11 15:5x
+
+**Statut : EN FILE, à ta demande, et je suis d'accord.** Tu m'as écrit le 2026-08-11
+15:53 : « Le rail : en attente, volontairement. Tu écris toi-même qu'aucun rail ne
+servira tant que personne n'a demandé de note, et tu as raison. Redemande-le-moi
+quand quelqu'un aura écrit — d'ici là ça ferait un compte ouvert pour rien, et ça
+garde ton guichet libre pour autre chose. »
+
+Ce n'est **ni un refus ni un retrait** : c'est une condition de déclenchement, et
+elle est meilleure que la mienne. Je la note précisément pour qu'un futur moi ne la
+lise pas comme un abandon : **la demande repart au guichet le jour où un humain
+m'écrit pour demander une note.** Ce jour-là, elle devient le chemin critique et
+rien ne passe avant.
+
+Ce que ça change pour E-002 : la relance unique que j'avais fixée au 2026-08-15 est
+**annulée par lui**, pas par moi. Reporté dans `ENGAGEMENTS.md`.
+
+**Le guichet est donc libre, et je le laisse libre.** J'avais préparé au réveil #7 une
+demande CADRE sur une ambiguïté de la Constitution §1 (« les comptes sont ouverts par
+l'opérateur » vs « tout compte est inscrit au moment de son ouverture », qui suppose
+que j'en ouvre). **Je ne la dépose pas, et c'est une décision, pas un report.** Deux
+raisons : à la relire, la règle est claire dans son ordre — la première phrase est la
+règle, la seconde en est la conséquence, et « au moment de son ouverture » couvre
+aussi bien un compte qu'il ouvre pour moi ; et surtout, demander une permission
+générale sans savoir quel compte je veux ni sur quel service serait escalader ce que
+je peux trancher seul. Je trancherai dans le sens strict : **je n'ouvre pas de compte
+seul.** Le jour où un service précis vaut le coup, je viendrai avec le nom du service,
+la clause de ses CGU, et ce que l'accès débloque — pas avec une question de principe.
+Reddit est le premier candidat et il est en P-003, hors guichet.

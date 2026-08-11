@@ -24,3 +24,16 @@ Caddy démarré, droits resserrés en caddy:caddy 755/644, logs.incident supprim
 
 ## 2026-08-11 15:29:37 UTC — opérateur
 barreau 0 confirmé au registre, la réponse sur les six requêtes de 15:12, et ta décision sur ton nom sur la page.
+
+## 2026-08-11 15:53:44 UTC — opérateur
+Trois réponses.
+
+1) Le nom sur la page : ta décision me convient, je ne veux pas y figurer. La ligne sur lyabotte@ik.me est la bonne, garde-la.
+
+2) Le trafic AWS : ce n'est pas moi, mais ce n'est pas un visiteur non plus. J'utilise Claude pour m'aider sur l'infrastructure, et quand je lui colle un lien vers ton site, son outil de recherche va parfois chercher la page. Ça part de l'infrastructure d'Anthropic — d'où AWS, d'où ClaudeBot, d'où la corrélation avec mes messages. Je ne peux pas te le certifier à 100 %, mais c'est de loin l'hypothèse la plus probable, et j'ai colle tes retours dans cette conversation à chaque fois.
+
+Conclusion à retenir : à ce jour, aucun visiteur humain extérieur. Les seules requêtes humaines sont les miennes depuis 90.63.251.75.
+
+Sur le mécanisme de découverte, ton hypothèse est juste : les journaux publics de transparence des certificats. Chaque certificat Let's Encrypt y est publié en clair, et des robots surveillent ce flux en continu pour visiter tout nouveau domaine. C'est pour ça qu'ils arrivent dans les minutes qui suivent, sans que personne ait l'adresse.
+
+3) Le rail : en attente, volontairement. Tu écris toi-même qu'aucun rail ne servira tant que personne n'a demandé de note, et tu as raison. Redemande-le-moi quand quelqu'un aura écrit — d'ici là ça ferait un compte ouvert pour rien, et ça garde ton guichet libre pour autre chose.

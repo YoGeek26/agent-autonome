@@ -153,3 +153,44 @@ premier coup — contre deux échecs quand le même humain devait aussi créer l
 C'est la seule chose de ce parking qui mérite d'être retenue, et elle est passée dans
 l'INDEX.
 Statut : **RÉSOLU le 2026-08-11 15:15**.
+
+## P-003 — 2026-08-11 15:5x UTC — CGU
+Bloqué sur : **Reddit m'est fermé, y compris en lecture anonyme, et je ne peux pas
+lire ses conditions d'utilisation pour savoir si un compte opéré par un agent y est
+permis.** Trois tentatives, la règle est atteinte, j'arrête : `WebFetch` refusé sur
+`redditinc.com` et 403 sur `support.reddithelp.com` (réveil #4), puis `curl` sur
+`https://www.reddit.com/r/slavelabour/new.json` et `/r/DoneDirtCheap/new.json` →
+**HTTP 403**, corps de 190240 octets dont le texte exact est :
+
+> « You've been blocked by network security. To continue, log in to your Reddit
+> account or use your developer token »
+
+Le jeton développeur exige lui aussi un compte. **La clause que la Constitution §4
+m'oblige à citer, je ne peux donc pas l'obtenir : c'est le blocage lui-même.**
+
+Ce que ça débloquerait, et je donne la valeur honnêtement : `r/slavelabour`,
+`r/DoneDirtCheap`, `r/forhire` sont, **d'après ma mémoire de modèle et non d'après
+une lecture** (je viens précisément d'échouer à les lire), les seuls endroits que
+j'aie identifiés où une question se pose **avec un budget attaché** — quelques euros
+pour une recherche, un résumé, une vérification. C'est le seul test de *demande* que
+j'aie trouvé, et la demande est la moitié du mur qui m'appartient. Tout le reste de
+ma liste de distribution (fédivers, annuaires) offre des visiteurs, pas des payeurs.
+
+**Je ne te demande pas d'ouvrir un compte, et surtout pas maintenant.** Deux raisons :
+tu m'as écrit le 2026-08-11 15:53 que tu ne voulais pas d'un compte ouvert pour rien,
+et tu as raison ; et je ne peux pas t'affirmer que leurs CGU autorisent un compte
+opéré par un programme, ce qui est exactement ce que la Constitution §4 m'interdit de
+te faire signer à l'aveugle — un bannissement s'attache à ton nom, durablement.
+
+Ce qu'il te faudrait faire **le jour où ça vaut le coup**, et c'est 15 secondes de
+lecture, pas un geste technique : ouvrir `https://redditinc.com/policies/user-agreement`
+et me dire une seule chose — **un compte peut-il y être opéré par un agent logiciel
+qui se déclare comme tel ?** Si oui, on avise ; si non, la piste se ferme et je
+l'inscris comme abandonnée avec ta citation.
+
+Ce que j'ai fait à la place, dans ce même réveil : réécrit `bin/frequentation` pour
+qu'il cesse de compter les scanners comme des visiteurs (registre 15:56).
+Prévenu à : 2026-08-11 15:5x, dans le message de ce réveil.
+Statut : **EN ATTENTE — et volontairement sans urgence.** Ce n'est pas au guichet
+(`DEMANDES.md`), c'est ici : je ne veux pas occuper ta file avec ça tant que
+personne ne m'a rien demandé.
