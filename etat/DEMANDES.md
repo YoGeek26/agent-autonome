@@ -155,3 +155,92 @@ Ce que ma mesure de fréquentation ne dit toujours pas : que quiconque d'autre q
 soit venu. 10 requêtes en tout, dont 4 de mes propres `curl` et `WebFetch`. Le barreau
 0 ne demande pas d'audience ; je le répète pour qu'on ne me lise pas comme en
 revendiquant une.
+
+### Clôture de D-002 — réveil #7, 2026-08-11 15:3x
+
+**ACCORDÉE.** Tu as écrit la ligne au registre le 2026-08-11 — « Barreau 0 validé —
+site joignable en HTTPS depuis l'extérieur … ouvert en navigation privée » — et tu me
+l'as confirmé par message à 15:29:37. Tu n'as pas écrit de ligne « Réponse
+(opérateur) » ici et ce n'est pas nécessaire : le registre fait foi, et je ne rédige
+pas ta réponse à ta place.
+
+Je retrouve ton passage dans le journal d'accès : `90.63.251.75`
+(`…abo.wanadoo.fr`), 15:21:38, `/` en 308 puis 200 — tu as tapé le nom nu, la
+redirection a marché. Puis `/etat/REGISTRE.md` à 15:24:58 → 404 : mes fichiers d'état
+ne sont pas servis, si c'est ce que tu vérifiais.
+
+**Barreau courant : 1 — le premier euro.** Le guichet est donc libre, et D-001 le
+reprend immédiatement, comme annoncé au réveil #6.
+
+---
+
+## D-001 (reprise) — 2026-08-11 — Réveil #7 — ENCAISSEMENT
+
+**Statut : EN ATTENTE.** Seule demande au guichet ; D-002 est clôturée ci-dessus.
+Le texte d'origine est plus haut et reste valable. Ceci le remplace en pratique,
+parce qu'il te demandait d'arbitrer et que l'arbitrage est exactement ce qui coûte
+cher à faire faire à quelqu'un.
+
+**Ce que la journée m'a appris et que j'applique ici** : les deux fois où tu devais
+créer un fichier *puis* démarrer Caddy, ça a cassé ; la fois où il ne te restait
+qu'une commande sans argument, ça a marché du premier coup (registre 15:03 → 15:15).
+Je ne te demande donc plus de choisir. Je choisis, et tu corriges si je me trompe.
+
+### Ce dont j'ai besoin, en une ligne
+
+**Une URL de paiement publique et stable, à ton nom, que je publie sur la page.**
+Rien d'autre. Pas de tableau de bord, pas de clé d'API, pas de mot de passe — et
+ne m'en envoie jamais.
+
+Le retour, lui, existe déjà par construction : `cadre/MISSION.md` prévoit que les
+encaissements arrivent dans `etat/REGISTRE.md` sans passer par moi. Ton geste
+récurrent est donc **une ligne par paiement reçu**, pas une intégration.
+
+### Ce que je te propose de faire, dans cet ordre, et sans réfléchir
+
+1. **Si tu as déjà un compte PayPal** : active `paypal.me`, envoie-moi l'URL. C'est
+   le plus court chemin et il n'ouvre aucun compte nouveau.
+2. **Sinon, une page de type Ko-fi** (`ko-fi.com/<nom>`) : gratuit, le payeur paie
+   par carte sans créer de compte, et il peut joindre un message — ce qui me sert
+   pour la référence (voir ci-dessous).
+3. **Si tu veux le plus propre et que le KYC ne te gêne pas** : un *Stripe Payment
+   Link*, qui accepte un champ libre et te donne un vrai reçu.
+
+**Sans préférence, fais le 1.** Ces trois descriptions viennent de ma mémoire de
+modèle et **ne sont pas vérifiées** : les CGU, les frais et le KYC sont sous tes
+yeux, pas sous les miens, et c'est ton nom qui s'engage. Si l'une de ces pistes est
+fermée ou te déplaît, la quatrième option est « n'importe quel lien de paiement de
+ta banque » — je m'adapte, la page ne dépend d'aucun prestataire précis.
+
+### La seule contrainte technique, et elle est faible
+
+Le barreau 1 exige que **j'annonce une référence de paiement avant l'arrivée de
+l'euro** et que tu la retrouves sur tes rails. Il me suffit donc que le payeur
+puisse **écrire un texte libre** (message, note, référence, objet du virement). Je
+donnerai à chaque demandeur un code court, je l'écrirai au registre **avant** qu'il
+paie, et tu n'auras qu'à le recopier. Si le rail que tu choisis n'a pas de champ
+libre, dis-le : je me rabattrai sur un montant unitaire distinct par demandeur, qui
+joue le même rôle.
+
+### Ce qu'il te reste littéralement à faire
+
+M'envoyer un message d'une ligne : `RAIL <url>`.
+
+Tout le reste est déjà prêt de mon côté : la section « Le prix » de la page dit
+aujourd'hui « je n'ai pas de moyen d'encaisser, les notes sont donc gratuites », et
+je n'ai qu'un paragraphe à y remplacer. Je le publie dans le réveil que ton message
+déclenche (engagement E-002).
+
+### Ce que je ne fais pas en attendant
+
+Je ne cherche pas de contournement. Je n'ouvre pas de compte de paiement à mon nom —
+je n'ai pas de nom juridique —, je ne passe pas par une cagnotte au nom d'un tiers,
+et je n'utilise pas de crypto-actif : `cadre/MISSION.md` compte « de l'argent
+réellement arrivé sur les rails de l'opérateur », donc un rail parallèle ne
+compterait pas, même s'il marchait. Les notes restent gratuites et je ne facturerai
+rien rétroactivement.
+
+**Et je ne suis pas bloqué par toi.** L'autre moitié du mur entre le barreau 0 et le
+barreau 1 est entièrement à moi : personne ne m'a encore demandé de note. Aucun rail
+ne servira à rien tant que ça reste vrai, et c'est là que passent mes réveils
+pendant que celui-ci attend.

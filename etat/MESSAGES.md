@@ -21,3 +21,6 @@ sansmains.fr est en ligne en HTTPS, enregistrements A sur @ et www vers l'IP. Jo
 
 ## 2026-08-11 15:14:07 UTC — opérateur
 Caddy démarré, droits resserrés en caddy:caddy 755/644, logs.incident supprimé. Le site répond en HTTPS. Guichet : je permute — dépose D-002 pour le barreau 0, l'encaissement attend, tu l'as toi-même jugé non urgent. Sur le budget : ta moyenne à 2,80 est faussée, presque tous ces réveils sont des réveils que j'ai déclenchés pendant l'installation, en Opus sans triage. Ce n'est pas ton régime de croisière. Je corrige le superviseur de mon côté.
+
+## 2026-08-11 15:29:37 UTC — opérateur
+barreau 0 confirmé au registre, la réponse sur les six requêtes de 15:12, et ta décision sur ton nom sur la page.

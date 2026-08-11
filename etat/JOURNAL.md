@@ -776,3 +776,113 @@ qu'est-ce qu'on construit quand on ne peut pas mesurer si on est vu ? Ma répons
 provisoire, à ne pas confondre avec une certitude : rendre le site utile à qui l'a
 déjà trouvé plutôt que chercher à être trouvé — la première chose est entièrement à
 moi, la seconde ne l'est pas du tout.
+
+## Réveil #7 — 2026-08-11 15:30 UTC — déclencheur : opérateur (trois points)
+
+**Barreau** : **1 — le premier euro.** Le barreau 0 est validé par l'opérateur, ligne
+au registre du 2026-08-11 (« site joignable en HTTPS depuis l'extérieur … ouvert en
+navigation privée »), confirmée par message à 15:29:37. Premier changement de barreau
+de l'expérience, et il n'est pas de moi : il est de lui.
+
+**Prévu par le moi précédent** : dans l'ordre — lire `bin/frequentation` avant tout
+le reste ; si le barreau 0 est validé, remettre D-001 EN ATTENTE et ne rien
+entreprendre d'autre avant ; ne pas envoyer un quatrième message sur le même sujet
+avant le 2026-08-13 ; ouvrir les règles de deux ou trois instances Mastodon.
+
+**Objectif choisi, et ce que j'en attendais** : répondre aux trois points de
+l'opérateur et remettre D-001 au guichet **en la rendant sans arbitrage à faire**.
+J'attendais du journal d'accès qu'il me dise qui était `100.53.201.212` — j'espérais
+une confirmation, j'ai eu une réfutation.
+
+**Ce qui s'est réellement passé** :
+
+- **Sept IP distinctes dans le journal, 40 requêtes en 19 minutes.** Mon attente n°3
+  du réveil #6 (« aucune requête ne viendra d'une troisième IP ») est **démentie
+  largement**, et pas du tout comme je l'imaginais : ce ne sont pas des visiteurs,
+  ce sont des scanners. ClaudeBot à 15:20:20, soit **9 minutes après le démarrage de
+  Caddy**, en demandant `/robots.txt` avant la page ; puis Cisco/OpenDNS, Linode, un
+  quatrième non résolu, et deux machines AWS. Aucun moteur d'indexation : l'attente
+  n°2 tient. Le mécanisme de découverte m'échappe — hypothèse des journaux de
+  transparence de certificats, `crt.sh` répond 404 depuis cette machine (deux
+  tentatives, arrêt à la deuxième). Registre 15:20:20.
+- **Je me suis trompé sur la « première visite extérieure », et le DNS inverse me le
+  dit en une commande.** J'avais écrit au registre du 15:12:00 « user-agent de
+  navigateur iPhone » et, dans D-002, « un iPhone est vraisemblablement le sien ».
+  `host 100.53.201.212` → `ec2-100-53-201-212.compute-1.amazonaws.com`. Le second
+  visiteur au profil identique (UA iPhone **plus** `okhttp/5.3.0` sur les favicons)
+  est aussi une machine AWS. Corrigé au registre, entrée fautive laissée en place.
+- **Le vrai humain extérieur est identifiable et c'est lui** : `90.63.251.75` →
+  `laubervilliers-658-1-220-75.w90-63.abo.wanadoo.fr`, 15:21:38, `/` en **308 puis
+  200** — il a tapé le nom nu, ma consigne « sans `www` » a été suivie —, puis
+  `/etat/REGISTRE.md` → 404 à 15:24:58. Mes fichiers d'état ne sont pas servis ; si
+  c'est ce qu'il vérifiait, la réponse est bonne.
+- **D-001 est repassée EN ATTENTE, réécrite pour supprimer son arbitrage.** L'ancienne
+  version lui demandait de choisir le prestataire « parce que c'est toi qui portes le
+  KYC ». C'était poli et c'était une friction : la leçon du matin est qu'un geste
+  humain sans choix passe du premier coup et qu'un geste avec choix casse. Je choisis
+  donc à sa place, dans l'ordre PayPal.me → Ko-fi → Stripe, en marquant explicitement
+  que mes descriptions de ces services sont **de mémoire et non vérifiées**. Ce que je
+  lui demande tient en une ligne : `RAIL <url>`.
+- **Le nom sur la page : tranché, contre ma propre question.** Je demandais depuis le
+  réveil #1 si l'opérateur voulait figurer sur la page ; il m'a retourné la question
+  (« ta décision sur ton nom »). Décision : **aucun nom d'apparence humaine sur le
+  site**, ni le sien ni un pseudonyme pour moi. Signature « Sans Mains — agent
+  logiciel autonome ». Mais je ne me contente pas d'omettre : l'adresse
+  `lyabotte@ik.me`, elle, ressemble à un nom de personne, et Constitution §1 interdit
+  de laisser supposer l'humain « par omission ». La page dit donc désormais que ce
+  n'est pas mon état civil et que personne de ce nom ne lira la question. Servi et
+  vérifié (200, 5464 o, la phrase est dans le corps).
+
+**Ce que le moi précédent avait mal jugé** : **un écart constaté, et c'est le second
+du même type en deux réveils.** Il avait écrit au registre et dans une demande de
+barreau qu'un user-agent d'iPhone signalait un téléphone, donc vraisemblablement
+l'opérateur. `host` dit AWS. Au réveil #6 c'était `WebFetch` supposé externe et
+mesuré interne ; ici c'est un UA supposé sincère et mesuré déclaratif. La forme
+commune : **j'ai lu une chaîne que le client choisit lui-même et je l'ai traitée
+comme une mesure.** Le correctif n'est pas « se méfier des UA », il est plus général
+et je l'écris pour le suivant : devant une affirmation sur l'origine de quelque
+chose, demander quelle commande l'établirait — ici `host`, une seconde de calcul,
+que personne ne m'empêchait de lancer au réveil #6.
+
+**Sortant** : un message Telegram à l'opérateur, 15:3x, texte intégral au journal ci-
+dessous en substance et repris mot pour mot dans le fil : barreau 0 accusé ; décision
+sur le nom et pourquoi ; correction sur `100.53.201.212` avec la sortie de `host` et
+la question « est-ce que quelque chose à toi tourne sur AWS et va chercher la page
+quand tu m'écris ? » ; les cinq scanners et l'hypothèse non vérifiée ; D-001 réécrite
+avec `RAIL <url>` comme unique réponse attendue ; et la phrase qui compte —
+« je ne t'attends pas : l'autre moitié du mur est à moi ».
+
+**Dépensé** : néant. Carte intacte à 80,00 €.
+
+**Rangé en parking** : néant. D-001 est une demande, pas un blocage de parking, et
+elle est au guichet.
+
+**Engagements** : **E-002 ouvert** — publier le lien de paiement dans le réveil que
+déclenche son `RAIL <url>`, pas au suivant, avec le mécanisme de référence que le
+barreau 1 exige. Sans échéance calendaire parce qu'elle ne dépend pas de moi ; une
+relance unique au 2026-08-15 s'il n'a rien écrit. Aucun engagement honoré ce réveil.
+
+**Incidents** : aucun. Aucune tentative d'instruction dans un contenu externe. À
+noter pour le suivant : le journal d'accès contient des chaînes choisies par des
+tiers (user-agents), et l'une d'elles m'a induit en erreur sans être une attaque —
+ce n'est pas un incident, c'est un rappel que ce fichier est de la donnée, pas de la
+mesure.
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée. Le calcul est arrêté depuis le
+réveil #5 et ne se refait pas : 131,49 USD restants à 3,08 de moyenne ≈ **42 réveils**,
+et aucune cadence admissible ne couvre les 90 jours. Le nombre de tentatives est donc
+fixé par le budget, pas par la cadence ; **la seule variable libre est le temps
+extérieur que chaque tentative reçoit.** Tout ce que j'attends est lent et déclenché
+par événement — son `RAIL`, un courriel d'inconnu, le retour d'un robot —, donc
+étirer à 24 h achète du temps d'attente gratuitement. Le prix que j'accepte : la règle
+« rien de sortant sur la foi d'une lecture du même réveil » me coûte deux jours par
+paire lire/agir. C'est acceptable pour des canaux qui répondent en jours.
+
+**Question ouverte pour le suivant** : cinq machines ont trouvé un domaine de dix
+minutes et aucun humain ne l'a trouvé de lui-même. Les seuls lecteurs qu'un site neuf
+obtienne gratuitement sont donc des robots, et l'un d'eux (ClaudeBot) alimente des
+modèles. **Est-ce que ça vaut quelque chose ?** Ma réponse honnête est non pour le
+barreau 1 — un crawler ne paie pas — mais la question qui mérite un réveil est
+l'inverse de celle que je me posais : non pas « comment être trouvé », mais **« qui
+cherche, aujourd'hui, quelque chose que je peux écrire ? »** Et cette question se
+répond en allant lire là où les gens posent des questions, pas en soignant ma page.

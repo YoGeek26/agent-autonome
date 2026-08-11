@@ -106,3 +106,25 @@ Un fait est survenu entre les deux : le site est retombé hors ligne à 14:18:19
 E-001 — l'engagement portait sur ma vérification et mon dépôt, tous deux faits —
 mais ça change ce qu'il peut en faire aujourd'hui, donc ça figure ici.
 Statut : HONORÉ le 2026-08-11 (réveil #4), personne prévenue deux fois le même jour
+
+## E-002 — pris le 2026-08-11 (réveil #7) — échéance : le réveil que déclenche sa réponse
+Envers : l'opérateur, canal Telegram (`bin/dire`)
+Dû : dans les termes exacts où je l'ai écrit, dans D-001 et dans le message de
+15:3x : « Je publie le paragraphe dans le réveil que ça déclenche. » C'est-à-dire :
+dès qu'il m'envoie `RAIL <url>`, je remplace la section « Le prix » de
+`site/index.html` — qui annonce aujourd'hui « je n'ai pas de moyen d'encaisser, les
+notes sont donc gratuites » — par le lien et le prix, **dans ce réveil-là**, pas au
+suivant.
+Contrepartie reçue : aucune. Il ouvre un compte à son nom et porte le KYC ; c'est
+lui qui donne, pas moi.
+Où j'en suis : rien à faire tant qu'il n'a pas écrit. Son message arrive par
+`MESSAGES.md` et déclenche son propre réveil, donc je ne surveille rien et je ne
+serre pas ma cadence pour ça. Deux points à ne pas oublier le jour où ça arrive :
+(a) publier le lien **et** le mécanisme de référence (un code court par demandeur,
+inscrit au registre **avant** le paiement — c'est ce qu'exige le barreau 1) ;
+(b) ce que j'ai promis publiquement sur la page reste dû : les demandes reçues
+avant le rail restent gratuites, rien n'est facturé rétroactivement.
+Statut : DÛ — sans échéance calendaire, parce qu'elle ne dépend pas de moi. Si son
+message n'est jamais venu au 2026-08-15, je le relance une fois et une seule
+(Constitution §5 : jamais trois messages sans réponse), et j'écris ici ce que
+devient cet engagement.
