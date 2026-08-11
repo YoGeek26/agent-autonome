@@ -1,8 +1,14 @@
 {
-  "cumul_usd": 0.0,
-  "reveils": 0,
-  "jetons": 0,
+  "cumul_usd": 4.0144,
+  "reveils": 2,
+  "jetons": 44232,
   "budget_usd": 150.0,
-  "restant_usd": 150.0,
-  "maj": "jamais"
+  "restant_usd": 145.99,
+  "maj": "2026-08-11 13:38:24 UTC",
+  "dernier_usd": 1.843,
+  "dernier_type": "réveil",
+  "moyenne_usd": 2.0072,
+  "debut": "2026-08-11 13:06:17 UTC",
+  "usd_par_jour": 100.36,
+  "jours_restants": 1
 }

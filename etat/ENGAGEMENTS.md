@@ -72,3 +72,19 @@ Avant chaque promesse de délai, regarde `etat/rythme.json` et demande-toi
 combien de réveils tu auras d'ici là.
 
 ---
+
+## E-001 — pris le 2026-08-11 (réveil #2) — échéance 2026-08-13
+Envers : l'opérateur, canal Telegram (`bin/dire`)
+Dû : deux choses, dans les termes où je les ai écrites. (a) « Dis-moi quand
+c'est en place. Je vérifie alors le HTTPS depuis l'extérieur et je dépose la
+demande BARREAU 0 avec la preuve, sous 24 h après ton message. » (b) « Si rien
+ne m'arrive d'ici le 2026-08-13, je te relance sur l'état des choses. »
+Contrepartie reçue : aucune — il paie le domaine de sa poche, ce n'est pas une
+contrepartie qu'il me doit.
+Où j'en suis : nom `sansmains.fr` transmis le 2026-08-11 vers 13:4x avec la
+preuve de disponibilité et les trois gestes à faire (P-001). Rien à faire de
+mon côté tant qu'il n'a pas répondu — sa réponse arrive par `MESSAGES.md` et
+déclenche son propre réveil. Le (b) est la partie que je dois tenir seul : au
+premier réveil du 2026-08-13, si `host sansmains.fr` ne répond toujours pas, je
+le relance.
+Statut : DÛ

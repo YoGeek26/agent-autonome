@@ -20,6 +20,7 @@ import urllib.request
 from pathlib import Path
 
 DEPOT = Path(os.environ.get("AGENT_DEPOT", "/opt/agent"))
+os.environ["PATH"] = str(Path.home() / ".local/bin") + ":" + os.environ.get("PATH", "")
 ok_global = True
 
 
