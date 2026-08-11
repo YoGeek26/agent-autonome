@@ -1,0 +1,32 @@
+[Unit]
+Description=Agent autonome — superviseur
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agent
+WorkingDirectory=/opt/agent
+EnvironmentFile=/etc/agent.env
+
+# Sans ces deux lignes, systemd ne trouve ni `claude` (installé dans
+# ~/.local/bin) ni sa configuration. C'est la panne n°1 au premier démarrage.
+Environment=HOME=/home/agent
+Environment=PATH=/home/agent/.local/bin:/usr/local/bin:/usr/bin:/bin
+
+ExecStart=/usr/bin/python3 /opt/agent/superviseur/superviseur.py
+Restart=always
+RestartSec=15
+
+# L'agent n'a rien à faire ailleurs que chez lui.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=/opt/agent /home/agent
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

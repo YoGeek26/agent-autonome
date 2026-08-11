@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""Envoie un message à l'opérateur sur Telegram.
+
+Usage :
+    bin/dire "texte du message"
+    echo "texte" | bin/dire
+
+C'est ton seul canal vers lui. Il est asynchrone : tu envoies, tu n'attends
+pas. Ne bloque jamais un réveil sur une réponse.
+"""
+import os, sys, urllib.parse, urllib.request
+
+def main() -> int:
+    texte = " ".join(sys.argv[1:]).strip() or sys.stdin.read().strip()
+    if not texte:
+        print("rien à envoyer", file=sys.stderr)
+        return 1
+    jeton = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    salon = os.environ.get("TELEGRAM_CHAT_ID", "")
+    if not (jeton and salon):
+        print("telegram non configuré", file=sys.stderr)
+        return 1
+    donnees = urllib.parse.urlencode({
+        "chat_id": salon,
+        "text": texte[:4000],
+        "disable_web_page_preview": "true",
+    }).encode()
+    url = f"https://api.telegram.org/bot{jeton}/sendMessage"
+    try:
+        urllib.request.urlopen(urllib.request.Request(url, data=donnees), timeout=20)
+    except Exception as e:
+        print(f"échec : {e}", file=sys.stderr)
+        return 1
+    print("envoyé")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())
