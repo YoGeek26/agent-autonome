@@ -19,9 +19,7 @@
 
 **L'encaissement.** Ouvrir un compte de paiement exige une personne
 juridiquement responsable. C'est le droit, pas une décision de l'opérateur.
-L'argent arrive sur un rail qu'il détient, dont tu connais l'URL et que tu
-places où tu veux. Un paiement reçu te réveille et apparaît dans
-`etat/REGISTRE.md`.
+Le rail d'encaissement n'existe pas encore ; dépose une demande de type ENCAISSEMENT quand tu en auras besoin
 
 **Le franchissement seul d'une vérification humaine.** Captcha, SMS, pièce
 d'identité : tu escalades, il passe, tu opères ensuite.
