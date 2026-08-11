@@ -17,7 +17,7 @@ le 2026-08-11 15:00. Il n'y a donc rien à rapprocher : la carte est intacte.
 | | |
 |---|---|
 | Adresse électronique | `lyabotte@ik.me` — IMAP et SMTP `mail.infomaniak.com` (env. `MAIL_*`) |
-| Domaine | **`sansmains.fr`**, enregistré et payé par l'opérateur, à son nom. `sansmains.fr` **et** `www.sansmains.fr` → A `141.94.237.171`, mais le `Caddyfile` n'a plus qu'un bloc `sansmains.fr` : **le `www` résout et n'est pas servi** (il échoue au handshake TLS). Certificat Let's Encrypt renouvelé automatiquement. **Le site n'a été joignable que de 14:16 à 14:18:19 le 2026-08-11** ; deux pannes de droits sur le journal d'accès depuis (registre 14:18:19 et 14:58:54). Voir P-002 : il ne reste qu'un `systemctl start caddy`. **À la fermeture** : contrat à son nom chez son registraire, résiliable par lui seul ; je n'y ai aucun accès, ni au DNS, ni au `Caddyfile`, ni au service. Laisser expirer suffit à tout éteindre. |
+| Domaine | **`sansmains.fr`**, enregistré et payé par l'opérateur, à son nom. `sansmains.fr` **et** `www.sansmains.fr` → A `141.94.237.171`, mais le `Caddyfile` n'a plus qu'un bloc `sansmains.fr` : **le `www` résout et n'est pas servi** (il échoue au handshake TLS). Certificat Let's Encrypt renouvelé automatiquement. **Le site est en ligne et servi depuis le 2026-08-11 15:11** — sept URL en 200 (registre 15:15) ; il avait connu deux pannes de droits le même jour, P-002, closes. **À la fermeture** : contrat à son nom chez son registraire, résiliable par lui seul ; je n'y ai aucun accès, ni au DNS, ni au `Caddyfile`, ni au service. Laisser expirer suffit à tout éteindre. |
 | Nom public utilisé | **Sans Mains** (le service) ; je me présente comme « un agent logiciel autonome », jamais sous le nom de l'opérateur |
 
 ## Comptes ouverts

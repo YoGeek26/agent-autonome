@@ -42,6 +42,18 @@ rétroactivement. Aucun euro gratuit ne sera compté comme un encaissement.
 
 Statut : EN ATTENTE
 
+**Mise à jour (réveil #6, 2026-08-11 15:1x) — Statut : EN FILE, à ta demande.** Tu
+as permuté le guichet le 2026-08-11 15:14 : « je permute — dépose D-002 pour le
+barreau 0, l'encaissement attend, tu l'as toi-même jugé non urgent. » Je libère donc
+le guichet pour D-002. Cette demande n'est **ni refusée ni retirée** : elle reprend
+la place dès que tu as tranché le barreau 0.
+
+Une précision sur « non urgent », parce que je ne veux pas que ma propre phrase me
+revienne déformée : ce n'est pas urgent **dans l'ordre** — le barreau courant est 0,
+et on ne travaille pas le barreau suivant. Mais c'est le seul blocage qui sépare le
+barreau 0 du barreau 1, et il est entièrement chez toi. Le jour où le barreau 0 est
+validé, cette demande devient le chemin critique et rien d'autre ne la remplace.
+
 ---
 
 ## D-002 — 2026-08-11 — Réveil #4 — BARREAU 0
@@ -97,3 +109,49 @@ Ce que je ne prétends pas : que quiconque l'ait ouverte. Je n'ai aucune mesure 
 fréquentation, et le journal d'accès qui devait m'en donner une est précisément ce
 qui a fait tomber le service (P-002). Le barreau 0 ne demande pas d'audience — je
 le note pour qu'on ne me lise pas comme en revendiquant une.
+
+---
+
+## Dépôt effectif — réveil #6, 2026-08-11 15:1x
+
+**Statut : EN ATTENTE.** Déposée sur ton instruction du 2026-08-11 15:14 (« je
+permute — dépose D-002 pour le barreau 0 »). D-001 est passée EN FILE, il n'y a donc
+qu'une seule demande EN ATTENTE, ta règle est respectée.
+
+Tout ce qui précède datait de 14:16 et le service est tombé deux fois entre-temps.
+**Voici la preuve refaite après ton `systemctl start`, et une correction qui retire
+un de mes arguments.**
+
+**Ce qui est vérifié maintenant** (registre 2026-08-11 15:15) : Caddy `active`, et
+les sept URL du site en 200 à 15:16 — `/` (5085 o), la note (9558 o), `/style.css`,
+`/robots.txt`, `/sitemap.xml`, et les deux favicons que je viens d'ajouter.
+Certificat Let's Encrypt valide, `ssl_verify_result=0`, `http://` → 308.
+
+**La correction, et elle est contre moi.** J'ai écrit deux fois — au registre du
+14:16 et dans la preuve ci-dessus — que `WebFetch` constituait une « vérification
+externe réelle » parce que « sa requête ne part pas de cette machine ». **C'est
+faux, et c'est mon journal d'accès qui me l'apprend** : la requête `WebFetch` de ce
+réveil apparaît avec `remote_ip = 141.94.237.171`, l'IP publique de ce VPS, et
+l'user-agent `Claude-User (claude-code/2.1.227)`. Elle prouve le DNS, le certificat
+et le service ; elle ne prouve rien du routage depuis l'extérieur. Ne compte donc pas
+cet argument dans ce que je te présente — je le retire moi-même.
+
+**Ce qui le remplace, et qui vaut mieux** (registre 2026-08-11 15:12:00) : le journal
+d'accès porte une visite venue de l'IP `100.53.201.212`, sans rapport avec cette
+machine, avec un user-agent de navigateur iPhone, et la séquence complète d'un
+chargement réel — `/` en 200, puis `/style.css` en 200, puis la demande de favicon.
+Deux chargements de `/` à 14 s d'intervalle. C'est la première fois que je peux
+montrer qu'une requête est arrivée **d'ailleurs**. Si c'était toi, dis-le : ça ne
+changerait rien au barreau 0, qui demande précisément que ce soit toi qui ouvres la
+page, mais je préfère le savoir que le supposer — le journal ne porte aucune
+identité et je n'en ai inventé aucune.
+
+**Ce qu'il te reste à faire, et c'est le cœur du barreau** : ouvrir
+`https://sansmains.fr/` depuis un navigateur non connecté. **Tape le nom nu, sans
+`www`** — le `Caddyfile` n'a plus qu'un bloc, le `www` résout mais n'est pas servi
+et échouerait au handshake TLS.
+
+Ce que ma mesure de fréquentation ne dit toujours pas : que quiconque d'autre que toi
+soit venu. 10 requêtes en tout, dont 4 de mes propres `curl` et `WebFetch`. Le barreau
+0 ne demande pas d'audience ; je le répète pour qu'on ne me lise pas comme en
+revendiquant une.

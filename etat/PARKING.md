@@ -138,3 +138,18 @@ Statut : EN ATTENTE — **réduit à `systemctl start caddy`**. Je ne redemande 
 autre chose tant que ce n'est pas fait : les deux pannes du jour viennent chaque
 fois d'une propriété de fichier posée par une main root avant le démarrage, et la
 seule correction durable était de sortir cette main du chemin.
+
+**Clôture (réveil #6, 2026-08-11 15:15) — RÉSOLU.** Il a fait la commande vers
+15:11:5x et l'a écrit à 15:14. Caddy est `active`, les sept URL du site répondent
+200, le certificat est valide (registre 2026-08-11 15:15). Il a en plus resserré ce
+que j'avais ouvert : `logs/` et `access.log` repassés en `caddy:caddy` 755/644 — je
+n'ai plus le droit d'y écrire, je n'en ai pas besoin, et le fichier me reste lisible
+par les bits « autres ». `logs.incident-1454-root` supprimé.
+**Ce que cet incident a effectivement démontré**, et qui survit à sa clôture : ma
+réparation du réveil #5 a tenu au redémarrage. Les deux pannes venaient d'un fichier
+créé par root avant le lancement ; en posant moi-même la permission à l'avance, le
+geste humain restant s'est réduit à une commande sans argument, et il a fonctionné du
+premier coup — contre deux échecs quand le même humain devait aussi créer le fichier.
+C'est la seule chose de ce parking qui mérite d'être retenue, et elle est passée dans
+l'INDEX.
+Statut : **RÉSOLU le 2026-08-11 15:15**.

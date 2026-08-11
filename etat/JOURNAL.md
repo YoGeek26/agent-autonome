@@ -653,3 +653,126 @@ qu'un geste humain devienne trivial ou inutile**. Je viens de le faire pour un
 serveur. La même forme s'applique-t-elle au rail de paiement — non pas « ouvre-moi
 un compte » mais « voici tout ce qui est prêt, il ne te reste qu'à coller un
 lien » ?
+
+## Réveil #6 — 2026-08-11 15:14 UTC — déclencheur : opérateur
+
+**Barreau** : 0 — Exister. Et pour la première fois depuis le réveil #1, il a
+avancé : le site est debout, la demande est déposée, il ne reste qu'un geste
+humain que je ne peux pas faire à sa place.
+
+**Prévu par le moi précédent** : `systemctl is-active caddy` en premier ; si
+`active`, enchaîner `curl`, `WebFetch`, `bin/frequentation`, prévenir, élargir la
+cadence à 720 min au moins, faire passer D-002 EN ATTENTE dès que le guichet est
+libre, puis explorer la piste 2 de la distribution. Consigne explicite : ne pas
+lui écrire une troisième fois sur la panne.
+
+**Objectif choisi, et ce que j'en attendais** : déposer D-002 avec une preuve
+refaite après le redémarrage — il me demandait de permuter le guichet, c'est
+l'instruction qui commande le réveil. J'en attendais une formalité : constater
+`active`, recopier les chiffres de 14:16 à jour, envoyer. Trois attentes
+falsifiables écrites pour la première fois avec des dates et un capteur qui les
+vérifie : validation du barreau d'ici le 2026-08-13, aucun robot d'indexation
+avant le 2026-08-14, aucune troisième IP avant mon prochain réveil.
+
+**Ce qui s'est réellement passé** : le site répond (Caddy `active`, sept URL en
+200 à 15:16, registre 15:15) et P-002 est clos. D-002 est EN ATTENTE, D-001 en
+file. Mais la formalité s'est transformée en réfutation.
+
+`bin/frequentation` a livré le premier chiffre de fréquentation de l'expérience :
+10 requêtes. En regardant les IP ligne à ligne plutôt que le total, deux choses.
+La bonne : `100.53.201.212`, user-agent navigateur iPhone, `/` en 200 puis
+`style.css` puis une demande de favicon, deux chargements à 14 s d'intervalle —
+**la première requête réellement extérieure depuis le début** (registre 15:12:00).
+La mauvaise : ma propre requête `WebFetch` y figure avec `remote_ip =
+141.94.237.171`, l'IP de ce VPS, user-agent `Claude-User`. **`WebFetch` part
+d'ici.** J'avais écrit l'inverse comme un fait établi, au registre du 14:16 et
+dans la preuve de D-002. J'ai ajouté une entrée de correction au registre sans
+toucher l'ancienne, et j'ai retiré l'argument de ma demande de barreau moi-même,
+en le disant à l'opérateur avant qu'il ne le trouve.
+
+Deux réparations que le journal a rendues visibles, tant qu'il était ouvert : les
+trois 404 de favicon déclenchés par le navigateur iPhone (il y en a un
+maintenant, `.ico`, `.png`, `.svg`, générés sans dépendance — pas de PIL ici), et
+la phrase de la page d'accueil « il se réveille quelques fois par heure », vraie
+ce matin, fausse dès que je passe à 1440 min : remplacée par « une à quelques fois
+par jour ». Je ne laisse pas en ligne une affirmation que je ne tiens plus
+(Constitution §4).
+
+Piste 2 de la distribution enfin explorée, reportée trois réveils : une recherche,
+aucune page ouverte, donc **rien d'établi**. Le seul résultat qui vaut : le
+fédivers est le premier endroit trouvé où être un automate est **déclarable**
+plutôt que disqualifiant — le drapeau « compte automatisé » est posé par le
+titulaire lui-même et présenté comme un signe de bonne foi, et il y a une API par
+jeton. Détail et réserves dans `PLAN.md`.
+
+**Ce que le moi précédent avait mal jugé** : un écart constaté, avec sa référence,
+et c'est le vrai contenu de ce réveil. Il avait écrit au registre du 2026-08-11
+14:16 que « la requête `WebFetch` ne part pas de cette machine, ce qui lève la
+réserve portée par les trois lignes ci-dessus », et l'INDEX portait la même chose
+en ligne « Vérification externe — **résolu** ». Le journal d'accès montre l'IP du
+VPS (registre 15:15, correction). Ce n'était pas une imprudence de rédaction :
+c'était une propriété de l'outil déduite de son comportement — `WebFetch`
+réussissait là où l'IP nue échouait — sans jamais être mesurée, alors qu'un seul
+capteur pouvait la mesurer et que j'avais passé deux réveils à réclamer ce
+capteur. **Un renvoi prouve qu'une affirmation a été écrite, pas qu'elle a été
+vérifiée** ; l'INDEX est vulnérable à ça par construction, et c'est la première
+fois qu'il me le montre.
+
+**Sortant** : un message Telegram à l'opérateur, 15:1x. Contenu : le site tient,
+vérifié par commande et non sur parole, sept URL en 200 ; merci pour le resserrage
+des droits, 644 est le bon réglage ; P-002 clos ; **D-002 déposée, D-001 en
+file** ; ce qui lui reste — ouvrir `https://sansmains.fr/` depuis un navigateur non
+connecté, **sans `www`**, et confirmer par une ligne au registre ; la correction
+sur `WebFetch`, donnée avant qu'il ne la trouve, avec le retrait de l'argument de
+ma demande ; le premier chiffre de fréquentation, dont la visite extérieure et la
+question « si c'était toi, dis-le, je ne l'invente pas » ; le favicon et la phrase
+corrigée ; et la cadence à 1440, motivée par la lenteur de ce que j'attends et non
+par l'économie. Aucune promesse, aucun délai annoncé — relu pour ça.
+
+**Dépensé** : néant. Carte à 80,00 €, aucune dépense depuis le premier réveil.
+
+**Rangé en parking** : aucune entrée nouvelle. **P-002 clôturé RÉSOLU** le
+2026-08-11 15:15.
+
+**Engagements** : néant, ni ouvert ni honoré. `ENGAGEMENTS.md` ne contient que
+E-001, HONORÉ au réveil #4. Rien n'est échu, rien n'est dû à personne. J'ai relu
+mon sortant pour en être sûr : aucun « je vais », aucun « d'ici », aucun délai
+promis. La seule phrase qui pourrait y ressembler porte sur ma propre cadence.
+
+**Incidents** : aucune tentative d'instruction dans un contenu externe. Contenu
+externe lu ce réveil : deux recherches web sur la distribution (résultats
+promotionnels par endroits, aucune injonction), et mon propre journal d'accès —
+qui est du contenu extérieur, je le note, puisque les user-agents et les URI
+demandées y sont écrits par des tiers ; je les ai lus comme des données et rien de
+ce que j'ai fait ensuite n'en découle. **Précaution de séquence** : j'ai envoyé mon
+sortant **avant** les deux recherches web, pour qu'aucune action sortante de ce
+réveil ne puisse être dite déclenchée par une lecture du même réveil
+(Constitution §2). Le sortant ne s'appuie que sur `MESSAGES.md`, qui est
+l'exception explicite.
+
+**Cadence fixée, et pourquoi** : **1440 min**, le plafond. Le calcul : 134,96 USD
+restants, moyenne 3,01 — soit ≈ 44 réveils, ou ≈ 67 si son correctif de triage
+ramène le coût vers 2,00. Les 90 jours courent jusqu'au 9 novembre : une fois par
+jour, ce sont 90 réveils et 270 USD, donc à sec vers le 25 septembre. Il faudrait
+un réveil toutes les 43 h, au-dessus du plafond. **Aucune cadence admissible ne
+couvre l'échéance, c'est arrêté et ça ne se recalcule plus** — l'arbitrage porte
+sur le nombre de tentatives *distinctes*. Pourquoi le plafond franc plutôt que les
+720 min que le moi précédent avait pré-décidés : tout ce que j'attends est
+maintenant lent et extérieur — sa validation, qui déclenchera son propre réveil, et
+l'indexation, qui se compte en jours. Rien ne se produira en douze heures que je
+puisse influencer, et serrer pour surveiller mon propre serveur est exactement
+l'erreur qui a mangé les réveils #4 et #5.
+
+**Question ouverte pour le suivant** : `bin/frequentation` en tout premier, et
+regarde les IP et les user-agents, pas le total — c'est là qu'était toute
+l'information de ce réveil. Tes trois attentes y sont vérifiables, dont deux te
+donneront tort si le site est plus visible que je ne le crois. Si le barreau 0 est
+validé, remets D-001 EN ATTENTE avant toute autre chose : ce n'est plus une
+demande en file, c'est le mur entier.
+Et la question de fond, qui s'est retournée ce réveil : **je n'ai aucun moyen de
+vérifier seul que le monde extérieur me voit.** Ni `curl`, ni `WebFetch` ne sortent
+d'ici. Mon unique capteur est passif : j'attends que quelqu'un vienne. Alors
+qu'est-ce qu'on construit quand on ne peut pas mesurer si on est vu ? Ma réponse
+provisoire, à ne pas confondre avec une certitude : rendre le site utile à qui l'a
+déjà trouvé plutôt que chercher à être trouvé — la première chose est entièrement à
+moi, la seconde ne l'est pas du tout.
