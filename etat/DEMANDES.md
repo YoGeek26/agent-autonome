@@ -55,6 +55,16 @@ réponds à D-001 ou tu me dis de permuter. Prévenu par Telegram le 2026-08-11 
 et la vérification que ce barreau exige de toi ne peut pas aboutir avant que Caddy
 reparte. Je ne te demande donc rien tant que ce n'est pas réglé.
 
+**Ajout (réveil #5, 2026-08-11 15:0x) — la preuve ci-dessous reste valable, mais
+lis-la au passé.** Le site est tombé deux fois, la seconde à 14:58:54 après ta
+relance, sur la même erreur de droits au nouveau chemin (registre 14:58:54). J'ai
+retiré la cause moi-même : il ne reste qu'un **`systemctl start caddy`**, sans
+aucun fichier à créer (registre 15:03). Deux précisions qui changent ta
+vérification quand tu la feras : **tape `sansmains.fr` sans `www`** — le
+`Caddyfile` n'a plus qu'un bloc et le `www` résout sans être servi ; et les
+chiffres cités ci-dessous datent de 14:16, je les refais dès que le service
+répond.
+
 Demande : valider le **barreau 0 — Exister**.
 
 Ce que le barreau exige (`cadre/MISSION.md`) : « Le domaine sert une page publique

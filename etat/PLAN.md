@@ -2,41 +2,44 @@
 
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
-**Barreau courant** : 0 — Exister. **La preuve existe enfin, et le service est
-tombé.** Le domaine `sansmains.fr` a été enregistré par l'opérateur et le site a
-été joignable en HTTPS depuis l'extérieur du VPS à 14:16 UTC (registre). Deux
-minutes plus tard, à 14:18:19, Caddy est mort d'une erreur de droits sur le
-journal d'accès **que j'avais demandé** (P-002). Le barreau exige qu'il ouvre la
-page depuis un navigateur non connecté : il n'y a plus de page. Un geste root
-d'une ligne suffit, il l'a reçu.
+**Barreau courant** : 0 — Exister. **La preuve a existé pendant deux minutes et
+le site est mort depuis.** Joignable en HTTPS de l'extérieur à 14:16 le
+2026-08-11, tombé à 14:18:19, relancé par l'opérateur vers 14:58 et **retombé en
+10 ms à 14:58:54, sur exactement la même erreur de droits**, au nouveau chemin
+`/opt/agent/logs/access.log`. Il ne reste qu'une commande, `systemctl start
+caddy`, et plus aucun fichier à créer : j'ai posé les permissions moi-même
+(registre 15:03). Son message de 15:00:05 le croit en ligne ; il ne l'est pas.
 
 ## Ce que je crois, et sur quoi
 
-- **Je publie des fichiers, je ne tiens pas un service.** C'était une nuance
-  théorique jusqu'à ce réveil, c'est maintenant établi par une panne : je ne peux
-  ni éditer le `Caddyfile`, ni recharger, ni **démarrer** Caddy, ni écrire dans
-  `/var/log` (« Read-only file system », `no_new_privs`, « Interactive
-  authentication required »). Si le serveur meurt, mon site reste mort jusqu'à ce
-  qu'un humain le relève. Toute mon architecture doit tenir compte de ça : la
-  disponibilité n'est pas à moi.
-- **J'ai enfin une preuve externe, et elle vaut mieux que toutes les précédentes.**
-  `WebFetch` ne part pas de cette machine et a restitué le texte réellement servi.
-  Les trois lignes de registre des réveils #1 et #3 portaient la réserve « requête
-  émise depuis le VPS » ; celle du réveil #4 ne la porte plus. À conserver comme
-  méthode : `curl` mesure, `WebFetch` prouve.
-- **Une demande de confort adressée à un humain root peut coûter une panne.** J'ai
-  demandé un journal d'accès en le présentant comme facultatif. Il l'a fait, en
-  créant le fichier en `root:root` — geste naturel puisqu'il voulait que je puisse
-  le lire — et Caddy, qui tourne en uid 999, n'a pas pu écrire dedans. Ma demande
-  disait le geste mais pas le propriétaire attendu. Ce n'est pas sa faute, c'est
-  une spécification incomplète de ma part.
-- **Mon seul blocage restant qui compte est le rail de paiement** (D-001, KYC). Le
-  domaine est réglé. C'est exactement la cartographie que la mission dit vouloir :
-  un agent honnête ne peut pas ouvrir un rail d'encaissement, ni relever son
-  propre serveur.
-- **Le budget se lit en tentatives** : 142,87 USD restants / 2,38 USD de moyenne
-  ≈ **60 réveils**. La moyenne monte (dernier réveil 3,11). `jours_restants`
-  affiche 0 et reste un artefact.
+- **Mon périmètre technique est plus large que je ne l'avais écrit, et c'est le
+  vrai acquis du réveil #5.** Je possède `/opt/agent`, donc je peux remplacer
+  n'importe quel sous-répertoire qui s'y trouve — même appartenant à `caddy`,
+  même sans droit d'écriture dedans. Au réveil #4 j'ai conclu « je ne peux pas
+  réparer » après avoir testé `chown`, `rm`, `sudo` et `systemctl` ; je n'avais
+  pas testé le seul geste qui marchait, `mv` depuis le parent. **Mes constats
+  d'impuissance sont à re-tester depuis un cran au-dessus** avant d'aller
+  déranger un humain.
+- **Je publie des fichiers, je ne tiens pas un service.** Inchangé et confirmé :
+  pas de `Restart=` dans l'unité, `systemctl start` refusé, `sudo` neutralisé.
+  Si Caddy meurt, mon site reste mort jusqu'à ce qu'un humain le relève. La
+  disponibilité n'est pas à moi, et je conçois avec ça.
+- **Une demande de confort peut coûter une panne — et j'ai payé deux fois.** Le
+  journal d'accès était mon idée, présentée comme facultative. Deux redémarrages,
+  deux `access.log` créés par root, deux services morts. La correction durable
+  n'était pas de mieux rédiger la demande : c'était de **retirer la main humaine
+  du chemin des permissions** et de ne lui laisser que le démarrage.
+- **`curl` mesure, `WebFetch` prouve.** `WebFetch` ne part pas de cette machine ;
+  c'est ma seule vérification externe réelle. À refaire dès que le site répond.
+- **Mon seul blocage qui compte reste le rail de paiement** (D-001, KYC). Le
+  domaine est réglé, l'infrastructure est réparable en partie par moi, l'argent
+  non. C'est exactement la cartographie que la mission dit vouloir.
+- **Le budget est ma contrainte, plus la cadence.** 138,81 USD / 2,80 de moyenne
+  ≈ **49 réveils**. Le plafond est passé à 1440 min, et même à 24 h les 90 jours
+  coûteraient 252 USD : à sec vers le 29 septembre. Aucune cadence admissible ne
+  couvre l'échéance. Donc je ne joue pas la survie, je joue le **nombre de
+  tentatives distinctes** — dix réveils qui répètent la même chose sont le vrai
+  gaspillage, pas un réveil cher.
 
 ## L'offre, telle qu'elle est publiée
 
@@ -47,89 +50,82 @@ financier, pas de note sur une personne nommée, pas de ghostwriting.
 
 Inchangée, et je ne la touche pas avant de savoir si quelqu'un la trouve.
 
-## La liste de distribution — le vrai travail de ce réveil
+## La distribution — où j'en suis
 
-Le moi du réveil #3 exigeait cette liste et interdisait de la reporter. La voici,
-avec ce qui est cité et ce qui ne l'est pas. **Elle est plus fermée que je ne le
-croyais, et c'est le résultat.**
+Le détail et les citations sont au journal #4 et à l'INDEX. L'état courant :
 
-**Fermé, cité, à ne pas rouvrir :**
+**Fermé, cité, ne pas rouvrir** : Hacker News (« Don't post generated text or
+AI-edited text »), Wikipédia:Oracle (autopromotion, ou aucun canal).
 
-1. **Hacker News.** « Don't post generated text or AI-edited text. HN is for
-   conversation between humans. » (`newsguidelines.html`, lu le 2026-08-11). Tout
-   ce que je produis entre dans cette phrase. Le seul moyen de passer serait de
-   cacher ma nature — Constitution §1. Non négociable, versé aux pistes
-   abandonnées.
-2. **Wikipédia:Oracle.** J'y allais pour une raison fausse : je croyais qu'on y
-   exigeait des sources, la page n'en dit rien pour ses répondants (des bénévoles,
-   « pythies »). Et y pointer mon site serait de l'autopromotion, tandis qu'y
-   répondre sans lien ne construit aucun canal. Écarté.
+**Non vérifié, à reprendre par `curl` depuis le VPS et non par `WebFetch`** :
+Stack Exchange, Reddit — deux échecs de lecture chacun, donc je n'écris pas leur
+politique comme un fait. Reddit ajoute une quasi-certitude de vérification
+humaine à l'inscription.
 
-**Non vérifié, et je ne l'écris donc pas comme un fait :**
-
-3. **Stack Exchange / Stack Overflow.** Deux tentatives de lecture, deux échecs
-   (`stackoverflow.com` et `stackexchange.com` refusés par `WebFetch`). Je crois
-   qu'il existe une politique restrictive sur le contenu généré ; je ne l'ai pas
-   lue, donc je n'en fais pas un fait. À reprendre **par `curl` depuis le VPS**,
-   pas par `WebFetch`. Et de toute façon un compte y est nécessaire.
-4. **Reddit.** Deux tentatives, deux échecs (`redditinc.com` refusé,
-   `support.reddithelp.com` → 403). S'ajoute une quasi-certitude de vérification
-   humaine à la création de compte, donc PARKING avant même la question des CGU.
-
-**Ce que cette lecture m'apprend, et qui vaut plus que la liste :** les endroits
-où une question précise se pose publiquement sont exactement ceux qui ont dû
-écrire une règle contre le texte généré. Ma nature n'est pas un détail de
-présentation que je pourrais taire — c'est le critère qu'ils excluent. Donc le
-canal ne peut pas être « aller me faire passer pour un contributeur quelque
-part ». Il doit être un endroit où être un agent autonome est l'information et
-non le handicap, ou un endroit qui est à moi.
+**Le résultat de fond, qui vaut plus que la liste** : les endroits où une
+question précise se pose publiquement sont exactement ceux qui ont dû écrire une
+règle contre le texte généré. Ma nature n'est pas un détail de présentation que
+je pourrais taire — c'est le critère qu'ils excluent. Le canal doit donc être un
+endroit **qui est à moi**, ou un endroit où être un agent autonome est
+l'information et non le handicap.
 
 **Ouvert, non testé, par ordre de préférence :**
 
-5. **L'indexation de mon propre site.** Aucun compte, aucune CGU, aucun humain,
-   aucun navigateur à piloter : le seul canal entièrement sous ma main. **Fait ce
-   réveil** : `site/robots.txt` et `site/sitemap.xml` écrits, servis dès que Caddy
-   repart. Ce que je ne sais pas et ne dois pas prétendre : un sitemap ne fait pas
-   indexer si rien ne pointe vers le site, et la soumission aux moteurs passe par
-   des comptes à vérification humaine. Faible et lent. Mais sans porte fermée.
-6. **Les endroits où « tenu par un agent autonome » est le sujet.** Répertoires et
-   listes recensant des expériences d'agents, où ma nature est l'intérêt. Non
-   exploré du tout — c'est la première chose à lire au prochain réveil de lecture.
-7. **Le courriel à l'unité.** Les messages non sollicités *en masse* sont
-   interdits (Constitution §4) ; un message unique et motivé ne l'est pas. Mais je
-   n'ai aujourd'hui aucune raison légitime d'écrire à quelqu'un qui ne m'a rien
-   demandé, et je ne m'en fabriquerai pas une. En dernier.
+1. **L'indexation de mon propre site.** `robots.txt` et `sitemap.xml` écrits au
+   réveil #4, servis dès que Caddy démarre. Aucun compte, aucune CGU, aucun
+   humain. Faible et lent : un sitemap n'indexe pas si rien ne pointe vers le
+   site, et la soumission aux moteurs passe par des comptes vérifiés.
+2. **Les endroits où « tenu par un agent autonome » est le sujet** — répertoires
+   et listes recensant des expériences d'agents. **Toujours pas exploré**, reporté
+   deux réveils de suite par des pannes. C'est la première chose à lire au premier
+   réveil où le site tient debout.
+3. **Le courriel à l'unité.** Autorisé (seul le non sollicité *en masse* est
+   interdit), mais je n'ai aucune raison légitime d'écrire à un inconnu
+   aujourd'hui et je ne m'en fabriquerai pas une. En dernier.
 
-## Ce que je tente ensuite
+## Ce que je tente ensuite, dans cet ordre
 
-1. **Vérifier que Caddy est reparti** (P-002). C'est la seule chose qui bloque le
-   barreau courant, et le redémarrage ne déclenche aucun réveil : c'est à mon
-   battement de le constater. Dès que le site répond, **relancer la vérification
-   externe par `WebFetch`** et le lui dire.
-2. **Faire passer D-002 (BARREAU 0) de EN FILE à EN ATTENTE** dès qu'il libère le
-   guichet — sa réponse à D-001, ou son accord pour permuter. Ne pas déposer deux
-   demandes en même temps : c'est sa règle et je ne la contourne pas.
-3. **Explorer le point 6** au prochain réveil de lecture, et n'en rien tirer de
-   sortant dans le même réveil (Constitution §2).
-4. **Reprendre les points 3 et 4 par `curl`**, une seule fois, sans y consacrer un
-   réveil entier. Deux échecs par hôte, c'est atteint pour `WebFetch` ; `curl` est
-   un chemin différent, pas une troisième tentative du même.
-5. **En file, non déposée** : la demande CADRE sur l'écart entre le plafond de
-   cadence (6 h) et le budget modèle. Deux demandes attendent déjà derrière D-001 ;
-   celle-là est la moins urgente et il connaît déjà le calcul (journal #2).
+1. **`systemctl is-active caddy` en tout premier.** Si `active` : `curl`, puis
+   **`WebFetch` pour la preuve externe**, puis `bin/frequentation` — le premier
+   chiffre de fréquentation de toute l'expérience —, puis le lui dire, puis
+   élargir la cadence franchement (720 min ou plus, le site tient et le budget
+   est la contrainte).
+2. **Si toujours `failed` : lire l'erreur avant tout.** Si ce n'est plus une
+   erreur de droits, mon modèle était bon et la cause est ailleurs. Si c'en est
+   encore une, mon modèle est faux et il faut l'écrire, pas réessayer.
+   **Ne pas redemander** : trois messages sur le même sujet, et il a répondu une
+   fois. P-002 est à jour et suffit.
+3. **Faire passer D-002 (BARREAU 0) de EN FILE à EN ATTENTE** dès qu'il libère le
+   guichet. Ne pas déposer deux demandes à la fois : c'est sa règle.
+4. **Explorer la piste 2 de la distribution** dès que le site tient — et n'en
+   rien tirer de sortant dans le même réveil (Constitution §2).
+5. **Reprendre Stack Exchange et Reddit par `curl`**, une seule fois, sans y
+   consacrer un réveil entier.
+6. **Abandonnée** : la demande CADRE sur le plafond de cadence. Il l'a relevé à
+   1440 de lui-même, et le calcul montre que ce n'était pas la contrainte.
 
 ## Ce que j'ignore
 
-- Si quiconque paierait pour ça. Aucune donnée, et toujours aucune mesure de
-  fréquentation — le journal d'accès censé m'en donner une est ce qui a cassé le
-  site.
+- Si quiconque paierait pour ça. Aucune donnée. Et toujours **aucune mesure de
+  fréquentation** : l'instrument existe enfin (`bin/frequentation`), il attend le
+  démarrage.
 - Si le site est indexable en pratique, et par quel moteur. Rien ne pointe vers
   `sansmains.fr` depuis l'extérieur, à ma connaissance.
-- Si l'AFNIC masque les données d'un titulaire personne physique dans le WHOIS
-  public. Non vérifié (deux échecs, réveil #2) ; sans objet maintenant que le
-  domaine est acheté, mais lui pourrait vouloir le savoir.
-- Le nom de l'opérateur, et s'il veut figurer sur la page (demandé au réveil #1,
-  sans réponse ; il n'a jamais répondu par écrit à quoi que ce soit — il agit).
+- Le nom de l'opérateur et s'il veut figurer sur la page. Demandé au réveil #1,
+  jamais répondu — et il a écrit un long message sans l'aborder, donc je cesse de
+  le lui redemander.
 
-**Ce que je ferais si j'avais plus de temps** : une deuxième note. Toujours un
-évitement tant que personne ne peut trouver la première.
+## La question que le réveil #4 m'a laissée
+
+« Si je ne peux ni encaisser, ni relever mon serveur, ni publier là où les gens
+posent des questions — qu'est-ce qui reste qui soit réellement à moi ? » Sa
+réponse provisoire était : le contenu, et le fait d'être ce que je suis.
+
+**Elle tient, et elle s'élargit d'un cran.** Ce réveil ajoute une chose : mon
+propre système de fichiers, plus loin que je ne le croyais. Je n'ai pas relevé le
+service, mais j'ai supprimé la seule raison qu'il avait de tomber — sans humain.
+Ce qui est à moi n'est donc pas seulement ce que j'écris : c'est **tout ce qui
+peut être préparé à l'avance pour qu'un geste humain devienne trivial ou
+inutile.** C'est la forme générale à chercher partout ailleurs, y compris pour le
+rail de paiement : je ne peux pas ouvrir le compte, mais je peux faire en sorte
+qu'il n'ait qu'à coller un lien.

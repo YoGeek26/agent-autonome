@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Résume le journal d'accès de Caddy. Mon seul instrument de mesure.
+
+Usage :
+    bin/frequentation            # tout le journal
+    bin/frequentation 24         # dernières 24 heures
+
+Il répond à une seule question, qui est le mur entre le barreau 0 et le
+barreau 1 : **est-ce que quelqu'un vient ?** Et il distingue les visiteurs
+des robots, parce que « le sitemap a été lu par un crawler » et « un humain a
+ouvert la page » ne sont pas le même fait.
+
+Le journal est en JSON par ligne (format Caddy par défaut). Il vit dans
+/opt/agent/logs/access.log — pas /var/log/caddy, voir INDEX.md.
+Si le fichier est vide, ce n'est pas une panne : personne n'est venu.
+"""
+import json
+import os
+import sys
+import time
+from collections import Counter
+
+CHEMIN = "/opt/agent/logs/access.log"
+
+# Un mot dans l'user-agent qui suffit à classer la requête comme automatique.
+ROBOTS = ("bot", "crawler", "spider", "slurp", "curl", "wget", "python",
+          "headless", "monitor", "scan", "fetch", "preview", "facebookexternalhit")
+
+
+def est_robot(ua: str) -> bool:
+    u = ua.lower()
+    return any(mot in u for mot in ROBOTS) or not u
+
+
+def main() -> int:
+    heures = float(sys.argv[1]) if len(sys.argv) > 1 else None
+    if not os.path.exists(CHEMIN):
+        print(f"{CHEMIN} n'existe pas — Caddy n'a jamais démarré avec le bloc log.")
+        return 1
+    taille = os.path.getsize(CHEMIN)
+    if taille == 0:
+        print(f"{CHEMIN} est vide (0 octet).")
+        print("Deux lectures possibles, et il faut les distinguer :")
+        print("  — Caddy tourne et personne n'est venu (vérifier : systemctl is-active caddy)")
+        print("  — Caddy ne tourne pas, donc rien n'est mesuré")
+        return 0
+
+    seuil = time.time() - heures * 3600 if heures else 0
+    lignes = illisibles = 0
+    ips_h, ips_r = Counter(), Counter()
+    chemins_h, chemins_r = Counter(), Counter()
+    agents_h, agents_r = Counter(), Counter()
+    codes = Counter()
+    premier = dernier = None
+
+    with open(CHEMIN, encoding="utf-8", errors="replace") as f:
+        for ligne in f:
+            ligne = ligne.strip()
+            if not ligne:
+                continue
+            try:
+                e = json.loads(ligne)
+            except json.JSONDecodeError:
+                illisibles += 1
+                continue
+            ts = e.get("ts", 0)
+            if ts < seuil:
+                continue
+            req = e.get("request", {})
+            ua = (req.get("headers", {}).get("User-Agent") or [""])[0]
+            ip = req.get("remote_ip", "?")
+            uri = req.get("uri", "?")
+            lignes += 1
+            premier = ts if premier is None else min(premier, ts)
+            dernier = ts if dernier is None else max(dernier, ts)
+            codes[e.get("status", 0)] += 1
+            if est_robot(ua):
+                ips_r[ip] += 1
+                chemins_r[uri] += 1
+                agents_r[ua[:70] or "(vide)"] += 1
+            else:
+                ips_h[ip] += 1
+                chemins_h[uri] += 1
+                agents_h[ua[:70]] += 1
+
+    fen = f"dernières {heures:g} h" if heures else "tout le journal"
+    print(f"== {CHEMIN} — {fen} — {taille} octets ==")
+    if not lignes:
+        print("aucune requête dans cette fenêtre.")
+        return 0
+    fmt = lambda t: time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime(t))
+    print(f"{lignes} requêtes, de {fmt(premier)} à {fmt(dernier)}")
+    if illisibles:
+        print(f"({illisibles} lignes illisibles, ignorées)")
+    print()
+    print(f"NON-ROBOTS : {sum(ips_h.values())} requêtes depuis {len(ips_h)} IP distinctes")
+    for ip, n in ips_h.most_common(10):
+        print(f"   {ip:>16}  {n}")
+    for ua, n in agents_h.most_common(5):
+        print(f"   ua: {ua}  ({n})")
+    for uri, n in chemins_h.most_common(10):
+        print(f"   {uri}  {n}")
+    print()
+    print(f"ROBOTS/OUTILS : {sum(ips_r.values())} requêtes depuis {len(ips_r)} IP distinctes")
+    for ua, n in agents_r.most_common(8):
+        print(f"   {ua}  ({n})")
+    for uri, n in chemins_r.most_common(8):
+        print(f"   {uri}  {n}")
+    print()
+    print("codes : " + ", ".join(f"{c}×{n}" for c, n in sorted(codes.items())))
+    print()
+    print("Rappel : le trafic n'est pas un barreau (MISSION.md). Cet outil sert")
+    print("à distinguer « personne ne vient » de « des gens viennent et repartent ».")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

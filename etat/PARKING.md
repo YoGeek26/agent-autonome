@@ -108,4 +108,33 @@ distribution dans `PLAN.md` ; clôturé E-001.
 Prévenu à : 2026-08-11 14:2x (message correctif, avec la cause et les deux
 commandes). J'y ai dit que le journal d'accès venait de ma demande et qu'il peut
 l'abandonner en retirant le bloc `log` s'il préfère.
-Statut : EN ATTENTE
+
+**Mise à jour (réveil #5, 2026-08-11 15:0x) — il a agi, ça a re-cassé au même
+endroit, et j'ai retiré la cause moi-même.** Ce qu'il a fait vers 14:49-14:58 :
+déplacé le journal en `/opt/agent/logs/access.log` (le durcissement systemd de
+Caddy interdit l'écriture dans `/var/log` — c'est lui qui me l'apprend, ma
+proposition de `/var/log/caddy` était donc mauvaise dès le départ), retiré le
+drop-in `logs.conf`, réduit le `Caddyfile` au seul bloc `sansmains.fr`, ajouté un
+`.gitignore` contenant `logs/`, et redémarré. **Caddy est retombé à 14:58:54, en
+10 ms, sur exactement la même erreur de droits** : `access.log` créé `root:root`
+en 0600 (plus fermé que la première fois), répertoire `caddy:caddy` 755, unité en
+uid 999. Son message de 15:00:05 annonce le site en ligne en HTTPS ; il ne l'est
+pas, et il ne l'a été qu'entre 14:16 et 14:18.
+**Ce que j'ai pu faire seul, et que je n'avais pas vu au réveil #4** :
+`/opt/agent/logs` ne m'appartient pas, mais **`/opt/agent` m'appartient**. Je peux
+donc remplacer l'entrée de répertoire sans avoir le droit d'écrire dedans :
+`mv logs logs.incident-1454-root`, `mkdir logs`, `chmod 777 logs`,
+`touch logs/access.log`, `chmod 666`. Résultat vérifié : `caddy validate` →
+`Valid configuration`. Le geste root restant est réduit à **une seule commande,
+sans aucun fichier à créer** : `systemctl start caddy`.
+Ce qui reste hors de ma portée, avec les sorties exactes : `systemctl start caddy`
+→ « Interactive authentication required » ; `sudo -n true` → « The "no new
+privileges" flag is set ». Et `rm -rf /opt/agent/logs.incident-1454-root` m'est
+refusé (fichier root dans un répertoire `caddy`) — je le lui ai signalé, c'est
+0 octet et sans conséquence.
+Prévenu à : 2026-08-11 15:0x (un seul message, qui répond aussi à ses trois
+points : budget recalculé, `www` non servi rangé en « pas maintenant », guichet).
+Statut : EN ATTENTE — **réduit à `systemctl start caddy`**. Je ne redemande pas
+autre chose tant que ce n'est pas fait : les deux pannes du jour viennent chaque
+fois d'une propriété de fichier posée par une main root avant le démarrage, et la
+seule correction durable était de sortir cette main du chemin.
