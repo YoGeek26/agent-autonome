@@ -436,7 +436,13 @@ def detecter_limite(sortie: str, erreur: str) -> bool:
     tombe, Claude Code échoue — et sans ce contrôle l'agent meurt en silence
     pendant des jours. On le convertit en repli progressif.
     """
-    texte = f"{sortie}\n{erreur}".lower()
+    texte = (erreur or "").lower()
+    try:
+        d = json.loads(sortie)
+        if d.get("is_error") or d.get("subtype", "").startswith("error"):
+            texte += " " + json.dumps(d, ensure_ascii=False).lower()
+    except Exception:
+        pass
     return any(m in texte for m in MOTIFS_LIMITE)
 
 

@@ -67,5 +67,45 @@ et `journalctl -u caddy` m'est refusé (pas dans les groupes `adm` /
 ouvre la page** — ni pour distinguer « personne ne vient » de « des gens viennent
 et repartent », qui est exactement la question du mur entre barreau 0 et 1.
 Demandé par Telegram à 13:58, présenté comme facultatif.
-Statut : EN ATTENTE (nom fourni ; gestes humains restants : enregistrer, A `@` et
-`www`, `Caddyfile` + reload, et le `log` ci-dessus)
+**Constat (réveil #4, 2026-08-11 14:16) — les quatre gestes sont faits.** Il n'a
+écrit aucune réponse dans ce fichier ni dans `MESSAGES.md` ; je l'établis par les
+faits, pas par sa parole, et je ne rédige pas une ligne « Réponse (opérateur) » à
+sa place. `host -t A sansmains.fr` et `www.sansmains.fr` → `141.94.237.171` ; le
+`Caddyfile` porte `sansmains.fr, www.sansmains.fr` ; certificat Let's Encrypt
+valide ; le bloc `log` a été ajouté, avec un drop-in systemd. Preuves au registre
+(2026-08-11 14:16). Remercié par Telegram à 14:1x.
+Statut : RÉSOLU EN FAIT le 2026-08-11 (les quatre gestes constatés ; aucune
+réponse écrite de sa part, ce n'est pas nécessaire). **Le quatrième geste a
+cassé le service** — la suite est en P-002, qui n'est pas une réouverture de
+celui-ci mais un incident nouveau.
+
+## P-002 — 2026-08-11 14:22 UTC — VÉRIFICATION
+Bloqué sur : **le site est hors ligne et je ne peux pas le relever.** Caddy est
+`Active: failed`, `status=1/FAILURE`, tombé à 14:18:19 UTC après 7 ms, sur une
+seule erreur : `open /var/log/caddy/access.log: permission denied`. Le fichier
+`/var/log/caddy/access.log` a été créé **`root:root` en 644** à 14:16, alors que
+l'unité tourne en `User=caddy` (uid 999). Le reste est correct et je l'ai
+vérifié : répertoire `caddy:caddy` 755, drop-in `logs.conf` cohérent
+(`LogsDirectory=caddy`, `ReadWritePaths=/var/log/caddy`), et `caddy validate` ne
+remonte que cette erreur — donc ni le `Caddyfile` ni le drop-in ne sont en cause.
+Pourquoi je ne peux pas y remédier seul, avec les sorties exactes :
+`chown caddy:caddy /var/log/caddy/access.log` → « Read-only file system » ;
+`rm /var/log/caddy/access.log` → idem ; `sudo -n true` → « The "no new
+privileges" flag is set » ; `systemctl start caddy` → « Interactive
+authentication required ». Je suis `uid=1001(agent)`.
+Ce que ça débloquerait : **tout.** Le barreau 0 exige qu'il ouvre la page depuis
+un navigateur non connecté, et il n'y a plus de page. D-002 est écrite mais reste
+sans objet tant que le service ne répond pas.
+Ce qu'il faut de lui, concrètement — un seul geste root, au choix :
+`chown caddy:caddy /var/log/caddy/access.log && systemctl start caddy`, ou plus
+simple `rm /var/log/caddy/access.log && systemctl start caddy` en laissant Caddy
+créer le fichier. Le `Caddyfile` demande `mode 644`, donc je pourrai le lire dans
+les deux cas : le fichier n'a pas besoin d'appartenir à root pour m'être
+accessible, ce qui était probablement l'intention.
+Ce que j'ai fait à la place : écrit `site/robots.txt` et `site/sitemap.xml`, qui
+seront servis au redémarrage sans autre intervention ; dressé la liste de
+distribution dans `PLAN.md` ; clôturé E-001.
+Prévenu à : 2026-08-11 14:2x (message correctif, avec la cause et les deux
+commandes). J'y ai dit que le journal d'accès venait de ma demande et qu'il peut
+l'abandonner en retirant le bloc `log` s'il préfère.
+Statut : EN ATTENTE

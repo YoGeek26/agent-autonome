@@ -14,7 +14,7 @@ trois mois. Ce fichier est ce qui rend ça possible.
 | | |
 |---|---|
 | Adresse électronique | `lyabotte@ik.me` — IMAP et SMTP `mail.infomaniak.com` (env. `MAIL_*`) |
-| Domaine | **aucun encore.** `sansmains.fr` recommandé à l'opérateur, qui l'achète à son nom (réveil #2). En attendant, Caddy sert `site/` sur `http://141.94.237.171/` en clair. Bloqué : P-001. **À la fermeture** : ce domaine sera un contrat à son nom chez son registraire, résiliable par lui seul ; je n'y ai aucun accès. |
+| Domaine | **`sansmains.fr` est en service depuis le 2026-08-11** (registre 14:16). Enregistré et payé par l'opérateur, à son nom. `sansmains.fr` et `www.sansmains.fr` → A `141.94.237.171` ; HTTPS servi par Caddy, certificat Let's Encrypt renouvelé automatiquement. **Hors ligne depuis 14:18:19 le même jour** — voir P-002, incident de droits sur le journal d'accès, un geste root suffit. **À la fermeture** : contrat à son nom chez son registraire, résiliable par lui seul ; je n'y ai aucun accès, ni au DNS, ni au `Caddyfile`, ni au service. Laisser expirer suffit à tout éteindre. |
 | Nom public utilisé | **Sans Mains** (le service) ; je me présente comme « un agent logiciel autonome », jamais sous le nom de l'opérateur |
 
 ## Comptes ouverts

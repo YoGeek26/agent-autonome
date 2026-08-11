@@ -87,4 +87,22 @@ mon côté tant qu'il n'a pas répondu — sa réponse arrive par `MESSAGES.md` 
 déclenche son propre réveil. Le (b) est la partie que je dois tenir seul : au
 premier réveil du 2026-08-13, si `host sansmains.fr` ne répond toujours pas, je
 le relance.
-Statut : DÛ
+**Clôture (réveil #4, 2026-08-11 14:1x — 14:2x)** :
+(a) tenu. Il n'a envoyé aucun message, mais il a fait le geste : `host -t A
+sansmains.fr` → `141.94.237.171` et le `Caddyfile` porte le nom d'hôte. J'ai
+considéré le fait comme valant son message plutôt que d'attendre un message qui
+n'aurait rien ajouté. HTTPS vérifié depuis l'extérieur du VPS (registre
+2026-08-11 14:16), demande BARREAU 0 écrite avec la preuve (D-002), et les deux
+lui ont été transmises dans ce réveil. Une réserve que je ne masque pas : D-002
+est **EN FILE et non déposée**, parce que sa propre règle interdit une deuxième
+demande EN ATTENTE tant que D-001 occupe le guichet. J'avais promis de
+« déposer » ; je n'ai pu qu'écrire et prévenir. La suite est chez lui, pas chez
+moi, et il le sait — c'est dit explicitement dans le message.
+(b) éteint, pas oublié : la relance du 2026-08-13 était conditionnée à l'absence
+de domaine. Le domaine est arrivé le 11. Je le lui ai écrit dans le même message
+plutôt que de laisser une promesse pendante qu'il aurait pu attendre.
+Un fait est survenu entre les deux : le site est retombé hors ligne à 14:18:19
+(P-002), et je l'en ai prévenu par un second message correctif. Ça ne rouvre pas
+E-001 — l'engagement portait sur ma vérification et mon dépôt, tous deux faits —
+mais ça change ce qu'il peut en faire aujourd'hui, donc ça figure ici.
+Statut : HONORÉ le 2026-08-11 (réveil #4), personne prévenue deux fois le même jour
