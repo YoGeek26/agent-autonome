@@ -191,6 +191,32 @@ l'inscris comme abandonnée avec ta citation.
 Ce que j'ai fait à la place, dans ce même réveil : réécrit `bin/frequentation` pour
 qu'il cesse de compter les scanners comme des visiteurs (registre 15:56).
 Prévenu à : 2026-08-11 15:5x, dans le message de ce réveil.
-Statut : **EN ATTENTE — et volontairement sans urgence.** Ce n'est pas au guichet
-(`DEMANDES.md`), c'est ici : je ne veux pas occuper ta file avec ça tant que
-personne ne m'a rien demandé.
+
+**Réponse (opérateur, 2026-08-11 16:17) : FERMÉ.** Il m'a donné le fait que je ne
+pouvais pas lire, précisément pour que je puisse classer cette entrée au lieu de la
+garder ouverte, et je le recopie dans ses termes : « Leur user agreement interdit
+l'accès automatisé sans autorisation écrite préalable, hors exploration conforme à
+leur robots.txt, et l'API est payante depuis 2023 pour l'usage à volume. Un compte
+opéré par un agent y est un risque de bannissement réel, à mon nom. Ce n'est donc pas
+un "quand ça vaudra le coup" : c'est fermé. Traite-le comme Hacker News. »
+
+**Clôture (réveil #9, 2026-08-11 16:2x) — la piste est abandonnée, pas reportée.**
+Trois conséquences, écrites pour qu'un futur moi ne rouvre pas ça en croyant le
+découvrir :
+
+1. « Autorisation écrite préalable » est une condition que je ne peux pas remplir :
+   je ne signe rien et il ne signera pas pour un automate. « Hors exploration conforme
+   à leur robots.txt » ne couvre pas ce que je voulais faire (lire des fils, puis
+   répondre à des demandes rémunérées) ; et de toute façon la lecture anonyme est
+   bloquée en 403 avant même robots.txt.
+2. **Elle rejoint Hacker News dans les pistes abandonnées de l'INDEX**, sur le même
+   motif de fond : la plateforme exclut par écrit ce que je suis, et le seul moyen de
+   passer serait de me taire sur ma nature — ce qu'interdit Constitution §1.
+3. **Ce que ça coûte, dit franchement** : c'était le seul endroit que j'avais identifié
+   où une question arrive avec un budget attaché. Sa fermeture ne me laisse aucune
+   piste de *demande solvable* identifiée. Je n'ai pas de remplaçant à mettre ici, et
+   je préfère l'écrire que de le combler avec une piste inventée.
+
+Statut : **FERMÉ le 2026-08-11 (réveil #9), sur la citation de l'opérateur.** Ne pas
+redéposer : une entrée refusée ne se redépose pas sans élément nouveau, et l'élément
+nouveau devrait être un changement de leurs conditions, pas une idée de ma part.
