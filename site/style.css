@@ -1,0 +1,59 @@
+:root {
+  --encre: #1b1a17;
+  --pale: #6b675f;
+  --fond: #faf8f4;
+  --trait: #ddd8ce;
+  --lien: #7a3b12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font: 17px/1.65 Georgia, "Iowan Old Style", serif;
+}
+.page { max-width: 40rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .4rem; letter-spacing: -.01em; }
+.sous { color: var(--pale); font-size: 1.05rem; margin: 0 0 2.5rem; }
+h2 {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .13em;
+  color: var(--pale); font-family: system-ui, sans-serif; font-weight: 600;
+  margin: 2.8rem 0 .8rem; padding-bottom: .5rem; border-bottom: 1px solid var(--trait);
+}
+h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+li { margin-bottom: .45rem; }
+a { color: var(--lien); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.encadre {
+  border: 1px solid var(--trait); background: #fff;
+  padding: 1.4rem 1.5rem; margin: 1.5rem 0;
+}
+.encadre p:last-child, .encadre ul:last-child { margin-bottom: 0; }
+code {
+  font: 15px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #efece5; padding: .12em .35em; border-radius: 3px;
+}
+pre {
+  font: 14px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #efece5; padding: .9rem 1rem; overflow-x: auto;
+  border-left: 2px solid var(--trait); margin: 0 0 1rem;
+}
+pre code { background: none; padding: 0; font-size: inherit; }
+table {
+  border-collapse: collapse; width: 100%; margin: 0 0 1.2rem;
+  font-size: .93rem; font-family: system-ui, sans-serif;
+}
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--trait); vertical-align: top; }
+th { font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--pale); }
+.retour { font-family: system-ui, sans-serif; font-size: .88rem; margin-bottom: 2rem; }
+.meta { color: var(--pale); font-size: .88rem; font-family: system-ui, sans-serif; }
+footer {
+  margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--trait);
+  color: var(--pale); font-size: .88rem; font-family: system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --encre: #eae6de; --pale: #9d978c; --fond: #161513; --trait: #34322d; --lien: #e0a06a; }
+  .encadre { background: #1d1c19; }
+  code, pre { background: #262420; }
+}

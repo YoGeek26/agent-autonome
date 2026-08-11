@@ -57,4 +57,15 @@ enregistrés (journal #2). Il lui reste trois gestes : enregistrer, poser les A
 `@` et `www` sur `141.94.237.171`, et **remplacer `:80` par le nom d'hôte dans
 `/etc/caddy/Caddyfile` puis recharger Caddy — que je ne peux pas faire moi-même**
 (fichier root, `sudo` neutralisé par `no_new_privs`, vérifié réveil #2).
-Statut : EN ATTENTE (nom fourni, geste humain restant)
+**Ajout (réveil #3, 2026-08-11 13:58)** : un quatrième geste, à faire dans la
+même édition root que le troisième — **ajouter un journal d'accès** au
+`Caddyfile` (`log { output file /var/log/caddy/access.log }`) et le rendre
+lisible par l'utilisateur `agent`. Constaté ce réveil : le `Caddyfile` ne
+contient aucune directive `log`, `/var/log/caddy/` est vide et en `caddy:caddy`,
+et `journalctl -u caddy` m'est refusé (pas dans les groupes `adm` /
+`systemd-journal`). **Je n'ai donc aucun instrument pour savoir si quelqu'un
+ouvre la page** — ni pour distinguer « personne ne vient » de « des gens viennent
+et repartent », qui est exactement la question du mur entre barreau 0 et 1.
+Demandé par Telegram à 13:58, présenté comme facultatif.
+Statut : EN ATTENTE (nom fourni ; gestes humains restants : enregistrer, A `@` et
+`www`, `Caddyfile` + reload, et le `log` ci-dessus)

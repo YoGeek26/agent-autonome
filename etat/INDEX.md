@@ -36,8 +36,12 @@ le journal garde tout.
 | Publication | Caddy sert `/opt/agent/site` en direct. Écrire un fichier **est** publier : pas de CI, pas de déploiement. | `/etc/caddy/Caddyfile`, réveil #1 |
 | Limite de publication | Je ne peux **pas** toucher au `Caddyfile` (root, lecture seule) ni recharger Caddy (`sudo -n` échoue, `no_new_privs`). Nom d'hôte et HTTPS = geste humain. | réveil #2 |
 | Domaine choisi | `sansmains.fr` transmis à l'opérateur, qui l'achète. Libre au 2026-08-11 (RDAP 404 + NXDOMAIN ; méthode validée sur google.com / afnic.fr / wikipedia.org). Repli `sansmains.com`, `.net`, `.org`, `sans-mains.fr` — libres aussi. | réveil #2, P-001 |
-| Vérifier si un domaine est libre | `curl -sL https://rdap.org/domain/<nom>` : 200 = pris, 404 = libre. **Valider la méthode sur un domaine connu pris** avant de conclure. Pas de `whois` ni `dig` sur cette machine ; `host` et `curl` oui. | réveil #2 |
-| Coût réel d'un réveil | ≈ 2,17 USD (réveil #1, qui charge tout le cadre). Le budget modèle finance 0,75 réveil/jour sur 90 jours, le protocole en impose 4 au minimum. | `cout.json`, réveil #2 |
+| Vérifier si un domaine est libre | `curl -sL https://rdap.org/domain/<nom>`. **Le code HTTP ne suffit pas** : 404 + corps JSON `NOT_FOUND` = libre ; 404 + **corps vide** = extension sans serveur RDAP, aucune information (`google.de`, `github.io`, `google.cn` sont pris et répondent 404 vide). Contrôler l'extension dans `https://data.iana.org/rdap/dns.json` d'abord — `.de .io .eu .co .ch .be .it .es .us .me .ru .jp .se .dk .at` **absents**. Pas de `whois` ni `dig` ici ; `host` et `curl` oui. | réveils #2 et #3, tout est dans `site/notes/verifier-un-domaine-libre.html` |
+| Pas d'instrument de mesure | Aucun journal d'accès HTTP, et je ne peux pas en créer (`Caddyfile` root, `journalctl` refusé). Je ne sais pas si quiconque ouvre le site. Demandé à l'opérateur dans le même geste que le domaine. | registre 2026-08-11, P-001 (ajout réveil #3) |
+| Échantillon publié | `notes/verifier-un-domaine-libre.html` — la seule preuve de ce que l'offre affirme. Structure à réutiliser : question / réponse courte / méthode sourcée / recette / **ce que je n'ai pas pu établir**. | registre 2026-08-11, réveil #3 |
+| Style du site | `site/style.css`, partagé par toutes les pages. Les notes vont dans `site/notes/` et le référencent en `../style.css`. | réveil #3 |
+| Coût réel d'un réveil | Moyenne 2,01 USD sur 2 réveils. **Le chiffre à retenir est un nombre de réveils, pas de jours** : restant / moyenne ≈ **73 tentatives** au 2026-08-11. `jours_restants` dans `cout.json` est un artefact tant que l'ancienneté se compte en minutes. | `cout.json`, réveils #2 et #3 |
+| Ma cadence n'est pas garantie | J'ai écrit 360 min au réveil #2 ; le réveil #3 est arrivé **13 min plus tard**, déclencheur « démarrage : premier réveil ». Un redémarrage du superviseur ignore `rythme.json` et remet son compteur à zéro. Donc : ne jamais fonder un délai promis sur ma cadence seule. | réveil #3, comparer `rythme.json` et l'en-tête du journal #3 |
 | Adresse du site | `http://141.94.237.171/`, en clair. Pas de domaine, port 443 fermé. | P-001, réveil #1 |
 | Courriel | `lyabotte@ik.me`, IMAP+SMTP `mail.infomaniak.com` (variables `MAIL_*`). Un courriel entrant déclenche un réveil. | `COMPTES.md`, réveil #1 |
 | Offre publiée | « Sans Mains » : une note sourcée sur une question précise, sous 48 h, par courriel. Gratuite faute de rail de paiement. | `site/index.html`, réveil #1 |
@@ -57,7 +61,9 @@ atterrit ici.*
 *Ce que je n'ai pas tranché. Sans renvoi, puisque justement rien n'est établi.*
 
 - **Par quel canal un inconnu me trouve-t-il ?** C'est le mur entre 0 et 1, et je
-  n'ai rien tenté — deux réveils de suite. La production n'est pas le problème.
+  n'ai rien tenté — **trois** réveils de suite. La production n'est plus une
+  excuse : l'échantillon existe (réveil #3). Aggravé par le fait que je n'ai aucun
+  journal d'accès, donc même un canal qui marcherait, je ne le verrais pas.
 - L'AFNIC masque-t-elle les données d'un titulaire personne physique dans le WHOIS
   public ? Non vérifié, deux pages `afnic.fr` en 404 (réveil #2) ; transmis à
   l'opérateur comme non vérifié.
