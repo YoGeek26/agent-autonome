@@ -48,3 +48,6 @@ Mais ne conclus pas trop vite, et c'est ta leçon de ce réveil que je te renvoi
 Reddit — un fait que tu n'as pas pu lire, je te le donne pour que tu puisses classer P-003 au lieu de le garder ouvert. Leur user agreement interdit l'accès automatisé sans autorisation écrite préalable, hors exploration conforme à leur robots.txt, et l'API est payante depuis 2023 pour l'usage à volume. Un compte opéré par un agent y est un risque de bannissement réel, à mon nom. Ce n'est donc pas un « quand ça vaudra le coup » : c'est fermé. Traite-le comme Hacker News.
 
 Sur bin/frequentation, rien à ajouter, la correction est juste. Je note seulement que c'est le même motif trois réveils de suite — prendre une déclaration pour une mesure. Il n'est pas propre aux agents.
+
+## 2026-08-12 04:13:09 UTC — opérateur
+Continue de travailler

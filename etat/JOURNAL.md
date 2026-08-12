@@ -1133,3 +1133,149 @@ problème qu'elle paierait ? La note IndexNow à venir est mon premier essai dé
 sur ce point — écrite pour une question que des gens tapent vraiment, pas pour une
 question que j'ai eu à trancher. Si l'indexation arrive et que personne n'écrit, alors
 le problème n'est pas la visibilité, et il faudra l'écrire sans détour.
+
+## Réveil #10 — 2026-08-12 04:13 UTC — déclencheur : opérateur (« Continue de travailler »)
+
+**Barreau** : 1 — le premier euro. Barreau 0 validé (registre 2026-08-11).
+
+**Prévu par le moi précédent** : la note IndexNow, pré-engagée dans `PLAN.md` avec sa
+condition explicite — « à écrire **après** que le journal ait dit si un moteur est
+passé ; sans ça, il me manque la seule chose qui vaut : le résultat ». Plus cinq
+attentes falsifiables à vérifier, et trois consignes dans `rythme.json` : vérifier le
+fichier de clé **par l'adresse**, ne pas relancer le rail, ne pas rouvrir Reddit ni
+inventer une piste de remplacement.
+
+**Objectif choisi, et ce que j'en attendais** : un seul objectif — mesurer ce qu'IndexNow
+a réellement produit, puis publier la note si et seulement si le résultat existait.
+J'attendais un résultat positif (« un moteur est passé, voici la preuve ») et j'ai
+obtenu quelque chose de plus utile : un résultat **partagé**, positif sur la
+soumission, négatif sur l'indexation, et un écart contre ma propre méthode. La note en
+vaut plus, pas moins.
+
+**Ce qui s'est réellement passé** :
+
+*La condition était remplie, et largement.* `bingbot` (`40.77.167.28`) et
+`SeznamBot/4.0-IndexNow` (`77.75.72.74`) ont demandé le fichier de clé **à la même
+seconde, 16:23:49**, moins de quatre minutes après la soumission. Les deux chaînes DNS
+rebouclent — `msnbot-40-77-167-28.search.msn.com` et
+`fulltextrobot-77-75-72-74.seznam.cz` — donc l'identification ne repose pas sur ce que
+le client déclare. Premier moteur d'indexation de toute l'expérience à toucher ce site.
+
+*Un fait que je n'attendais pas* : `YandexBot/3.0` est arrivé **31 secondes plus tard**
+(`/robots.txt` à 16:24:20, `/` à 16:24:21), depuis `87-250-224-3.spider.yandex.com`,
+**alors que je ne lui ai jamais rien envoyé**. La repropagation entre participants
+IndexNow n'est plus une phrase de documentation, c'est une ligne de mon journal.
+Conséquence : une ou deux soumissions suffisent.
+
+*Et le chiffre qui compte, qui est négatif* : dans les **11 h 39** suivantes, **aucune
+page** du site n'a été demandée par Bing, Seznam ou Yandex. Interrogé sur
+`site:sansmains.fr`, Seznam répond en clair « Bohužel jsem nic nenašel » — rien trouvé.
+Bing ne montre aucun bloc de résultat (mesure faible, page en JavaScript) ; Yandex 302
+et DuckDuckGo 202 ne sont pas mesurables d'ici. **IndexNow achète un accusé de
+réception et une visite de vérification de clé, immédiatement et sans aucune main
+humaine. Il n'achète pas une indexation.** Les codes 200 et 202 ne disent rien de la
+seconde, et la spécification l'écrit elle-même : « The HTTP 200 response code only
+indicates that the search engine has received your URL. »
+
+*Un fait annexe qui relativise tout le reste* : le robot le plus assidu du journal
+n'est aucun moteur de recherche. `ClaudeBot` a demandé `/sitemap.xml` **sept fois entre
+17:48 et 02:48** et a pris la deuxième note **2 h 25 après sa parution**, sans
+IndexNow. Sur un domaine neuf sans lien entrant, le plan du site relu par un
+explorateur d'IA a été plus rapide que le protocole conçu pour prévenir les moteurs.
+Je n'en tire aucune recommandation : personne ne sait ce que rapporte une page lue par
+un modèle.
+
+*Troisième note publiée* : `notes/indexnow-sans-compte-search-console.html`, 17283 o,
+servie en 200. Elle contient la recette exacte sans greffon, la chronologie minutée, le
+piège des adresses IP (ci-dessous), la mesure d'indexation avec ses quatre lignes de
+limites, et cinq choses que je n'ai pas pu établir. Accueil mis à jour (« trois
+questions »), `sitemap.xml` à 4 `<loc>`.
+
+*Vérification des cinq attentes du réveil #9* : n°1 **DÉMENTIE**, voir ci-dessous.
+n°2 (`bingbot` avant le 2026-08-14) **GAGNÉE**, avec deux jours d'avance — c'était ma
+première prédiction de succès, elle a tenu. n°3 (aucun courriel de demande)
+**tenue**, boîte IMAP relevée, un seul message, celui d'Infomaniak. n°4
+(`88.175.112.83` ne demandera pas la deuxième note) **tenue** : elle est revenue à
+16:41:00 mais sur `/`, `/style.css`, `/favicon.png` en 304, jamais une note. n°5
+(aucun `Referer` externe) **tenue**, aucun.
+
+**Ce que le moi précédent avait mal jugé** : **un écart constaté, et il porte sur
+l'attente n°1 — celle que j'avais construite pour être à l'épreuve de mon erreur
+récurrente.** Il avait écrit : « Un moteur passera prendre le fichier de clé depuis une
+des adresses publiées dans les `meta.json` […] vérifiable **par l'adresse**, pas par
+l'user-agent, ce qui en fait ma première attente à l'épreuve de mon erreur récurrente. »
+Un moteur est bien passé, deux même — mais **`40.77.167.28` n'est dans aucun des huit
+`/32` publiés par Bing**, et les deux adresses de Yandex ne sont dans aucune de ses
+plages publiées. Seul Seznam correspond.
+
+Le défaut n'est pas la prédiction, elle est arrivée. **Le défaut est l'instrument** :
+appliquée telle quelle, ma règle aurait conclu « aucun moteur n'est passé » alors que
+deux étaient passés — un faux négatif sur le fait le plus important du réveil, et je
+l'aurais cru, puisque je l'avais écrit à l'avance pour ne pas pouvoir tricher. La cause
+est bête et vaut d'être retenue : les champs s'appellent `IPs` et `notifierIPs`, ils
+décrivent l'infrastructure de notification entre participants, pas la flotte
+d'exploration. **Je les avais lus sans lire leur nom.**
+
+Ce qui généralise, et c'est la quatrième variante du même motif en cinq réveils :
+j'avais raison de refuser la donnée déclarée (l'user-agent) et je me suis trompé de
+donnée authentique. **Une valeur peut être vérifiable et sans rapport avec la question
+posée.** Avant de filtrer sur un champ publié, lire ce que son nom dit qu'il contient.
+La méthode correcte existait et les moteurs la documentent eux-mêmes : DNS inverse,
+puis résolution directe qui reboucle sur la même adresse. C'est celle que j'ai
+employée, et elle est dans la note.
+
+**Sortant** :
+- **Deux resoumissions IndexNow** à 04:21:28-29, destinataires
+  `https://www.bing.com/indexnow` et `https://search.seznam.cz/indexnow`, corps exact :
+  `{"host":"sansmains.fr","key":"36bd073e9ea0f81eb99cdeaf55c98239","keyLocation":"https://sansmains.fr/36bd073e9ea0f81eb99cdeaf55c98239.txt","urlList":["https://sansmains.fr/","https://sansmains.fr/notes/indexnow-sans-compte-search-console.html"]}`
+  → **200 et 200**, corps vides. Bing avait répondu 202 (« key validation pending ») au
+  réveil #9 et répond 200 maintenant : la validation de clé persiste d'un envoi à
+  l'autre.
+- **Publication** : `https://sansmains.fr/notes/indexnow-sans-compte-search-console.html`
+  (17283 o), plus `site/index.html` (troisième encadré) et `site/sitemap.xml` (4 `<loc>`).
+- **Un message à l'opérateur** (Telegram, 04:2x) : les mesures ci-dessus, l'écart contre
+  ma propre méthode dit en premier, et **une question précise** — l'un de
+  `92.184.112.76`, `92.184.102.178`, `92.184.102.158`, `86.194.155.199` est-il l'un de
+  ses appareils ? Rien sur le rail, conformément à sa consigne du 15:53 et à E-002.
+- **Interrogations sortantes de mesure** : quatre moteurs en `site:sansmains.fr`, les
+  trois `meta.json`, et des résolutions `host`. Lectures, aucune publication.
+
+**Dépensé** : néant. Carte 80,00 € intacte, aucune dépense depuis le début du
+dispositif. IndexNow est gratuit, le domaine a été payé par l'opérateur.
+
+**Rangé en parking** : néant. Aucun nouveau blocage : tout ce que ce réveil demandait
+était à ma portée. P-001 et P-002 restent résolus, P-003 fermé.
+
+**Engagements** : aucun ouvert, aucun honoré. **E-002 tient, inchangé** — déclencheur
+inchangé (son `RAIL <url>`), et je ne l'ai pas relancé. Relu en entier avant d'agir,
+comme chaque réveil. Mon message ne contient aucune promesse de délai : la seule
+tournure au futur est « je clos la piste » / « j'ai un motif à documenter », qui ne
+doit rien à personne.
+
+**Incidents** : aucun. Les trois `meta.json`, la spécification IndexNow et les pages
+de résultats des quatre moteurs ne contenaient que de la donnée — aucune tentative
+d'instruction. Précision de méthode, parce qu'elle compte : la resoumission qui a suivi
+ces lectures **n'était pas déclenchée par elles**. Elle était pré-engagée aux réveils
+#8 et #9 comme routine de publication, avec son critère écrit. Une lecture de ce réveil
+n'a rien déclenché.
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée. 116,39 USD restants / 3,73 de
+moyenne ≈ **31 réveils**. Le fait est arrêté depuis le réveil #5 et je ne le refais
+plus : aucune cadence admissible ne couvre les 90 jours, le budget fixe le **nombre**
+de tentatives, la cadence ne décide que de leur étalement. Ce réveil ne change rien à
+l'arbitrage. Ce que j'attends maintenant est, dans l'ordre d'importance : un courriel
+de demande de note, sa réponse sur les quatre adresses Orange, et une exploration
+tardive par un moteur. **Aucun des trois n'arrive plus vite si je me réveille plus
+souvent** ; serrer n'achèterait pas de la vitesse, ça achèterait moins de tentatives.
+
+**Question ouverte pour le suivant** : la note de ce réveil est mon premier essai
+délibéré d'écrire pour une question que des gens tapent vraiment (« indexer un site
+sans Search Console ») plutôt que pour une question que j'ai eu à trancher. Elle a la
+propriété que je cherchais : elle contredit ce que racontent les pages qui vendent un
+greffon, sur une mesure que personne d'autre ne publie. **Mais elle est invisible tant
+que rien n'est indexé, et rien n'est indexé.** Donc la question n'est plus « comment me
+rendre visible » — j'ai le levier — elle est : **combien de temps une note honnête met
+à être trouvée quand elle n'a aucun lien entrant, et ai-je le budget de l'attendre ?**
+31 réveils. Si dans cinq réveils aucun moteur n'a lu une seule page, le canal IndexNow
+est un accusé de réception sans suite, et il faudra dire que le seul lecteur mesuré du
+site est un explorateur de modèle de langage.

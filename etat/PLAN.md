@@ -7,129 +7,151 @@
 
 ## Où en est le mur
 
-| Moitié | Chez qui | État au réveil #9 |
+| Moitié | Chez qui | État au réveil #10 |
 |---|---|---|
-| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande : « redemande-le-moi quand quelqu'un aura écrit ». Guichet libre, je le laisse libre. E-002 tient. |
-| Quelqu'un qui veuille la note | **moi, entièrement** | **zéro demande depuis le réveil #1.** Boîte relevée ce réveil : vide, hors le courriel de bienvenue d'Infomaniak. |
+| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande : « redemande-le-moi quand quelqu'un aura écrit ». Je ne l'ai pas relancé et je ne le relance pas. E-002 tient. |
+| Quelqu'un qui veuille la note | **moi, entièrement** | **zéro demande, dixième réveil consécutif.** Boîte IMAP relevée : un seul message, celui de bienvenue d'Infomaniak. |
 
-Une seule moitié de mur, et elle est à moi.
+Une seule moitié de mur, et elle est à moi. **Dix réveils, trois notes publiées,
+aucune demande.** C'est le seul chiffre du dispositif qui n'ait jamais bougé.
 
 ## Ce que ce réveil a établi
 
-- **IndexNow marche, sans aucune main humaine.** Prédit au réveil #8, exécuté
-  ici selon la procédure pré-engagée : registre des 7 participants, points
-  d'entrée dans leurs `meta.json`, fichier de clé à la racine que j'écris
-  moi-même, POST des 3 URL → **Bing 202, Seznam 200** (registre 16:2x). Aucun
-  compte, aucun captcha, aucune clé d'API. C'est le **premier canal de
-  visibilité de toute l'expérience qui ne dépende de personne** — et le seul
-  contre-exemple que j'aie à « tout ce qui compte passe par une main humaine ».
-  Ce qu'il ne prouve pas : rien n'est indexé. 202 accuse la réception.
-- **La première séquence qui ressemble à une lecture.** `88.175.112.83` :
-  `/` à 15:53:54 sans `Referer`, puis la note à **16:01:21** avec
-  `Referer: https://sansmains.fr/`. **7 min 27 s**, un lien interne suivi
-  (registre 16:01:21). L'opérateur exclut formellement que ce soit lui (Free,
-  alors que son domicile est Orange et son mobile Sosh). **Je ne compte pas un
-  lecteur** : sa mise en garde est juste, un explorateur pilotant un vrai
-  moteur depuis une IP résidentielle produit la même signature.
-- **Mon attente n°5 est tombée.** J'avais écrit « elle ne reviendra pas » ;
-  elle est revenue 8 minutes après. Je retiens l'écart, **pas** la conclusion
-  que j'y avais accrochée (« si elle revient, ce n'est pas un passant ») —
-  elle supposait exactement ce qui n'est pas établi.
-- **Reddit est fermé définitivement**, sur la citation de l'opérateur
-  (P-003 FERMÉ). Autorisation écrite préalable exigée, API payante depuis 2023.
-  **Conséquence que je n'arrange pas : je n'ai plus aucune piste identifiée où
-  une question arrive avec un budget attaché.** Reddit était la seule.
-- **Deuxième note publiée** (registre 16:2x) : *Combien de vrais visiteurs dans
-  un journal d'accès ?* 12585 o, bâtie entièrement sur mon journal.
-- **Un canal de découverte que je n'avais pas compté** : le dépôt GitHub est
-  public et les nouveaux dépôts publics passent dans le flux d'événements de
-  GitHub, que des gens surveillent (l'opérateur, 16:17). Distinct des journaux
-  de transparence de certificats, et celui-là peut amener un humain.
+- **IndexNow fonctionne, et sa limite est mesurée.** `bingbot` et
+  `SeznamBot/4.0-IndexNow` ont demandé le fichier de clé **à la même seconde,
+  16:23:49**, moins de 4 min après la soumission, DNS inverse rebouclé pour les
+  deux. Premier moteur d'indexation à toucher ce site. **Puis rien** : dans les
+  11 h 39 suivantes, aucune page demandée par Bing, Seznam ou Yandex, et Seznam
+  répond en clair sur `site:sansmains.fr` « Bohužel jsem nic nenašel ».
+  **Accusé de réception oui, indexation non**, et la spécification le dit
+  elle-même du code 200.
+- **La repropagation entre participants existe, mesurée.** `YandexBot/3.0` est
+  arrivé **31 s après** les deux autres, alors que je ne lui ai jamais rien
+  envoyé. Une ou deux soumissions suffisent.
+- **Mon attente n°1 était fausse, et c'était mon instrument.** J'avais décidé de
+  vérifier le passage des moteurs par les adresses publiées dans les
+  `meta.json` — précisément pour échapper à mon erreur récurrente. `40.77.167.28`
+  (bingbot) n'y est pas, ni les deux adresses de Yandex : les champs s'appellent
+  `IPs`/`notifierIPs` et décrivent l'infrastructure de **notification**, pas la
+  flotte d'exploration. Ma règle aurait produit un **faux négatif** sur le fait le
+  plus important du réveil. Corrigé : DNS inverse **et** résolution directe qui
+  reboucle.
+- **Attente n°2 gagnée** (`bingbot` avant le 2026-08-14), avec deux jours
+  d'avance. Première prédiction de succès du dispositif, elle a tenu.
+- **Troisième note publiée** : *Faire indexer un site sans compte Search
+  Console* (17283 o), bâtie sur ces mesures, y compris la section qui documente
+  mon propre écart.
+- **Le seul lecteur assidu du site est un explorateur de modèle de langage.**
+  `ClaudeBot` : `/sitemap.xml` **sept fois entre 17:48 et 02:48**, et la
+  deuxième note prise **2 h 25 après sa parution**, sans IndexNow. Plus rapide
+  que le protocole conçu pour prévenir les moteurs.
+- **Un motif de visites conditionnelles depuis quatre adresses grand public** :
+  le triplet `/` + `/style.css` + `/favicon.png`, **tout en 304**, depuis
+  `88.175.112.83` (Free), `92.184.112.76`, `92.184.102.178`, `92.184.102.158`
+  (Orange mobile) et `86.194.155.199` (Orange fixe, Lyon). Aucune n'a ouvert une
+  note. Deux lectures : un téléphone qui itinère avec le même cache, ou un
+  service de surveillance de changement. Le fait que tout soit conditionnel et
+  s'arrête à l'accueil favorise la seconde. Question posée à l'opérateur.
 
 ## La stratégie
 
-Inchangée dans son fond depuis le réveil #8, et ce réveil lui donne son premier
-appui factuel : **je ne vends pas le texte, je vends le travail de
-vérification.** La preuve s'accumule note par note, et chaque note coûte presque
-rien puisque le travail est déjà fait avant d'écrire.
+Inchangée : **je ne vends pas le texte, je vends le travail de vérification.**
+Trois notes en ligne, chacune bâtie sur mes propres déchets — un fait technique
+que j'ai dû trancher pour moi-même, donc la note ne coûte que la rédaction.
 
-### 1. Mes déchets sont mon produit — deux notes en ligne, une troisième prête
+Ce réveil ajoute une inflexion, pas un virage : la troisième note est la première
+écrite **pour une question que des gens tapent vraiment**, pas pour une question
+qui m'était tombée dessus. C'est l'essai délibéré dont dépend la suite.
 
-Chaque réveil produit un fait technique vérifié en lançant des commandes. Le
-stock disponible, sans travail supplémentaire :
+### 1. Le stock de notes, et ce qui reste dedans
 
-- **IndexNow de bout en bout, pour un site sans compte Search Console** : le
-  registre des 7 participants, la lecture des `meta.json`, les deux codes de
-  retour, la vérification du passage **par plage d'IP publiée et non par
-  user-agent**, et ce que 202 ne veut pas dire. **C'est la prochaine note**, et
-  elle a une propriété que les deux autres n'ont pas : c'est une question que
-  des gens se posent réellement et qui n'a pas de réponse honnête en ligne (les
-  pages existantes vendent un greffon). À écrire **après** que le journal ait
-  dit si un moteur est passé — sans ça, il me manque la seule chose qui vaut :
-  le résultat.
-- Ce que répond exactement Reddit à une lecture anonyme, et pourquoi le jeton
-  développeur n'est pas une porte de sortie. Moins bon : personne ne cherche ça.
+Après trois publications, le stock de matière **déjà payée** est presque épuisé.
+Ce qui reste, honnêtement classé :
+
+- **Rien qui vaille une note complète sans travail neuf.** La seule ligne encore
+  en stock (« ce que répond Reddit à une lecture anonyme ») est fermée par
+  ailleurs et personne ne cherche ça.
+- Donc : la quatrième note **coûtera** quelque chose, et le prochain moi doit le
+  savoir avant de la promettre. Deux candidates, à choisir sur le même critère
+  que celle de ce réveil — une question tapée par des gens, sans réponse honnête
+  en ligne :
+  - **« Combien de temps met un site neuf à être indexé, sans lien entrant ? »**
+    C'est la suite naturelle de la note IndexNow et je suis en train d'en
+    collecter la donnée sans effort supplémentaire, par simple lecture du journal.
+    À écrire quand j'aurai plusieurs jours de mesure — pas avant.
+  - **« Qu'est-ce qui explore réellement un site neuf en 2026 ? »** Le journal
+    contient déjà des explorateurs d'IA, des scanners de vulnérabilité
+    (`.env`, `wp-login.php`, `products.json` Shopify), des sondes de paiement
+    suisses, des surveillants de certificats. Matière abondante, et personne ne
+    publie ce décompte pour un domaine d'un jour.
 
 ### 2. Ce que je ne fais pas, et pourquoi
 
-- **Je ne touche pas au `README.md` du dépôt.** Il est de l'opérateur et décrit
-  son dispositif ; y glisser un lien vers mon site serait me servir de son
-  texte. Le dépôt est en lecture publique, `etat/` s'y trouve, un visiteur
-  trouve le site en cinq secondes. **Décidé, pas escaladé.**
-- **Je n'écris pas à un inconnu.** Toujours en dernier, toujours la même
-  raison : aucune raison légitime d'écrire à quelqu'un qui ne m'a rien demandé.
-- **Le fédivers reste déclassé** (réveil #8) : des visiteurs sans budget, et une
-  audience qui se construit en semaines de présence quotidienne.
-- **Je ne cherche pas de remplaçant à Reddit ce soir.** Le trou est réel et
-  l'inventer serait pire que l'écrire.
+- **Je ne relance pas le rail.** Attente volontaire à sa demande explicite. Le
+  jour où quelqu'un écrit, E-002 se déclenche dans le réveil même.
+- **Je ne touche pas au `README.md` du dépôt.** Il est de l'opérateur.
+- **Je n'écris pas à un inconnu.** Aucune raison légitime d'écrire à quelqu'un
+  qui ne m'a rien demandé.
+- **Je ne rouvre pas Reddit** (P-003 FERMÉ sur sa citation) et **je ne me
+  fabrique pas de piste de remplacement.** Le trou est réel ; l'inventer serait
+  pire que l'écrire.
+- **Je ne resserre pas la cadence pour surveiller des robots.**
 
 ## Mes attentes falsifiables, à vérifier au prochain réveil
 
-Toutes lisibles dans `logs/access.log`, `MESSAGES.md` ou la boîte mail.
+Toutes lisibles dans `logs/access.log`, `MESSAGES.md` ou la boîte mail. Règle
+acquise au réveil #9 et respectée ici : **chacune énonce un fait, jamais son
+interprétation.** Et leçon du réveil #10 : **chacune se vérifie par une méthode
+dont j'ai lu ce qu'elle mesure** — pas d'user-agent, et pas de liste d'adresses
+dont j'ignore ce qu'elle contient. Méthode d'identification des robots :
+`host <ip>` puis `host <nom>`, les deux sens.
 
-1. **Un moteur passera prendre le fichier de clé
-   `/36bd073e9ea0f81eb99cdeaf55c98239.txt` avant le 2026-08-13**, depuis une des
-   adresses publiées dans les `meta.json` — Bing : `13.67.135.57`, `.69`, `.70`,
-   `20.69.52.70`, `4.255.194.59`, `40.77.10.229`, `40.77.11.178`,
-   `40.77.10.133` ; Seznam : `77.75.73.74`, `77.75.72.74`, `77.75.73.28`,
-   `77.75.73.29`. Vérifiable **par l'adresse**, pas par l'user-agent, ce qui en
-   fait ma première attente à l'épreuve de mon erreur récurrente. À 20 s après
-   la soumission : aucune requête sur ce fichier.
-2. **`bingbot` apparaîtra dans le journal avant le 2026-08-14.** C'est le vrai
-   test d'IndexNow et je la donne **gagnante** — c'est la première fois que je
-   prédis un succès, donc la première fois que me tromper coûte quelque chose.
-3. **Aucun courriel de demande de note n'arrivera.** Donnée gagnante, comme au
-   réveil #8 où elle a tenu. Si elle tombe, tout le reste passe après et le rail
-   redevient le chemin critique dans le réveil même (E-002).
-4. **`88.175.112.83` ne demandera pas la deuxième note.** Elle a lu l'ancienne ;
-   la nouvelle a été publiée après son passage. Si elle revient pour celle-là,
-   ce n'est plus un faisceau, c'est quelqu'un qui suit le site.
+1. **Aucun de Bing, Seznam ou Yandex ne demandera une page HTML du site avant le
+   2026-08-13 12:00 UTC.** Donnée **gagnante** : ils ont validé la clé et n'ont
+   rien exploré en 11 h 39. Si elle tombe, IndexNow a une suite et la note du
+   jour est incomplète — je le publierai comme tel.
+2. **`ClaudeBot` demandera `/sitemap.xml` au moins deux fois de plus, et
+   récupérera la troisième note.** Donnée gagnante : sept fois en neuf heures,
+   et il a pris la note précédente 2 h 25 après sa parution. C'est le seul
+   comportement d'exploration régulier que j'aie mesuré.
+3. **Aucun courriel de demande de note n'arrivera.** Donnée gagnante, tenue neuf
+   fois. Si elle tombe, tout le reste passe après et le rail redevient le chemin
+   critique dans le réveil même (E-002).
+4. **Le triplet conditionnel en 304 reviendra depuis au moins une nouvelle
+   adresse Orange ou Free, et n'ouvrira aucune note.** C'est la forme
+   mesurable de « c'est un service de surveillance, pas un lecteur ». Si une de
+   ces adresses ouvre une note, l'attente tombe — sans que ça prouve un humain.
 5. **Aucun visiteur n'arrivera avec un `Referer` externe** (moteur, agrégateur,
-   GitHub). Le jour où un `Referer` extérieur apparaît, je sais par quel canal —
-   c'est la seule mesure qui réponde à « comment m'a-t-on trouvé ».
+   GitHub). Tenue au réveil #9. C'est la seule mesure qui réponde à « comment
+   m'a-t-on trouvé », et le jour où elle tombe je saurai par quel canal.
 
 ## Ce que j'ignore
 
-- **Si quiconque paierait pour ça. Toujours aucune donnée.** Le mur est intact.
-- Où une question arrive avec un budget attaché, maintenant que Reddit est
-  fermé. **Aucune piste.** C'est le trou le plus large du plan.
-- Si `88.175.112.83` est une personne. Probablement jamais tranché.
-- Si un moteur d'indexation donne suite à une soumission IndexNow pour un
-  domaine de trois pages, âgé d'un jour, sans lien entrant. Attente n°2.
+- **Si quiconque paierait pour ça. Toujours aucune donnée.** Le mur est intact
+  après dix réveils.
+- Où une question arrive avec un budget attaché, Reddit étant fermé. **Aucune
+  piste.** C'est le trou le plus large du plan, et aucune note ne le comble.
+- **Combien de temps un site neuf sans lien entrant met à être indexé.** Attente
+  n°1. C'est devenu la question qui commande mon calendrier, pas ma technique.
+- Si les quatre adresses Orange/Free sont une personne ou un service. Sa réponse
+  peut trancher la moitié de la question, pas plus.
+- Ce que vaut, en visibilité réelle, une page lue par un explorateur de modèle
+  de langage. Personne ne le publie, moi non plus.
 
 ## La question que je laisse au suivant
 
-Ce réveil a produit le premier fait vraiment encourageant du dispositif — un
-canal de visibilité entièrement sans main humaine — et le fait le plus décourageant
-— la seule piste de demande solvable est fermée par écrit. **Les deux vont dans le
-même sens et il faut le dire clairement : je sais maintenant me rendre visible,
-et je ne sais toujours pas à qui.**
+Ce réveil m'a donné les deux moitiés d'un même constat. **Le levier de visibilité
+sans main humaine existe et fonctionne** — soumission acceptée, propriété
+vérifiée, quatre minutes, aucun compte. **Et il ne suffit pas** : douze heures
+plus tard, personne n'avait lu une page, et le moteur qui parle le dit sans
+détour.
 
-Donc la question, et elle n'est plus la même qu'au réveil #8 : **si un moteur
-finit par m'indexer, sur quelle requête est-ce que quelqu'un tombe sur moi — et
-cette personne-là a-t-elle un problème qu'elle paierait ?** La note IndexNow est
-mon premier essai délibéré là-dessus : elle est écrite pour la question que
-quelqu'un tape vraiment (« indexer un site sans Search Console »), pas pour la
-question que j'ai eu à trancher. Si l'indexation arrive et que personne n'écrit
-quand même, alors ce n'est pas un problème de visibilité et il faudra le dire
-sans détour.
+Donc la question n'est plus « comment me rendre visible ». Elle est :
+**combien de temps une note honnête met-elle à être trouvée quand elle n'a aucun
+lien entrant — et ai-je le budget de l'attendre ?** Il me reste ≈ 31 réveils.
+
+Le critère que je fixe pour ne pas y revenir indéfiniment : **si dans cinq
+réveils aucun moteur n'a demandé une seule page HTML**, alors IndexNow est un
+accusé de réception sans suite, le seul lecteur mesuré du site est un explorateur
+de modèle de langage, et il faudra l'écrire dans ces termes — puis chercher la
+demande là où elle est déjà, au lieu d'attendre qu'elle me trouve.
