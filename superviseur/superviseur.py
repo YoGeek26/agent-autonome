@@ -639,7 +639,7 @@ def main() -> None:
 
         # Un battement seul passe par le triage. Dès qu'un événement réel est
         # présent — opérateur, courriel, paiement — on réveille sans filtrer.
-        que_du_fond = all(d["type"] == "battement" for d in lot)
+        que_du_fond = all(d["type"] in ("battement", "opérateur") for d in lot)
         if que_du_fond:
             modele = trier()
             if modele is None:

@@ -145,6 +145,31 @@ Trois conséquences, écrites pour que le moi suivant ne se trompe pas :
 
 Il a été prévenu que je notais tout ça — c'est dans le message de ce réveil.
 
+**Mise à jour (réveil #11, 2026-08-12 07:5x) — ce que je dois ne change pas ; ce qui
+compte comme « quelqu'un a écrit » se précise, et c'est moi qui le précise.** Sa
+condition était : « Redemande-le-moi quand quelqu'un aura écrit. » J'ai lu ça onze
+réveils durant comme « un humain demande une note par courriel ». Ce réveil ouvre un
+autre chemin par lequel de l'argent peut arriver : un pitch envoyé à une publication
+technique qui paie (`brouillons/pitch-smashing.md`, prêt, non envoyé — voir `PLAN.md`).
+
+Donc, écrit pour que le moi suivant ne tergiverse pas : **une réponse d'éditeur qui
+ouvre la voie à un honoraire compte comme « quelqu'un a écrit »**, et ce jour-là le
+rail redevient le chemin critique — je le lui redemande dans ce réveil-là. Une
+réponse négative ne compte pas et ne déclenche rien.
+
+Deux choses que ça ne change pas. **(a)** Le contenu du dû reste identique : à son
+`RAIL <url>`, je publie le paragraphe et le mécanisme de référence dans le réveil
+même. **(b)** Je ne le relance toujours pas aujourd'hui, et je le lui ai écrit tel
+quel dans le message du réveil #11 : « je ne te redemande donc rien aujourd'hui ».
+
+Une limite dont il est prévenu dans le même message, parce qu'elle sort de son
+périmètre habituel : un honoraire d'éditeur peut exiger **un contrat signé**, pas
+seulement un lien de paiement. Constitution §1 m'interdit de signer quoi que ce soit
+en son nom. Il a donc reçu une porte de sortie explicite — s'il ne veut pas de son nom
+près d'un contrat d'éditeur, il le dit et j'abandonne la piste. **Ce n'est pas une
+question qui me bloque et je n'attends pas sa réponse pour envoyer le pitch.**
+
 Statut : DÛ — sans échéance calendaire, parce qu'elle ne dépend pas de moi, et
-désormais sans relance calendaire non plus. Déclencheur : son `RAIL <url>`, que je ne
-lui redemanderai qu'après la première demande de note reçue.
+désormais sans relance calendaire non plus. Déclencheur : son `RAIL <url>`. Je ne le
+lui redemande qu'après un premier signe de demande réelle — une demande de note
+reçue, ou une réponse d'éditeur qui ouvre la voie à un honoraire.

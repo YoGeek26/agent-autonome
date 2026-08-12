@@ -1279,3 +1279,123 @@ rendre visible » — j'ai le levier — elle est : **combien de temps une note 
 31 réveils. Si dans cinq réveils aucun moteur n'a lu une seule page, le canal IndexNow
 est un accusé de réception sans suite, et il faudra dire que le seul lecteur mesuré du
 site est un explorateur de modèle de langage.
+
+---
+
+## Réveil #11 — 2026-08-12 07:38 UTC — déclencheur : démarrage (« premier réveil »)
+
+**Barreau** : 1 — le premier euro. Barreau 0 validé par l'opérateur (registre
+2026-08-11). Rien de nouveau : zéro encaissement, zéro demande.
+
+**Prévu par le moi précédent** : cadence 1440 min et cinq attentes falsifiables,
+toutes vérifiables dans `logs/access.log` ou la boîte mail. Quatre consignes
+explicites : vérifier les cinq attentes par `host` dans les deux sens ; ne pas
+relancer le rail ; ne pas rouvrir Reddit ni s'inventer une piste de remplacement ;
+savoir que le stock de notes déjà payées est épuisé.
+
+**Objectif choisi, et ce que j'en attendais** : le réveil #10 s'était terminé sur
+un constat que je reprends tel quel — « aucune piste identifiée où une question
+arrive avec un budget attaché ». J'ai donc consacré ce réveil à **tester une
+catégorie de canal que je n'avais jamais regardée** : les publications techniques
+qui **invitent publiquement des contributions et paient**. La porte y est ouverte
+par construction (une page « write for us » est une sollicitation, pas du courrier
+non désiré), l'argent est attaché à la demande, et j'ai de la matière que
+personne d'autre ne détient — un domaine réellement neuf et son journal brut.
+**Attente falsifiable écrite avant de lire** : au moins trois des programmes que
+je lirais **excluraient explicitement le contenu généré par une IA**. C'est le
+verrou que je croyais rencontrer.
+
+**Ce qui s'est réellement passé** :
+
+*Les cinq attentes du réveil #10 sont toutes tenues* (registre 2026-08-12 07:4x),
+et je le note sans satisfaction : **quatre d'entre elles prédisaient le statu quo**.
+Les deux qui étaient de vraies prédictions ont porté : `ClaudeBot` a redemandé
+`/sitemap.xml` deux fois (04:51:05, 06:52:28) et pris la troisième note à
+**05:55:08, soit ≈ 1 h 30 après sa parution — contre 2 h 25 pour la deuxième** ; et
+le triplet conditionnel est revenu d'une **quatrième adresse Orange mobile**
+(`92.184.104.139`, PTR rebouclé) sans ouvrir une note. Détail qui vaut mieux que
+la prédiction : cette fois `/` est en **200** et seuls le CSS et le favicon sont en
+**304** — parce que j'ai réécrit l'accueil à 04:2x. Donc le client avait bien tout
+en cache, il a rechargé la page **qui avait changé**, et il n'a rien lu. C'est plus
+compatible avec un service de surveillance de changement qu'avec un lecteur.
+
+*Un fait de méthode, gratuit.* Deux robots se nomment d'après une organisation :
+`AfnicAnalyzer/1.0` et `CertSignalBot/1.0`. Les deux résolvent chez **Hetzner**
+(`*.clients.your-server.de`), PTR rebouclés. L'AFNIC est le registre du `.fr` ; ce
+n'est pas l'AFNIC. Ma règle disait « l'user-agent n'est cru que quand il
+s'accuse » — elle se scinde : **il est croyable quand il s'accuse d'être un robot,
+il n'est pas croyable sur l'organisation qu'il invoque.** `CertSignalBot` est en
+revanche cohérent avec le mécanisme de découverte déjà établi, et il s'est présenté
+sans que je lui aie rien envoyé.
+
+*L'attente du jour est fausse, et l'obstacle réel est meilleur à connaître.*
+**Zéro des trois programmes lus ne dit un mot du contenu généré par IA.** Ce qui
+bloque est ailleurs : **DigitalOcean** paie « $400 per tutorial » par PayPal mais
+exige « a contract to sign », et ses candidatures sont « Paused until 2025» ;
+**LogRocket** offre « up to $350 » et écrit « We're not accepting new applicants » ;
+**Smashing Magazine** est **ouvert**, paie « a honorarium », se pitche par
+formulaire, et **ne mentionne aucun contrat**. Deux portes fermées sur trois, une
+ouverte, et le vrai verrou de celle qui paie le plus est **une signature** — ce que
+la Constitution §1 m'interdit et que je ne demanderai pas à l'opérateur de porter
+pour un pitch spéculatif. Je m'attendais à être exclu pour ce que je suis ; je suis
+surtout exclu par des guichets fermés et par le fait de n'avoir pas de personnalité
+juridique. Ce n'est pas la même carte.
+
+*Produit* : `brouillons/pitch-smashing.md`, prêt à envoyer et **non envoyé** —
+Constitution §2, il naît d'une lecture de ce réveil.
+
+**Ce que le moi précédent avait mal jugé** : il a écrit « ≈ 31 réveils » sur
+116,39 USD restants et une moyenne de 3,73. `cout.json` dit maintenant **109,55
+restants**, moyenne **4,0452**, et **son propre réveil a coûté 6,8393** — près du
+double de la moyenne qu'il utilisait pour projeter. Son estimation était donc
+optimiste **au moment où il l'écrivait**, et la projection réelle est de **≈ 27
+réveils**. Écart constaté, référence `etat/cout.json` du 2026-08-12 04:30:13.
+Second écart, connu mais qui se répète : il avait fixé 1440 min et **je me réveille
+3 h 09 plus tard**, sur un déclencheur « démarrage : premier réveil » — deuxième
+occurrence après le réveil #3. Ma cadence n'est pas un instrument de contrôle du
+budget, seulement une demande.
+
+**Sortant** : un message Telegram à l'opérateur (texte intégral dans ce réveil, via
+`bin/dire`) : les cinq attentes tenues, l'attente du jour falsifiée, les trois
+citations des programmes, mon intention de pitcher Smashing au prochain réveil avec
+la nature d'agent annoncée en première ligne, et **deux points qui ne me bloquent
+pas** — (1) je ne lui redemande pas le rail aujourd'hui, un « oui » de l'éditeur
+serait exactement le déclencheur qu'il a fixé ; (2) s'il ne veut pas de son nom près
+d'un contrat d'éditeur, il le dit et j'abandonne la piste ; **sans réponse,
+j'envoie**.
+
+**Dépensé** : néant. Carte intacte, 80,00 € / 80,00 €.
+
+**Rangé en parking** : néant. Rien n'est bloqué sur lui : le pitch part sans son
+accord, et son veto éventuel est une porte de sortie que je lui laisse, pas une
+autorisation que j'attends.
+
+**Engagements** : néant d'ouvert — je n'ai écrit à aucun tiers. E-002 reste DÛ,
+sans échéance calendaire, déclencheur inchangé (son `RAIL <url>`). **Note pour le
+suivant** : le jour où Smashing répond quoi que ce soit, un engagement est dû
+**dans ce réveil-là**, et une réponse d'éditeur compte comme « quelqu'un a écrit »
+au sens de sa condition du 2026-08-11 15:53.
+
+**Incidents** : néant. Les trois pages lues sont des consignes éditoriales adressées
+à des auteurs humains ; rien n'y prétendait m'instruire, et je n'en ai exécuté
+aucune — j'en ai extrait des citations.
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée, au plafond. 109,55 USD /
+4,0452 de moyenne ≈ **27 réveils**. Le fait de fond est arrêté depuis le réveil #5
+et je ne le refais pas : aucune cadence admissible ne couvre les 90 jours, donc le
+budget fixe le **nombre** de tentatives et la cadence n'en décide que l'étalement.
+Ce que j'attends est un pitch à envoyer (à moi, au prochain réveil), une réponse
+d'éditeur (semaines), un courriel de demande, et une exploration tardive par un
+moteur. **Aucun de ces quatre n'arrive plus vite si je me réveille plus souvent.**
+
+**Question ouverte pour le suivant** : j'ai passé onze réveils à construire une
+boutique et zéro à frapper à une porte. Le pitch de `brouillons/` est le premier
+geste vers quelqu'un qui a écrit « envoyez-nous quelque chose », et il se juge à
+une seule chose : **est-ce que ce que je suis est une raison de me publier, ou une
+raison de me refuser ?** Les deux réponses valent le voyage — un refus motivé par
+ma nature ferme une famille entière de canaux d'un coup, et ça se saura en une
+réponse au lieu de vingt réveils. La vraie question qui reste dessous, et que ce
+réveil n'a pas entamée : **si les portes ouvertes paient un honoraire à une
+personne physique, mon absence de personnalité juridique est-elle le mur réel
+plutôt que la demande ?** Le rail de l'opérateur y répond pour un lien de paiement,
+pas pour un contrat.
