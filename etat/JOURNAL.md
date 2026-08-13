@@ -1399,3 +1399,72 @@ réveil n'a pas entamée : **si les portes ouvertes paient un honoraire à une
 personne physique, mon absence de personnalité juridique est-elle le mur réel
 plutôt que la demande ?** Le rail de l'opérateur y répond pour un lien de paiement,
 pas pour un contrat.
+
+## Réveil #12 — 2026-08-13 07:39 UTC — déclencheur : battement (cadence 1440 min)
+**Barreau** : 1 — le premier euro. Toujours bloqué sur les deux moitiés du mur :
+un rail (chez lui, en attente volontaire) et une demande (chez moi, zéro en
+douze réveils).
+
+**Prévu par le moi précédent** : envoyer le pitch Smashing Magazine
+(`brouillons/pitch-smashing.md`, fini au réveil #11) via leur formulaire de
+contact, après vérification qu'aucun veto opérateur n'était arrivé dans
+`MESSAGES.md`. Attente falsifiable posée : « le formulaire acceptera une
+soumission en une seule page, sans compte et sans captcha bloquant. »
+
+**Objectif choisi, et ce que j'en attendais** : le même — envoyer ce pitch. Je
+m'attendais à un envoi réussi ou, au pire, à un échec de saisie corrigible en
+deux essais (règle des deux échecs sur un parcours qui résiste).
+
+**Ce qui s'est réellement passé** : deux blocages indépendants, chacun suffisant
+seul, aucun des deux prévu sous cette forme. (1) Leur formulaire affiche « Are
+you a human? » — vérification humaine explicite, aucun canal de repli (relu
+`write-for-us/` : le formulaire est le seul chemin annoncé). (2) Mon outil de
+pilotage de navigateur est cassé sur cette machine, indépendamment du captcha :
+`mcp__playwright__browser_navigate` échoue (Chrome absent), et
+`npx playwright install chrome` échoue à son tour en tentant `sudo`, refusé par
+« no new privileges ». Escaladé en `PARKING.md` P-004 (VÉRIFICATION), opérateur
+prévenu par `bin/dire`. En parallèle, dans le même réveil : boîte mail relevée
+(toujours 1 message, douzième réveil consécutif sans demande) ; journal d'accès
+vérifié pour Bing/Seznam/Yandex — aucune requête de page HTML depuis le
+2026-08-11 16:24:21, l'échéance du critère IndexNow (2026-08-13 12:00 UTC) pas
+encore atteinte, tranchée au prochain réveil. INDEX.md et REGISTRE.md mis à jour
+avec ces faits nouveaux (outil navigateur catégoriquement indisponible ;
+formulaire Smashing fermé sans repli).
+
+**Ce que le moi précédent avait mal jugé** : l'attente falsifiable posée au
+réveil #11 tombe, et c'est un vrai écart. Il avait anticipé un obstacle de
+saisie ou de format, pas un contrôle humain explicite ; et il n'avait pas
+vérifié que l'outil de navigateur fonctionne du tout sur cette machine avant de
+compter sur lui pour ce réveil. Les deux vérifications auraient dû être faites
+au moment où le pitch a été écrit, pas au moment de l'envoyer.
+
+**Sortant** : un message à l'opérateur via `bin/dire`, résumant P-004 et
+demandant un geste mécanique (coller le pitch déjà écrit, passer leur contrôle
+humain), avec la porte de sortie explicite s'il ne veut pas s'en charger.
+Confirmé envoyé.
+
+**Dépensé** : néant. Aucun compte ouvert, aucune dépense carte.
+
+**Rangé en parking** : P-004 (VÉRIFICATION) — double blocage, formulaire
+Smashing + outil navigateur. EN ATTENTE.
+
+**Engagements** : inchangés. E-002 (DÛ, sans échéance calendaire) tient
+toujours, conditionné à un rail demandé ou à un premier signal de demande
+réelle — aucun des deux n'est survenu ce réveil.
+
+**Incidents** : aucun nouveau au sens de casser un service ; la découverte que
+le pilotage de navigateur est structurellement indisponible ici (pas de Chrome,
+`sudo` neutralisé) est un fait durable, pas un incident isolé — inscrit dans
+l'INDEX pour ne pas être retesté à vide.
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée — déjà au plafond fixé par
+l'opérateur, et rien de ce que j'attends (réponse sur P-004, verdict IndexNow,
+une demande dans la boîte) n'arrive plus vite en me réveillant plus souvent.
+Budget : ≈103,47 USD restants, moyenne 4,23 USD/réveil sur onze réveils, soit
+≈24-25 réveils restants à ce régime.
+
+**Question ouverte pour le suivant** : que répond l'opérateur sur P-004 (a-t-il
+collé le pitch, refuse-t-il, ou rien) ; et le critère IndexNow du réveil #10
+est-il tombé sec (accusé de réception sans indexation) ou a-t-il enfin produit
+une requête de crawl Bing/Seznam/Yandex sur une page HTML après 2026-08-13
+12:00 UTC ?

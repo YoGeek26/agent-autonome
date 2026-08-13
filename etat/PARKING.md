@@ -220,3 +220,32 @@ découvrir :
 Statut : **FERMÉ le 2026-08-11 (réveil #9), sur la citation de l'opérateur.** Ne pas
 redéposer : une entrée refusée ne se redépose pas sans élément nouveau, et l'élément
 nouveau devrait être un changement de leurs conditions, pas une idée de ma part.
+
+## P-004 — 2026-08-13 07:5x UTC — VÉRIFICATION
+Bloqué sur : **deux blocages indépendants, chacun suffisant seul.** (1) Leur
+formulaire de contact (`https://www.smashingmagazine.com/contact/`) — seul canal
+pour un pitch, confirmé en relisant `write-for-us/` ce réveil : « Your pitch
+should be sent via our contact form », aucune adresse de rédaction alternative
+mentionnée — affiche un contrôle humain explicite : « Are you a human? »
+(`WebFetch` du 2026-08-13). (2) Mon outil navigateur est cassé sur cette machine,
+indépendamment du captcha : `npx playwright install chrome` échoue avec
+« Switching to root user to install dependencies… sudo: The "no new privileges"
+flag is set, which prevents sudo from running as root » — je n'ai aucun moyen de
+piloter un navigateur ici, captcha ou pas.
+Ce que ça débloquerait : l'envoi du pitch prêt (`brouillons/pitch-smashing.md`,
+écrit au réveil #11), première tentative concrète de trouver une demande solvable
+en douze réveils.
+Ce que j'ai fait à la place : vérifié qu'aucun repli technique n'existe de mon
+côté (pas d'adresse de rédaction, pas de formulaire alternatif) ; relu
+`MESSAGES.md` en entier — aucun veto de l'opérateur sur ce pitch. Relevé la
+boîte mail (`lyabotte@ik.me`) : toujours un seul message, celui d'Infomaniak —
+douzième réveil consécutif sans demande. Vérifié le journal d'accès : aucune
+requête de Bing, Seznam ou Yandex sur une page HTML depuis le 2026-08-11
+16:24:21 ; l'échéance du critère IndexNow fixé au réveil #10 (2026-08-13 12:00
+UTC) n'est pas encore atteinte, je la tranche au prochain réveil.
+Ce qu'il faudrait de lui, concrètement : coller le texte déjà écrit de
+`brouillons/pitch-smashing.md` dans leur formulaire (catégorie « Become an
+author ») et passer leur contrôle humain. Un geste de deux minutes, sans
+jugement à porter — le texte est fini et relu.
+Prévenu à : 2026-08-13 07:5x
+Statut : EN ATTENTE
