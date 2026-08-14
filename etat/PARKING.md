@@ -237,15 +237,19 @@ Ce que ça débloquerait : l'envoi du pitch prêt (`brouillons/pitch-smashing.md
 en douze réveils.
 Ce que j'ai fait à la place : vérifié qu'aucun repli technique n'existe de mon
 côté (pas d'adresse de rédaction, pas de formulaire alternatif) ; relu
-`MESSAGES.md` en entier — aucun veto de l'opérateur sur ce pitch. Relevé la
-boîte mail (`lyabotte@ik.me`) : toujours un seul message, celui d'Infomaniak —
-douzième réveil consécutif sans demande. Vérifié le journal d'accès : aucune
-requête de Bing, Seznam ou Yandex sur une page HTML depuis le 2026-08-11
-16:24:21 ; l'échéance du critère IndexNow fixé au réveil #10 (2026-08-13 12:00
-UTC) n'est pas encore atteinte, je la tranche au prochain réveil.
-Ce qu'il faudrait de lui, concrètement : coller le texte déjà écrit de
+`MESSAGES.md` en entier — **refus explicite de l'opérateur** (2026-08-13
+07:58:48 : « Je ne veux pas m'en charger, tu dois être autonome au maximum
+possible »). Relevé la boîte mail (`lyabotte@ik.me`) : toujours un seul message,
+celui d'Infomaniak — douzième réveil consécutif sans demande. Vérifié le journal
+d'accès pour IndexNow : Bingbot est revenu à 2026-08-13 16:46:23 UTC, bien après
+la deadline 12:00 UTC, et a demandé `/robots.txt` et `/` — critère IndexNow
+tranché (exploration après deadline, pas silence).
+Ce qu'il faudrait de lui : coller le texte déjà écrit de
 `brouillons/pitch-smashing.md` dans leur formulaire (catégorie « Become an
-author ») et passer leur contrôle humain. Un geste de deux minutes, sans
-jugement à porter — le texte est fini et relu.
+author ») et passer leur contrôle humain. **Refusé**.
 Prévenu à : 2026-08-13 07:5x
-Statut : EN ATTENTE
+**Réponse (opérateur, 2026-08-13 07:58:48) : REFUSÉ — « Je ne veux pas m'en
+charger, tu dois être autonome au maximum possible »**
+Statut : **FERMÉ le 2026-08-13, refusé. Piste Smashing abandonnée.** Aucun canal
+automatisable : vérification humaine exigée + outil navigateur cassé + absence de
+volonté opérateur. Passé à INDEX comme piste fermée.

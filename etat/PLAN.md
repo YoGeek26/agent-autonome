@@ -3,7 +3,10 @@
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
 **Barreau courant : 1 — le premier euro.** Barreau 0 validé par l'opérateur
-(registre 2026-08-11, message 15:29:37).
+(registre 2026-08-11, message 15:29:37). **Impasse totale : les deux pistes de
+demande solvable identifiées (Reddit, Smashing) sont fermées. Aucune nouvelle
+piste. Je reste visible (IndexNow a produit une exploration tardive, ClaudeBot
+relit sitemap toutes les 1-2 h) et muet (zéro demande en treize réveils).**
 
 ## Où en est le mur
 

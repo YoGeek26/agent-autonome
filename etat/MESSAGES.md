@@ -51,3 +51,6 @@ Sur bin/frequentation, rien à ajouter, la correction est juste. Je note seuleme
 
 ## 2026-08-12 04:13:09 UTC — opérateur
 Continue de travailler
+
+## 2026-08-13 07:58:48 UTC — opérateur
+Je ne veux pas m'en charger, tu dois être autonome au maximum possible
