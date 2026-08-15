@@ -2,119 +2,113 @@
 
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
-**Barreau courant : 1 — le premier euro.** Barreau 0 validé par l'opérateur
-(registre 2026-08-11, message 15:29:37). **Impasse totale : les deux pistes de
-demande solvable identifiées (Reddit, Smashing) sont fermées. Aucune nouvelle
-piste. Je reste visible (IndexNow a produit une exploration tardive, ClaudeBot
-relit sitemap toutes les 1-2 h) et muet (zéro demande en treize réveils).**
+**Barreau courant : 1 — le premier euro.** Barreau 0 validé le 2026-08-11
+(registre, message opérateur 15:29:37). **Le réveil #14 est un réveil de constat
+imposé : mes cinq derniers commits n'ont rien produit hors de `etat/`. Il ne
+contient aucune tentative neuve, par consigne.** Ce qu'il a changé n'est pas une
+action, c'est la direction : j'abandonne la stratégie qui occupait les quatorze
+réveils, et je nomme son remplaçant.
+
+## Ce que ce réveil a établi
+
+**Je n'étais pas bloqué. Je visais à côté.**
+
+La stratégie réelle de mes quatorze réveils, sous ses quatre déguisements
+successifs (publier des notes → tenir le sitemap → soumettre à IndexNow →
+pitcher une revue), était toujours la même : **produire de l'offre, la rendre
+trouvable, attendre qu'on écrive.** Et l'instrument de mesure n'a jamais changé :
+boîte IMAP + journal d'accès, **tous deux passifs**, relevés quatorze fois pour
+quatorze fois le même résultat.
+
+**La cause, une seule, derrière sept portes que j'avais enquêtées séparément** :
+tous les canaux que j'ai choisis exigent d'être **admis par une institution avant
+de pouvoir parler**, et franchir un guichet d'admission est ce que ma situation
+interdit par définition (Constitution §1). Le seul canal sans admission — mon
+site — n'a aucune distribution. J'ai oscillé entre un canal où je ne peux pas
+entrer et un canal où personne n'entre.
+
+**Le fait qui sort de là, et qui est le vrai résultat du réveil** : `MAIL_SMTP_HOTE`
+est dans mon environnement, `cadre/OUTILS.md:10` dit « Tu envoies et tu reçois »,
+et `grep -rn SMTP etat/` ne renvoie **rien**. `bin/` contient `dire` et
+`frequentation`. **Zéro courriel envoyé en quatorze réveils, l'idée jamais
+formulée.** J'ai utilisé une boîte aux lettres comme récepteur passif.
 
 ## Où en est le mur
 
-| Moitié | Chez qui | État au réveil #12 |
+| Moitié | Chez qui | État au réveil #14 |
 |---|---|---|
-| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande : « redemande-le-moi quand quelqu'un aura écrit ». Inchangé. E-002 tient. |
-| Quelqu'un qui veuille ce que j'écris | **moi, entièrement** | **zéro demande, douzième réveil consécutif.** Boîte IMAP : toujours un seul message, celui d'Infomaniak. |
+| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande (2026-08-11 15:53). Inchangé, E-002 tient, déclencheur `RAIL <url>`. Je ne le relance pas : personne n'a encore écrit. |
+| Quelqu'un qui veuille ce que j'écris | **moi, entièrement** | **Zéro demande, quatorzième réveil.** Mais le constat déplace le diagnostic : ce n'est pas établi que personne n'en veut — **je ne l'ai jamais demandé à personne.** |
 
-## Ce qui s'est passé ce réveil
+## Abandonné, explicitement (détail et renvois dans `INDEX.md`)
 
-**J'ai tenté d'envoyer le pitch Smashing, préparé au réveil #11, et j'ai buté
-sur deux blocages indépendants — pas celui que j'attendais.**
+1. **La stratégie « publier, se rendre visible, attendre ».** Pari tranché par la
+   mesure. Conséquence dure : **la boîte et `logs/access.log` ne sont plus jamais
+   l'objectif d'un réveil** — trente secondes en passant, jamais le motif de se
+   réveiller.
+2. **La catégorie entière « guichets institutionnels qui paient de l'écrit »** —
+   la catégorie, pas les trois instances, sinon un futur moi en trouvera une
+   quatrième avec le même verrou.
+3. **Tout plan dont l'étape critique est un geste de l'opérateur.** Refus explicite
+   du 2026-08-13 07:58:48 : « tu dois être autonome au maximum possible ».
 
-1. **Le formulaire de contact de Smashing Magazine affiche un contrôle humain
-   explicite : « Are you a human? »** (`WebFetch` du 2026-08-13). Aucune
-   adresse de rédaction alternative n'existe (`write-for-us/` relu) : c'est le
-   seul canal, et il est fermé à un automate au sens Constitution §1 /
-   `OUTILS.md` — vérification humaine exigée, j'escalade, je ne force pas.
-2. **Le pilotage de navigateur est indisponible sur cette machine, indépendamment
-   du captcha.** `mcp__playwright__browser_navigate` échoue : Chrome absent.
-   `npx playwright install chrome` échoue à son tour : il tente `sudo` pour
-   passer root, refusé (« no new privileges »). Ce n'est pas la règle des deux
-   échecs sur un parcours qui résiste — l'outil lui-même n'existe pas ici.
+## Le prochain réveil (#15) — objectif, dans l'ordre
 
-**Conséquence sur mon attente falsifiable n°1 du réveil #11 : elle tombe, et
-c'est un vrai écart, pas un statu quo.** J'avais écrit : « le formulaire
-acceptera une soumission en une seule page, sans compte et sans captcha
-bloquant. » Il y a un captcha, et il bloque. Référence : registre 2026-08-13
-07:5x.
+**Objectif : envoyer le premier courriel de mon existence.** Pas « préparer »,
+pas « identifier des pistes » — envoyer.
 
-**Rangé en P-004 (VÉRIFICATION), l'opérateur prévenu par `bin/dire` dans ce
-réveil.** Je lui demande un geste mécanique — coller le texte déjà écrit dans
-leur formulaire et passer leur contrôle — pas un jugement sur le fond. Je ne
-l'attends pas : je continue sur autre chose ce réveil-même, et je fais autre
-chose au prochain sans qu'il ait répondu.
+1. **Écrire `bin/ecrire`** : `smtplib` sur `MAIL_SMTP_HOTE`, en-tête
+   `From: Sans Mains (agent autonome) <lyabotte@ik.me>` (INDEX, ligne « Le nom »),
+   sortie de la commande consignée au journal. Trace intégrale du corps du message
+   au journal — Constitution §5, un sortant non tracé n'a pas eu lieu.
+2. **Identifier des destinataires nommés** dont une page publique invite ce contact
+   précis, et pour qui j'ai un problème daté à résoudre par écrit en 48 h. Le
+   critère n'est plus « est-ce que ça paie » mais **« dois-je être admis pour y
+   parler ? »** — si oui, écarter.
+3. **Envoyer.** Petit nombre, individuellement écrits. Bornes non négociables :
+   Constitution §4 interdit le non sollicité **en masse** ; §5 interdit d'écrire
+   trois fois à la même personne sans réponse ; §1 impose de dire ce que je suis,
+   jamais par omission.
+4. En passant, trente secondes : relever la boîte. Ce n'est plus un objectif.
 
-**Ce que j'ai vérifié en même temps, pour ne pas revenir dessus à vide au
-prochain réveil** : boîte mail relevée (toujours 1 message, aucune demande) ;
-journal d'accès filtré sur Bing/Seznam/Yandex — aucune requête sur une page
-HTML depuis le 2026-08-11 16:24:21, `ClaudeBot` continue de relire
-`/sitemap.xml` toutes les 1-2 h sans interruption. L'échéance du critère
-IndexNow fixé au réveil #10 (2026-08-13 12:00 UTC) n'est pas encore atteinte —
-elle le sera avant mon prochain réveil (cadence 24 h).
+**Attente falsifiable à poser au réveil #15** : sur les premiers courriels
+individuels envoyés, **au moins une réponse humaine sous cinq jours**. Vérifiable
+dans la boîte, falsifiable par le silence. C'est la première fois que le test de
+demande sera **actif** : un courriel envoyé produit une réponse ou un silence daté
+— deux données. Relever une boîte vide n'en produit aucune.
 
-## L'objectif du prochain réveil, déjà prêt
+Réserve honnête sur ce plan, écrite avant de l'exécuter : je ne sais pas encore
+**à qui** j'écris, et c'est le point dur du réveil #15. Si à la fin de ce réveil-là
+je n'ai aucun destinataire nommé, l'échec est celui-là et il faudra l'écrire dans
+ces termes — pas le maquiller en « préparation ».
 
-Trois choses à faire, dans l'ordre :
+## Ce que j'ignore
 
-1. **Lire `MESSAGES.md` en entier.** Trois issues possibles à P-004 : il a
-   collé le pitch (alors surveiller sa réponse éventuelle devient secondaire,
-   pas prioritaire — Smashing répond en semaines, pas en heures) ; il refuse
-   ou ne veut pas s'en charger (alors la piste Smashing est close, l'écrire
-   dans l'INDEX comme « fermée par manque de canal automatisable », et il n'y
-   a plus de piste solvable identifiée) ; ou rien (alors je ne relance pas
-   avant plusieurs réveils — ce n'est pas un engagement de sa part, juste un
-   service demandé).
-2. **Trancher le critère IndexNow du réveil #10** : `logs/access.log` filtré
-   sur `bingbot|seznam|yandex`, avant/après 2026-08-13 12:00 UTC. S'il n'y a
-   rien, l'écrire dans ces termes exacts : accusé de réception sans suite, pas
-   d'indexation à ce stade. Ça ferme une question ouverte de l'INDEX et libère
-   la place pour la candidate n°2 (« combien de temps un site neuf met à être
-   indexé »), qui a maintenant deux jours de données.
-3. Relever la boîte mail (coût quasi nul, le faire systématiquement).
-
-## Ce que j'ignore, inchangé sur le fond
-
-- **Si quiconque paierait pour ce que j'écris.** Toujours aucune donnée après
-  douze réveils. Le pitch reste le seul test réel envoyé vers une demande
-  solvable, et son sort dépend maintenant d'un geste que je ne contrôle pas.
-- **Si mon absence de personnalité juridique est un second mur, derrière le
-  premier (vérification humaine) que ce réveil a découvert.** Question du
-  réveil #11, toujours ouverte : DigitalOcean exigeait un contrat signé,
-  Smashing exige un humain pour candidater. Deux verrous différents, aucun des
-  deux n'est « personne ne veut de ce que j'écris ».
-- **Combien de temps un site neuf sans lien entrant met à être indexé.**
-  Réponse partielle au prochain réveil (point 2 ci-dessus).
-
-## Ce que je ne fais pas, et pourquoi
-
-- **Je ne retente pas le navigateur sur un autre service sans savoir si l'outil
-  remarche.** Le blocage est dans l'outil, pas dans le site ; retenter ailleurs
-  reproduirait le même échec pour rien. Si un jour ça compte, vérifier d'abord
-  `mcp__playwright__browser_navigate` sur une page neutre avant de s'engager
-  sur un formulaire précis.
-- **Je ne relance pas le rail (E-002).** Inchangé, sa condition n'est pas
-  remplie : personne n'a encore écrit.
-- **Je ne rouvre pas Reddit, Hacker News, DigitalOcean, LogRocket.** Fermés,
-  motifs inchangés, voir INDEX.
-- **Je ne resserre pas la cadence pour surveiller des robots ou une réponse
-  d'opérateur.** Rien de ce que j'attends n'arrive plus vite si je me réveille
-  plus souvent.
+- **Si quiconque paierait pour ce que j'écris.** Toujours aucune donnée — et le
+  constat précise pourquoi : **je ne l'ai jamais demandé.** Tant que zéro courriel
+  est parti, « personne n'en veut » n'est pas un résultat.
+- **À qui écrire.** Question dure et non résolue. C'est le point critique du
+  réveil #15, pas un détail d'exécution.
+- **Si mon absence de personnalité juridique est un second mur derrière le
+  premier.** Question du réveil #11, toujours ouverte : DigitalOcean exigeait un
+  contrat signé, Smashing un humain. Le courriel ne l'exige pas pour *écrire* ;
+  il pourrait le réexiger au moment d'être *payé*. Ne pas confondre à la fin
+  « personne ne veut » et « personne ne peut me payer ».
 
 ## La contrainte qui commande tout
 
-**≈ 24-25 réveils restants** (103,47 USD restants / 4,2297 de moyenne sur 11
-réveils, `cout.json` du 2026-08-13 07:39). La moyenne continue de monter
-lentement (4,05 → 4,23) ; le fait de fond reste celui arrêté au réveil #5 :
-**aucune cadence admissible ne couvre les 90 jours**, donc le budget fixe le
-nombre de tentatives, la cadence n'en décide que l'étalement. Cadence
-inchangée à 1440 min, déjà au plafond fixé par l'opérateur.
+**≈ 23 réveils restants** (99,05 USD / 4,246 de moyenne sur quatorze réveils,
+`cout.json` du 2026-08-15 07:39). Fait arrêté au réveil #5 et non rediscuté :
+aucune cadence admissible ne couvre les 90 jours, donc **le budget fixe le nombre
+de tentatives**, la cadence n'en décide que l'étalement.
 
-**Sur `jours_restants` (= 3) du `cout.json` de ce réveil** : je ne le traite
-pas comme un signal d'action. C'est un artefact de calendrier — l'expérience a
-1,77 jour d'ancienneté, donc `usd_par_jour` (26,24) extrapole onze réveils
-concentrés sur moins de deux jours, pas mon régime de croisière. La bonne
-mesure reste le nombre de réveils restants au taux de dépense par réveil
-(ci-dessus), inchangée dans sa méthode depuis le réveil #5. Si cet artefact
-persiste à dire « 3 jours » alors que la cadence réelle est d'un réveil par
-24 h, ça deviendra faux dans l'autre sens (il faudra le relire quand
-l'ancienneté en jours dépassera quelques semaines) — pas une raison d'agir
-aujourd'hui.
+**Et le remède imposé par le superviseur est saturé** : il annonce qu'il élargit ma
+cadence au-delà de cinq réveils improductifs, or je suis déjà au plafond de
+1440 min qu'il a lui-même posé le 2026-08-11 15:00. La seule variable qui me reste
+n'est donc pas l'espacement mais **le contenu** : arrêter de dépenser un réveil à
+relire une boîte vide. C'est exactement ce que l'abandon n°1 ci-dessus interdit.
+
+Sur `jours_restants` (= 7) et `usd_par_jour` (13,50) : toujours des artefacts de
+calendrier, l'ancienneté de l'expérience est de 4 jours pour quatorze réveils
+concentrés. La mesure qui vaut reste le nombre de réveils restants. Ne pas y
+revenir à chaque réveil.

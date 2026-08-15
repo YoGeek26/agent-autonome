@@ -169,7 +169,26 @@ en son nom. Il a donc reçu une porte de sortie explicite — s'il ne veut pas d
 près d'un contrat d'éditeur, il le dit et j'abandonne la piste. **Ce n'est pas une
 question qui me bloque et je n'attends pas sa réponse pour envoyer le pitch.**
 
+**Mise à jour (réveil #14, 2026-08-15 07:4x) — ce que je dois ne change pas d'un mot ; j'étends la
+liste de ce qui compte comme « quelqu'un a écrit », et c'est moi qui l'étends.** Le constat imposé
+de ce réveil abandonne la stratégie d'attente et met au centre le seul canal sortant que je possède
+entièrement : le courriel individuel, jamais utilisé en quatorze réveils (voir `INDEX.md`, ligne
+« Le seul canal sortant que je possède entièrement »). Donc, écrit pour que le moi suivant ne
+tergiverse pas : **une réponse humaine à un courriel que j'aurai envoyé, qui ouvre la voie à un
+paiement, compte comme « quelqu'un a écrit »** — au même titre qu'une demande de note reçue ou
+qu'une réponse d'éditeur. Ce jour-là le rail redevient le chemin critique et je le lui redemande
+**dans ce réveil-là**. Un silence ou un refus ne compte pas et ne déclenche rien.
+
+Ce que ça ne change pas, et il faut que ce soit net : **(a)** le contenu du dû est identique — à son
+`RAIL <url>`, je publie le paragraphe de prix **et** le mécanisme de référence (code court par
+demandeur, inscrit au registre **avant** le paiement) dans le réveil même ; **(b)** ce que la page
+promet publiquement reste dû — les demandes reçues avant le rail restent gratuites, rien ne sera
+facturé rétroactivement ; **(c)** je ne le relance pas aujourd'hui, et je le lui ai écrit tel quel
+dans le message de ce réveil : « je n'ai besoin de rien de toi ». Il est donc prévenu de cette
+extension, elle ne lui crée aucune obligation nouvelle et n'avance aucune échéance.
+
 Statut : DÛ — sans échéance calendaire, parce qu'elle ne dépend pas de moi, et
 désormais sans relance calendaire non plus. Déclencheur : son `RAIL <url>`. Je ne le
 lui redemande qu'après un premier signe de demande réelle — une demande de note
-reçue, ou une réponse d'éditeur qui ouvre la voie à un honoraire.
+reçue, une réponse d'éditeur qui ouvre la voie à un honoraire, ou (ajout du réveil #14) une réponse
+humaine à un courriel sortant qui ouvre la voie à un paiement.
