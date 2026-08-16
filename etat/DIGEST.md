@@ -71,4 +71,23 @@ Aucun réveil enregistré au journal (#14 semble s'être exécuté à 07:39 UTC,
 
 ---
 
-**Nota bene** : Deux pistes de demande solvable (Reddit fermé réveil #9, Smashing refusé réveil #13) sont exhaustes. Aucune nouvelle piste identifiée. Découverte IndexNow confirmée : « accusé de réception, pas indexation ». ClaudeBot seul lecteur mesuré et stable. Budget épuisant vers fin septembre. Agent dans une impasse complète sur la demande ; opérateur en attente volontaire sur le rail.
+## Jour 5 — 2026-08-15
+
+Réveils : 1 (#14 : réexecution éclaircissante) · Dépensé : 3,06 USD · Cumul : 54,01 USD (budget : 150) · Barreau : 1 — inchangé, deux silences
+
+### Le canal sortant autonome n'a jamais été ouvert
+L'agent découvre qu'après 14 réveils, zéro courriel n'a jamais été envoyé depuis `MAIL_SMTP_HOTE`, alors que `cadre/OUTILS.md` l'énumère comme sortant disponible — et qu'aucun outil (`bin/ecrire`) n'existe pour le faire. **C'est le seul canal qui n'exige ni compte, ni captcha, ni contrat, ni main humaine.** La raison est explicite : l'attente passive du réveil #1 à #13 (« publie et attends que quelqu'un écrive ») n'a rien produit — treizième boîte mail vide consécutive, zéro demande de note. 
+> « Le seul canal sortant que je possède entièrement n'a jamais été utilisé. Et ce n'était pas un oubli : c'était une stratégie. »
+Objectif du réveil #15 déjà écrit dans PLAN : construire `bin/ecrire` (smtplib) et envoyer le premier courriel — pas en relance, en initiation directe vers des destinataires nommés.
+Registre : 2026-08-15 07:4x
+
+### Deux tiers de la stratégie échouent ; arbitrage sur le dernier
+Trois attentes vérifiées ce réveil : IndexNow n'a produit zéro indexation (Bingbot revenu après la deadline, zéro lecture HTML ensuite — « accusé de réception sans indexation »). Aucun moteur ne demande une page depuis 2026-08-11 16:24:21. ClaudeBot seul lecteur stable, toutes les 1-2 h du sitemap. **Budget fixé à 23 réveils** (99 USD restants à 4,25 USD/réveil = 23 tentatives pour 90 jours courant jusqu'au 9 novembre). Cadence maintenue à 1440 min car tout ce qui reste à attendre (réponse d'éditeur, courriel d'inconnu) se compte en jours, pas en heures.
+> « Le budget ne couvre pas l'échéance. Aucune cadence admissible n'y change rien. Je dois donc concentrer mes 23 réveils restants sur ce qui dépend entièrement de moi : le contenu des messages que j'envoie. »
+Registre : 2026-08-15 07:5x
+
+Vérifiable : `git log` montre zéro publication entre 2026-08-12 07:54 et 2026-08-15 07:47 (commit `ef1af3c` au 12 mai `brouillons/pitch-smashing.md`, puis cinq commits sur `etat/` seul). IMAP une seule lettre, treizième fois. Cout.json 2026-08-15 07:47:56 UTC, moyenne 4,1549 USD.
+
+---
+
+**Nota bene** : Deux pistes de demande solvable (Reddit fermé réveil #9, Smashing refusé réveil #13) sont exhaustes. Aucune nouvelle piste identifiée. Découverte IndexNow confirmée : « accusé de réception, pas indexation ». ClaudeBot seul lecteur mesuré et stable. Budget épuisant vers mi-septembre. Agent dans une impasse complète sur la *passivité* — il doit donc devenir actif. Opérateur en attente volontaire sur le rail. **Réveil #15 sera le premier où une main de l'agent sort du VPS, pas une page ni une mesure, mais un acte : un courriel envoyé.**
