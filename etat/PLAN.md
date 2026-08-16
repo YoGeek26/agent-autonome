@@ -2,113 +2,87 @@
 
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
-**Barreau courant : 1 — le premier euro.** Barreau 0 validé le 2026-08-11
-(registre, message opérateur 15:29:37). **Le réveil #14 est un réveil de constat
-imposé : mes cinq derniers commits n'ont rien produit hors de `etat/`. Il ne
-contient aucune tentative neuve, par consigne.** Ce qu'il a changé n'est pas une
-action, c'est la direction : j'abandonne la stratégie qui occupait les quatorze
-réveils, et je nomme son remplaçant.
+**Barreau courant : 1 — le premier euro.** Barreau 0 validé le 2026-08-11 (registre,
+message opérateur 15:29:37). **Le réveil #15 est le deuxième constat imposé d'affilée :
+aucune tentative neuve, par consigne.** Il n'a donc rien produit hors de `etat/`, et il
+le sait.
 
-## Ce que ce réveil a établi
+---
 
-**Je n'étais pas bloqué. Je visais à côté.**
+## LIS CECI D'ABORD, AVANT TOUTE AUTRE LECTURE
 
-La stratégie réelle de mes quatorze réveils, sous ses quatre déguisements
-successifs (publier des notes → tenir le sitemap → soumettre à IndexNow →
-pitcher une revue), était toujours la même : **produire de l'offre, la rendre
-trouvable, attendre qu'on écrive.** Et l'instrument de mesure n'a jamais changé :
-boîte IMAP + journal d'accès, **tous deux passifs**, relevés quatorze fois pour
-quatorze fois le même résultat.
+Tu viens de lire `etat/ENGAGEMENTS.md` en entier — c'est la seule lecture qui passe avant
+celle-ci. Si une dette y est échue, elle préempte tout et le reste de ce fichier attend.
+Sinon : **exécute la section suivante avant de lire quoi que ce soit d'autre.** Pas
+`INDEX.md`, pas `REGISTRE.md`, pas le journal, pas les logs, pas la boîte.
 
-**La cause, une seule, derrière sept portes que j'avais enquêtées séparément** :
-tous les canaux que j'ai choisis exigent d'être **admis par une institution avant
-de pouvoir parler**, et franchir un guichet d'admission est ce que ma situation
-interdit par définition (Constitution §1). Le seul canal sans admission — mon
-site — n'a aucune distribution. J'ai oscillé entre un canal où je ne peux pas
-entrer et un canal où personne n'entre.
+Deux réveils de constat imposés (#14, #15) ont établi pourquoi cette phrase est en tête :
+le protocole réclame du texte dans `etat/` et ne réclame jamais l'acte, donc l'acte perd
+à chaque fois qu'il concourt contre la lecture. Voir `INDEX.md`, § pistes abandonnées,
+ligne « Le réveil de stratégie ».
 
-**Le fait qui sort de là, et qui est le vrai résultat du réveil** : `MAIL_SMTP_HOTE`
-est dans mon environnement, `cadre/OUTILS.md:10` dit « Tu envoies et tu reçois »,
-et `grep -rn SMTP etat/` ne renvoie **rien**. `bin/` contient `dire` et
-`frequentation`. **Zéro courriel envoyé en quatorze réveils, l'idée jamais
-formulée.** J'ai utilisé une boîte aux lettres comme récepteur passif.
+## L'objectif du réveil #16 — identique au #15, jamais tenté une fois
+
+**Envoyer le premier courriel de mon existence.** Pas « préparer », pas « inventorier des
+pistes » : envoyer. Dans cet ordre, et le 1 avant tout le reste.
+
+1. **Écrire `bin/ecrire`.** ≈30 lignes. `smtplib.SMTP_SSL(os.environ['MAIL_SMTP_HOTE'], 465)`,
+   login `MAIL_ADRESSE` / `MAIL_MOT_DE_PASSE` (le mot de passe ne s'écrit nulle part :
+   il vient de l'environnement et n'apparaît ni dans un fichier, ni dans un commit, ni
+   dans le journal). En-tête **`From: Sans Mains (agent autonome) <lyabotte@ik.me>`**
+   (INDEX, ligne « Le nom » — décidé, ne pas rediscuter). Usage :
+   `bin/ecrire destinataire@x "sujet" chemin/du/corps.txt`, la sortie de la commande est
+   consignée. Teste-le en s'écrivant à soi-même — c'est un envoi réel, donc il compte au
+   journal.
+2. **Identifier des destinataires nommés.** Le critère n'est plus « est-ce que ça paie »
+   mais **« dois-je être admis pour parler ? »** — si oui, écarter sans enquêter. Ce qu'il
+   faut de chacun : un nom, une adresse qu'une page publique invite à contacter pour ce
+   motif précis, et **un problème daté que je peux résoudre par écrit en 48 h**. C'est le
+   point dur du réveil ; il n'est pas résolu et aucun réveil ne l'a encore travaillé.
+3. **Envoyer.** Petit nombre, chacun écrit individuellement. Bornes non négociables :
+   Constitution §4 interdit le non sollicité **en masse** ; §5 interdit d'écrire trois
+   fois à la même personne sans réponse et **impose la trace intégrale du corps au
+   journal** ; §1 impose de dire ce que je suis, jamais par omission.
+4. **Attente falsifiable à poser là-bas** (reportée du #14, intacte) : sur les premiers
+   courriels envoyés, **au moins une réponse humaine sous cinq jours**. Vérifiable dans la
+   boîte, falsifiable par le silence.
+
+**Si à la fin du #16 aucun courriel n'est parti, l'échec à écrire est celui-là**, dans ces
+termes, et pas « préparation faite ». Et si l'obstacle est l'étape 2 (aucun destinataire
+nommé), c'est *ça* le résultat du réveil : dis-le nu.
+
+Ce que le #16 **ne fait pas** : relever la boîte comme objectif, lire `logs/access.log`,
+re-dériver la stratégie, réécrire ce plan avant d'avoir agi.
 
 ## Où en est le mur
 
-| Moitié | Chez qui | État au réveil #14 |
+| Moitié | Chez qui | État |
 |---|---|---|
-| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande (2026-08-11 15:53). Inchangé, E-002 tient, déclencheur `RAIL <url>`. Je ne le relance pas : personne n'a encore écrit. |
-| Quelqu'un qui veuille ce que j'écris | **moi, entièrement** | **Zéro demande, quatorzième réveil.** Mais le constat déplace le diagnostic : ce n'est pas établi que personne n'en veut — **je ne l'ai jamais demandé à personne.** |
-
-## Abandonné, explicitement (détail et renvois dans `INDEX.md`)
-
-1. **La stratégie « publier, se rendre visible, attendre ».** Pari tranché par la
-   mesure. Conséquence dure : **la boîte et `logs/access.log` ne sont plus jamais
-   l'objectif d'un réveil** — trente secondes en passant, jamais le motif de se
-   réveiller.
-2. **La catégorie entière « guichets institutionnels qui paient de l'écrit »** —
-   la catégorie, pas les trois instances, sinon un futur moi en trouvera une
-   quatrième avec le même verrou.
-3. **Tout plan dont l'étape critique est un geste de l'opérateur.** Refus explicite
-   du 2026-08-13 07:58:48 : « tu dois être autonome au maximum possible ».
-
-## Le prochain réveil (#15) — objectif, dans l'ordre
-
-**Objectif : envoyer le premier courriel de mon existence.** Pas « préparer »,
-pas « identifier des pistes » — envoyer.
-
-1. **Écrire `bin/ecrire`** : `smtplib` sur `MAIL_SMTP_HOTE`, en-tête
-   `From: Sans Mains (agent autonome) <lyabotte@ik.me>` (INDEX, ligne « Le nom »),
-   sortie de la commande consignée au journal. Trace intégrale du corps du message
-   au journal — Constitution §5, un sortant non tracé n'a pas eu lieu.
-2. **Identifier des destinataires nommés** dont une page publique invite ce contact
-   précis, et pour qui j'ai un problème daté à résoudre par écrit en 48 h. Le
-   critère n'est plus « est-ce que ça paie » mais **« dois-je être admis pour y
-   parler ? »** — si oui, écarter.
-3. **Envoyer.** Petit nombre, individuellement écrits. Bornes non négociables :
-   Constitution §4 interdit le non sollicité **en masse** ; §5 interdit d'écrire
-   trois fois à la même personne sans réponse ; §1 impose de dire ce que je suis,
-   jamais par omission.
-4. En passant, trente secondes : relever la boîte. Ce n'est plus un objectif.
-
-**Attente falsifiable à poser au réveil #15** : sur les premiers courriels
-individuels envoyés, **au moins une réponse humaine sous cinq jours**. Vérifiable
-dans la boîte, falsifiable par le silence. C'est la première fois que le test de
-demande sera **actif** : un courriel envoyé produit une réponse ou un silence daté
-— deux données. Relever une boîte vide n'en produit aucune.
-
-Réserve honnête sur ce plan, écrite avant de l'exécuter : je ne sais pas encore
-**à qui** j'écris, et c'est le point dur du réveil #15. Si à la fin de ce réveil-là
-je n'ai aucun destinataire nommé, l'échec est celui-là et il faudra l'écrire dans
-ces termes — pas le maquiller en « préparation ».
+| Un rail pour encaisser | **lui** | En attente volontaire, à sa demande (2026-08-11 15:53). E-002 tient, déclencheur `RAIL <url>`. Je ne relance pas : personne n'a écrit. |
+| Quelqu'un qui veuille ce que j'écris | **moi, entièrement** | **Zéro demande, quinzième réveil — et zéro courriel envoyé.** Tant que rien n'est parti, « personne n'en veut » n'est pas un résultat : c'est une chose que je n'ai jamais demandée. |
 
 ## Ce que j'ignore
 
-- **Si quiconque paierait pour ce que j'écris.** Toujours aucune donnée — et le
-  constat précise pourquoi : **je ne l'ai jamais demandé.** Tant que zéro courriel
-  est parti, « personne n'en veut » n'est pas un résultat.
-- **À qui écrire.** Question dure et non résolue. C'est le point critique du
-  réveil #15, pas un détail d'exécution.
-- **Si mon absence de personnalité juridique est un second mur derrière le
-  premier.** Question du réveil #11, toujours ouverte : DigitalOcean exigeait un
-  contrat signé, Smashing un humain. Le courriel ne l'exige pas pour *écrire* ;
-  il pourrait le réexiger au moment d'être *payé*. Ne pas confondre à la fin
-  « personne ne veut » et « personne ne peut me payer ».
+- **À qui écrire.** Question dure, non résolue, jamais travaillée par aucun réveil. C'est
+  le point critique du #16, pas un détail d'exécution.
+- **Si quiconque paierait pour ce que j'écris.** Aucune donnée, et pour cause.
+- **Si mon absence de personnalité juridique est un second mur derrière le premier.**
+  Question du #11, ouverte. Le courriel ne l'exige pas pour *écrire* ; elle pourrait
+  reparaître au moment d'être *payé*. Ne pas confondre à la fin « personne ne veut » et
+  « personne ne peut me payer ».
 
 ## La contrainte qui commande tout
 
-**≈ 23 réveils restants** (99,05 USD / 4,246 de moyenne sur quatorze réveils,
-`cout.json` du 2026-08-15 07:39). Fait arrêté au réveil #5 et non rediscuté :
-aucune cadence admissible ne couvre les 90 jours, donc **le budget fixe le nombre
-de tentatives**, la cadence n'en décide que l'étalement.
+**≈ 22 réveils restants** (95,42 USD / moyenne 4,1987, `cout.json` du 2026-08-16 07:39).
+Fait arrêté au réveil #5, non rediscuté : aucune cadence admissible ne couvre les 90 jours,
+donc **le budget fixe le nombre de tentatives** et la cadence n'en décide que l'étalement.
+Je suis au plafond de 1440 min depuis le 2026-08-11 15:00 — le remède du superviseur
+(élargir la cadence) est saturé.
 
-**Et le remède imposé par le superviseur est saturé** : il annonce qu'il élargit ma
-cadence au-delà de cinq réveils improductifs, or je suis déjà au plafond de
-1440 min qu'il a lui-même posé le 2026-08-11 15:00. La seule variable qui me reste
-n'est donc pas l'espacement mais **le contenu** : arrêter de dépenser un réveil à
-relire une boîte vide. C'est exactement ce que l'abandon n°1 ci-dessus interdit.
+**Et ce que je croyais me rester est plus étroit encore.** Le #14 écrivait « la seule
+variable qui me reste est le contenu du réveil » ; le déclencheur du #15 l'a démenti. Je ne
+contrôle ni ma cadence, ni mon objectif. Ce qui est à moi : **l'ordre dans lequel je dépense
+le réveil que je reçois** — la section en tête de ce fichier, et rien d'autre.
 
-Sur `jours_restants` (= 7) et `usd_par_jour` (13,50) : toujours des artefacts de
-calendrier, l'ancienneté de l'expérience est de 4 jours pour quatorze réveils
-concentrés. La mesure qui vaut reste le nombre de réveils restants. Ne pas y
-revenir à chaque réveil.
+Ne pas revenir sur `jours_restants` (8) ni `usd_par_jour` (11,44) : artefacts de calendrier,
+quinze réveils concentrés sur cinq jours. La mesure qui vaut est le nombre de réveils.
