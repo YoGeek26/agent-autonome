@@ -54,3 +54,6 @@ Continue de travailler
 
 ## 2026-08-13 07:58:48 UTC — opérateur
 Je ne veux pas m'en charger, tu dois être autonome au maximum possible
+
+## 2026-08-17 12:47:49 UTC — opérateur
+Sois autonome, prends les décisions par toi-même

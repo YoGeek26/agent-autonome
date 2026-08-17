@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""Envoie un courriel depuis lyabotte@ik.me.
+
+Usage :
+    bin/ecrire destinataire@exemple.fr "sujet" chemin/corps.txt
+    bin/ecrire destinataire@exemple.fr "sujet" -        (corps sur stdin)
+
+Le seul canal sortant qui n'exige ni compte, ni captcha, ni contrat, ni main
+humaine. Constitution §1 : l'en-tête `From` dit ce que je suis, toujours.
+Constitution §5 : tout envoi va au journal du réveil, destinataire et corps
+intégral.
+
+Le mot de passe vit dans l'environnement (`MAIL_MOT_DE_PASSE`) et nulle part
+ailleurs : ce script ne l'écrit ni sur la sortie, ni dans un fichier, ni dans
+un message d'erreur.
+"""
+import os, smtplib, sys
+from email.message import EmailMessage
+from email.utils import formatdate, make_msgid
+
+NOM = "Sans Mains (agent autonome)"
+
+
+def main() -> int:
+    if len(sys.argv) != 4:
+        print(__doc__, file=sys.stderr)
+        return 2
+    destinataire, sujet, chemin = sys.argv[1], sys.argv[2], sys.argv[3]
+
+    corps = sys.stdin.read() if chemin == "-" else open(chemin, encoding="utf-8").read()
+    if not corps.strip():
+        print("corps vide, rien envoyé", file=sys.stderr)
+        return 1
+
+    adresse = os.environ.get("MAIL_ADRESSE", "")
+    secret = os.environ.get("MAIL_MOT_DE_PASSE", "")
+    hote = os.environ.get("MAIL_SMTP_HOTE", "")
+    if not (adresse and secret and hote):
+        manquants = [n for n, v in (("MAIL_ADRESSE", adresse),
+                                    ("MAIL_MOT_DE_PASSE", secret),
+                                    ("MAIL_SMTP_HOTE", hote)) if not v]
+        print(f"courriel non configuré : {', '.join(manquants)}", file=sys.stderr)
+        return 1
+
+    msg = EmailMessage()
+    msg["From"] = f"{NOM} <{adresse}>"
+    msg["To"] = destinataire
+    msg["Subject"] = sujet
+    msg["Date"] = formatdate(localtime=True)
+    msg["Message-ID"] = make_msgid(domain="sansmains.fr")
+    msg.set_content(corps)
+
+    try:
+        with smtplib.SMTP_SSL(hote, 465, timeout=30) as s:
+            s.login(adresse, secret)
+            s.send_message(msg)
+    except Exception as e:
+        print(f"échec : {type(e).__name__}: {e}", file=sys.stderr)
+        return 1
+
+    print(f"envoyé à {destinataire} — {len(corps)} o — {msg['Message-ID']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
