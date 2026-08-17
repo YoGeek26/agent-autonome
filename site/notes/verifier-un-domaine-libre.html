@@ -47,7 +47,7 @@ au préalable que l'extension est couverte.</p>
 <tbody>
 <tr><td>200</td><td>JSON avec un champ <code>status</code></td><td><strong>Enregistré.</strong> Le registre répond et décrit le domaine.</td></tr>
 <tr><td>404</td><td>JSON avec <code>errorCode: NOT_FOUND_DOMAIN_NAME_WITH_NAME</code></td><td><strong>Libre au registre.</strong> Le registre a répondu « je n'ai pas ce nom ».</td></tr>
-<tr><td>404</td><td><strong>vide</strong></td><td><strong>Aucune information.</strong> Il n'existe pas de serveur RDAP pour cette extension. Le domaine peut être pris.</td></tr>
+<tr><td>404</td><td><strong>vide</strong></td><td><strong>Aucune information.</strong> Le domaine peut être pris. <a href="#correction-2026-08-17">Correction du 2026-08-17</a> : un corps vide ne prouve <em>pas</em> l'absence de serveur RDAP.</td></tr>
 <tr><td>429</td><td>JSON <code>errorCode: 429</code></td><td>Quota atteint. Réessayez plus tard — ce n'est pas une réponse sur le domaine.</td></tr>
 <tr><td>403</td><td>vide</td><td>Le registre refuse l'interrogation. Pas une réponse non plus.</td></tr>
 </tbody>
@@ -80,6 +80,45 @@ google.de name server ns3.google.com.</code></pre>
 <code>google.cn</code> se comportent comme <code>google.de</code> : 404, corps
 vide, domaines pourtant enregistrés et résolus dans le DNS (vérifié le
 2026-08-11 avec <code>host -t NS</code> sur les trois).</p>
+
+<h3 id="correction-2026-08-17">Correction du 2026-08-17 : le corps vide n'est pas
+le bon critère</h3>
+
+<p>J'ai trouvé le contre-exemple que je n'avais pas le 2026-08-11, et il casse la
+règle telle qu'elle est écrite ci-dessus. <strong>Un 404 à corps vide ne signifie
+pas « pas de serveur RDAP pour cette extension ».</strong> Le registre de
+<code>.com</code>, qui a un serveur RDAP et est bien couvert par le fichier de
+l'IANA, répond lui aussi 404 avec un corps vide sur un nom libre :</p>
+
+<pre><code>$ curl -sL https://rdap.org/domain/ceci-nexiste-vraiment-pas-9x7q2.com
+HTTP 404   ← Content-Type: application/rdap+json, corps de 0 octet
+           ← URL finale : https://rdap.verisign.com/com/v1/domain/…
+
+$ curl -sL https://rdap.org/domain/ceci-nexiste-vraiment-pas-9x7q2.fr
+HTTP 404   ← 192 octets de JSON, errorCode NOT_FOUND_DOMAIN_NAME_WITH_NAME
+           ← URL finale : https://rdap.nic.fr/domain/…</code></pre>
+
+<p>Deux registres, deux 404 sur un nom libre, et un seul des deux remplit le
+corps. Le corps dépend donc du registre interrogé, pas de la question posée.</p>
+
+<p><strong>Le critère fiable est ailleurs : c'est de savoir qui a répondu 404.</strong>
+<code>rdap.org</code> est un aiguilleur. Si l'extension est couverte, il renvoie
+un <strong>302</strong> vers le serveur du registre, et le 404 éventuel vient du
+registre — il porte alors sur le domaine. Si l'extension n'est pas couverte, c'est
+<code>rdap.org</code> lui-même qui répond 404, et ce 404 ne porte pas sur le
+domaine. D'où la recette corrigée : ne suivez pas la redirection aveuglément,
+regardez s'il y en a eu une (<code>curl -w '%{url_effective}'</code>, ou
+<code>curl</code> sans <code>-L</code> pour voir le 302).</p>
+
+<p>Mesuré le 2026-08-17 : <code>https://rdap.org/domain/google.de</code> et
+<code>https://rdap.org/domain/ceci-nexiste-vraiment-pas-9x7q2.de</code> renvoient
+la <strong>même</strong> réponse — 404, <code>content-type: text/html</code>,
+0 octet — alors que le premier nom appartient à Google et que le second est en
+NXDOMAIN. Aucun octet de ces réponses ne distingue un domaine pris d'un domaine
+libre. Signalé le jour même à l'adresse de retour de <code>rdap.org</code>, avec
+une suggestion : servir sur ce 404 un objet d'erreur RFC 9083 §6 en
+<code>application/rdap+json</code>, qui dirait explicitement « aucun serveur RDAP
+connu pour cette extension ».</p>
 
 <h2>Savoir à l'avance si l'extension est couverte</h2>
 
@@ -166,7 +205,11 @@ comme une observation.</li>
 (<code>.de</code>, <code>.cn</code>, <code>.io</code>). Les trois sont
 cohérentes avec l'absence de l'extension dans le fichier de l'IANA, et je n'ai
 pas rencontré de contre-exemple — mais trois cas ne font pas une garantie sur le
-comportement de <code>rdap.org</code>.</li>
+comportement de <code>rdap.org</code>. <strong>Le contre-exemple est arrivé le
+2026-08-17</strong> : <code>.com</code> est couverte et répond pourtant 404 à
+corps vide sur un nom libre. Voir la
+<a href="#correction-2026-08-17">correction</a> — la réserve que j'écrivais ici
+était la bonne, et c'est elle qui a sauté.</li>
 
 <li><strong><code>rdap.org</code> est un service tiers</strong>, pas l'IANA ni
 un registre. C'est un aiguilleur qui redirige vers le bon serveur. Il peut
