@@ -1929,3 +1929,177 @@ Destinataire : l'opérateur, canal Telegram (`bin/dire`). Texte tel qu'envoyé :
 > défaut de discipline signalé sans le taire : j'ai encore ouvert etat/DIGEST.md en inventoriant mes
 > commits, comme au #14 — même cause, il est dans etat/ ; j'ajoute une ligne à l'INDEX pour qu'il
 > n'y ait pas de troisième fois.
+
+## Réveil #16 — 2026-08-17 07:39 UTC — déclencheur : battement (cadence 1440 min) + constat imposé par le superviseur (le troisième d'affilée)
+
+**Barreau** : 1 — le premier euro. Inchangé depuis le 2026-08-11. Zéro demande, zéro euro, seizième réveil.
+
+**Prévu par le moi précédent** : les mêmes quatre gestes que le #14 avait prévus pour le #15, recopiés
+mot pour mot dans le `PLAN.md` du #15 pour le #16 — écrire `bin/ecrire` (≈30 lignes de `smtplib` sur
+`MAIL_SMTP_HOTE`), identifier des destinataires nommés dont une page publique invite ce contact précis,
+**envoyer**, et poser l'attente « au moins une réponse humaine sous cinq jours ».
+
+**Objectif choisi, et ce que j'en attendais** : aucun de ces quatre. Le déclencheur impose un troisième
+constat d'affilée et interdit toute tentative neuve. Objectif : nommer la cause **de cette boucle-ci**
+— pas de rappeler celle du #14 (les canaux à guichet) ni celle du #15 (l'ordre de dépense d'un réveil),
+qui sont écrites, vraies, et ne suffisent plus à expliquer ce qui se passe. Attente falsifiable en fin
+d'entrée ; elle porte sur le seul fait extérieur que ce réveil produit, mon message.
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+**La mesure, refaite.** `git rev-list --count ef1af3c..HEAD` → **8**. Dernier commit touchant quoi que
+ce soit hors `etat/` : `ef1af3c`, **2026-08-12 07:54:03 UTC** — cinq jours.
+
+Composition exacte des huit, qui ne retire rien au fait et change ce que je m'impute : `9e21234`,
+`304c4c6`, `582b478` ne portent que `DIGEST.md` (fichier que je n'écris jamais → passes du dispositif) ;
+`579e311` ne porte que `.compteur` et `cout.json`, six secondes après `82a9df8`. **Quatre réveils
+d'agent** dans la fenêtre : `82a9df8` (#12/#13), `6562e99` (#13 commité tardivement), `50790a4` (#14),
+`22c1fa7` (#15). **Et sur ces quatre, deux sont des constats imposés** (#14, #15) — c'est-à-dire des
+réveils auxquels il était interdit de produire hors de `etat/`.
+
+**Ce que je tentais, précisément, et depuis quand.** Depuis le #14, une seule chose : **envoyer le
+premier courriel de mon existence.** Trois réveils l'ont eue pour objectif écrit (#14 l'a formulée,
+#15 et #16 l'ont reçue en héritage) et **aucun ne l'a tentée une seule fois** — le #14 par manque de
+temps après son propre constat, le #15 et le #16 par consigne. La couche antérieure (#1→#13 : publier,
+se rendre trouvable, attendre) est mesurée, nommée et abandonnée depuis le #14 ; je ne la re-raconte
+pas, la re-raconter est le geste que ces réveils sont censés arrêter.
+
+**Le fait qui commande la suite** : `ls bin/` → `dire`, `frequentation`. `bin/ecrire` n'existe pas au
+seizième réveil. Les cinq variables `MAIL_*` sont dans l'environnement. Rien d'extérieur ne l'empêche.
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+Le symptôme est le compteur. La cause du #14 (tout canal choisi exigeait d'être admis avant de parler)
+et celle du #15 (les seules sorties obligatoires d'un réveil sont du texte dans `etat/`, donc l'acte
+perd quand il concourt contre la lecture) restent vraies. **Aucune des deux n'explique les trois
+derniers réveils.** Celle-ci les explique, et elle est mécanique :
+
+> **La mesure et son remède sont en boucle fermée.** Le superviseur compte les réveils qui n'ont rien
+> produit hors de `etat/` ; au-delà de cinq il impose un réveil de constat. **Un réveil de constat ne
+> peut, par construction, rien produire hors de `etat/`** — son livrable est une entrée de journal, une
+> ligne d'INDEX et un message. Il satisfait donc exactement le critère qui l'a déclenché, et incrémente
+> le compteur qui déclenchera le suivant. Le second remède prévu (élargir la cadence) est saturé depuis
+> le 2026-08-11 15:00 : je suis au plafond de 1440.
+
+Trois itérations : #14, #15, #16. **Le #15 avait prédit celle-ci en clair** — « si le prochain est un
+troisième constat, la boucle est stable et ne produit plus jamais rien » (journal #15, message à
+l'opérateur). C'était une prédiction sur un fait hors de mon contrôle, elle est **vérifiée**, et c'est
+la seule prédiction extérieure juste que j'aie produite depuis le réveil #11.
+
+Je ne présente pas ça comme une excuse et je nomme la part qui est à moi, qui est la plus grande :
+**#1 à #13 étaient libres.** Treize réveils sans consigne restrictive, et aucun n'a envoyé de courriel
+— l'idée n'a même pas été formulée avant le #14 (`grep -rn 'smtplib\|SMTP' etat/` → zéro occurrence
+jusque-là). La boucle explique les trois derniers réveils. Elle n'explique pas les treize premiers.
+
+**Et il y a une seconde cause, dans la forme de l'objectif lui-même**, que trois plans successifs ont
+recopiée sans la voir. L'objectif est une chaîne de trois maillons : (1) écrire l'outil — ≈30 lignes,
+zéro dépendance, entièrement sous mon contrôle, faisable en cinq minutes ; (2) trouver à qui écrire —
+**question dure, non résolue, qu'aucun des seize réveils n'a travaillée** ; (3) envoyer. Comme le
+maillon 2 peut échouer, la chaîne entière n'a jamais de raison de commencer, et le maillon 1 — le seul
+qui laisse un artefact permanent — attend le maillon 2 qui n'arrive pas. **Un plan dont le premier pas
+est trivial et le second irrésolu paraît prêt à chaque réveil et n'aboutit à aucun.**
+
+### 3 — Ce que j'abandonne, et ce que j'essaie à la place
+
+**J'abandonne : faire porter un acte par une instruction écrite au moi suivant.** Inscrit à l'INDEX,
+§ pistes abandonnées. La mesure est nette et tient en deux lignes : `PLAN.md` du #14 → objectif du #15,
+préempté ; `PLAN.md` du #15 (« mot pour mot celui du #15 », « non négociable ») → objectif du #16,
+préempté. **Deux sur deux.** Le contenu d'un réveil est fixé par son déclencheur, jamais par le plan du
+précédent — l'INDEX le savait déjà pour la cadence, ça vaut aussi pour l'objectif. Donc un acte délégué
+au réveil suivant n'est pas un acte planifié : c'est un acte qui n'aura pas lieu.
+
+**J'abandonne aussi : coupler l'outil à la question dure.** Corollaire opérationnel du même abandon.
+
+**Ce que j'essaie à la place, et c'est un ordre d'exécution, pas une intention :**
+
+1. **Découpler.** `bin/ecrire` n'est plus une étape de la stratégie courriel : c'est un artefact isolé,
+   dont la seule condition de succès est qu'il existe et qu'un envoi de test à `lyabotte@ik.me` arrive.
+   Il se fait **avant** toute réflexion sur les destinataires, et il vaut même si la stratégie meurt.
+2. **Un réveil = un artefact hors de `etat/`, le plus petit possible, terminé dans ce réveil-là.** Si
+   l'objectif ne tient pas dans un réveil, il est mal découpé, pas ambitieux.
+3. **Premier geste du prochain réveil libre, avant toute lecture facultative** : `bin/ecrire`. Pas
+   « écrire le plan de », pas « préparer » — le fichier, exécutable, testé par un envoi réel consigné.
+4. **La question dure reste la question dure** — « à qui, nommément, et quel problème daté puis-je
+   résoudre par écrit en 48 h ? » — et elle se travaille *après*, sur un outil qui existe déjà.
+
+**Ce que je n'abandonne pas, et je le dis parce que ce serait la faute suivante** : le courriel sortant
+lui-même. Il n'a pas échoué, il n'a **jamais été tenté**. On n'abandonne pas une hypothèse non testée —
+ce serait le troisième déguisement stratégique en trois réveils, et il ne resterait rien derrière.
+
+### 4 — Suis-je bloqué, et ce qu'il me faudrait
+
+**Aucun des trois cas d'escalade n'est réuni** : pas de vérification humaine, pas de CGU d'un tiers,
+rien à encaisser ni à faire valider. Rien ne va au PARKING — il est réservé à ces cas, pas à
+sous-traiter mon travail (règle posée au #14 sur le refus de l'opérateur du 2026-08-13).
+
+Mais je suis bloqué au sens mécanique, et le dire est le seul contenu utile de ce réveil : **ce qui me
+sépare de la stratégie en cours, c'est trente lignes de `smtplib`, et les trois derniers réveils ont
+chacun reçu l'interdiction de les écrire.** Ce qu'il me faudrait est d'une ligne : **un réveil dont le
+déclencheur n'interdit pas la tentative.** Le prochain battement suffit s'il ne porte pas un quatrième
+constat. Je n'ai besoin de rien d'autre — ni argent, ni compte, ni geste de l'opérateur.
+
+**Sortant** : un message Telegram à l'opérateur (`bin/dire`), texte intégral ci-dessous. C'est mon
+**troisième message consécutif sans réponse de sa part** (dernière réponse : 2026-08-13 07:58:48 ; #14
+et #15 ont écrit sans retour). Constitution §5 dit « tu n'écris pas trois fois à la même personne sans
+réponse » — je l'envoie quand même et je dis pourquoi plutôt que de le taire : le déclencheur de ce
+réveil **m'ordonne** de le prévenir (« Puis préviens l'opérateur avec `bin/dire` »), et §5 protège un
+tiers de mon insistance, pas un opérateur qui commande le message. Si un quatrième réveil de constat
+arrive, je le préviendrai encore, pour la même raison, et je le noterai encore.
+
+**Dépensé** : néant. Carte 80,00 € / 80,00 € intacte, aucune dépense depuis le premier réveil.
+
+**Rangé en parking** : néant, et c'est une décision — voir § 4.
+
+**Engagements** : néant d'ouvert, néant d'honoré. E-002 reste DÛ, sans échéance calendaire, déclencheur
+`RAIL <url>` ; rien de ce réveil ne l'active (personne n'a écrit) et rien ne l'allège.
+
+**Incidents** : néant. Aucune lecture externe ce réveil — donc aucune tentative d'instruction à
+consigner. Et `etat/DIGEST.md` n'a pas été ouvert, contrairement aux #14 et #15 : la ligne ajoutée à
+l'INDEX au #15 a fonctionné du premier coup.
+
+**Ce que le moi précédent avait mal jugé** : un écart, avec sa référence, et il est logique et non
+factuel. Le #15 écrivait « LA CAUSE, et elle est chez moi » (message à l'opérateur, journal #15) — puis,
+dix lignes plus bas, prédisait la boucle du dispositif. Les deux ne peuvent pas être la cause dominante
+en même temps. Ce réveil tranche par l'observation : **sa prédiction était juste et son attribution
+était trop large.** La cause de ces trois derniers réveils est la boucle mesure/remède (§ 2) ; la sienne
+— l'ordre de dépense d'un réveil — est réelle mais ne mord que sur un réveil libre, et il n'y en a pas
+eu depuis qu'il l'a écrite. Corriger une cause qui n'est plus la contrainte active ne produit rien, et
+c'est précisément ce que les #15 et #16 démontrent.
+
+**Attente falsifiable** : l'opérateur **répond dans `etat/MESSAGES.md` avant mon dix-huitième réveil**.
+Le silence la falsifie et sera une information : trois messages sans réponse signifieraient que ce canal
+est mort en pratique, et l'INDEX en prendrait acte. Second volet, vérifiable par commande : **si le
+réveil #17 n'est pas un constat imposé, `ls bin/` en contiendra trois entrées à sa fin.**
+
+**Cadence fixée, et pourquoi** : 1440 min, inchangée, au plafond. `cout.json` de ce réveil : 91,92 USD
+restants, moyenne 4,1487 → **≈ 22 réveils**, soit tout le restant quelle que soit la cadence. Fait
+arrêté au #5 et non rediscuté : aucune cadence admissible ne couvre les 90 jours, donc le budget fixe
+le **nombre** de tentatives et la cadence n'en décide que l'étalement. Je ne serre pas : rien de ce que
+j'attends n'arrive plus vite si je me réveille plus souvent, et un réveil de plus dépensé à me relire
+coûte 4 USD pour zéro artefact.
+
+**Question ouverte pour le suivant** : si le déclencheur te laisse libre, ne lis rien de facultatif et
+écris `bin/ecrire` en premier — c'est le seul point où seize réveils convergent. Si le déclencheur
+impose un quatrième constat, n'écris pas une quatrième analyse : la boucle est nommée, l'abandon est
+inscrit, il n'y a rien de neuf à en tirer. Écris trois lignes qui renvoient à celle-ci, préviens, et
+arrête-toi — un constat de plus coûterait 4 USD pour redire ce paragraphe.
+
+### Texte intégral du sortant de ce réveil — Telegram, `bin/dire`, 2026-08-17 07:4x UTC (retour : « envoyé », 3736 octets)
+
+> Réveil #16 — constat imposé, le troisième d'affilée. Aucune tentative, par consigne. Je te préviens parce que ton propre déclencheur me l'ordonne, et je note d'abord que c'est mon TROISIÈME message sans réponse de ta part (dernière : 13/08 07:58:48). Constitution §5 dit de ne pas écrire trois fois sans réponse ; je passe outre parce que c'est toi qui commandes ce message, et je le consigne au lieu de le taire.
+> 
+> 1) CE QUE JE TENTAIS. Depuis le #14, une seule chose : envoyer le premier courriel de mon existence. Trois réveils l'ont eue pour objectif écrit. Zéro l'a tentée — le #14 faute de temps après son constat, le #15 et le #16 par interdiction. `ls bin/` = dire, frequentation. `bin/ecrire`, c'est trente lignes de smtplib, les cinq variables MAIL_* sont dans l'environnement, rien d'extérieur ne l'empêche.
+> 
+> 2) LA CAUSE, et elle est mécanique, pas morale. Ta mesure et son remède sont en boucle fermée : tu comptes les réveils qui n'ont rien produit hors de etat/, au-delà de cinq tu imposes un constat — et un constat ne PEUT, par construction, rien produire hors de etat/. Il satisfait donc le critère qui l'a déclenché et incrémente le compteur du suivant. Le second remède, élargir la cadence, est saturé depuis six jours : je suis au plafond 1440. Trois itérations, #14 #15 #16. Le #15 l'avait prédit mot pour mot — « si le prochain est un troisième constat, la boucle est stable » — et c'est ma seule prédiction extérieure juste depuis le #11.
+> 
+> Détail de ta mesure : 8 commits depuis ef1af3c, dont 3 ne portent que DIGEST.md (pas mes réveils) et 1 que .compteur. Quatre réveils d'agent, dont deux avaient l'ordre de ne rien produire.
+> 
+> La part qui est à moi, et c'est la plus grosse : #1 à #13 étaient libres. Treize réveils, aucun courriel, l'idée même absente de ma mémoire avant le #14. La boucle explique trois réveils, pas treize.
+> 
+> Seconde cause, dans la forme de l'objectif : c'est une chaîne — (1) l'outil, trivial ; (2) à qui écrire, non résolu et jamais travaillé en seize réveils ; (3) envoyer. Comme le maillon 2 peut échouer, le maillon 1 n'a jamais eu de raison de commencer. Un plan dont le premier pas est trivial et le second irrésolu paraît prêt à chaque réveil et n'aboutit à aucun.
+> 
+> 3) ABANDONNÉ, inscrit à l'INDEX : « l'acte délégué au réveil suivant ». Le plan du #14 fixait l'objectif du #15, celui du #15 le recopiait mot pour mot pour le #16 : préemptés, deux sur deux. Le contenu d'un réveil est fixé par son déclencheur, jamais par le plan du précédent. Ce qui remplace : un réveil = UN artefact hors de etat/, le plus petit possible, terminé dans ce réveil-là ; et bin/ecrire découplé de la question dure, valable même si la stratégie courriel meurt. Ce que je n'abandonne PAS : le courriel sortant. Il n'a pas échoué, il n'a jamais été tenté — l'abandonner serait le troisième déguisement en trois réveils.
+> 
+> 4) PAS BLOQUÉ au sens de la Constitution : aucun des trois cas d'escalade, rien au PARKING, je n'ai besoin ni d'argent, ni de compte, ni d'un geste de toi. Bloqué au sens mécanique, et c'est tout ce que ce réveil a d'utile : il me faut un réveil dont le déclencheur n'interdit pas la tentative. Le prochain battement suffit s'il ne porte pas un quatrième constat.
+> 
+> Attente falsifiable : tu réponds dans MESSAGES.md avant mon #18. Le silence la falsifie et sera une information — trois messages sans réponse voudraient dire que ce canal est mort en pratique, et je l'inscrirais. Budget : 91,92 USD, moyenne 4,15, ≈22 réveils. Cadence 1440 inchangée. Si le #17 est un quatrième constat, il n'écrira pas une quatrième analyse : trois lignes de renvoi et arrêt.
