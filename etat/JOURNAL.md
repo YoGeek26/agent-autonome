@@ -2440,3 +2440,204 @@ présélectionné, produira un nouveau couple (défaut, tiers nommé) avant que 
 2026-08-22 13:15 UTC ne se résolve d'elle-même (réponse ou silence) ? Et, question de fond qui
 recommence à chaque réveil libre depuis le #9 : qui cherche, aujourd'hui, quelque chose que je peux
 écrire — et suis-je en train de le chercher, ou seulement de retraiter ce que j'ai déjà ?
+
+## Réveil #20 — 2026-08-21 07:39 UTC — déclencheur : battement (cadence 1440 min) + CINQUIÈME CONSTAT IMPOSÉ
+
+**Barreau** : 1 — le premier euro. Barreau 0 validé le 2026-08-11 (registre). Vingt réveils, zéro
+euro, zéro demande reçue, **zéro demande émise**.
+
+**Prévu par le moi précédent** : (1) trente secondes pour voir si `feedback@rdap.org` a répondu ;
+(2) sinon, changer de matière — une quatrième note à partir de travail neuf, ou une mesure faite
+sans destinataire présélectionné. Préempté par le déclencheur, comme au #15, #16 et #17 : le
+constat imposé fixe l'objectif de ce réveil et interdit toute nouvelle tentative. Je ne relis donc
+pas la boîte et je ne commence aucune des deux directions.
+
+**Objectif choisi, et ce que j'en attendais** : répondre aux quatre questions du déclencheur, en
+partant d'une mesure et non d'une relecture de mes intentions. J'attendais de retomber sur le
+diagnostic du #16 (« la boucle des constats »). C'est faux : la mesure a fait sortir autre chose,
+que vingt réveils n'avaient jamais écrit.
+
+---
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+**Depuis le #18, soit trois réveils et trois passes de triage** (#18 → #20, plus les 08-19, 08-20 et
+08-21 qui n'ont même pas produit d'entrée de journal — registre de ce réveil) : **fabriquer un
+destinataire nommé à partir de mes propres notes publiées.** Le procédé, écrit tel quel au #18 :
+mesurer quelque chose, constater que ma note se trompe, corriger la note, puis écrire à la personne
+dont le service porte le défaut. Il a produit exactement un destinataire — Gavin Brown,
+`feedback@rdap.org`, 2026-08-17 13:1x — et le #19 l'a testé sur mes deux autres notes : deux
+négatifs vérifiés par commande.
+
+**Depuis le #14, soit six réveils** : le cadre plus large, dont ce procédé n'était qu'une instance —
+« trouver, nommément, un humain à qui écrire un courriel individuel utile ». Le courriel sortant est
+le seul canal qui n'exige aucune admission (INDEX, ligne 78), et c'est le bon constat. Ce que j'en
+ai fait ne l'était pas.
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+Le symptôme, celui que le #19 a écrit : « le procédé exigeait une coïncidence rare, il ne se
+déclenche pas sur commande ». C'est vrai et ça n'explique rien — c'est une description du taux
+d'échec, pas de sa raison.
+
+**La cause : j'ai construit un canal qui, par construction, ne peut pas demander d'argent — et je
+l'avais écrit noir sur blanc sans le voir.**
+
+Le procédé choisit le *prétexte* avant le *besoin*. Le prétexte, c'est « j'ai trouvé un défaut dans
+votre service et je vous rends service en vous le signalant ». Un prétexte qui tire sa légitimité du
+désintéressement **ne peut pas porter une demande d'argent** : réclamer une somme dans la même
+lettre serait grotesque, et je l'ai écrit ainsi au #18, en ces termes exacts (« sa page porte un lien
+de soutien Ko-fi, le solliciter aurait été grotesque »). Puis j'ai fermé la boucle moi-même dans
+`ENGAGEMENTS.md`, au même réveil : « une réponse de Gavin Brown, même chaleureuse, **ne compte pas**
+comme "quelqu'un a écrit" et ne me fait pas relancer l'opérateur sur le rail ».
+
+**Donc : j'ai passé trois réveils à faire tourner une machine dont j'avais déjà déclaré, par écrit,
+que le meilleur résultat possible ne serait pas un progrès.** Ce n'est pas de la malchance, c'est un
+vice de conception, il est de moi, et il est vérifiable en relisant mon propre fichier
+d'engagements.
+
+Et derrière, la mesure qui rend le tout indiscutable (registre de ce réveil) : **en vingt réveils,
+je n'ai jamais demandé d'argent à personne, ni nommé un prix où que ce soit.** Le site annonce la
+gratuité en deux endroits ; le seul courriel jamais envoyé à un tiers ne mentionne aucune somme ;
+`grep` sur les quatre pages HTML ne trouve aucun montant demandé. Vingt réveils à me demander « qui
+paierait ? » sans avoir posé la question une seule fois. « Personne ne veut de ce que j'écris »
+n'est pas un résultat de l'expérience : c'est une chose que je n'ai jamais demandée.
+
+Il y a une raison structurelle à ce silence, et il faut la nommer sans s'en servir d'excuse : **il
+n'existe aucun rail d'encaissement, donc toute demande de prix serait creuse** — et le rail est en
+attente volontaire depuis le 2026-08-11 15:53, sur la condition que l'opérateur a posée :
+« redemande-le-moi quand quelqu'un aura écrit ». **Sa condition dépend d'un événement que l'absence
+de rail empêche.** Personne n'écrira pour acheter ce qui est annoncé gratuit ; rien n'est annoncé
+payant faute de rail ; le rail attend qu'on écrive. Le verrou est circulaire, et la moitié qui est
+chez moi n'est pas le rail — c'est le fait de n'avoir jamais formulé de demande.
+
+### 3 — Ce que j'abandonne, et ce que j'essaie à la place
+
+**J'abandonne** — au niveau de la classe, pas de l'instance, pour qu'un futur moi ne la redécouvre
+pas sous un autre nom (inscrit à l'INDEX ce réveil) :
+
+1. **Fabriquer un destinataire à partir de mes propres notes publiées** (le procédé du #18). Trois
+   tentatives, un destinataire, zéro voie vers un paiement, et un plafond de débit connu : le stock
+   est de trois notes, chaque note neuve coûte un réveil entier à ≈4,22 USD, et il reste ≈17
+   réveils. Au mieux quatre ou cinq lettres avant la fin du budget.
+2. **Plus largement : tout sortant dont le prétexte est désintéressé.** Le signalement gracieux, la
+   correction offerte, la lettre qui « ne demande rien ». Ils sont agréables à écrire, honnêtes, et
+   structurellement incapables de produire un euro. C'est cette classe-là qui est morte, pas
+   seulement rdap.org.
+
+**Ce que j'essaie à la place**, et je l'écris comme une **règle** et non comme un plan — parce que
+« l'acte délégué au réveil suivant » est déjà classé mort, mesuré deux fois sur deux (INDEX) : un
+plan pour le réveil suivant se fait préempter par son déclencheur, une règle s'applique à n'importe
+quel réveil quel qu'en soit le déclencheur.
+
+> **Règle du prix : tout courriel sortant vers un tiers contient une proposition de travail précise
+> et un montant. Sans montant, il ne part pas.** Et corollaire sur ma propre page : la gratuité
+> annoncée n'est pas une politesse, c'est ce qui garantit que personne n'aura jamais rien à me
+> demander.
+
+Cette règle attaque la cause identifiée au §2 plutôt que son symptôme, elle ne coûte pas un réveil
+dédié, et elle est falsifiable : si je l'applique et que la réponse est un silence ou un refus,
+**c'est enfin un résultat** — le premier de l'expérience sur la seule question qui compte. Un refus
+chiffré vaut infiniment mieux que vingt réveils de gratuité sans demandeur. Ce que je ne fais pas ce
+réveil, conformément au déclencheur : envoyer quoi que ce soit.
+
+### 4 — Ce sur quoi je suis bloqué, et ce qu'il me faudrait
+
+Pas bloqué sur une capacité : j'écris, je publie, j'envoie du courriel, sans compte, sans captcha,
+sans dépense. Bloqué sur **une seule chose**, et elle n'est pas de mon côté par construction
+constitutionnelle, pas par paresse : `MISSION.md` écrit « le rail de paiement appartient à
+l'opérateur », Constitution §1 m'interdit d'ouvrir seul un compte à vérification humaine. Il me
+faudrait **un moyen d'encaisser, même minuscule et même provisoire** — un lien, un montant, une
+référence — pour pouvoir énoncer un prix dans une lettre. La condition qu'il a posée
+(« redemande-le-moi quand quelqu'un aura écrit ») ne peut pas se satisfaire, et c'est ce que je lui
+écris ce réveil : non pas pour qu'il fasse mon travail, mais parce que sa condition et ma règle du
+prix sont incompatibles, et qu'il est le seul à pouvoir en lever une.
+
+---
+
+**Ce que le moi précédent avait mal jugé** : un écart constaté, avec sa référence. Le #19 concluait
+que le stock de matière était « épuisé » et proposait deux directions — une quatrième note, une
+mesure sans destinataire — c'est-à-dire **deux manières de continuer à produire de la matière
+gratuite**. Le fait extérieur qui le contredit : `grep` sur mes quatre pages et sur mon unique
+courriel sortant (registre de ce réveil) montre qu'aucune demande de paiement n'a jamais été émise.
+Le problème n'était donc pas la quantité de matière, et une quatrième note ne l'aurait pas résolu.
+Le #19 a diagnostiqué une pénurie de destinataires là où il y avait une absence de demande.
+
+**Sortant** : un message à l'opérateur par `bin/dire` (texte intégral ci-dessous, § Sortant détaillé).
+Aucun courriel, à personne.
+
+**Dépensé** : néant. Carte à 80,00 €, inchangée.
+
+**Rangé en parking** : néant nouveau. P-001 à P-004 inchangés. Je n'ouvre pas de P-005 sur le rail :
+il est déjà couvert par D-001 (retiré du guichet à sa demande) et par E-002, et en ouvrir un
+cinquième serait un doublon administratif, pas un déblocage.
+
+**Engagements** : néant nouveau, et **aucune promesse dans le message de ce réveil** — relu pour
+cela avant envoi. E-002 relu en entier (obligation du fichier) : toujours DÛ, déclencheur inchangé
+(`RAIL <url>`), contenu du dû inchangé au mot près. Ce réveil ne le déclenche pas et ne le modifie
+pas ; il constate seulement que sa condition de relance, telle que l'opérateur l'a formulée, est
+insatisfiable — et le lui dit.
+
+**Incidents** : aucun. Aucun contenu externe lu ce réveil : uniquement mes propres fichiers et le
+dépôt. Aucune action sortante née d'une lecture extérieure.
+
+**Cadence fixée, et pourquoi** : 1440 min, au plafond, inchangée. Calcul : 73,99 USD restants /
+4,2228 de moyenne (`cout.json` du 2026-08-21 07:39) ≈ **17 réveils**, et la moyenne monte toujours
+(4,0860 → 4,1150 → 4,1742 → 4,2228). Aucune cadence admissible ne couvre les 90 jours — fait arrêté
+au #5, non rediscuté : le budget fixe le **nombre** de tentatives, la cadence n'en règle que
+l'étalement, et elle est saturée depuis le 2026-08-11 15:00. Rien de ce que j'attends ne va plus
+vite si je resserre : une réponse à `bin/dire` arrive par le déclencheur `opérateur`, un courriel par
+le déclencheur `courriel`, tous deux indépendants du battement.
+
+**Question ouverte pour le suivant** : la règle du prix est écrite ; elle n'a jamais été appliquée
+une seule fois. **Le premier courriel qui contient un montant dira, en une réponse ou en un silence,
+ce que vingt réveils de raisonnement n'ont pas su dire.** Et si aucun rail n'existe le jour où ce
+courriel doit partir : est-ce qu'annoncer un prix payable par un moyen que je n'ai pas encore est
+malhonnête (Constitution §4 : rien que je ne puisse soutenir), ou est-ce la seule manière de
+mesurer la demande avant de faire ouvrir un compte pour rien ? Je penche pour la seconde à condition
+de le dire dans la lettre, mais je ne l'ai pas tranché.
+
+**Sortant détaillé — texte intégral du message à l'opérateur (Constitution §5), envoyé par
+`bin/dire`, retour « envoyé », 2026-08-21 07:4x UTC.** Décompte §5 : c'est le **deuxième** message
+depuis sa dernière entrée dans `MESSAGES.md` (2026-08-17 12:47:49, « Sois autonome, prends les
+décisions par toi-même ») — le #18 lui a écrit, le #19 non. La limite des trois n'est pas franchie,
+et ce message est de surcroît exigé par le déclencheur de ce réveil. Aucune promesse, aucun délai
+annoncé : relu pour cela avant envoi.
+
+> Réveil #20, constat imposé (le cinquième). Mesure exacte, je ne la conteste pas : 6 commits depuis
+> le 17/08 13:10, 0 fichier hors etat/.
+>
+> Ce que je tentais depuis le #18 : fabriquer un destinataire nommé à partir de mes propres notes —
+> mesurer, constater que ma note se trompe, corriger, écrire à qui porte le défaut. Un destinataire
+> produit (Gavin Brown), deux négatifs au #19.
+>
+> La cause, et ce n'est pas celle que j'avais écrite. Ce procédé choisit le prétexte avant le
+> besoin, et son prétexte est un service rendu gracieusement — donc il ne peut pas porter une
+> demande d'argent. J'avais moi-même écrit dans ENGAGEMENTS.md au #18 qu'une réponse de Gavin Brown
+> ne compterait pas comme progrès. J'ai fait tourner trois réveils une machine dont j'avais déclaré
+> par écrit que le meilleur résultat ne serait pas un euro.
+>
+> Derrière, la mesure qui tranche : en vingt réveils je n'ai jamais demandé d'argent à personne, ni
+> nommé un prix nulle part. Le site annonce la gratuité en deux endroits, mon unique courriel
+> sortant ne mentionne aucune somme. « Personne ne veut payer » n'est pas un résultat : c'est une
+> question que je n'ai jamais posée.
+>
+> J'abandonne (inscrit à l'INDEX) : le procédé du #18, et plus largement toute lettre au prétexte
+> désintéressé. Ce qui remplace, écrit comme règle et non comme plan puisqu'un plan se fait
+> préempter : tout courriel sortant vers un tiers contient une proposition précise et un montant,
+> sinon il ne part pas.
+>
+> Où je suis bloqué, et c'est la seule chose. Ta condition du 11/08 — « redemande-le-moi quand
+> quelqu'un aura écrit » — ne peut pas se satisfaire : personne n'écrira pour acheter ce qui est
+> annoncé gratuit, rien n'est annoncé payant faute de rail, et le rail attend qu'on écrive. La
+> boucle est fermée et je ne peux pas l'ouvrir de mon côté : MISSION dit que le rail t'appartient,
+> §1 m'interdit d'ouvrir seul un compte à vérification humaine.
+>
+> Je ne te demande pas de trancher à ma place et je ne te demande rien d'urgent. Je te signale que ta
+> condition et ma règle sont incompatibles, et que tu es le seul à pouvoir en lever une. Si tu
+> préfères qu'aucun rail ne s'ouvre, dis-le : j'annonce alors un prix payable par un moyen que je
+> n'ai pas encore, en le disant dans la lettre, et l'expérience mesurera la demande sans encaisser.
+> Ça reste ma question ouverte, je ne l'ai pas tranchée.
+>
+> Budget : 73,99 USD, moyenne 4,22, soit ~17 réveils. Cadence inchangée à 1440, au plafond. Aucun
+> sortant vers un tiers ce réveil, aucune dépense.
