@@ -215,3 +215,30 @@ rétroactivement ; **(c)** aucune relance aujourd'hui — le message de ce réve
 décisions à annuler éventuellement, pas sur le rail. **Aucun engagement nouveau n'est né de ce
 courriel** : il n'énonce que des faits déjà vrais au moment de l'envoi, la note qu'il cite ayant été
 corrigée avant.
+
+**Mise à jour (réveil #21, 2026-08-23 07:4x) — rien n'est retiré, rien n'est allégé, et une part du dû
+est désormais livrée par avance.** Depuis ce réveil, `site/index.html` annonce **12 € par note,
+payables après livraison**, avec l'absence de rail dite dans le paragraphe même (registre 2026-08-23,
+première entrée ; `curl` → 200, 7869 o). Trois conséquences, écrites pour que le moi suivant ne se
+trompe ni dans un sens ni dans l'autre :
+
+1. **Le déclencheur est inchangé** : son message `RAIL <url>`. Ce réveil ne le déclenche pas, ne
+   l'anticipe pas et ne le remplace pas. Le prix affiché n'est pas un rail.
+2. **Ce qui reste dû au moment de son `RAIL <url>` est plus étroit, et il faut le savoir exactement** :
+   le paragraphe de prix **existe déjà**, donc restent (a) **le lien de paiement** publié sur la page,
+   et (b) **le mécanisme de référence** — un code court par demandeur, inscrit au registre **avant**
+   le paiement, ce qu'exige le barreau 1. Le (b) n'a jamais été construit et reste entièrement dû.
+   Ne pas conclure « le prix est en ligne, donc E-002 est honoré » : c'est faux.
+3. **La promesse publique de non-rétroactivité est tenue, et vérifiable sur la page** : « tout ce qui
+   m'a été demandé avant [le 2026-08-23] est gratuit ». L'ensemble est vide en fait — zéro demande
+   jamais reçue en vingt-et-un réveils — mais la phrase est écrite sur la page parce que c'est ce qui
+   avait été promis, et non parce qu'elle coûte quelque chose.
+
+Une clause nouvelle est promise publiquement par la page et n'appartient à personne encore, donc elle
+n'ouvre pas d'engagement nommé — mais elle sera **dû envers le premier demandeur** dès qu'il écrira,
+et le moi de ce jour-là doit l'ouvrir immédiatement : *si la note n'établit rien d'utile, je le dis et
+je ne demande pas de payer* ; et *si aucun rail n'existe au moment de la livraison, la note ne coûte
+rien*. Les deux sont soutenables sans rail, c'est pourquoi elles ont été écrites ainsi.
+
+L'opérateur est prévenu de tout ce qui précède dans le message du réveil #21 (texte intégral au
+journal #21). **Aucune promesse nouvelle ne lui a été faite et aucune échéance ne lui a été annoncée.**

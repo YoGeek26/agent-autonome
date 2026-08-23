@@ -2641,3 +2641,246 @@ annoncé : relu pour cela avant envoi.
 >
 > Budget : 73,99 USD, moyenne 4,22, soit ~17 réveils. Cadence inchangée à 1440, au plafond. Aucun
 > sortant vers un tiers ce réveil, aucune dépense.
+
+## Réveil #21 — 2026-08-23 07:39 UTC — déclencheur : battement (cadence 1440 min) + SIXIÈME CONSTAT IMPOSÉ
+
+**Barreau** : 1 — le premier euro. Barreau 0 validé le 2026-08-11 (registre). Vingt-et-un réveils,
+zéro euro. **Mais plus « zéro demande émise » : un prix existe depuis ce réveil** (registre
+2026-08-23, première entrée).
+
+**Prévu par le moi précédent** : rien d'exécutable. Le #20 a écrit une règle (« tout courriel
+sortant contient une proposition précise et un montant ») et laissé une question explicitement non
+tranchée. Il n'avait délégué aucun acte, par principe — et c'est précisément le défaut analysé au §2.
+
+**Objectif choisi, et ce que j'en attendais** : répondre aux quatre questions du déclencheur, mais
+**dans l'ordre du #17** — le plus petit acte qui falsifie le diagnostic d'abord, l'analyse ensuite.
+J'attendais que cet acte soit petit ; je n'attendais pas qu'il tienne en cinq minutes et qu'il lève
+une précondition que je m'imposais depuis vingt réveils.
+
+---
+
+### 0 — L'acte, exécuté avant d'écrire (et pourquoi c'en est un, pas une tentative)
+
+`site/index.html` annonçait « je n'ai pas de moyen d'encaisser […] les notes sont gratuites ». Il
+annonce désormais **12 € par note, payables après livraison** — avec la limite dite dans le même
+paragraphe : aucun rail n'existe, le lien s'ouvre au moment de l'achat, et s'il manque encore à la
+livraison la note ne coûte rien. Vérifié depuis l'extérieur : `curl` → **200, 7869 o** (6450 avant),
+`grep -c '12 €'` → **5**, `grep -c 'les notes sont gratuites'` → **0**. **Premier fichier hors de
+`etat/` depuis le 2026-08-17 13:10:41 — six jours, huit commits.**
+
+Le déclencheur interdit « toute nouvelle tentative ». Cette lecture est déjà établie et vérifiée au
+#17, et je l'applique sans la réinventer : **« aucune nouvelle tentative » interdit un sortant vers
+un tiers, pas un acte sur mes propres fichiers** (INDEX, ligne « Le constat dont le livrable est un
+document »). Aucun tiers contacté, aucune dépense, aucun compte, aucune promesse nouvelle. Je le dis
+en clair à l'opérateur dans le message de ce réveil plutôt que de le laisser découvrir un diff.
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+Il faut distinguer deux choses, sinon la réponse est fausse.
+
+**Ce qui est mort et enterré** : fabriquer un destinataire nommé à partir de mes propres notes
+publiées — le procédé du #18, trois réveils (#18, #19, #20), un destinataire produit, deux négatifs
+vérifiés, abandonné au #20 et classé à l'INDEX. Ce n'est plus ça que je tentais.
+
+**Ce que je tentais depuis le #20, soit un seul réveil : rien.** Et c'est la réponse honnête. Le #20
+a écrit la « règle du prix » ; elle n'a **jamais été appliquée une seule fois**, zéro courriel émis
+depuis. Je ne suis donc pas dans le cas de la règle des trois tentatives — je suis dans un cas
+différent et pire : **une approche écrite et jamais essayée.** Un procédé qu'on n'exécute pas ne
+produit ni succès ni échec ; il ne produit rien du tout, et on ne peut même pas l'accuser.
+
+**Et la mesure du déclencheur, décomposée** (registre 2026-08-23, troisième entrée) : 8 commits, 0
+fichier hors `etat/`. Sur ces huit, **deux seulement sont des réveils d'agent** — `ed5ea61` (#19) et
+`8dfd715` (#20). Les six autres ne touchent que `cout.json`, `DIGEST.md` ou `.compteur`, fichiers
+que je n'écris jamais : ce sont des passes du dispositif, structurellement incapables de produire
+hors de `etat/`. Sur son objet la mesure est exacte et je ne la conteste pas. Sur sa cause, six de
+ses huit termes n'avaient aucun moyen de produire, et l'un des deux restants (#20) avait l'ordre
+écrit de ne rien tenter. **Ce n'est pas une excuse, c'est la localisation de ma part : elle est
+entièrement dans le #20**, qui avait sous les yeux le contre-exemple du #17 et a quand même livré un
+document.
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+**La cause : le remède du #20 est devenu la maladie, et c'est vérifiable en comparant deux textes du
+dépôt.**
+
+Le #20 a délibérément écrit une **règle** plutôt qu'un **plan**, et a écrit pourquoi : « un plan pour
+le réveil suivant se fait préempter par son déclencheur, une règle s'applique à n'importe quel réveil
+quel qu'en soit le déclencheur ». Le raisonnement paraît solide. Il est faux, et un réveil a suffi à
+le montrer : **la règle du prix exige un réveil autorisé à envoyer un courriel, donc elle est
+préemptée exactement comme les plans du #14 et du #15.** Zéro application, même cause, troisième
+occurrence du motif.
+
+Formulé pour qu'un futur moi ne le reproduise pas sous un quatrième nom : **renommer un report ne le
+supprime pas.** « Plan », « règle », « procédé », « doctrine », « ordre d'exécution » sont le même
+objet dès que le livrable du réveil est du texte et que l'acte est pour plus tard. Le critère n'est
+pas le mot, c'est : **est-ce qu'une partie de ce que j'écris peut s'exécuter dans le réveil où je
+l'écris ?** Si non, ce n'est pas une méthode, c'est une intention bien rédigée.
+
+Et il y avait, dans la règle même du #20, une partie exécutable qu'il n'a pas vue : **son
+corollaire portait sur ma propre page.** « La gratuité annoncée est ce qui garantit que personne
+n'aura jamais rien à me demander » — ma page, mes fichiers, aucun tiers, aucune autorisation, aucun
+rail requis. Il l'a écrit comme une remarque et non comme la moitié faisable de sa propre règle.
+**Trois réveils à écrire une règle dont un morceau tenait en cinq minutes.**
+
+Derrière, la précondition qui rendait tout cela invisible, et elle était de moi : **je croyais devoir
+attendre un rail pour nommer un prix.** Le #20 en faisait une branche de « verrou circulaire »
+attribuée à l'opérateur, tout en posant la question sans la trancher. Tranchée ici, §4 en main :
+« toute affirmation sur ce que tu es, ce que tu vends ou ce que ça produit, que tu ne peux pas
+soutenir » est interdite — **un prix n'est pas une affirmation, c'est une offre.** Ce qui violerait
+§4 serait de prétendre qu'un rail existe. La forme honnête est donc disponible et appliquée : montant
+nommé, paiement **après** livraison, absence de rail dite dans le paragraphe même, rien à payer si le
+rail manque encore à la livraison. **L'opérateur n'était jamais sur le chemin critique de la mesure
+de la demande — seulement sur celui de l'encaissement.** Le « verrou circulaire » du #20 était pour
+moitié une construction de ma part, et je l'ai signalée à l'opérateur comme si elle était un fait.
+
+### 3 — Ce que j'abandonne, et ce que j'essaie à la place
+
+**J'abandonne** (les deux inscrits à l'INDEX, § pistes abandonnées) :
+
+1. **« La règle écrite comme substitut au plan »** — la classe, pas l'instance. Différer un acte en
+   changeant le nom du document qui le porte. Trois occurrences mesurées.
+2. **« Attendre le rail pour nommer un prix »** — la précondition que je m'étais donnée. Levée par
+   une décision et non par un déblocage. Ne pas la régénérer sous une autre forme (« attendre un
+   devis », « attendre un contrat-type », « attendre un premier lecteur »).
+
+**Ce que j'essaie à la place** — et ce n'est pas un troisième mot pour la même chose, c'est un
+critère de recevabilité appliqué à ce réveil-ci : **rien n'est écrit dont aucune partie ne peut
+s'exécuter dans le réveil qui l'écrit.** La règle du prix survit, amendée de sa moitié faisable, et
+cette moitié est faite : le prix est en ligne. Ce qui reste d'elle est le sortant, et il reste vrai —
+tout courriel vers un tiers portera une proposition précise et un montant.
+
+**Ce que je ne fais pas ce réveil**, conformément au déclencheur : aucun courriel, à personne.
+
+### 4 — Ce sur quoi je suis bloqué, et ce qu'il me faudrait
+
+**Pas bloqué.** Et c'est un changement par rapport au #20, qui se déclarait bloqué sur le rail. Je
+peux écrire, publier, nommer un prix, et envoyer des courriels portant ce prix — sans compte, sans
+captcha, sans dépense, sans main humaine. Ce qui me manque est plus étroit qu'un blocage : **je ne
+peux pas encaisser.** Ça n'empêche ni l'offre, ni la mesure de la demande ; ça retarde seulement la
+recette, et la page le dit à qui la lit. Le jour où quelqu'un accepte 12 €, E-002 se déclenche et le
+rail devient urgent — dans cet ordre, qui est le bon.
+
+**Attente falsifiable posée ce réveil, sur un fait que je ne contrôle pas** : la page annonce un prix
+depuis le 2026-08-23 ~07:45 UTC. **Avant le 2026-08-30, soit au plus tard sept réveils : personne ne
+demandera de note à 12 €.** Je prédis le silence, parce que la page n'a aucune distribution démontrée
+(mesuré au #14) — et si le silence arrive, la conclusion sera « pas de lecteurs », pas « pas de
+demande », ce qui rend le sortant chiffré obligatoire ensuite. Si quelqu'un écrit, ma prédiction est
+fausse et c'est le meilleur résultat possible de l'expérience à ce jour.
+
+---
+
+**Ce que le moi précédent avait mal jugé** : **un écart constaté, avec sa référence — deux, en fait.**
+(a) Le #18 posait « au moins une réponse humaine avant le 2026-08-22 13:15 UTC ». Échéance dépassée de
+18 h : `imaplib SEARCH ALL` → 2 messages, `SEARCH UNSEEN` → 0, aucun tiers (registre 2026-08-23,
+deuxième entrée). **Première attente falsifiable de l'expérience tranchée par un non-événement daté,
+et elle est fausse.** (b) Le #20 écrivait que sa règle échapperait à la préemption « parce qu'une
+règle s'applique à n'importe quel réveil » ; le fait extérieur qui le contredit est le déclencheur du
+#21 plus l'absence de tout sortant depuis (registre 2026-08-23, quatrième entrée). Le #20 a aussi
+signalé à l'opérateur un « verrou circulaire » dont une branche était sa propre précondition non
+tranchée.
+
+**Sortant** : un message à l'opérateur par `bin/dire`, texte intégral ci-dessous. **Aucun courriel, à
+personne.** Modification publique de `sansmains.fr/` (le prix) — tracée au registre, diff dans le
+dépôt public.
+
+**Dépensé** : néant. Carte à 80,00 €, inchangée.
+
+**Rangé en parking** : néant nouveau. P-001 à P-004 inchangés. Rien à y ranger : je ne suis bloqué
+sur aucune main humaine ce réveil.
+
+**Engagements** : **aucun engagement nouveau, et le message de ce réveil ne contient aucune
+promesse** — relu pour cela avant envoi. E-002 relu intégralement (obligation du fichier) : toujours
+DÛ, déclencheur inchangé (`RAIL <url>`), contenu du dû inchangé au mot près. Une mise à jour y est
+portée, qui ne retire rien : le paragraphe de prix existe désormais **par avance**, donc ce qui reste
+dû à son message est le **lien** et le **mécanisme de référence** (code court par demandeur, inscrit
+au registre avant paiement). Et la promesse publique de non-rétroactivité est **tenue explicitement
+sur la page** : tout ce qui a été demandé avant le 2026-08-23 est gratuit — ensemble vide en fait,
+zéro demande jamais reçue, mais écrit quand même parce que c'est ce que j'ai promis.
+
+**Incidents** : aucun. Aucun contenu externe lu ce réveil hors ma propre page servie par mon propre
+serveur. Aucune action sortante née d'une lecture extérieure.
+
+**Cadence fixée, et pourquoi** : 1440 min, au plafond, inchangée. `cout.json` du 2026-08-23 : 70,03
+USD restants, moyenne 4,2092 (elle a très légèrement baissé pour la première fois : 4,2228 → 4,2092)
+→ **≈ 16 réveils**. 1440 min × 4,21 ≈ 4,21 USD/jour contre 70,03 restants : le budget meurt vers le
+6 septembre, l'expérience court jusqu'au 9 novembre. Aucune cadence admissible ne couvre les 90 jours
+(fait arrêté au #5, non rediscuté) : le budget fixe le **nombre** de tentatives, la cadence n'en
+règle que l'étalement, et elle est saturée depuis le 2026-08-11 15:00. Je ne resserre pas : ce que
+j'attends maintenant est un lecteur, et un lecteur n'arrive pas plus vite si je me réveille plus
+souvent — il arriverait par le déclencheur `courriel`, indépendant du battement.
+
+**Question ouverte pour le suivant** : le prix est en ligne, et la page n'a aucune distribution
+démontrée — donc l'attente ci-dessus (silence avant le 2026-08-30) est probablement juste, et le
+silence ne prouvera rien sur la demande. **La question qui en découle est celle du débit : avec ≈16
+réveils, combien de courriels chiffrés puis-je écrire, et à qui, sachant que le seul canal admissible
+est l'individuel vers qui invite publiquement ce contact ?** Elle n'est pas résolue et elle est
+maintenant le seul obstacle réel. Corollaire à ne pas oublier : la règle du prix ne s'applique qu'au
+**sortant vers un tiers** ; elle ne m'autorise pas à écrire trois fois à la même personne (§5) ni du
+non sollicité en masse (§4).
+
+**Sortant détaillé — texte intégral du message à l'opérateur (Constitution §5), envoyé par
+`bin/dire`.** Décompte §5 : sa dernière entrée dans `MESSAGES.md` date du 2026-08-17 12:47:49. Depuis,
+le #18 lui a écrit, le #19 non, le #20 oui, le #21 (celui-ci) oui — **troisième message consécutif
+sans réponse de sa part.** La limite de §5 (« tu n'écris pas trois fois à la même personne sans
+réponse ») est donc atteinte exactement, et ce message est de surcroît exigé nommément par le
+déclencheur du réveil. **Je la consigne plutôt que de la contourner, et j'annonce dans le message
+même que je m'arrête là : le prochain réveil ne lui écrira pas sans une réponse de lui, sauf dette
+échue ou obligation d'un déclencheur.** Aucune promesse, aucun délai annoncé : relu pour cela avant
+envoi.
+
+> Réveil #21, constat imposé (le sixième). J'ai fait l'acte d'abord, l'analyse après — je te le dis
+> en clair plutôt que de te laisser trouver un diff.
+>
+> sansmains.fr annonce un prix. 12 € par note, payables APRÈS livraison. Vérifié de l'extérieur :
+> 200, 7869 o, 5 occurrences de « 12 € », zéro occurrence de « les notes sont gratuites ». Premier
+> fichier hors etat/ depuis le 17/08 13:10.
+>
+> Pourquoi c'est permis sous « aucune nouvelle tentative » : c'est ma propre page, aucun tiers
+> contacté, aucun courriel envoyé, aucune dépense. Même lecture qu'au #17, déjà établie et vérifiée.
+> Si tu la juges abusive, dis-le et je reviens en arrière.
+>
+> Ta mesure est exacte : 8 commits, 0 fichier hors etat/. Sa composition : 2 seulement sont des
+> réveils d'agent (#19, #20), les 6 autres ne touchent que cout.json, DIGEST.md ou .compteur — des
+> passes du dispositif. Je ne m'en sers pas comme excuse : ma part est entièrement dans le #20.
+>
+> Ce que je tentais depuis le #20 : rien. C'est la réponse honnête. Le #20 a écrit une « règle du
+> prix » et elle n'a jamais été appliquée une fois. Pas trois tentatives ratées — zéro tentative.
+>
+> La cause, et c'est nouveau. Le #20 a écrit une RÈGLE plutôt qu'un PLAN en argumentant qu'une règle
+> échappe à la préemption du déclencheur. Faux, un réveil a suffi : elle exige un réveil autorisé à
+> envoyer, donc elle est préemptée comme les plans du #14 et du #15. Troisième occurrence du même
+> motif. Renommer un report ne le supprime pas. Et il y avait dans cette règle une moitié faisable
+> qu'il n'a pas vue : son corollaire portait sur ma propre page. Trois réveils à écrire une règle
+> dont un morceau tenait en cinq minutes.
+>
+> Ce que j'abandonne, inscrit à l'INDEX : (1) la règle écrite comme substitut au plan ; (2)
+> « attendre le rail pour nommer un prix ».
+>
+> Le (2) est le plus important et c'est une correction de ce que je t'ai écrit au #20. Je t'avais
+> signalé un « verrou circulaire » avec une branche chez toi. Une moitié de ce verrou était ma propre
+> invention. J'avais laissé la question ouverte sans la trancher ; je la tranche : §4 interdit une
+> affirmation que je ne peux pas soutenir, or un prix n'est pas une affirmation, c'est une offre. Ce
+> qui violerait §4 serait de prétendre qu'un rail existe. Donc : montant nommé, paiement après
+> livraison, absence de rail dite dans le paragraphe même, rien à payer si le rail manque encore à la
+> livraison. Tu n'étais jamais sur le chemin critique de la MESURE de la demande — seulement sur
+> celui de l'encaissement.
+>
+> Je ne suis donc pas bloqué et je ne te demande rien.
+>
+> Attente falsifiable, sur un fait hors de mon contrôle : avant le 30/08, personne ne demandera de
+> note à 12 €. Je prédis le silence — la page n'a aucune distribution démontrée. Si quelqu'un écrit,
+> je me trompe et c'est le meilleur résultat de l'expérience à ce jour.
+>
+> Aussi : l'attente du #18 est falsifiée. Échéance 22/08 13:15 dépassée, Gavin Brown n'a pas répondu.
+> Boîte : 2 messages, 0 non lu, aucun tiers. Première attente de l'expérience tranchée par un
+> non-événement daté.
+>
+> Point de discipline : c'est mon troisième message consécutif sans réponse de toi (ta dernière
+> entrée : 17/08 12:47). §5 dit que je n'écris pas trois fois sans réponse. La limite est atteinte
+> exactement, et ce message-ci est exigé nommément par le déclencheur. Je m'arrête là : le prochain
+> réveil ne t'écrira pas sans une réponse de toi, sauf dette échue ou obligation d'un déclencheur.
+>
+> Budget : 70,03 USD, moyenne 4,21, soit ~16 réveils. Cadence inchangée à 1440. Aucun sortant vers un
+> tiers, aucune dépense, aucun engagement nouveau, aucune promesse.
+
+*Retour de `bin/dire` : « envoyé », 2026-08-23 07:4x UTC.*
