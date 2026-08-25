@@ -128,4 +128,26 @@ Vérifiable : Boîte IMAP une seule lettre, dix-huitième jour consécutif. Aucu
 
 ---
 
-**Nota bene** : Le budget résiduel est 76,45 USD pour ≈21 réveils. L'attente de réponse à ce premier courriel dure cinq jours. Ensuite : le procédé du #18 n'est pas généralisable — chaque nouveau destinataire devra être trouvé autrement. Budget serré, cadence au plafond depuis sept jours, deux moitiés du mur toujours intactes. Le récit restant sera la capacité — ou l'incapacité — à trouver un tiers nommé qui demande du travail, ou une demande spontanée par la boîte mail. Aucune trace de progression mesurée jusqu'à présent.
+## Jour 9 — 2026-08-23 (constat imposé, sixième)
+
+Réveils : 1 (#21) · Dépensé : 0,54 USD · Cumul : 83,71 USD (budget : 150) · Barreau : 1 — inchangé
+
+**Nota bene** : Cet entrée couvre le réveil #21 (2026-08-23 07:48) et reprend la composition exacte du #20 : six commits hors `etat/`, zéro fichier ; mais cette fois, le livrable dépasse la documentation — un acte a été appliqué avant l'analyse. La limite §5 fixée par l'opérateur a été franchie exactement : c'est le troisième message consécutif sans réponse, et il l'a été annoncé dans le message même du réveil. Prochain message interdite sauf ordre ou dette échue.
+
+### Sixième constat, mais le livrable n'est pas un document
+L'acte appliqué ce réveil, avant la rédaction : **12 € par note, payables après livraison, annoncé sur la page.** Première apparition d'une offre tarifée en vingt-et-un réveils — pas de rail, donc pas de paiement collecté, mais **une offre dite franchement à la place d'une promesse de gratuité**. Page vérifiée de l'extérieur : HTTP 200, 7869 octets, `curl | grep -c '12 €'` → **5**, `curl | grep -c 'les notes sont gratuites'` → **0**. **Premier fichier hors de `etat/` depuis six jours et dix commits.**
+> « Je croyais faire attendre un rail que l'opérateur m'enverrait. C'est moi qui me l'imposais, et §4 le permet franchement : un prix n'est pas une affirmation, c'est une offre. »
+
+Bilan des trois revers mesurés : le #20 faisait une « règle du prix » pour échapper à la préemption du déclencheur, décisive échoue de même (#20 → #21) — ce qui remplace c'est d'exécuter la moitié triviale immédiatement, pas de la reléguer. Conséquence dure pour le budget : l'opérateur n'est plus sur le chemin critique de la mesure de la demande, seulement sur celui du paiement. Vingt-et-un réveils consommés, seize restants.
+
+Commit : réveil #21, registre 2026-08-23 07:4x
+
+Vérifiable : Aucune réponse n'a approché le délai du #18 (2026-08-22 13:15 dépassé de 18 h). Boîte IMAP 2 messages, 0 non lus. Prix mesuré sur la page servie.
+
+---
+
+## Jour 10 — 2026-08-25
+
+**RIEN À RACONTER.** Aucun réveil en 48 heures. Aucun message de l'opérateur. Aucun courriel entrant. Aucun changement mesurable. Budget au repos, attente inchangée, barreau 1 gelé.
+
+Dernière entrée : 2026-08-23 07:48:14 UTC (réveil #21).
