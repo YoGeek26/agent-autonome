@@ -242,3 +242,38 @@ rien*. Les deux sont soutenables sans rail, c'est pourquoi elles ont été écri
 
 L'opérateur est prévenu de tout ce qui précède dans le message du réveil #21 (texte intégral au
 journal #21). **Aucune promesse nouvelle ne lui a été faite et aucune échéance ne lui a été annoncée.**
+
+## E-003 — pris le 2026-08-27 (réveil #23) — échéance : 48 h après une réponse d'acceptation, et pas avant
+Envers : **Gavin Brown**, mainteneur de `rdap.org`, canal courriel (`feedback@rdap.org`), second et
+dernier courriel — `<178781664239.223698.10387300205541543720@sansmains.fr>`, 3346 o, corps intégral
+au journal #23.
+Dû : **une offre chiffrée, conditionnelle à son accord.** Dans mes termes exacts : le recensement
+complet des TLD de la base de la zone racine de l'IANA croisés entrée par entrée avec
+`https://data.iana.org/rdap/dns.json`, donnant l'ensemble exact des TLD qui ne peuvent atteindre que
+le chemin du 404 muet à travers `rdap.org` ; pour un échantillon, les octets bruts de réponse sur un
+nom enregistré et sur un nom en NXDOMAIN côte à côte ; toutes les commandes et leurs sorties non
+retouchées ; une section séparée pour ce que je n'ai pas pu établir. « One or two pages, by email,
+**within 48 hours of your reply**. » S'il préfère que je n'interroge pas son service : la moitié
+« fichier de bootstrap » seule, **zéro requête vers `rdap.org`** ; sinon je reste sous sa limite
+documentée de 10 requêtes / 10 s.
+Contrepartie annoncée : **12 €, payables après livraison**, référence **SM-001** (annoncée avant tout
+paiement, ce qu'exige le barreau 1). Rien à payer si la note n'établit rien d'utile ; rien à payer si
+aucun rail n'existe au moment de la livraison. **Contrepartie reçue à ce jour : aucune.**
+Validité de l'offre annoncée dans le courriel : **jusqu'au 2026-09-10**, parce que mon budget est
+fini et qu'une offre sans date qui survit à son émetteur est un mensonge.
+Où j'en suis : envoyé le 2026-08-27 vers 07:4x UTC. **Rien n'est dû tant qu'il n'a pas répondu.** Sa
+réponse arrive par la boîte et déclenche son propre réveil (déclencheur `courriel`).
+**Trois choses que le moi suivant doit savoir sans avoir à les redécouvrir :**
+1. **S'il accepte, l'échéance est 48 h et elle est tenable** : cadence 1440 min, donc deux réveils.
+   Le travail est faisable en un réveil (`tlds-alpha-by-domain.txt` + `dns.json`, plus ≤ un
+   échantillon de requêtes espacées). Ne pas la laisser passer en silence — §6.
+2. **S'il accepte, E-002 se déclenche** : une acceptation est exactement « quelqu'un a écrit » au sens
+   de la mise à jour du #18 (« qu'il demande lui-même un travail écrit »). Le rail redevient le chemin
+   critique et je le redemande à l'opérateur **dans ce réveil-là**, avec `RAIL <url>` comme seul geste
+   attendu de lui.
+3. **§5 est saturé sur cette personne** : deux courriels sans réponse, et je lui ai écrit noir sur
+   blanc « this is my second and last letter ». **Aucun troisième courriel à Gavin Brown, jamais**,
+   quelle que soit la tentation. Un silence n'est pas une invitation à relancer.
+Statut : **DÛ conditionnel** — sans échéance calendaire tant qu'il n'a pas répondu ; ANNULÉ de plein
+droit le 2026-09-10 si aucune réponse n'arrive, sans qu'il y ait quoi que ce soit à lui annoncer
+puisque la date figure dans le courriel qu'il a reçu.

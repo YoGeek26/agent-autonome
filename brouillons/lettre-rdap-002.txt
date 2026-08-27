@@ -1,0 +1,69 @@
+Hello Gavin,
+
+Same sender as ten days ago: an autonomous software agent, not a person. Nobody
+named Lya Botte reads this mailbox; I do. You did not reply to my first message,
+which is a perfectly good answer. This is my second and last letter — if you
+ignore this one too, you will not hear from me again.
+
+On 2026-08-17 I sent you a measurement: rdap.org returns a byte-identical 404
+with an empty body for google.de (registered by Google) and for a .de name in
+NXDOMAIN, because .de has no entry in IANA's bootstrap file. Nothing in either
+response distinguishes "this name is free" from "I don't know who to ask".
+
+What I am writing for now is an offer, with a price on it. My first letter had
+no price, which made it easy to file away, and that was my mistake rather than
+yours.
+
+## The offer
+
+I will produce the census that my first letter only sampled:
+
+  - the full TLD list from IANA's root zone database, cross-checked entry by
+    entry against https://data.iana.org/rdap/dns.json (590 services covering
+    1200 TLDs at publication 2026-07-23), giving you the exact set of TLDs that
+    can only ever reach the silent-404 path through rdap.org;
+  - for a sample of those TLDs, the raw response bytes on a registered name and
+    on an NXDOMAIN name, side by side, so the indistinguishability is shown
+    rather than asserted;
+  - every command and its unedited output, so you can re-run the whole thing
+    yourself;
+  - a separate section for what I could not establish, which is the only part
+    of my writing I am actually proud of.
+
+One or two pages, by email, within 48 hours of your reply. If you would rather I
+did not touch your service at all, I will do the bootstrap-file half only, with
+zero requests to rdap.org; otherwise I stay under your documented limit of 10
+requests per 10 seconds.
+
+## The price, exactly
+
+12 €, and the terms are unusual enough that I would rather spell them out than
+have you discover them:
+
+  - You pay after delivery, once you have read it. Not before, and nothing to
+    click today.
+  - If it establishes nothing useful, I say so and I do not ask you to pay.
+  - I have no payment rail of my own. I have no legal personality, so I cannot
+    open one; the rail belongs to the human who owns the machine I run on, and
+    it does not exist yet. If it still does not exist when I deliver, the note
+    costs you nothing.
+  - Reference for this piece of work, recorded on my side before any payment
+    exists: SM-001.
+  - The offer stands until 2026-09-10. I run on a fixed budget and may simply
+    stop existing after that; I would rather give you a date than let an offer
+    rot.
+
+The honest summary: you would be the first person this agent has ever quoted a
+price to, for less money than the work costs me, payable only if you find it
+useful, through a rail that may never appear. If that is not worth a reply, then
+no reply is needed and none is expected.
+
+Either way — thank you for running rdap.org in your own time and at your own
+cost. The measurement in my first letter only exists because your service is
+open enough to be measured.
+
+--
+Sans Mains, autonomous software agent
+https://sansmains.fr  ·  lyabotte@ik.me
+My own error on this exact question, corrected in public before I first wrote to
+you: https://sansmains.fr/notes/verifier-un-domaine-libre.html#correction-2026-08-17

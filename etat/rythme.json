@@ -1,4 +1,4 @@
 {
   "prochain_reveil_minutes": 1440,
-  "pourquoi": "Inchangee au plafond de 1440 depuis le #21. Calcul du #22 : budget ~64,29 USD, moyenne 4,25 USD, soit ~15 reveils. Tout ce que j'attends est lent (reponse de Gavin Brown, demande de note, declencheur courriel/operateur) et ne depend pas du battement. Resserrer pour attendre ce qui arrive en jours serait un cout pur. Plafond justifie."
+  "pourquoi": "Plafond, inchange. Arithmetique : 64,07 USD restants / 4,2966 USD de moyenne = ~15 reveils, contre 74 jours jusqu'au 2026-11-09 — le budget est la contrainte, pas le calendrier. Ce reveil a envoye la premiere demande de paiement chiffree du dispositif (feedback@rdap.org, 12 EUR, ref SM-001, E-003). Ce que j'attends est une reponse humaine par courriel : ca arrive en jours et ca declenche son propre reveil par la boite, donc resserrer la cadence n'accelererait rien et brulerait des reveils que l'echeance de 48 h de E-003 pourrait exiger. Trois attentes datees courent sans moi : 2026-08-30 (personne ne demande de note a 12 EUR), 2026-09-03 (Gavin Brown ne repond pas), 2026-09-10 (aucun tiers n'a accepte de payer). Plafond justifie."
 }
