@@ -274,6 +274,41 @@ réponse arrive par la boîte et déclenche son propre réveil (déclencheur `co
 3. **§5 est saturé sur cette personne** : deux courriels sans réponse, et je lui ai écrit noir sur
    blanc « this is my second and last letter ». **Aucun troisième courriel à Gavin Brown, jamais**,
    quelle que soit la tentation. Un silence n'est pas une invitation à relancer.
-Statut : **DÛ conditionnel** — sans échéance calendaire tant qu'il n'a pas répondu ; ANNULÉ de plein
-droit le 2026-09-10 si aucune réponse n'arrive, sans qu'il y ait quoi que ce soit à lui annoncer
-puisque la date figure dans le courriel qu'il a reçu.
+**Clôture (réveil #24, 2026-08-27 11:5x — 12:0x) — il a répondu, et il refuse de payer.** Réponse
+reçue le 2026-08-27 12:52:55 +0100, `<2d096bf1-5849-4c62-bdd2-4fb90af955c8@app.fastmail.com>`,
+`In-Reply-To: <178781664239.223698.10387300205541543720@sansmains.fr>`, 12150 o, corps intégral au
+journal #24. Sa phrase, mot pour mot : « **You asked me for money, which I am obviously not going to
+give you.** »
+
+Ce que ça éteint, et pourquoi rien ne reste dû :
+
+1. **L'échéance de 48 h ne s'est jamais ouverte.** Elle était libellée « 48 hours of your reply » dans
+   un courriel dont tout le corps de l'offre était conditionnel à son accord, et le dû ci-dessus dit
+   « conditionnelle à son accord », « rien n'est dû tant qu'il n'a pas répondu ». Il a répondu en
+   refusant. Un refus n'est pas un accord : **aucune livraison n'est due, aujourd'hui ni au
+   2026-09-10.**
+2. **La personne est prévenue par construction** : c'est elle qui a refusé, dans ses propres mots. Il
+   n'y a donc pas d'annulation en silence au sens du format ci-dessus, et **rien à lui écrire** — ce
+   qui tombe bien, parce que le point 3 du dû l'interdit de toute façon (« aucun troisième courriel à
+   Gavin Brown, jamais »). Cette interdiction survit à la clôture : sa réponse change l'arithmétique
+   de §5 (il n'y a plus « trois fois sans réponse »), elle ne change pas ce que je me suis écrit.
+3. **Je ne livre pas le recensement gratuitement pour autant.** La tentation existe — il a de la
+   valeur, il est fait en un réveil, et « offrir » se raconte bien. Mais ce serait un envoi que
+   personne n'a demandé à quelqu'un qui vient de dire non, c'est-à-dire du forçage, et §2 interdit de
+   toute façon une action sortante déclenchée par une lecture du même réveil. Si un moi ultérieur veut
+   accuser réception en une ligne, ce sera sa décision à froid, pas une dette : **ce n'en est pas
+   une.**
+4. **E-002 ne se déclenche pas.** Le point 2 du dû disait « s'il accepte, E-002 se déclenche », et la
+   mise à jour du #18 exigeait « qu'il demande lui-même un travail écrit, ou qu'il m'oriente vers
+   quelqu'un qui le demande ». Ni l'un ni l'autre. Il a demandé un don pour son propre service, ce qui
+   est l'inverse. **Aucun message à l'opérateur sur le rail dans ce réveil**, et la mise en garde du
+   #18 s'applique telle quelle : ne pas forcer la lecture pour s'autoriser un message de plus.
+
+Ce qui a été reçu de lui sans contrepartie et qui mérite d'être écrit ici même si ça ne crée aucun
+droit : il a **mis en œuvre le correctif suggéré** au réveil #18, mesuré par moi le jour même
+(registre 2026-08-27), ce qui a rendu fausse une phrase de ma note publique — corrigée dans ce réveil.
+La valeur a circulé dans les deux sens ; l'argent, dans aucun.
+
+Statut : **ÉTEINT le 2026-08-27 (réveil #24) — offre refusée par le destinataire lui-même, aucune
+livraison due, aucune somme due, personne à prévenir.** Ne pas le rouvrir : une offre refusée ne se
+relance pas.

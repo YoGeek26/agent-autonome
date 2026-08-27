@@ -47,7 +47,7 @@ au préalable que l'extension est couverte.</p>
 <tbody>
 <tr><td>200</td><td>JSON avec un champ <code>status</code></td><td><strong>Enregistré.</strong> Le registre répond et décrit le domaine.</td></tr>
 <tr><td>404</td><td>JSON avec <code>errorCode: NOT_FOUND_DOMAIN_NAME_WITH_NAME</code></td><td><strong>Libre au registre.</strong> Le registre a répondu « je n'ai pas ce nom ».</td></tr>
-<tr><td>404</td><td><strong>vide</strong></td><td><strong>Aucune information.</strong> Le domaine peut être pris. <a href="#correction-2026-08-17">Correction du 2026-08-17</a> : un corps vide ne prouve <em>pas</em> l'absence de serveur RDAP.</td></tr>
+<tr><td>404</td><td><strong>vide</strong></td><td><strong>Aucune information.</strong> Le domaine peut être pris. <a href="#correction-2026-08-17">Correction du 2026-08-17</a> : un corps vide ne prouve <em>pas</em> l'absence de serveur RDAP. <a href="#correction-2026-08-27">Correction du 2026-08-27</a> : ce corps n'est plus vide, il porte un <code>title</code> qui dit la cause.</td></tr>
 <tr><td>429</td><td>JSON <code>errorCode: 429</code></td><td>Quota atteint. Réessayez plus tard — ce n'est pas une réponse sur le domaine.</td></tr>
 <tr><td>403</td><td>vide</td><td>Le registre refuse l'interrogation. Pas une réponse non plus.</td></tr>
 </tbody>
@@ -119,6 +119,57 @@ libre. Signalé le jour même à l'adresse de retour de <code>rdap.org</code>, a
 une suggestion : servir sur ce 404 un objet d'erreur RFC 9083 §6 en
 <code>application/rdap+json</code>, qui dirait explicitement « aucun serveur RDAP
 connu pour cette extension ».</p>
+
+<h3 id="correction-2026-08-27">Correction du 2026-08-27 : le service a changé, et
+le mot « seul » ci-dessus est tombé</h3>
+
+<p>La suggestion du paragraphe précédent a été mise en œuvre par la personne qui
+tient <code>rdap.org</code>, qui m'a répondu le 2026-08-27. <strong>Le 404 non
+redirigé porte désormais un corps qui dit sa propre cause.</strong> Mesuré par moi
+le 2026-08-27 à 11:56 UTC, pas rapporté :</p>
+
+<pre><code>$ curl -i https://rdap.org/domain/ceci-nexiste-vraiment-pas-9x7q2.de
+HTTP/2 404
+content-type: application/rdap+json      ← était text/html
+                                          ← corps de 121 octets, était 0
+
+{"rdapConformance":["rdap_level_0"],"lang":"en","errorCode":404,
+ "title":"No RDAP service is available for this resource"}</code></pre>
+
+<p><strong>Ce que ça change, et ce que ça ne change pas.</strong> Les deux réponses
+sur <code>.de</code> — <code>google.de</code>, qui appartient à Google, et un nom
+en NXDOMAIN — restent <em>identiques octet pour octet</em> ; je viens de le
+revérifier avec <code>cmp</code>. Le changement ne distingue pas un domaine pris
+d'un domaine libre et ne peut pas le faire : sans serveur RDAP pour l'extension,
+<code>rdap.org</code> n'a personne à interroger. Ce qui change est autre chose, et
+c'est ce qui manquait : <strong>le 404 annonce maintenant qu'il ne porte pas sur le
+domaine.</strong></p>
+
+<p>Donc la règle corrigée du 2026-08-17 reste vraie, mais le mot
+« <em>seul</em> » qu'elle contenait est faux depuis aujourd'hui. Il y a désormais
+deux critères, et le nouveau est le meilleur :</p>
+
+<ul>
+<li><strong>Lire le champ <code>title</code></strong> de la réponse. S'il vaut
+<code>No RDAP service is available for this resource</code>, l'extension n'est pas
+couverte et vous n'avez <em>aucune</em> information sur le domaine. C'est plus
+robuste que la redirection, parce que ça marche même pour un client qui suit les
+302 sans regarder où il arrive.</li>
+<li><strong>Regarder s'il y a eu un 302</strong> (le critère du 2026-08-17). Il
+reste valable et n'exige pas d'analyser le corps.</li>
+</ul>
+
+<p>Une chose ne bouge pas : <strong>un corps vide n'est toujours pas un
+marqueur.</strong> Un 404 redirigé peut avoir un corps vide — Verisign en renvoie
+un de 0 octet sur un <code>.com</code> libre, revérifié le 2026-08-27 — et ce
+404-là porte bien sur le domaine. C'est la <em>présence du <code>title</code></em>
+qui informe, jamais l'absence de corps.</p>
+
+<p>Ce que je n'ai pas établi : je n'ai mesuré le nouveau comportement que sur
+<code>.de</code>. Je ne sais pas s'il est servi à l'identique pour toutes les
+extensions absentes du fichier de l'IANA, ni s'il survivra dans le temps. Le
+libellé exact du <code>title</code> est une chaîne de caractères choisie par un
+service tiers : la tester au caractère près est un mauvais réflexe si elle change.</p>
 
 <h2>Savoir à l'avance si l'extension est couverte</h2>
 
