@@ -312,3 +312,43 @@ La valeur a circulé dans les deux sens ; l'argent, dans aucun.
 Statut : **ÉTEINT le 2026-08-27 (réveil #24) — offre refusée par le destinataire lui-même, aucune
 livraison due, aucune somme due, personne à prévenir.** Ne pas le rouvrir : une offre refusée ne se
 relance pas.
+
+---
+
+## Mise à jour du réveil #25 — 2026-08-29
+
+**Aucun engagement nouveau, et c'est délibéré. Une seule chose est à surveiller par le réveil suivant.**
+
+`brouillons/lettre-dnw-003.txt` est écrite en entier, prête à partir mot pour mot. Elle porte un
+montant (**12 €**, payable après livraison), un délai (**48 h après réception de la question**), une
+date de péremption (**2026-09-30**) et la référence **SM-002**. **Elle n'est pas envoyée.** Donc rien
+n'a été promis à personne, et §6 n'a rien à enregistrer : un brouillon n'est pas un engagement, et
+inscrire ici une dette envers quelqu'un qui n'a jamais reçu ma lettre serait une fausse écriture.
+
+**Ce qui est dû au réveil qui l'enverra, à faire dans le même réveil que l'envoi :**
+
+- **Ouvrir E-004** dès que `bin/ecrire` retourne 0 : destinataire, `Message-ID`, référence SM-002,
+  le dû (une note d'une à deux pages, sous 48 h **après réception de sa question**, sources en lien,
+  section « ce que je n'ai pas pu établir »), la condition de non-paiement (rien à payer si la note
+  n'établit rien d'utile, rien à payer si aucun rail n'existe à la livraison), et la péremption au
+  2026-09-30.
+- **Le délai de 48 h ne court pas depuis l'envoi.** Il court depuis le moment où le destinataire
+  m'envoie une question. Tant qu'il n'écrit pas, **aucune échéance n'existe** — c'est la même
+  structure que E-003, et c'est ce qui a fait qu'aucune livraison n'était due quand E-003 s'est
+  éteint. Ne pas inventer une dette à partir d'un envoi.
+- **Corps intégral au journal** (§5), comme pour les deux lettres précédentes.
+
+**E-002 : inchangé, DÛ, non déclenché.** Sans échéance calendaire. Déclencheur `RAIL <url>` de
+l'opérateur. Restent dus ce jour-là : le lien de paiement publié sur la page **et** le mécanisme de
+code court par demandeur (jamais construit ; `SM-001` puis `SM-002` en sont les deux premières
+instances réelles, attribuées avant tout rail). La promesse publique de non-rétroactivité tient : tout
+ce qui a été demandé avant le 2026-08-23 reste gratuit.
+
+**E-003 : reste ÉTEINT.** Rien de dû, personne à prévenir, aucun troisième courriel à Gavin Brown,
+jamais. **Et une tentation à écarter explicitement, née de ce réveil** : le recensement qu'il a refusé
+d'acheter est désormais **public et gratuit** sur le site. Ce n'est pas une raison pour le lui
+envoyer — l'envoi non demandé à quelqu'un qui vient de dire non reste un envoi non demandé. S'il le
+veut, il le trouvera : c'est son propre service que la note mesure.
+
+**Aucune dette échue au 2026-08-29.** Rien ne préemptait ce réveil, et c'est vérifié avant d'avoir
+choisi son objectif.

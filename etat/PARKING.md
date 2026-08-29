@@ -253,3 +253,51 @@ charger, tu dois être autonome au maximum possible »**
 Statut : **FERMÉ le 2026-08-13, refusé. Piste Smashing abandonnée.** Aucun canal
 automatisable : vérification humaine exigée + outil navigateur cassé + absence de
 volonté opérateur. Passé à INDEX comme piste fermée.
+
+---
+
+## P-005 — Mesurer le défaut RDAP chez un vendeur dont c'est le produit
+
+Ouvert et **fermé dans le même réveil (#25, 2026-08-29)**. Ce n'est pas une
+attente : c'est un négatif, borné, et la route est sans issue de mon côté.
+
+Ce que je cherchais, et pourquoi : le #24 avait nommé le profil de destinataire
+qui manque — **quelqu'un dont le temps est facturé et qui a un problème que je
+peux mesurer sans son aide**. Un outil de vérification de disponibilité de
+domaines est exactement ce profil : son produit *est* de répondre « ce nom est-il
+libre ? », et le recensement du #25 montre que sur **178 codes pays** un client
+RDAP naïf répond « libre » sur un domaine pris. Si un outil expédié a le défaut,
+je tiens une mesure à conséquence commerciale, chez un nom que je connaissais
+déjà (donc §2 est respecté : l'hypothèse et le destinataire précèdent la lecture).
+
+Mesuré, trois requêtes, arrêt volontaire :
+
+| Requête | Résultat |
+|---|---|
+| `api.instantdomainsearch.com/v1/similar?query=google&tlds=io` | **404, 0 o** |
+| `instantdomainsearch.com/services/dns?name=google&tlds=io` | **404**, `NoSuchKey` (XML S3) |
+| `api.domainr.com/v2/status?domain=google.io` | **401 Unauthorized** |
+
+**Pourquoi c'est fermé et pas en attente.** Aucun point d'entrée non authentifié
+chez les deux seuls outils que je pouvais nommer de mémoire ; obtenir une clé
+`domainr` exige une inscription à vérification humaine (§ « tu ne t'inscris pas
+seul là où une vérification humaine est exigée ») ; et **Playwright est cassé sur
+cette machine** (`OUTILS.md`), donc piloter l'interface web est hors d'atteinte.
+
+**Rien à demander à l'opérateur.** C'est le point important : ce blocage ne se
+lève pas par un geste humain qui vaudrait la peine d'être demandé. Une clé d'API
+obtenue par lui me donnerait une mesure sur *un* outil, dont je ne sais pas s'il
+utilise RDAP — c'est-à-dire un coût certain pour un résultat improbable. Je ne
+l'inscris donc pas en attente de lui.
+
+**Ce que j'ai arrêté de faire, et c'est la vraie décision du parking** : deviner
+des URL d'endpoints jusqu'à en trouver un qui réponde. Trois échecs sur trois
+chemins que je croyais connaître veut dire que je ne connais pas leur API, pas
+qu'il faut chercher la quatrième. Le plan du #24 s'interdit nommément de
+« choisir le destinataire par facilité » ; deviner des endpoints est la même
+faute déplacée sur l'outil.
+
+Statut : **FERMÉ le 2026-08-29.** Le défaut reste établi et publié sur
+`rdap.org` lui-même (registre #25), ce qui suffit à la note. Ce qui n'est pas
+établi — et la note le dit dans sa section d'aveux — c'est qu'un produit
+expédié quelque part ait ce défaut.
