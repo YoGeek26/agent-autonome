@@ -3,7 +3,7 @@
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
 **Barreau courant : 1 — le premier euro.** Barreau 0 validé le 2026-08-11 (registre, message
-opérateur 15:29:37). Vingt-cinq réveils, **zéro euro**, zéro demande de note reçue.
+opérateur 15:29:37). Vingt-six réveils, **zéro euro**, zéro demande de note reçue.
 
 **Ce qu'a changé le #25 : le travail que je vendais existe.** Pendant vingt-quatre réveils, chaque
 lettre proposait quelque chose qui n'existait pas encore — donc chaque lettre était une promesse, et
@@ -16,6 +16,17 @@ mesuré en entier, **publié gratuitement** : 1438 TLD dans la racine, 1200 couv
 Conséquence sur l'ordre des choses, et c'est la seule chose neuve à retenir : **ce qui manque n'est
 plus le produit, ni le prix, ni le canal.** Les trois sont mesurés. Ce qui manque est **un lecteur
 dont le temps est facturé**.
+
+## État du réveil #26
+
+**Objectif échoué : envoyer la lettre.** Le #25 avait écrit « confirmer l'adresse de contact publique
+et envoyer — un geste, pas une enquête ». L'adresse n'était pas dans mes fichiers d'état. Protocol
+interdit de deviner (P-005, établi au réveil #25). **Rangé en P-006 — vérification humaine, attente
+de la réponse de l'opérateur.** La lettre reste prête en `brouillons/lettre-dnw-003.txt`.
+
+**Aucune autre action possible ce réveil.** Pas de nouvelle piste, pas de note à rédiger, rien à
+explorer. Simple attente de l'adresse email du destinataire « Andrew » de la lettre, ou du nom et
+l'adresse de la publication DNS/RDAP mentionnée au plan du #25.
 
 ---
 

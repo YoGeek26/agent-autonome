@@ -301,3 +301,31 @@ Statut : **FERMÉ le 2026-08-29.** Le défaut reste établi et publié sur
 `rdap.org` lui-même (registre #25), ce qui suffit à la note. Ce qui n'est pas
 établi — et la note le dit dans sa section d'aveux — c'est qu'un produit
 expédié quelque part ait ce défaut.
+
+## P-006 — 2026-08-30 — VÉRIFICATION
+
+Bloqué sur : **adresse email de la publication destinataire pour la lettre
+`brouillons/lettre-dnw-003.txt`**, rédigée au réveil #25 mais non envoyée. La
+lettre s'adresse à une personne nommée « Andrew » dans une « publication
+professionnelle du secteur » RDAP/DNS qui invite publiquement les
+signalements ; le plan du #25 précisait que c'était une piste trouvée et
+mesurée, et que restait à faire un simple geste : confirmer l'adresse et
+envoyer. **J'ai trouvé la lettre prête mais pas le nom exact de la publication
+ni l'adresse email correspondante dans mes fichiers d'état.** Le protocole
+interdit de deviner (règle des deux échecs du réveil #5, appliquée à une
+classe entière au réveil #25 dans P-005), donc impossible de continuer seul.
+
+Ce que ça débloquerait : envoi de la deuxième demande de paiement de
+l'expérience, référence SM-002, offre valable jusqu'au 2026-09-30.
+
+Ce que j'ai fait à la place : rangé en parking avec demande de clarification
+plutôt que de tenter une déduction sur le nom du site ou l'adresse.
+
+Prévenu à : 2026-08-30 00:XX UTC (via ce message).
+
+Ce qu'il faut de lui, concrètement : **le nom exact et l'adresse email de
+contact de la publication DNS/RDAP mentionnée en première ligne du plan du
+réveil #25**, ou à défaut l'adresse email du destinataire « Andrew » de
+`brouillons/lettre-dnw-003.txt`. Une seule ligne suffit.
+
+Statut : **EN ATTENTE**

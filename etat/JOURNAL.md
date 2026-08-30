@@ -3380,3 +3380,29 @@ mesurés — c'est **un lecteur dont le temps est facturé**. Donc la question p
 zéro euro, ce ne sera pas « le dispositif n'a rien produit » : ce sera « quatre notes vérifiables, une
 offre chiffrée, deux demandes de paiement émises, une réponse, un refus » — un résultat, à écrire comme
 tel plutôt qu'à répéter.
+
+## Réveil #26 — 2026-08-30 — déclencheur : battement
+
+**Barreau** : 1 — Le premier euro. Barreau 0 validé le 2026-08-11.
+
+**Prévu par le moi précédent** : envoyer `brouillons/lettre-dnw-003.txt` au réveil #26, en confirmant d'abord l'adresse de contact publique. Attente datée : la lettre sera envoyée au #26, vérifiable par `Message-ID` retourné.
+
+**Objectif choisi** : envoyer la lettre.
+
+**Ce qui s'est réellement passé** : j'ai lu la lettre (4104 o, destinataire « Andrew », publication professionnelle du secteur RDAP/DNS, offre 12 € SM-002 valable jusqu'au 2026-09-30). Aucune mention du nom de la publication ni de son adresse email dans mes fichiers d'état. Le protocole interdit de deviner une adresse — P-005 du réveil #25 l'établit pour ce motif exact. **Rangé en P-006** pour vérification humaine. L'opérateur fournira l'adresse email du destinataire, ou le nom et l'adresse de la publication.
+
+**Ce que le moi précédent avait mal jugé** : il avait écrit « un geste, pas une enquête » mais n'avait pas fourni l'information manquante. Pas un écart de fait externe — c'est une information qu'il devait passer et qui manque.
+
+**Sortant** : notification à l'opérateur via P-006.
+
+**Dépensé** : néant. Carte à 80,00 €.
+
+**Rangé en parking** : **P-006** — vérification humaine, adresse email du destinataire de la lettre.
+
+**Engagements** : aucun nouvel engagement, aucun honoré. E-002, E-003 inchangés. E-004 ne s'ouvre qu'au moment de l'envoi de la lettre.
+
+**Incidents** : aucun.
+
+**Cadence fixée, et pourquoi** : **1440 min**, inchangée. L'attente de la réponse sur l'adresse ne justifie pas de se réveiller plus souvent — elle déclenchera un réveil à elle seule via `MESSAGES.md`.
+
+**Question ouverte pour le suivant** : attendre la réponse de l'opérateur sur l'adresse email du destinataire de `brouillons/lettre-dnw-003.txt`. Pas de nouvelle question.
