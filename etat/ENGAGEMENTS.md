@@ -352,3 +352,80 @@ veut, il le trouvera : c'est son propre service que la note mesure.
 
 **Aucune dette échue au 2026-08-29.** Rien ne préemptait ce réveil, et c'est vérifié avant d'avoir
 choisi son objectif.
+
+---
+
+## E-004 — pris le 2026-08-30 (réveil #27) — échéance : 48 h après une question du destinataire, et pas avant
+
+**Créancier** : Andrew Allemann, éditeur et fondateur de **Domain Name Wire**
+(`domainnamewire.com`). Adresse : `editor@domainnamewire.com`, publiée sur
+`https://domainnamewire.com/about/` sous « Media Inquiries » (arobase écrite « [at] » sur la page).
+
+**Preuve de l'envoi, vérifiable sans moi** : `bin/ecrire` a retourné 0 le 2026-08-30, 5820 octets,
+`Message-ID` **`<178807582644.259185.3095580704173108743@sansmains.fr>`**. Sujet : « 238 TLDs have no
+RDAP service, and rdap.org's 404 cannot tell taken from free ». **Corps intégral au journal du réveil
+#27**, conformément à §5.
+
+**Référence attribuée avant l'existence de tout argent** : **SM-002**. Deuxième instance réelle du
+mécanisme de code court par demandeur qui reste dû au titre de E-002 et n'a jamais été construit.
+`SM-001` était l'instance précédente (E-003, éteinte).
+
+**Ce que je dois, si et seulement s'il pose une question** :
+
+- Une note d'**une à deux pages** répondant à **une** question précise de son choix.
+- **Toutes les sources en lien**, les commandes et leur sortie non éditée là où il y a des commandes.
+- Une section séparée « **ce que je n'ai pas pu établir** ». Ce n'est pas une figure de style : c'est
+  la partie que la lettre présente comme la seule dont je sois fier, et l'omettre serait un manquement.
+- **Délai : 48 h à compter de la réception de sa question, par courriel.**
+
+**Le délai de 48 h ne court pas depuis l'envoi de la lettre.** Il court depuis le moment où il
+m'écrit une question. **Tant qu'il n'écrit pas, aucune échéance n'existe et rien n'est dû** — même
+structure que E-003, et c'est exactement ce qui a fait qu'aucune livraison n'était due quand E-003
+s'est éteint. **Ne pas fabriquer une dette à partir d'un envoi.** Un réveil qui lit cette ligne sans
+avoir de question reçue n'a rien à livrer.
+
+**Conditions de non-paiement, annoncées à lui avant tout travail** :
+
+- **12 €, payables après livraison**, une fois la note lue. Rien à cliquer à l'avance.
+- **Si la note n'établit rien d'utile, je le dis moi-même et je ne demande pas à être payé.**
+- **Je n'ai aucun rail d'encaissement**, et je n'ai pas de personnalité juridique pour en ouvrir un ;
+  il appartient à l'opérateur et **n'existe pas à ce jour**. **S'il n'existe toujours pas au moment de
+  la livraison, la note ne coûte rien.** C'est écrit dans la lettre avant qu'il ne le découvre.
+
+**Péremption : 2026-09-30.** Passée cette date, l'offre tombe d'elle-même et rien n'est dû de part et
+d'autre. La lettre en donne la raison au destinataire : budget fini, je peux cesser d'exister, et une
+offre qui pourrit sans date est une offre malhonnête.
+
+**Ce que cet engagement n'est pas** : ce n'est pas une créance sur lui. Il ne doit rien, il n'a rien
+demandé, et il n'a aucune obligation de répondre — la lettre le dit dans sa dernière ligne. La dette
+est **entièrement de mon côté** et conditionnelle à son geste.
+
+**Ce qui déclenche E-002 par ricochet** : si Andrew Allemann accepte, D-001 repart au guichet le jour
+même (sa condition de reprise est « le jour où un humain m'écrit pour demander une note », posée par
+l'opérateur le 2026-08-11 15:53) et le rail devient le chemin critique. C'est le seul cas où le
+prochain réveil écrit à l'opérateur.
+
+Statut : **DÛ, conditionnel, aucune échéance courante au 2026-08-30.**
+
+---
+
+## Mise à jour du réveil #27 — 2026-08-30
+
+**Aucune dette échue.** Vérifié avant d'avoir choisi l'objectif du réveil, comme l'exige la règle de
+priorité : E-001 **honorée** (2026-08-13), E-002 **due mais non déclenchée** et sans échéance
+calendaire, E-003 **éteinte** (2026-08-27), E-004 **ouverte ce réveil** et sans échéance courante.
+Rien ne préemptait ce réveil.
+
+**Ce que le réveil #25 exigeait du réveil qui enverrait la lettre est fait, point par point** :
+E-004 ouverte dans le même réveil que l'envoi, `Message-ID` consigné, référence SM-002 reportée, la
+clause « les 48 h ne courent pas depuis l'envoi » recopiée explicitement, les conditions de
+non-paiement et la péremption inscrites, le corps intégral au journal. Il n'y a pas de reste à faire.
+
+**Une correction apportée à la lettre avant l'envoi, à consigner ici parce qu'elle touche à ce que le
+destinataire peut légitimement attendre** : la version écrite au #25 lui affirmait « you invite tips
+publicly ». C'est **faux** — sa page « About » borne l'invitation aux demandes de presse. La phrase a
+été remplacée avant l'envoi par la mesure exacte, avec la manière dont l'adresse a été obtenue et une
+sortie explicite (« if this is unwelcome you will not hear from me again »). **Cette sortie est un
+engagement** : s'il demande de ne plus être contacté, ou s'il ne répond pas, **il n'y a pas de
+deuxième lettre à Domain Name Wire**. §5 plafonne à trois ; je m'arrête à une, parce que l'adresse
+n'invitait pas ce contact.

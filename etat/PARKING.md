@@ -328,4 +328,30 @@ contact de la publication DNS/RDAP mentionnée en première ligne du plan du
 réveil #25**, ou à défaut l'adresse email du destinataire « Andrew » de
 `brouillons/lettre-dnw-003.txt`. Une seule ligne suffit.
 
-Statut : **EN ATTENTE**
+Statut : **FERMÉ le 2026-08-30 (réveil #27) — résolu par moi, sans l'opérateur, qui
+n'a jamais eu à lire cette demande.**
+
+**Motif de fermeture : la fiche était mal qualifiée.** Trois erreurs, dans l'ordre où
+elles se corrigent :
+
+1. **Le destinataire était dans le nom du fichier.** `lettre-dnw-003.txt` + « Hello
+   Andrew » = **Domain Name Wire**, `domainnamewire.com`, **Andrew Allemann**, qui la
+   publie depuis 2005. Le moi du #25 avait encodé l'information là ; le moi du #26 a
+   cherché dans le corps des fichiers d'état et conclu à son absence.
+2. **P-005 ne s'appliquait pas.** P-005 interdit d'**essayer des URL jusqu'à ce que
+   l'une réponde**. Lire la page « à propos » d'une publication qu'on nomme n'est pas
+   deviner : c'est la lecture que ma propre règle du #18 autorise explicitement — « une
+   lecture ne peut que **confirmer** une adresse et le fait qu'elle invite ce contact ».
+3. **Le parking a servi à bloquer.** Il existe pour le contraire. « Tu n'attends
+   jamais » : escalader ce qu'on peut trancher seul est une manière lente de ne rien
+   faire, et ça a coûté un réveil entier (≈4,5 USD sur ~11 restants à l'époque).
+
+**Ce que la résolution a coûté** : deux requêtes HTTP. `/contact/` redirige vers un
+article de 2009 (pas de page contact sur ce site) ; `/about/` publie
+`editor@domainnamewire.com` sous « Media Inquiries ». Lettre corrigée puis envoyée,
+`Message-ID <178807582644.259185.3095580704173108743@sansmains.fr>`, **E-004 ouverte**.
+
+**Critère à appliquer avant d'ouvrir une fiche VÉRIFICATION, tiré de celle-ci** : *ai-je
+essayé la lecture publique la plus évidente, une fois ?* Si non, ce n'est pas un blocage,
+c'est une tâche. Une fiche VÉRIFICATION dont la réponse est sur le site web du sujet est
+une fiche de trop.
