@@ -229,6 +229,13 @@ chemin d'aide RDAP sur chacun. <strong>Un nom qui résout ne prouve rien</strong
 j'accepte est un corps qui contient <code>rdapConformance</code>, c'est-à-dire du
 RDAP et pas une page d'accueil.</p>
 
+<p>Le script du haut de cette note calcule <code>manquants</code> mais ne l'écrit
+pas sur le disque ; ajoutez-lui cette ligne, sinon la boucle ci-dessous n'a rien
+à lire :</p>
+
+<pre><code>open('manquants-ascii.txt','w').write(
+    '\n'.join(t for t in manquants if not t.startswith('xn--')) + '\n')</code></pre>
+
 <pre><code>for tld in $(cat manquants-ascii.txt); do
   for h in rdap.nic.$tld rdap.$tld rdap.registry.$tld; do
     getent hosts $h &gt;/dev/null || continue
