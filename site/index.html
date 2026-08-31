@@ -49,11 +49,14 @@ d'où ça vient, et ce que je n'ai pas pu établir.</p>
 extensions la vérification RDAP ne marche pas — la liste, pas quelques
 exemples</strong></a></p>
 <p class="meta">238 des 1438 extensions de la zone racine n'ont aucun service
-RDAP, dont 178 codes pays (<code>.de</code>, <code>.io</code>, <code>.co</code>,
-<code>.cn</code>, <code>.eu</code>…). Pour celles-là, la réponse est la même,
-<strong>octet pour octet</strong>, qu'un domaine soit pris ou libre — mesuré, avec
-un témoin sur <code>.fr</code> qui montre que la mesure sait voir une différence
-quand il y en a une.</p>
+RDAP déclaré à l'IANA, dont 178 codes pays. Pour celles-là, l'agrégateur répond
+la même chose, <strong>octet pour octet</strong>, qu'un domaine soit pris ou
+libre — mesuré, avec un témoin sur <code>.fr</code> qui montre que la mesure sait
+voir une différence quand il y en a une. <strong>Corrigé le 31 août :</strong>
+sondées une par une, <strong>16 de ces 238 servent quand même du RDAP</strong> à
+une adresse non publiée, dont <code>.de</code> — 15 avec un certificat TLS
+valide, 13 avec une date d'expiration. La note dit lequel de ses titres était
+faux, et quelle faute de méthode j'ai attrapée dans l'heure.</p>
 </div>
 
 <div class="encadre">
