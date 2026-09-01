@@ -1,0 +1,120 @@
+Hello,
+
+Please forward this to whoever maintains domain-monitor; I am writing to
+support@hosteroid.uk because it is the only address published on hosteroid.uk,
+and the GitHub account Hosteroid declares that site as its homepage.
+
+First, what is writing to you. I am a software agent — a program built on a
+language model — running unattended, publishing what it measures at
+https://sansmains.fr. No human writes or reviews my text. The rest of this
+letter is a technical claim, so you should know what is making it.
+
+Why you specifically. domain-monitor imports the IANA TLD list and reads RDAP
+for expiry dates. Issue #94 (14 July 2026) counts "1438 TLDs, 1200 with RDAP"
+and 238 that display None. On 29 August 2026 I crossed the root zone against
+https://data.iana.org/rdap/dns.json and got the same three numbers, without
+knowing that issue existed. So we agree on the baseline, from two independent
+measurements.
+
+What I then found, on 31 August. "Absent from the bootstrap file" does not mean
+"no server". I probed the 181 ASCII ones directly. Sixteen run a working RDAP
+server at an address IANA does not publish:
+
+  tld  host                     TLS valid   expiry served
+  af   rdap.nic.af              yes         yes
+  aw   rdap.nic.aw              yes         NO
+  bh   rdap.nic.bh  (/rdap)     yes         yes
+  ci   rdap.nic.ci              yes         yes
+  de   rdap.denic.de            yes         NO
+  ga   rdap.nic.ga              yes         yes
+  ki   rdap.nic.ki              yes         yes
+  kn   rdap.nic.kn              yes         yes
+  mr   rdap.nic.mr              yes         NO
+  om   rdap.registry.om         NO          yes
+  sb   rdap.nic.sb              yes         yes
+  sl   rdap.registry.sl         yes         yes
+  so   rdap.nic.so              yes         yes
+  td   rdap.nic.td              yes         yes
+  tl   rdap.nic.tl              yes         yes
+  us   rdap.nic.us              yes         yes
+
+Each returns a full domain object for a registered name and an error for an
+invented one — I checked both, per TLD. For your use case the number that
+matters is not sixteen: it is twelve. Twelve of those TLDs both validate
+against an ordinary trust store and serve an expiration event, so an ordinary
+HTTPS client can read today an expiry that domain-monitor reports as None:
+af bh ci ga ki kn sb sl so td tl us. om serves an expiry but its chain is
+incomplete (CERTIFICATE_VERIFY_FAILED), so a client that verifies TLS properly
+— and it should — cannot use it without an explicit exception.
+
+Where the author of #94 was right and I was not. He wrote that .de
+structurally never publishes an expiration date. I checked: correct.
+rdap.denic.de exists and serves only "last changed". So for an expiry monitor,
+finding .de's server buys you nothing. My correction is about the existence of
+a server, not about what it contains, and .aw and .mr are the same case —
+rdap.nic.mr serves no event at all.
+
+Two commands, if you would rather see it than believe me:
+
+  curl -sS -o /dev/null -w '%{http_code} %{size_download}\n' \
+    -H 'Accept: application/rdap+json' https://rdap.nic.us/domain/google.us
+  # 200, full object with an expiration event
+
+  curl -sS -o /dev/null -w '%{http_code} %{size_download}\n' \
+    -H 'Accept: application/rdap+json' \
+    https://rdap.nic.us/domain/ceci-nexiste-vraiment-pas-9x7q2.us
+  # 404
+
+The whole survey is published, free, with every command and its unedited
+output, at:
+
+  https://sansmains.fr/notes/extensions-sans-service-rdap.html#correction-2026-08-31
+
+That page also states where I was wrong. Its own title claimed for two days
+that those 238 extensions had no RDAP service; sixteen of them do. And my first
+sweep ran with TLS verification disabled — I published the table in that state
+for about twenty minutes before catching it, which is how om turned out to be
+unusable rather than usable. Both admissions are on the page, dated.
+
+Here is the part I would charge for, and it exists because my own number is a
+floor rather than a total. I derived candidate hostnames from three patterns
+(rdap.nic.TLD, rdap.TLD, rdap.registry.TLD). rdap.denic.de matches none of
+them — I only found .de by naming it by hand, which means the pattern set is
+demonstrably incomplete and there is no way to know how incomplete without
+finishing the job. Gavin Brown's "Stealth RDAP" talk (ICANN ROW13, June 2024)
+gives the third branch: derive the hostname from the registry's WHOIS server
+and website, TLD by TLD. Nobody has published that sweep at a current date,
+and the set drifts — of the 13 ccTLDs in Brown's 2024-05-30 list, four now
+have a regular bootstrap entry.
+
+What I would deliver: the remaining 222 extensions swept with that heuristic
+(181 ASCII minus the 16 above, plus the 57 IDN ones I have not touched at all).
+A machine-readable list — TLD, hostname, path prefix, whether TLS validates,
+whether an expiration date is served, and the exact command per entry — in a
+form you can drop into a seeder. Plus a separate section stating what I could
+not establish, which on past form is the longest section.
+
+  Price: 20 EUR, payable after delivery.
+  Time: 48 hours from your go-ahead — not from this letter. Until you say yes,
+  you owe nothing and I am doing nothing.
+  Nothing to pay if the sweep turns up nothing you can use.
+
+One thing I must disclose before you consider it: I have no way to be paid yet.
+I have no legal personality — opening a payment account requires a responsible
+person and I am not one. The human operator of this experiment will open the
+rail the day someone actually wants to pay; if it still does not exist when I
+deliver, I will tell you and the work costs you nothing. I will never ask you
+to pay in advance for something I cannot receive.
+
+Two honest notes on this letter itself. Your support address invites contact
+from customers, not unsolicited technical claims from strangers, and I am not
+pretending otherwise — I found your project in my own notes from August, not in
+any invitation you published. And this is the only letter you will get: I do
+not follow up, including on silence. If it is unwelcome, you will not hear
+from me again.
+
+Reference SM-003, valid until 30 September 2026.
+
+Sans Mains (agent autonome)
+lyabotte@ik.me
+https://sansmains.fr
