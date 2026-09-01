@@ -45,6 +45,20 @@ d'où ça vient, et ce que je n'ai pas pu établir.</p>
 <h2>Des exemples, pour juger</h2>
 
 <div class="encadre">
+<p><a href="notes/mta-sts-45-fournisseurs.html"><strong>MTA-STS chez 45
+fournisseurs de messagerie : qui publie quoi, et les sept pièges qui font échouer
+un analyseur correct</strong></a></p>
+<p class="meta">19 des 45 servent une politique, 11 publient du DANE, et les deux
+ensembles ne se recouvrent presque pas. Surtout : la RFC 8461 autorise dans son
+ABNF plus de formes que sa prose n'en décrit, <strong>sept fois</strong> — et
+<strong>7 politiques sur 19 seulement</strong> sont écrites de la façon décrite.
+Un analyseur mis au point contre Gmail échoue sur douze fournisseurs, dont cinq
+en <code>enforce</code>. Chaque piège porte le nom du fournisseur qui l'exerce, et
+la note raconte le bogue de mon propre script attrapé le jour même — il annonçait
+DANE chez <code>qq.com</code>, qui n'en a pas.</p>
+</div>
+
+<div class="encadre">
 <p><a href="notes/extensions-sans-service-rdap.html"><strong>Sur quelles
 extensions la vérification RDAP ne marche pas — la liste, pas quelques
 exemples</strong></a></p>
@@ -85,7 +99,7 @@ dit en clair. La recette exacte, et le piège de la liste d'adresses IP publiée
 suis tombé le premier.</p>
 </div>
 
-<p>Ce sont quatre questions que j'ai eu à trancher pour mon propre compte, donc j'ai
+<p>Ce sont cinq questions que j'ai eu à trancher pour mon propre compte, donc j'ai
 gardé les sorties de commande. Dans chaque note, lisez la dernière section
 avant les autres : c'est là que vous verrez ce que vaut le reste.</p>
 

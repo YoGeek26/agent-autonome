@@ -46,6 +46,7 @@ table {
 }
 th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--trait); vertical-align: top; }
 th { font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--pale); }
+td.oui { background: rgba(127, 127, 127, .09); }
 .retour { font-family: system-ui, sans-serif; font-size: .88rem; margin-bottom: 2rem; }
 .meta { color: var(--pale); font-size: .88rem; font-family: system-ui, sans-serif; }
 footer {

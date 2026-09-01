@@ -1,0 +1,46 @@
+sonde refaite (DANE corrige) 2026-09-01T08:07:08Z
+gmail.com | mx=alt1.gmail-smtp-in.l.google.com,alt2.gmail-smtp-in.l.google.com,alt3.gmail-smtp-in.l.google.com,alt4.gmail-smtp-in.l.google.com,gmail-smtp-in.l.google.com | txt=v=STSv1; id=20190429T010101; | http=200/134o/ssl=0 | mode=enforce | max_age=86400 | motifs=smtp.google.com,gmail-smtp-in.l.google.com,*.gmail-smtp-in.l.google.com | couverture=couverts | dane=aucun
+outlook.com | mx=outlook-com.olc.protection.outlook.com | txt=v=STSv1; id=20190225000000Z; | http=200/82o/ssl=0 | mode=enforce | max_age=604800 | motifs=*.olc.protection.outlook.com | couverture=couverts | dane=aucun
+hotmail.com | mx=hotmail-com.olc.protection.outlook.com | txt=v=STSv1; id=20190225000000Z; | http=200/82o/ssl=0 | mode=enforce | max_age=604800 | motifs=*.olc.protection.outlook.com | couverture=couverts | dane=aucun
+yahoo.com | mx=mta5.am0.yahoodns.net,mta6.am0.yahoodns.net,mta7.am0.yahoodns.net | txt=v=STSv1; id=20161109010200Z; | http=200/123o/ssl=0 | mode=testing | max_age=86400 | motifs=*.am0.yahoodns.net,*.mail.gm0.yahoodns.net,*.mail.am0.yahoodns.net | couverture=couverts | dane=aucun
+icloud.com | mx=mx01.mail.icloud.com,mx02.mail.icloud.com | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+proton.me | mx=mail.protonmail.ch,mailsec.protonmail.ch | txt=v=STSv1; id=190906205100Z; | http=200/93o/ssl=0 | mode=enforce | max_age=604800 | motifs=mail.protonmail.ch,mailsec.protonmail.ch | couverture=couverts | dane=mail.protonmail.ch=TLSA,mailsec.protonmail.ch=TLSA
+protonmail.com | mx=mail.protonmail.ch,mailsec.protonmail.ch | txt=v=STSv1; id=190906205100Z; | http=200/93o/ssl=0 | mode=enforce | max_age=604800 | motifs=mail.protonmail.ch,mailsec.protonmail.ch | couverture=couverts | dane=mail.protonmail.ch=TLSA,mailsec.protonmail.ch=TLSA
+fastmail.com | mx=in1-smtp.messagingengine.com,in2-smtp.messagingengine.com | txt=v=STSv1; id=20260728T132000 | http=200/70o/ssl=0 | mode=testing | max_age=86400 | motifs=*.messagingengine.com | couverture=couverts | dane=aucun
+zoho.com | mx=smtpin.zoho.com,smtpin2.zoho.com,smtpin3.zoho.com | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+aol.com | mx=mx-aol.mail.gm0.yahoodns.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+gmx.de | mx=mx00.emig.gmx.net,mx01.emig.gmx.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=mx00.emig.gmx.net=TLSA,mx01.emig.gmx.net=TLSA
+gmx.net | mx=mx00.emig.gmx.net,mx01.emig.gmx.net | txt=v=STSv1;id=20180928194800Z; | http=200/89o/ssl=0 | mode=testing | max_age=604800 | motifs=mx00.emig.gmx.net,mx01.emig.gmx.net | couverture=couverts | dane=mx00.emig.gmx.net=TLSA,mx01.emig.gmx.net=TLSA
+web.de | mx=mx-ha02.web.de,mx-ha03.web.de | txt=v=STSv1;id=20180928194800Z; | http=200/83o/ssl=0 | mode=testing | max_age=604800 | motifs=mx-ha02.web.de,mx-ha03.web.de | couverture=couverts | dane=mx-ha02.web.de=TLSA,mx-ha03.web.de=TLSA
+mail.ru | mx=mxs.mail.ru | txt=v=STSv1; id=20260715T120000; | http=200/103o/ssl=0 | mode=testing | max_age=86400 | motifs=mxs.mail.ru,emx.mail.ru,mx2.corp.mail.ru | couverture=couverts | dane=aucun
+yandex.ru | mx=mx.yandex.ru | txt=- | http=404/11816o/ssl=0 | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+orange.fr | mx=smtp-in.orange.fr,smtp-in2.orange.fr | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+free.fr | mx=mx1.free.fr,mx2.free.fr | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+laposte.net | mx=smtpz4.laposte.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+sfr.fr | mx=smtp-in.sfr.fr | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+wanadoo.fr | mx=smtp-in.orange.fr,smtp-in2.orange.fr | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+t-online.de | mx=mx00.t-online.de,mx01.t-online.de,mx02.t-online.de,mx03.t-online.de | txt=v=STSv1;id=20250815115500Z; | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+posteo.de | mx=mx01.posteo.de,mx02.posteo.de,mx03.posteo.de,mx04.posteo.de | txt=v=STSv1; id=20251202110430Z | http=200/136o/ssl=0 | mode=enforce | max_age=1209600 | motifs=mx01.posteo.de,mx02.posteo.de,mx03.posteo.de,mx04.posteo.de,posteo.de | couverture=couverts | dane=mx01.posteo.de=TLSA,mx02.posteo.de=TLSA,mx03.posteo.de=TLSA,mx04.posteo.de=TLSA
+mailbox.org | mx=mx-n.mailbox.org,mx1.mailbox.org,mx2.mailbox.org,mx3.mailbox.org,mx4.mailbox.org | txt=v=STSv1; | http=200/190o/ssl=0 | mode=enforce | max_age=2419200 | motifs=*.mailbox.org,mx1.mailbox.org,mx2.mailbox.org,mx3.mailbox.org,mx4.mailbox.org,mxtls1.mailbox.org,mxtls2.mailbox.org | couverture=couverts | dane=mx-n.mailbox.org=TLSA,mx1.mailbox.org=TLSA,mx2.mailbox.org=TLSA,mx3.mailbox.org=TLSA,mx4.mailbox.org=TLSA
+tutanota.com | mx=mail.tutanota.de | txt=v=STSv1; id=20190723; | http=200/67o/ssl=0 | mode=enforce | max_age=86400 | motifs=mail.tutanota.de | couverture=couverts | dane=mail.tutanota.de=TLSA
+tuta.com | mx=mail.tutanota.de | txt=v=STSv1; id=20190723; | http=200/67o/ssl=0 | mode=enforce | max_age=86400 | motifs=mail.tutanota.de | couverture=couverts | dane=mail.tutanota.de=TLSA
+libero.it | mx=smtp-in.libero.it | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+virgilio.it | mx=smtp-in.virgilio.it | txt=- | http=301/230o/ssl=0 | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+terra.com.br | mx=mx.terra.com.br | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+uol.com.br | mx=mx.uol.com.br | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+naver.com | mx=mx1.mail.naver.com,mx4.mail.naver.com,mx5.mail.naver.com,mx6.mail.naver.com | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+qq.com | mx=mx1.qq.com,mx2.qq.com,mx3.qq.com | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+163.com | mx=163mx00.mxmail.netease.com,163mx01.mxmail.netease.com,163mx02.mxmail.netease.com,163mx03.mxmail.netease.com | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+comcast.net | mx=mx1.mxge.comcast.net,mx1a1.comcast.net,mx1c1.comcast.net,mx1h1.comcast.net,mx2.mxge.comcast.net,mx2a1.comcast.net,mx2c1.comcast.net,mx2h1.comcast.net | txt=v=STSv1; id=1667432290; | http=200/274o/ssl=0 | mode=enforce  | max_age=2592000 | motifs=mx2c1.comcast.net,mx2h1.comcast.net,mx1a1.comcast.net,mx1h1.comcast.net,mx1c1.comcast.net,mx2a1.comcast.net,mx1.ge.comcast.net,mx2.ge.comcast.net,mx1.mxge.comcast.net,mx2.mxge.comcast.net | couverture=couverts | dane=mx1.mxge.comcast.net=TLSA,mx1a1.comcast.net=TLSA,mx1c1.comcast.net=TLSA,mx1h1.comcast.net=TLSA,mx2.mxge.comcast.net=TLSA,mx2a1.comcast.net=TLSA,mx2c1.comcast.net=TLSA,mx2h1.comcast.net=TLSA
+verizon.net | mx=mx-aol.mail.gm0.yahoodns.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+att.net | mx=mx-att.mail.am0.yahoodns.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+bt.com | mx=btgroupcloud-mail-onmicrosoft-com.mail.protection.outlook.com | txt=v=STSv1; id=20250710 | http=200/109o/ssl=0 | mode=testing | max_age=86400 | motifs=btgroupcloud-mail-onmicrosoft-com.mail.protection.outlook.com | couverture=couverts | dane=aucun
+sky.com | mx=mx-eu.mail.am0.yahoodns.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+telenet.be | mx=mx1.telenet-ops.be,mx2.telenet-ops.be | txt=v=STSv1; id=2022090100; | http=200/96o/ssl=0 | mode=enforce | max_age=604800 | motifs=mx1.telenet-ops.be,mx2.telenet-ops.be | couverture=couverts | dane=aucun
+ziggo.nl | mx=mxin10.ziggo.nl,mxin5.ziggo.nl | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=mxin10.ziggo.nl=TLSA,mxin5.ziggo.nl=TLSA
+kpnmail.nl | mx=mx.kpnmail.nl | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+telia.se | mx=mail.cm.telia.net | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+online.no | mx=mx1c60.megamailservers.eu,mx2c60.megamailservers.eu,mx3c60.megamailservers.eu,mx4c60.megamailservers.eu | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+seznam.cz | mx=mx1.seznam.cz,mx2.seznam.cz | txt=- | http=000/0o/ssl=- | mode=- | max_age=- | motifs= | couverture=- | dane=aucun
+wp.pl | mx=mx.wp.pl,mx5.wp.pl | txt=v=STSv1; id=20200722100000Z; | http=200/60o/ssl=0 | mode=enforce | max_age=86400 | motifs=*.wp.pl | couverture=couverts | dane=aucun
+o2.pl | mx=mx.tlen.pl | txt=v=STSv1; id=20200722100000Z; | http=200/62o/ssl=0 | mode=enforce | max_age=86400 | motifs=*.tlen.pl | couverture=couverts | dane=aucun

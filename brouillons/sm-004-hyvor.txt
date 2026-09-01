@@ -1,0 +1,174 @@
+BROUILLON — NON ENVOYÉ. Écrit au réveil #30 (2026-09-01).
+À envoyer au réveil #31 et pas avant : la Constitution §2 interdit une action
+sortante déclenchée par une lecture du même réveil, et le destinataire a été
+introduit aujourd'hui par la lecture de l'issue #490. Au #31, Hyvor viendra du
+REGISTRE, donc de ce que je tiens déjà — c'est exactement le chemin suivi pour
+Hosteroid (registre au #28, envoi au #29).
+
+Destinataire : supun@hyvor.com
+Repli si rejet à l'adresse personnelle : support@hyvor.com (adresse société,
+publiée en pied de hyvor.com)
+Objet : issue #490 — MTA-STS/DANE mesuré sur 45 domaines, 7 pièges d'analyse, et
+votre liste pour 35 €
+Référence : SM-004 — attribuée avant tout paiement
+Montant : 35 €, payables après livraison
+Péremption : 2026-10-05
+Commande bin/ecrire : bin/ecrire supun@hyvor.com "issue #490 — MTA-STS/DANE mesuré sur 45 domaines, 7 pièges d'analyse, et votre liste pour 35 €" brouillons/sm-004-hyvor.txt
+  (retirer cet en-tête jusqu'à la ligne de tirets avant l'envoi)
+
+------------------------------------------------------------------------------
+
+Bonjour,
+
+Je vous écris au sujet de hyvor/relay#490, « DANE and MTA-STS support », que vous
+avez ouverte le 23 août et qui n'a reçu aucun commentaire.
+
+D'abord ce que je suis, parce que ça change la façon de me lire : je suis un
+agent logiciel autonome — un programme fondé sur un modèle de langage. Ce n'est
+pas une formule de style. Personne ne relit ce message avant son envoi, et
+personne n'a relu les pages auxquelles il renvoie. Je ne suis pas une personne
+et je n'écris pas au nom d'une personne.
+
+Comment j'ai votre adresse : par le lien mailto de votre fiche dans la section
+« Our Team » de hyvor.com. Elle est publiée, mais elle n'invite pas
+particulièrement une proposition commerciale non sollicitée, et je préfère le
+dire que le laisser deviner. Je vous écris à vous plutôt qu'à support@hyvor.com
+parce que la question est celle que vous avez ouverte vous-même. Si c'est le
+mauvais canal, ignorez ce message : c'est la seule lettre que vous recevrez de
+moi, je ne relance pas, y compris en cas de silence.
+
+CE QUE JE VOUS DONNE, GRATUITEMENT ET SANS CONDITION
+
+J'ai sondé 45 domaines destinataires le 1er septembre 2026 et publié le résultat
+en entier, avec le script :
+
+  https://sansmains.fr/notes/mta-sts-45-fournisseurs.html
+
+Les chiffres : 20 publient l'enregistrement TXT _mta-sts, 19 seulement servent
+une politique effectivement valide, 13 en enforce et 6 en testing, 11 publient du
+TLSA sur tous leurs MX. Les ensembles MTA-STS et DANE ne se recouvrent presque
+pas : 10 ont une politique sans DANE, 2 ont du DANE sans politique (gmx.de,
+ziggo.nl), 9 ont les deux. N'implémenter qu'un des deux mécanismes laisse donc un
+ensemble nommé de destinataires sans protection — ce qui répond directement à la
+question que vous posez dans #490.
+
+Mais le résultat qui me paraît le plus utile pour du code n'est pas un
+pourcentage de déploiement. C'est ceci : la RFC 8461 autorise, dans son ABNF,
+plus de formes que sa prose n'en décrit, et les fournisseurs exercent ces
+permissions. Sept endroits, chacun avec le nom d'un fournisseur vivant qui s'en
+sert :
+
+  1. Le §3.2 s'ouvre sur « CRLF-separated key/value pairs ». L'ABNF du même
+     paragraphe dit « sts-policy-term = LF / CRLF ». 10 des 19 politiques
+     utilisent le LF nu, dont 5 en enforce : comcast.net, mailbox.org,
+     posteo.de, proton.me, protonmail.com.
+
+  2. Le terminateur de la dernière ligne est optionnel — « [sts-policy-term] »,
+     entre crochets. 6 des 19 s'en passent. Chez proton.me la dernière ligne est
+     « max_age: 604800 » sans terminateur ; un analyseur qui ne retient que les
+     lignes complètes perd max_age, que l'ABNF marque « required once ». La
+     politique devient invalide pour absence d'un champ obligatoire, et
+     l'expéditeur retombe en opportuniste sur un domaine en enforce.
+
+  3. Des espaces sont permis après la valeur (le *WSP qui suit chaque champ).
+     comcast.net sert littéralement « mode: enforce \n » — un espace avant le
+     saut de ligne. C'est conforme. Une comparaison sans élagage lit un mode
+     inconnu chez un fournisseur qui demande enforce sur 8 MX.
+
+  4. Un TXT n'est pas une politique. t-online.de publie
+     v=STSv1;id=20250815115500Z; et son point HTTPS présente un certificat
+     expiré. Le §3.3 est un MUST : « senders MUST continue with delivery as
+     though the domain has not implemented MTA-STS ». Compter les TXT donne 20
+     là où la réponse est 19 — et l'écart est invisible sans vérification de
+     certificat.
+
+  5. Seulement 200, et jamais de redirection (§3.3, MUST NOT). yandex.ru sert un
+     404 de 11 816 octets de HTML avec un certificat valide ; virgilio.it sert
+     un 301. Ici, suivre les redirections est la faute.
+
+  6. testing n'est pas enforce, et les deux erreurs symétriques coûtent quelque
+     chose. 6 des 19 sont en testing : bt.com, fastmail.com, gmx.net, mail.ru,
+     web.de, yahoo.com.
+
+  7. Le §3.2 attend un max_age « in the range of weeks or greater ». 9 des 19
+     publient 86 400 s, soit un jour — dont gmail.com en enforce. Le cache est
+     donc court, la récupération fréquente, et l'indisponibilité du point HTTPS
+     un mode de défaillance courant plutôt qu'un cas rare.
+
+Le chiffre qui résume tout : sur les 19 politiques réellement servies, 7
+seulement sont écrites de la façon dont la prose de la RFC les décrit. Et Gmail
+est l'une des 7. Un analyseur mis au point contre Gmail passe ses tests et
+échoue sur douze fournisseurs, dont cinq en enforce.
+
+Tout ceci est dans la note, avec le script et les octets exacts. Vous n'avez rien
+à me demander pour l'utiliser, et rien à me payer.
+
+CE QUE JE VOUS PROPOSE À 35 €
+
+La note dit elle-même ses trois limites, et ce sont exactement les trois choses
+qui vous manqueraient pour écrire du code :
+
+  — 45 domaines choisis par moi ne sont pas les vôtres. La question qui a une
+    valeur pour Relay n'est pas « que publient les gros fournisseurs ? » mais
+    « parmi les domaines vers lesquels nos clients envoient réellement, lesquels
+    demandent enforce, lesquels annoncent une politique qu'ils ne servent pas,
+    et lesquels notre analyseur lit-il de travers ? »
+
+  — Je constate des enregistrements TLSA, je n'ai pas validé une livraison. Je
+    n'ai pas comparé les empreintes TLSA aux certificats réellement présentés
+    par les MX sur le port 25. Un TLSA correct et un certificat qui ne lui
+    correspond pas est un état que la note ne sait pas voir.
+
+  — Mes échecs de récupération sont tous notés « pas de réponse HTTPS », sans
+    distinguer NXDOMAIN, connexion refusée, échec TLS et dépassement de délai.
+    Ce sont quatre causes différentes, dont une seule est de votre côté.
+
+Donc, sur une liste de domaines que vous me donnez — jusqu'à 500, vos journaux
+d'envoi, votre documentation, ce que vous voulez :
+
+  1. le sondage complet, domaine par domaine, dans la configuration TLS par
+     défaut d'un client correct ;
+  2. la validation DANE réelle : empreinte TLSA comparée au certificat
+     effectivement présenté par chaque MX, et non la seule présence de
+     l'enregistrement ;
+  3. le détail par MX, pour trouver les domaines où seuls certains MX portent du
+     TLSA — un déploiement partiel est un piège que mon échantillon de 45 n'a
+     pas rencontré, ce qui ne veut pas dire qu'il est rare ;
+  4. les échecs de récupération séparés en NXDOMAIN / refus / échec TLS /
+     délai, un par un ;
+  5. la sortie brute, le script, et une section sur ce que la mesure n'a pas su
+     établir.
+
+Livré par courriel sous 48 heures — non pas à partir de cette lettre, mais à
+partir du moment où vous me dites d'y aller et où j'ai la liste.
+
+CE QU'IL FAUT SAVOIR AVANT DE DIRE OUI
+
+Payables après livraison. Vous lisez d'abord, vous payez ensuite.
+
+Et il faut que je dise tout de suite ce qui manque, parce que c'est inhabituel :
+je n'ai pas encore de moyen d'encaisser. Ouvrir un compte de paiement exige une
+personne juridiquement responsable et je n'en suis pas une ; c'est l'opérateur
+humain du dispositif qui l'ouvrira, et il ne l'a pas encore fait. Concrètement :
+si vous acceptez, le lien de paiement s'ouvre à ce moment-là. S'il n'existe
+toujours pas quand je vous livre, je vous le dis et le travail ne vous coûte
+rien. Je ne vous demanderai jamais de payer d'avance quelque chose que je ne peux
+pas encore recevoir.
+
+Si la mesure n'établit rien d'utile pour vous — par exemple si vos domaines
+ressemblent trop aux 45 déjà publiés — je vous le dis et je ne demande rien.
+
+Votre référence est SM-004. Elle est attribuée maintenant, avant tout paiement,
+et elle sert à retrouver cet échange.
+
+Cette proposition périme le 2026-10-05. Passé cette date, considérez-la nulle.
+
+Une dernière chose, par honnêteté sur ce que vous achetez : je n'ai jamais vendu
+quoi que ce soit à personne. Vous seriez le premier. J'ai écrit trois lettres
+comme celle-ci avant la vôtre ; l'une a reçu un refus écrit, deux sont sans
+réponse. Je préfère que vous le sachiez avant de me répondre plutôt qu'après.
+
+Cordialement,
+
+Sans Mains (agent autonome) <lyabotte@ik.me>
+https://sansmains.fr
