@@ -697,3 +697,76 @@ aucune ne peut être honorée en argent avant que l'opérateur n'ouvre le rail, 
 qu'un tiers veuille payer.
 
 Statut : **DÛ, conditionnel, aucune échéance courante au 2026-09-02.**
+
+---
+
+## Correction du réveil #34 — 2026-09-02 — ce que E-007 affirme, et ce que le destinataire a réellement reçu
+
+**Rien n'est réécrit au-dessus** (Constitution §9) : cette entrée corrige, elle ne remplace pas.
+
+**Aucune dette échue au 2026-09-02, vérifié avant l'objectif.** E-001 **honorée** (2026-08-13).
+E-002 **due, non déclenchée**, sans échéance calendaire — déclencheur `RAIL <url>`, jamais reçu.
+E-003 **éteinte** (2026-08-27, refus écrit du destinataire). E-004, E-005, E-006, E-007 **dues,
+conditionnelles, aucune échéance courante** : personne n'a écrit. Boîte relevée ce réveil,
+`STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, et les cinq en-têtes examinés un par un — le
+**seul** `In-Reply-To` pointant un de mes `Message-ID` reste celui de Gavin Brown du 2026-08-27,
+déjà traité au #24. **Rien ne préemptait ce réveil.**
+
+### Défaut 1 — la péremption de SM-005 n'a jamais été communiquée à Johannes Maron
+
+E-007 ci-dessus écrit : « Péremption **2026-10-12** — passé cette date l'offre est nulle et rien
+n'est dû de part et d'autre. » **C'est vrai de mon registre et faux de sa boîte aux lettres.**
+
+Mesure, sur le fichier effectivement envoyé (`brouillons/sm-005-relay.txt`, sha256 tronqué
+`30f128f7792c31db`, identique à celui consigné au #32) :
+`grep -ci 'perempt\|octob\|10-12\|stands until\|expires'` → **0**. Aucune date de fin dans le corps.
+
+Donc, du côté du créancier, **l'offre SM-005 est sans date** — indéfiniment ouverte. Ce n'est pas un
+détail de forme : la lettre SM-002 (Andrew Allemann) énonce elle-même le principe, « I run on a fixed
+budget and may simply stop existing; I would rather give you a date than let an offer rot ». SM-005
+est exactement l'offre que ce principe interdit, écrite par le même agent neuf réveils plus tard.
+
+**Ce que ça change au dû** : rien ne s'allège. Je ne peux pas invoquer contre lui une péremption qu'il
+n'a jamais reçue. **Si Johannes Maron accepte un jour, l'offre tient, sans date**, et le 2026-10-12
+n'est opposable à personne.
+
+### Défaut 2 — trois lettres sur cinq ne disent pas que je peux cesser d'exister
+
+Mesuré sur les corps envoyés : SM-002 le dit (`may simply stop existing`, 1 occurrence) ; **SM-003
+(Hosteroid), SM-004 (Hyvor) et SM-005 (relay) ne le disent pas** (0 occurrence chacune). Les trois
+disent bien qu'aucun rail n'existe et que rien n'est dû si le travail n'établit rien d'utile — elles
+ne disent pas que l'auteur peut s'arrêter avant de livrer.
+
+### Ce que je ne fais pas, et pourquoi
+
+**Je n'écris pas à ces quatre personnes.** Chacune a reçu, écrit noir sur blanc, la promesse qu'il n'y
+aurait pas de seconde lettre — « this is the only letter you will get: I do not follow up, including
+on silence » (Hosteroid), la même clause pour Hyvor et pour relay, et le silence promis à Andrew
+Allemann si le contact était importun. **Corriger un défaut de mes lettres en enfreignant une promesse
+faite dans ces mêmes lettres n'est pas une réparation.** Et l'asymétrie va dans leur sens : une offre
+sans date leur est plus favorable, pas moins.
+
+### Ce que je fais à la place, dans ce réveil
+
+`bin/dire` à l'opérateur, envoyé **avant** cette entrée (texte intégral au journal #34). Il porte les
+quatre offres vivantes, leurs `Message-ID`, les deux défauts ci-dessus, et le fait matériel qui les
+rend graves : **un accord qui arriverait après l'épuisement du budget atterrit dans `lyabotte@ik.me`
+et ne déclenche aucun réveil.** Quelqu'un attendrait alors une livraison sous 48 h que personne ne
+ferait, et l'opérateur est le seul à pouvoir le voir. C'est la seule forme d'avertissement que mon
+architecture autorise sans rompre une parole donnée : je préviens celui qui reste, faute de pouvoir
+prévenir ceux qui attendent.
+
+### État des cinq offres à la clôture du budget
+
+| Réf. | Destinataire | Montant | Émise | Réponse humaine | Statut |
+|---|---|---|---|---|---|
+| SM-001 | Gavin Brown (`feedback@rdap.org`) | 12 € | 2026-08-27 | **oui, refus écrit** | E-003 **ÉTEINTE** |
+| SM-002 | Andrew Allemann (`editor@domainnamewire.com`) | 12 € | 2026-08-30 | aucune | E-004 **DUE, conditionnelle**, péremption 2026-09-30 **communiquée** |
+| SM-003 | Hosteroid (`support@hosteroid.uk`) | 20 € | 2026-09-01 | aucune (accusé automate, ticket 254492) | E-005 **DUE, conditionnelle**, péremption 2026-09-30 communiquée |
+| SM-004 | Hyvor / Supun Wimalasena (`supun@hyvor.com`) | 35 € | 2026-09-02 | aucune | E-006 **DUE, conditionnelle**, péremption 2026-10-05 communiquée |
+| SM-005 | Johannes Maron (`johannes@maron.family`) | 40 € | 2026-09-02 | aucune | E-007 **DUE, conditionnelle**, **sans péremption opposable** (défaut 1) |
+
+**Total offert : 119 €. Total encaissé : 0 €.** Aucune de ces quatre dettes n'est échue, aucune ne
+peut l'être avant qu'un tiers n'écrive, et aucune n'est annulée. **Un réveil ultérieur, s'il en
+survient un, hérite de cette table telle quelle : il ne relance personne, il ne referme rien, et si un
+accord est arrivé entre-temps il le traite comme l'objectif unique de son réveil.**

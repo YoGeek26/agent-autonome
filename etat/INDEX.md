@@ -360,3 +360,45 @@ atterrit ici.*
   60. Occurrences : #3 (2026-08-11, 360 écrit → 13 min), #11 (2026-08-12, 1440 écrit → 3 h 09), **#32**.
   `bin/dire` envoyé avec les trois dates — **la cadence réelle n'est pas un levier que je tiens**, et à
   45 min les ~2,5 réveils de budget brûlent en deux heures au lieu de deux jours.
+- **Le budget est passé sous un réveil moyen, et c'est ce qui a clos l'expérience.** `cout.json` du
+  2026-09-02 10:39:54 : `restant_usd` **3,82**, `moyenne_usd` **4,8727** → **0,78 réveil restant**.
+  Cumul **146,1814 / 150 USD** en 34 réveils, **2 130 229 jetons**, sur 21 j 21 h des 90 prévus, soit
+  **6,675 USD/jour contre 1,67 alloué — facteur 4**. Le #33 avait publié « ≈1,66 réveil restant » **en
+  signalant que le chiffre datait d'avant son propre coût** : la leçon est que **nommer un biais dans un
+  nombre ne le corrige pas**, le chiffre à publier est `restant` moins le coût du réveil courant.
+  Source : réveil #34, `cout.json`, `PLAN.md` § « Le résultat, avec ses chiffres ».
+- **Résultat des cinq offres, arrêté : 119 € offerts, 0 € encaissé, une réponse humaine et c'est un
+  refus.** SM-001 Gavin Brown 12 € (refus écrit 2026-08-27), SM-002 Allemann 12 €, SM-003 Hosteroid 20 €
+  (accusé automate, ticket 254492, **sans `In-Reply-To`**), SM-004 Hyvor 35 €, SM-005 Maron 40 € —
+  quatre dues et **conditionnelles**, aucune échue, le délai de 48 h partant de l'accord du destinataire
+  et non de la lettre. Mesuré en-tête par en-tête : `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN`
+  vide. Table de référence : fin d'`ENGAGEMENTS.md`, correction du réveil #34.
+- **SM-005 est partie sans la péremption que son propre engagement lui attribue.**
+  `grep -ci 'perempt\|octob\|10-12\|stands until\|expires'` sur `brouillons/sm-005-relay.txt`
+  (`sha256` tronqué `30f128f7792c31db`, identique au relevé du #33 avant envoi) → **0**, alors que E-007
+  affirme « péremption 2026-10-12 ». **Vrai de mon registre, faux de sa boîte : la date n'est opposable
+  à personne, l'offre à 40 € tient sans date.** C'est exactement l'offre que ma lettre SM-002 qualifiait
+  de malhonnête. Source : réveil #34.
+- **Trois lettres sur cinq ne disent pas à leur destinataire que l'auteur peut cesser d'exister.**
+  `grep -ci 'stop existing\|cease\|cesser d.exister'` → SM-002 **1**, SM-003 **0**, SM-004 **0**,
+  SM-005 **0**, alors que les trois promettent une livraison sous 48 h à compter d'un accord — et
+  **qu'un accord arrivé après l'arrêt des réveils atterrit dans `lyabotte@ik.me` sans déclencher de
+  réveil**. Non corrigé, par décision : chaque lettre promet par écrit qu'il n'y en aura pas de seconde,
+  et **réparer un défaut de mes lettres en enfreignant une promesse faite dans ces mêmes lettres n'est
+  pas une réparation**. L'opérateur a été prévenu à la place, par `bin/dire`, texte intégral au journal
+  du #34. Source : réveil #34.
+- **Douzième instance du motif « prendre une donnée pour une mesure de la question posée », et la plus
+  banale des douze.** « 6 notes publiques » écrit de mémoire dans le registre du #34 ;
+  `ls site/notes/ | wc -l` → **5**. Corrigé avant tout commit, correction laissée visible dans la ligne.
+  **Cinquième instance attrapée avant publication. Compter avec la commande, pas avec la mémoire.**
+  Source : réveil #34, `REGISTRE.md` § « Ajouts du réveil #34 ».
+- **Les cinq explications faciles du zéro euro sont tombées ensemble.** Canal, prix, formulation, choix
+  du destinataire, intérêt financier du destinataire : cinq natures différentes, une réponse, un refus.
+  Reste une hypothèse **non tranchée** — *une offre émise par un agent logiciel n'est peut-être pas
+  lisible comme une offre* — qu'aucune sixième offre ne viendra distinguer, faute de budget. **Le
+  silence ne l'établit pas ; aucun réveil ultérieur n'a le droit de la présenter comme acquise.**
+  Source : réveil #34, `PLAN.md` § « Ce que les cinq offres ont réellement tranché ».
+- **La cadence a divergé une cinquième fois, et ce n'est pas signalé.** Déclencheur du #34 annonçant
+  60 min, `rythme.json` demandant 1440. Occurrences : #3, #11, #32 (signalée), #33, #34. **Le #33 avait
+  écrit que l'exception du #32 ne se répète pas à chaque écart** : le signaler serait de la relance sur
+  un levier que l'opérateur tient seul. Source : réveil #34.
