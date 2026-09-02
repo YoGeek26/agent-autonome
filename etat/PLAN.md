@@ -2,14 +2,37 @@
 
 *Réécrit intégralement à chaque réveil. État mental courant, pas historique.*
 
+> **Mise à jour du #36 (2026-09-02 15:39), et c'est délibérément une mise à jour et non une
+> réécriture.** Ce document portait déjà le résultat au #35 ; le rédiger une seconde fois plus
+> longuement serait exactement le défaut que l'`INDEX` documente depuis le #12. **Deux choses ont
+> changé, les deux sont des chiffres, et rien de l'analyse ci-dessous ne bouge :**
+>
+> 1. **`restant_usd` est passé de −0,75 à −5,60** (`cout.json`, 11:39:27 → 15:39:44 ; `cumul_usd`
+>    **155,5994** / `budget_usd` **150,00**). Le dépassement a grandi de **4,85 USD en un intervalle**,
+>    et **les deux réveils qui l'ont creusé étaient des constats imposés** — les deux seuls types de
+>    réveil dont le protocole garantit qu'ils ne produisent que du texte dans `etat/`. **Un constat ne
+>    peut donc pas faire redescendre le compteur qui le déclenche**, et le second remède de la règle
+>    des trois tentatives (élargir la cadence) est saturé au plafond 1440 depuis le 2026-08-11.
+>    → `INDEX.md`, pistes abandonnées, **« Le réveil comme unité de production »**.
+> 2. **Troisième relève consécutive à boîte identique** : `(MESSAGES 5 RECENT 0 UNSEEN 0)`, cinq
+>    en-têtes relus, seul `In-Reply-To` = le refus de Gavin Brown du 2026-08-27. Aucune dette échue.
+>
+> **Ce que le #36 ajoute, et c'est tout ce qu'il ajoute** : la réponse à la mission n'est plus « voici
+> ce que j'essaie à la place » mais **§10 — bloqué, et voici quoi**. Trois choses manquent, aucune en
+> mon pouvoir, **et je n'en demande aucune** : un budget modèle rechargé, ou un guichet franchi côté
+> demande (classe refusée par l'opérateur le 2026-08-13, non rouverte), ou un canal aux deux propriétés
+> que 35 réveils n'ont pas trouvé. **Continuer ou arrêter est une décision de l'opérateur, pas un
+> objectif qu'un agent peut se donner** — il en est prévenu (journal #36, texte intégral).
+
 **Barreau courant : 1 — le premier euro. Non atteint.** Barreau 0 validé le 2026-08-11 (registre,
-message opérateur 15:29:37). **Trente-cinq réveils, 119 € offerts, 0 € encaissé, zéro demande de
+message opérateur 15:29:37). **Trente-six réveils, 119 € offerts, 0 € encaissé, zéro demande de
 note reçue.**
 
 **Le budget est dépassé, pas épuisé.** `cout.json` du 2026-09-02 11:39:27 : `cumul_usd` **150,7506**
 contre `budget_usd` **150,00** → `restant_usd` **−0,75**. Le #34 avait prévu 0,78 réveil restant ; le
 dépassement est arrivé au réveil suivant. **Ce plan n'est donc pas un plan. C'est un résultat, et la
-consigne d'un réveil de plus s'il survient.**
+consigne d'un réveil de plus s'il survient.** *(Chiffre du #35 laissé en place — §9. Valeur courante
+en tête de document : **−5,60**.)*
 
 ---
 
@@ -205,7 +228,8 @@ Ce qui n'a pas été produit : **un euro**. C'est le barreau, et il n'est pas at
 
 | Posée | Attente | Se relève | Comment |
 |---|---|---|---|
-| **#35, 2026-09-02** | **Aucun tiers ne répondra plus à aucune des cinq lettres** | 2026-09-16 | un `In-Reply-To` sur un des cinq `Message-ID`, `Auto-Submitted` absent |
+| **#36, 2026-09-02** | **Aucun réveil ultérieur ne produira quoi que ce soit hors de `etat/`** — non par manque de volonté, mais parce que `restant_usd` est négatif et qu'aucune tentative n'est financée | au premier réveil suivant | un commit postérieur au #36 touchant un fichier hors `etat/`, **ou** une sortie de `bin/ecrire` au journal. **Falsifiable par l'opérateur seul** : un budget rechargé ou un message de sa part la démentirait immédiatement |
+| **#35, 2026-09-02** | **Aucun tiers ne répondra plus à aucune des cinq lettres** | 2026-09-16 | un `In-Reply-To` sur un des cinq `Message-ID`, `Auto-Submitted` absent — **relevé trois fois depuis (#34, #35, #36), boîte identique en-tête par en-tête** |
 | #34, 2026-09-02 | Aucun réveil d'agent après le 2026-09-03 | immédiat | **déjà falsifiée une fois** par ce réveil ; une entrée de journal postérieure au 03/09 la falsifie à nouveau |
 | #33, 2026-09-02 | Johannes Maron ne répondra pas | 2026-09-14 | `In-Reply-To` sur `<178834215446.291998.665272504131293675@sansmains.fr>` **et** `Auto-Submitted` absent |
 | #31, 2026-09-01 | Hyvor ne répondra pas | 2026-09-12 | `In-Reply-To` sur `<178833506082.289093.6119573015481842052@sansmains.fr>` **et** `Auto-Submitted` absent |
