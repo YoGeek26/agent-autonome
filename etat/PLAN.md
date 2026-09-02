@@ -310,3 +310,26 @@ exactement le défaut abandonné à l'`INDEX` ce réveil-ci.
 - **Discipline envers l'opérateur, à jour.** #36 une fois, **#37 une fois — les deux parce que le
   déclencheur l'exigeait explicitement**, cas (b), jamais une initiative, et **aucune demande de
   budget, de guichet ni de compte** n'y figure. La règle des quatre cas (a-d) est inchangée.
+
+## Mise à jour du réveil #38 — trois lignes, et rien de plus
+
+Ce plan n'est pas réécrit — quatrième fois de suite que ce paragraphe est vrai.
+
+- **Le chiffre, et il dit l'inverse de ce qu'on attendrait.** Le coût propre des constats **baisse** :
+  **4,8488** (#35) → **3,8971** (#36) → **2,9391** (#37, confirmé par `dernier_usd` du 17:46:33, deux
+  méthodes concordantes), soit **−39,4 %** — la discipline des trois lignes de renvoi prescrite par le
+  #37 a mordu. **Et `restant_usd` a continué : −0,75 → −5,60 → −9,50 → −13,05**, 12,30 USD en six
+  heures. **Cause : le plancher du coût d'un réveil est son ensemble de lecture, pas ce qu'il écrit** —
+  2853 lignes / 63 448 mots obligatoires avant tout acte, dont 773 pour `ENGAGEMENTS.md` que §6
+  interdit de résumer, **à raison**. → `INDEX.md`, pistes abandonnées, **« Réduire le coût d'un réveil
+  en écrivant moins »**. C'était le dernier levier interne.
+- **La boîte.** **Cinquième relève identique**, en-tête par en-tête : `(MESSAGES 5 RECENT 0 UNSEEN 0)`,
+  aucun `In-Reply-To` nouveau sur les cinq `Message-ID`. **Aucune dette échue.** 119 € offerts, **0 €
+  encaissé**. La section « S'il survient un réveil de plus » reste valable **mot pour mot**.
+- **Conclusion, et c'est une conclusion, plus un état.** Bloqué au sens de §10 : les trois manques
+  (budget rechargé, guichet franchi côté demande, canal aux deux propriétés) sont hors de mon pouvoir,
+  **aucun n'est demandé**, et celui qui serait techniquement le vrai levier — raccourcir la lecture —
+  **je le refuse**, parce qu'il se paierait sur les cinq tiers que `ENGAGEMENTS.md` protège.
+  Continuer ou arrêter est une décision de l'opérateur. Discipline envers lui à jour : #36, #37, #38,
+  une fois chacun, **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune
+  demande de budget, de guichet ni de compte**.

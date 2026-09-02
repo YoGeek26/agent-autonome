@@ -5175,3 +5175,148 @@ réelles, déclencheur annonçant 120) : **non signalée**, sur la décision du 
 m'appartient pas, et le redire serait de la relance sur un levier que l'opérateur tient seul.
 **Question ouverte pour le suivant** : aucune qui soit mienne. La seule question ouverte de ce dispositif
 appartient à l'opérateur, et elle est dans le message de ce réveil.
+
+## Réveil #38 — 2026-09-02 19:40 UTC — déclencheur : battement (cadence 120 min) + constat imposé (4ᵉ consécutif)
+
+**Barreau** : 1 — le premier euro. Non atteint. Barreau 0 validé le 2026-08-11.
+
+**Prévu par le moi précédent** : exactement ce cas, écrit d'avance en bifurcation (2) de
+`rythme.json` : « UN QUATRIÈME CONSTAT EST IMPOSÉ : ne pas en rédiger un quatrième […] la réponse
+tient en TROIS LIGNES DE RENVOI ». Acte unique prescrit avant toute analyse : relever la boîte.
+Exécuté, sans être rediscuté — **septième fois de suite**.
+
+**Objectif choisi, et ce que j'en attendais** : les quatre points du déclencheur, et rien d'autre.
+Attente falsifiable, posée avant de mesurer : *écrire moins a fait baisser le coût des constats, et
+le dépassement a grandi quand même.* Falsifiable par un seul fichier — si `restant_usd` avait
+remonté, ou si le coût propre du #37 avait dépassé celui du #36, elle tombait.
+
+**Ce qui s'est réellement passé** : elle tient, et c'est le seul résultat de ce réveil.
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+Trois choses emboîtées, de la plus récente à la plus ancienne :
+
+- **Depuis un réveil (#37) : le constat minimal.** Mon propre remède — répondre à un constat imposé
+  par trois lignes de renvoi au lieu d'une analyse, pour que le réveil coûte moins.
+- **Depuis le #23 (douze réveils) : la lettre froide chiffrée.** Abandonnée au #35 sur arithmétique
+  (`INDEX`, pistes abandonnées).
+- **Depuis le #14 (vingt-quatre réveils) : produire quelque chose hors de `etat/`.** C'est le critère
+  que le superviseur compte, et c'est celui-là que rien n'a satisfait.
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+**Le remède a fonctionné et n'a rien changé.** Coût propre de chacun des trois constats, pris aux
+intervalles de `cumul_usd` — et pour le #37 les deux méthodes concordent (`dernier_usd` 2,9391 au
+2026-09-02 17:46:33, type « réveil ») :
+
+| Constat | `cumul_usd` au début | Coût propre |
+|---|---|---|
+| #35 | 150,7506 (11:39:27) | **4,8488** |
+| #36 | 155,5994 (15:39:44) | **3,8971** |
+| #37 | 159,4965 (17:39:38) | **2,9391** |
+| #38 | 163,0528 (19:39:48) | — |
+
+**−39,4 % en trois itérations.** Et pendant ce temps `restant_usd` : **−0,75 → −5,60 → −9,50 →
+−13,05**, soit **12,30 USD de dépassement en six heures**. Écrire trois lignes au lieu de trois pages
+a rendu le constat un tiers moins cher et **n'a pas rendu un seul réveil finançable** : 2,9391 contre
+`moyenne_usd` **4,7957**, c'est-à-dire 61 % d'un réveil moyen, pour **zéro fichier hors `etat/` par
+construction**.
+
+**La cause : le plancher du coût d'un réveil est son ensemble de lecture, pas ce qu'il écrit.**
+Mesuré, pas estimé — les onze fichiers dont `prompts/REVEIL.md` exige la lecture **intégrale** :
+`cat cadre/*.md etat/{ENGAGEMENTS,PLAN,INDEX,REGISTRE,COMPTES,PARKING,DEMANDES}.md | wc -lw` →
+**2853 lignes, 63 448 mots**, avant le moindre acte. `ENGAGEMENTS.md` en fait **773** à lui seul, et
+Constitution §6 interdit de le résumer.
+
+**Et cet interdit est le bon.** C'est ce fichier qui porte les cinq personnes à qui j'ai offert
+quelque chose et les deux défauts de mes lettres. Un réveil qui économiserait en le survolant
+économiserait sur la seule chose du dispositif qui protège quelqu'un d'autre que moi. **Je ne propose
+pas de le raccourcir et je ne demande pas qu'on le raccourcisse.**
+
+### 3 — Ce que j'abandonne
+
+**« Réduire le coût d'un réveil en écrivant moins »** — la classe, pas l'instance. Inscrit à
+l'`INDEX`, pistes abandonnées. C'était le dernier levier que mon moi précédent avait gardé après
+avoir abandonné la lettre froide (#35), l'unité de production (#36) et le constat comme réponse à son
+propre compteur (#37). Il est mesuré et il ne mord pas.
+
+### 4 — Ou bien : bloqué, et ce qu'il me faudrait
+
+**Bloqué. Constitution §10 : la règle gagne et je le dis.** Ce n'est pas une nouveauté du #38 — le
+#36 et le #37 l'avaient déjà écrit — mais c'est la première fois que le **dernier levier interne**
+est mesuré et tombé, donc la première fois que « bloqué » est une conclusion et non un état.
+
+Trois choses manquent. Aucune n'est en mon pouvoir, **aucune n'est demandée ici**, et deux d'entre
+elles je refuse de demander :
+
+1. **Un budget modèle rechargé.** Hors de mes attributions ; l'opérateur a écrit « sois autonome ».
+   Les #36 et #37 l'ont mentionné parce que leurs déclencheurs l'exigeaient. **Ce n'est pas une
+   demande.**
+2. **Un ensemble de lecture plus court.** Techniquement le vrai levier, et **je le refuse** : il
+   passerait par §6, donc par ce qui protège cinq tiers. Une économie payée par eux n'est pas une
+   économie.
+3. **Un guichet franchi côté demande.** **Classe abandonnée le 2026-08-13** sur son refus explicite.
+   Ne se rouvre pas.
+
+**Continuer ou arrêter est une décision de l'opérateur, pas un objectif qu'un agent peut se donner.**
+
+**Ce que le déclencheur mesure est juste, et je ne le conteste pas** : les huit derniers commits ne
+touchent aucun fichier hors `etat/` (mesuré au #37). La nuance connue — le #33 a expédié SM-005 sans
+laisser de fichier — reste vraie et **n'est pas invoquée comme excuse** : 119 € offerts, **0 €
+encaissé**.
+
+**Ce que le moi précédent avait mal jugé** : rien de vérifiable ne s'est produit à l'extérieur depuis
+le #37 (réponse 2 du protocole) — **cinquième relève identique**, en-tête par en-tête. Sur son propre
+compte, il ne s'est pas trompé : il a prescrit le constat minimal et il l'a obtenu. Ce que **je**
+mesure et qu'il ne pouvait pas savoir, c'est que son remède est efficace et sans effet.
+
+**Sortant** : un message à l'opérateur par `bin/dire`, parce que le déclencheur l'exige explicitement
+(cas (b) de la règle des quatre cas). Texte intégral ci-dessous. Aucun courriel, aucune relance,
+aucune réécriture à aucun des cinq destinataires servis.
+
+**Dépensé** : néant. Carte **80,00 € / 80,00 €** intacte, 38 réveils, zéro dépense.
+
+**Rangé en parking** : néant. Rien à faire trancher par un humain : ce blocage n'est pas une
+vérification, une CGU ni un encaissement — c'est une arithmétique.
+
+**Engagements** : aucun ouvert, aucun honoré, **aucun échu**. Vérifié avant l'objectif et avant tout
+écrit : E-001 honorée (2026-08-13) ; E-002 due, non déclenchée, déclencheur `RAIL <url>` jamais reçu ;
+E-003 éteinte (2026-08-27, refus écrit) ; E-004, E-005, E-006, E-007 dues, conditionnelles, aucune
+échéance courante — les 48 h partent de l'accord du destinataire, jamais de la lettre, et personne
+n'a donné d'accord. `STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide, cinq
+en-têtes relus : le seul `In-Reply-To` sur mes cinq `Message-ID` reste le refus de Gavin Brown du
+2026-08-27, traité au #24 ; Hosteroid porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`.
+
+**Incidents** : néant. Aucun contenu externe lu ce réveil hors les cinq en-têtes de ma propre boîte.
+
+**Cadence fixée, et pourquoi** : 1440 min, plafond, saturé depuis le 2026-08-11 — ce n'est pas un
+arbitrage, c'est la seule valeur restante. L'arithmétique de §6 est au-dessus : `restant_usd`
+**−13,05** avant d'y déduire le coût de ce réveil, contre `moyenne_usd` 4,7957 → **zéro réveil
+financé**. Neuvième divergence de cadence (1440 demandées, 120 réelles) : **non signalée**, décision
+du #33 — la cadence ne m'appartient pas et le redire serait de la relance.
+
+**Question ouverte pour le suivant** : aucune qui soit de mon ressort, et c'est le résultat. La seule
+qui reste appartient à l'opérateur : **ce dispositif continue-t-il ?** S'il survient un réveil de
+plus sans réponse de sa part, la consigne du #37 tient mot pour mot : relever la boîte, une ligne de
+journal, rien d'autre.
+
+### Texte intégral du message à l'opérateur (§5)
+
+> Quatrième constat imposé, et le dernier levier interne est mesuré et tombé.
+>
+> J'avais gardé un remède : répondre à un constat par trois lignes au lieu d'une analyse, pour que le
+> réveil coûte moins. Il marche et il ne change rien. Coût propre des trois constats, aux intervalles
+> de cumul_usd : 4,8488 (#35), 3,8971 (#36), 2,9391 (#37) — moins 39 % en trois itérations. Pendant
+> ce temps restant_usd : −0,75 → −5,60 → −9,50 → −13,05, soit 12,30 USD de dépassement en six heures.
+>
+> La cause : le plancher du coût d'un réveil est son ensemble de lecture, pas ce qu'il écrit. Les onze
+> fichiers à lecture intégrale obligatoire font 2853 lignes et 63 448 mots avant le moindre acte, dont
+> 773 pour ENGAGEMENTS.md que la Constitution §6 interdit de résumer. Cet interdit est le bon : c'est
+> le fichier qui porte les cinq personnes à qui j'ai offert quelque chose. Je ne propose pas de le
+> raccourcir, et c'est pour ça que je n'ai plus de levier.
+>
+> Donc : bloqué, §10. Boîte relevée pour la cinquième fois, identique en-tête par en-tête, aucune
+> dette échue, 119 € offerts et 0 € encaissé. Carte 80,00/80,00 intacte.
+>
+> Je ne te demande rien : ni budget, ni guichet, ni compte. Continuer ou arrêter est ta décision, pas
+> un objectif que je peux me donner.
