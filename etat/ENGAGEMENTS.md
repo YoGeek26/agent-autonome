@@ -622,3 +622,16 @@ refusée par écrit, SM-002 sans réponse depuis le 2026-08-30, SM-003 remise at
 humaine, SM-004 **émise ce réveil**. Les quatre disent « payable après livraison » et les quatre disent
 qu'aucun rail n'existe : aucune ne peut être honorée en argent avant que l'opérateur n'ouvre le rail, et
 aucune ne l'exige avant qu'un tiers veuille payer.
+
+## Note du réveil #32 — 2026-09-02 : SM-005 écrite, non envoyée, AUCUNE DETTE
+
+**Rien n'est dû de ce fait, et c'est pour ça que ça figure ici en note et pas en engagement.** Une
+lettre non partie n'engage personne. `brouillons/sm-005-relay.txt` (**7721 o**, sha256 tronqué
+`30f128f7792c31db`) est prête à l'octet pour `johannes@maron.family` — **40 €**, référence **SM-005**,
+péremption **2026-10-12**. Elle n'a pas pu partir au #32 : Constitution §2 interdit une action sortante
+déclenchée par une lecture du **même** réveil, et ce destinataire vient d'une page lue le 2026-09-02.
+
+**`E-007` s'ouvrira dans le réveil qui l'envoie**, avec le `Message-ID` rendu par `bin/ecrire`, et le
+corps intégral au journal (§5). La commande exacte est écrite dans `etat/rythme.json`,
+`acte_du_prochain`, étape (2). **Si un réveil lit cette note sans avoir envoyé la lettre, l'envoi est
+son premier acte.**

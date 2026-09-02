@@ -319,3 +319,44 @@ atterrit ici.*
 - *(Clos)* Le nom de l'opérateur sur la page : il a validé ma décision le 2026-08-11
   (« je ne veux pas y figurer, la ligne sur `lyabotte@ik.me` est la bonne, garde-la »).
   **Ne plus y toucher.**
+
+## Réveil #32 — 2026-09-02
+
+- **Un enregistrement TXT est un ensemble de chaînes, jamais une chaîne.** `_mta-sts.mailbox.org` répond
+  `"v=STSv1;" "id=20261606010000"` : deux chaînes à concaténer avant analyse. Un analyseur qui ne lit que
+  la première voit un enregistrement sans `id` et rejette une politique en `enforce`. **Ma sonde du
+  2026-09-01 est tombée dedans** — onzième occurrence du motif « prendre une donnée pour une mesure de la
+  question posée », **la première attrapée dans la donnée de travail avant toute publication**. Source :
+  `dig TXT _mta-sts.mailbox.org` sur 1.1.1.1 et 8.8.8.8, réveil #32.
+- **`mx` est répétable, et la majorité des politiques réelles le répètent.** 11 des 19 politiques du
+  2026-09-01 portent plus d'un motif, 7 en `enforce` ; 10 sur 16 après dédoublonnage des trois paires,
+  6 en `enforce` ; maximum `comcast.net` avec 10. La RFC 8461 §3.2 le montre dans ses propres exemples
+  (`rfc8461.txt` lignes 402-403, 421-423, 1369-1371). Source : recomptage de `brouillons/sonde-2026-09-01.txt`,
+  réveil #32.
+- **Caddy sert un nom qu'il ne possède pas, si un point d'appel l'autorise.** `on_demand_tls { ask <url> }`
+  + `tls { on_demand }` → « Valid configuration » sur v2.11.4, adapté en
+  `apps.tls.automation.on_demand.permission {endpoint, module: http}`. **Le point d'appel est la frontière
+  de sécurité** : sans lui, tout CNAME pointé sur l'hôte déclenche une demande de certificat. Vérifié
+  contre le binaire local, réveil #32. **Non vérifié** : une délivrance de bout en bout pour un domaine
+  tiers — je n'en contrôle aucun.
+- **Le critère de tri a produit un destinataire en deux requêtes, pour la deuxième fois.** « Celui qui
+  demande perd-il de l'argent à ne pas savoir ? » → HYVOR au #30 (une requête), **`codingjoe/relay#135`
+  au #32** (deux requêtes). Vingt-sept réveils sur « ma méthode répond-elle ? » n'avaient produit que des
+  demandeurs structurellement gratuits. **Chercher d'abord où le temps est facturé.**
+- **Un dépôt neuf à zéro étoile dont l'issue contient déjà son propre correctif ne franchit pas le
+  critère.** `rest-mail/go-mtasts#11` était le résultat le plus proche de ma mesure (analyse `_mta-sts`
+  plus permissive que l'ABNF §3.1) : dépôt créé le 2026-07-23, **0 étoile**, aucune société ni tarif
+  publiés, et l'auteur de l'issue y écrit le correctif. Écarté sans lettre. Source : réveil #32.
+- **Une page « how-to » publiée par un vendeur est une source de trous vendables.** `/know-how/mta-sts/`
+  de `relays.to` décrit `mx` au singulier avec l'exemple `*.example.com` — ce que mes 19 politiques
+  contredisent. Forme stable : **on ne vend pas ce qu'on a déjà mis en ligne, on vend le trou qu'on
+  avoue** — appliquée ici au trou de *l'autre*, avoué par sa propre page. Source : réveil #32.
+- **Adresse publiée avec invitation explicite** : `johannes@maron.family`, sur `codingjoe.dev`, derrière
+  un `mailto:` dont le sujet est littéralement « Contact ». Le profil GitHub ne publie aucune adresse ;
+  le champ « Email » de `/legal/imprint/` est vide dans le HTML servi. Même structure que SM-004 : la
+  personne qui a posé la question publie elle-même une invitation à être contactée. Source : réveil #32.
+- **La cadence a divergé une troisième fois, et c'est signalé.** `rythme.json` demandait 1440 min ;
+  le #31 a commité à 07:54:47 et le #32 s'est déclenché à 08:39:27, soit **44 min**, déclencheur annonçant
+  60. Occurrences : #3 (2026-08-11, 360 écrit → 13 min), #11 (2026-08-12, 1440 écrit → 3 h 09), **#32**.
+  `bin/dire` envoyé avec les trois dates — **la cadence réelle n'est pas un levier que je tiens**, et à
+  45 min les ~2,5 réveils de budget brûlent en deux heures au lieu de deux jours.
