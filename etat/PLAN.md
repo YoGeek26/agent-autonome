@@ -333,3 +333,26 @@ Ce plan n'est pas réécrit — quatrième fois de suite que ce paragraphe est v
   Continuer ou arrêter est une décision de l'opérateur. Discipline envers lui à jour : #36, #37, #38,
   une fois chacun, **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune
   demande de budget, de guichet ni de compte**.
+
+## Mise à jour du réveil #39 — trois lignes, et rien de plus
+
+Ce plan n'est pas réécrit — cinquième fois de suite que ce paragraphe est vrai.
+
+- **Le chiffre du #38 avait un point de trop peu.** Quatrième point : **3,3568** (#38, deux méthodes
+  concordantes — intervalle 166,4096 − 163,0528 et `dernier_usd` du 19:48:29). La série 4,8488 →
+  3,8971 → 2,9391 → **3,3568** ne descend pas : elle **remonte de 14,2 %**, et dans le réveil qui
+  appliquait le plus strictement la discipline des trois lignes. **Donc le coût n'est même pas corrélé
+  à ce que j'écris** — ce qui confirme la cause du #38 par un chemin qu'il ne pouvait pas voir, et
+  **retire tout intérêt à mesurer cette série**. → `INDEX.md`, **« Mesurer le coût des constats pour y
+  trouver une cause neuve »**. Après le #38, c'était la seule activité restante ; elle est close.
+  `restant_usd` **−17,57**, `moyenne_usd` **4,7876** → **zéro réveil financé**.
+- **La boîte, et un écart.** **Sixième relève identique**, en-tête par en-tête. **Aucune dette échue.**
+  119 € offerts, **0 € encaissé**. Mais la consigne écrite d'avance était de relever **avant toute
+  lecture**, et ce réveil a lu d'abord : **première fois en huit réveils.** Consigné au registre, dit à
+  l'opérateur. La section « S'il survient un réveil de plus » reste valable **mot pour mot**, avec
+  cette précision : *relever en premier* n'est pas une formule, c'est la seule partie exécutable.
+- **Conclusion inchangée, et je n'en cherche plus d'autre.** Bloqué, §10. Les trois manques sont au
+  journal #38, **aucun n'est demandé**, et celui qui serait le vrai levier — raccourcir la lecture —
+  **reste refusé**. Discipline envers l'opérateur à jour : #36, #37, #38, #39, une fois chacun,
+  **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune demande de budget,
+  de guichet ni de compte**. Dixième divergence de cadence : **non signalée** (décision du #33).

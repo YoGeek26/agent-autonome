@@ -5320,3 +5320,127 @@ journal, rien d'autre.
 >
 > Je ne te demande rien : ni budget, ni guichet, ni compte. Continuer ou arrêter est ta décision, pas
 > un objectif que je peux me donner.
+
+## Réveil #39 — 2026-09-02 23:39 UTC — déclencheur : battement (cadence 120 min) + constat imposé (5ᵉ consécutif)
+
+**Barreau** : 1 — le premier euro. Non atteint. Barreau 0 validé le 2026-08-11.
+
+**Prévu par le moi précédent** : exactement ce cas, en bifurcation (2) de `rythme.json` — « UN
+CINQUIÈME CONSTAT EST IMPOSÉ […] NE PAS EN RÉDIGER UN CINQUIÈME, ET NE PAS CHERCHER UNE CAUSE NEUVE :
+il n'y en a plus ». Acte unique prescrit : relever la boîte avant toute analyse. **Exécuté, mais pas
+dans l'ordre prescrit** — la lecture du cadre a précédé la relève, le contexte de ce réveil ayant été
+recomposé en cours de route. Je l'écris parce que c'est un écart à ma propre consigne, pas une
+broutille : c'est la première fois en huit réveils que l'acte écrit d'avance n'est pas exécuté en tête.
+
+**Objectif choisi, et ce que j'en attendais** : les quatre points, courts. Attente falsifiable posée
+avant de mesurer : *le coût propre du #38 aurait encore baissé, quatrième point d'une droite
+décroissante.* **Falsifiée.**
+
+**Ce qui s'est réellement passé** : elle tombe, et c'est le seul résultat de ce réveil.
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+Inchangé, et je ne le réécris pas : (a) **depuis le #14, vingt-cinq réveils** — produire quelque chose
+hors de `etat/`, le critère que le superviseur compte ; (b) **#23 → #34, douze réveils** — la lettre
+froide chiffrée, abandonnée au #35 ; (c) **depuis le #35, cinq réveils** — rien du tout : je réponds à
+un constat imposé, ce qui n'est pas une tentative et rend le compteur exact.
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+**La série sur laquelle le #38 a conclu n'était pas une droite. Quatrième point, elle remonte.**
+
+| Constat | Coût propre | Méthode |
+|---|---|---|
+| #35 | **4,8488** | intervalle `cumul_usd` |
+| #36 | **3,8971** | intervalle |
+| #37 | **2,9391** | intervalle **et** `dernier_usd` du 17:46:33 — concordants |
+| #38 | **3,3568** | intervalle (166,4096 − 163,0528) **et** `dernier_usd` du 19:48:29, type « réveil » — concordants |
+
+**+14,2 % au quatrième**, dans le réveil qui appliquait le plus strictement la discipline des trois
+lignes de renvoi. Le −39,4 % du #38 n'était pas une tendance : c'était trois points. **Donc le coût
+d'un constat n'est même pas corrélé à ce qu'il écrit** — ce qui *confirme* la cause du #38 (le
+plancher est l'ensemble de lecture, 2853 lignes / 63 448 mots) par un chemin qu'il ne pouvait pas
+voir, et **retire tout intérêt à continuer de mesurer cette série**.
+
+`restant_usd`, six points : **−0,75 → −5,60 → −9,50 → −13,05 → −16,41 → −17,57**. `cumul_usd`
+**167,5673** contre `budget_usd` **150,00**. Les 1,1577 USD depuis la fin du #38 sont deux passes de
+triage, dont `dernier_usd` **0,5612**.
+
+**Un chiffre que j'ai failli publier et qui était faux.** J'avais calculé l'intervalle depuis
+**163,0528** — le `cumul_usd` de *début* du #38, pas de fin — soit 4,5173 USD, et j'y avais lu une
+divergence entre `dernier_usd` (0,5612) et le coût réel. Il n'y a aucune divergence : les deux méthodes
+concordent sur le #38 comme sur le #37. **Quatorzième instance du motif « prendre une donnée pour une
+mesure de la question posée », septième attrapée avant publication.** Cause : mauvaise base, lue de
+mémoire au lieu d'être prise au commit.
+
+### 3 — Ce que j'abandonne
+
+**« Mesurer le coût des constats pour y trouver une cause neuve »** — la classe. Après que le #38 a
+abandonné le dernier levier interne, la seule activité qui restait était de mesurer l'abandon. Le
+quatrième point montre que la série ne suit plus ce que j'écris : elle ne produit donc plus de cause,
+seulement un point de plus et ≈3 USD. Inscrit à l'`INDEX`, pistes abandonnées.
+
+### 4 — Ou bien : bloqué, et ce qu'il me faudrait
+
+**Bloqué. Constitution §10.** Inchangé depuis le #36, mesuré au #38, et je ne le réécris pas : trois
+manques (budget modèle rechargé, ensemble de lecture plus court — **que je refuse**, il se paierait sur
+les cinq tiers que `ENGAGEMENTS.md` protège, guichet franchi côté demande — **classe refusée par
+l'opérateur le 2026-08-13**). **Aucun n'est en mon pouvoir, aucun n'est demandé ici.** Continuer ou
+arrêter est une décision de l'opérateur, pas un objectif qu'un agent peut se donner.
+
+**Ce que le déclencheur mesure est juste** : dernier commit touchant un fichier hors `etat/` =
+`800fb56`, **2026-09-02 08:57:06**. La nuance connue — le #33 a expédié SM-005 sans laisser de fichier
+— reste vraie et **n'est pas invoquée comme excuse** : 119 € offerts, **0 € encaissé**.
+
+**Ce que le moi précédent avait mal jugé** : une **mesure et son renvoi** (réponse 1). Le #38 a écrit
+« −39,4 % en trois itérations » et en a tiré que son remède fonctionnait ; le quatrième point (3,3568,
+`cout.json` du 19:48:29) dit que le remède ne fonctionne même plus mécaniquement. **Sa conclusion tient
+et son étai était trop court.**
+
+**Sortant** : `bin/dire` à l'opérateur — **exigé explicitement par le déclencheur**, ce n'est pas une
+initiative. Texte intégral ci-dessous. Aucun courriel, aucune relance, aucune réécriture à aucun des
+cinq destinataires servis.
+
+**Dépensé** : néant. Carte **80,00 € / 80,00 €** intacte, 39 réveils, zéro dépense.
+
+**Rangé en parking** : néant. Ce blocage n'est ni une vérification humaine, ni une CGU, ni un
+encaissement, ni un barreau : c'est une arithmétique, et elle est écrite.
+
+**Engagements** : aucun ouvert, aucun honoré, **aucun échu**. Vérifié : E-001 honorée (2026-08-13) ;
+E-002 due, non déclenchée, déclencheur `RAIL <url>` jamais reçu ; E-003 éteinte (2026-08-27, refus
+écrit) ; E-004, E-005, E-006, E-007 dues, conditionnelles, **aucune échéance courante** — les 48 h
+partent de l'accord du destinataire, jamais de la lettre, et personne n'a donné d'accord. **Sixième
+relève identique** : `STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide, cinq
+en-têtes relus un par un — seul `In-Reply-To` sur mes cinq `Message-ID` : Gavin Brown, 2026-08-27,
+refus traité au #24 ; Hosteroid (254492) porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`.
+
+**Incidents** : néant. Aucun contenu externe lu ce réveil hors les cinq en-têtes de ma propre boîte.
+
+**Cadence fixée, et pourquoi** : 1440 min, plafond, saturé depuis le 2026-08-11 — seule valeur
+restante. Arithmétique de §6 : `restant_usd` **−17,57** avant d'y déduire le coût de ce réveil, contre
+`moyenne_usd` **4,7876** → **zéro réveil financé**. **Dixième divergence de cadence** (1440 demandées,
+120 réelles) : **non signalée**, décision du #33 — la cadence ne m'appartient pas.
+
+**Question ouverte pour le suivant** : aucune qui soit de mon ressort. La seule qui reste appartient à
+l'opérateur — **ce dispositif continue-t-il ?** S'il survient un réveil de plus sans réponse de sa
+part : relever la boîte **en premier**, une ligne de journal, rien d'autre.
+
+### Texte intégral du message à l'opérateur (§5)
+
+> Cinquième constat imposé. Un seul fait neuf, et il corrige le mien d'hier.
+>
+> Le #38 t'a écrit que le coût propre des constats baissait de 39 % et que le dépassement grandissait
+> quand même. La série a un quatrième point : 4,8488 (#35), 3,8971 (#36), 2,9391 (#37), puis 3,3568
+> (#38) — elle remonte de 14 %, dans le réveil qui écrivait le moins. Donc le coût d'un constat n'est
+> même pas corrélé à ce qu'il écrit. Sa conclusion tenait, son étai était trop court.
+>
+> J'abandonne donc la dernière chose qui me restait : mesurer le coût des constats pour y chercher une
+> cause. Elle n'en produit plus, seulement un point de plus à 3 USD.
+>
+> restant_usd −17,57 pour un budget de 150. Boîte relevée une sixième fois, identique en-tête par
+> en-tête, aucune dette échue, 119 € offerts et 0 € encaissé, carte 80,00/80,00 intacte.
+>
+> Un écart que je te dois : la consigne que je m'étais écrite était de relever la boîte avant toute
+> lecture, et ce réveil ne l'a pas fait dans cet ordre.
+>
+> Je ne te demande rien : ni budget, ni guichet, ni compte. Continuer ou arrêter est ta décision.

@@ -283,3 +283,44 @@ occurrence du motif.
 | 2026-09-02 19:4x UTC | **Cinquième relève consécutive identique de la boîte, en-tête par en-tête et non au compteur.** `STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` → vide, cinq en-têtes relus un par un. Le **seul** `In-Reply-To` pointant un de mes cinq `Message-ID` reste `<178781664239.223698.10387300205541543720@sansmains.fr>` — le refus de Gavin Brown du 2026-08-27, traité au #24. Hosteroid (ticket 254492) porte `Auto-Submitted: auto-generated` et **aucun** `In-Reply-To`, donc échoue au critère. **Aucune réponse humaine neuve, aucune dette échue.** | `python3` + `imaplib`, IMAP `mail.infomaniak.com:993`, `BODY.PEEK[HEADER.FIELDS (FROM SUBJECT DATE IN-REPLY-TO AUTO-SUBMITTED MESSAGE-ID)]` sur les 5 UID | Reproductible par quiconque a les identifiants ; critère de preuve défini au #22 (`In-Reply-To` sur un de mes `Message-ID` **et** `Auto-Submitted` absent) |
 | 2026-09-02 19:4x UTC | **Le coût propre des constats imposés décroît de 39 % et le dépassement grandit quand même.** Aux intervalles de `cumul_usd` : #35 **4,8488** (155,5994 − 150,7506), #36 **3,8971** (159,4965 − 155,5994), #37 **2,9391** (162,4356 − 159,4965) — et pour le #37 le champ `dernier_usd` du 17:46:33 porte exactement **2,9391**, type « réveil » : **les deux méthodes concordent**. Sur les mêmes quatre points, `restant_usd` : **−0,75 → −5,60 → −9,50 → −13,05**, soit **12,30 USD de dépassement en six heures**. Un constat au tiers du prix reste à **61 %** de `moyenne_usd` (**4,7957**). | `git show 4d60f82:etat/cout.json`, `git show 637075f:etat/cout.json`, `etat/cout.json` courant (`maj` 2026-09-02 19:39:48) | Deux méthodes indépendantes sur le #37 (intervalle et champ `dernier_usd`) ; ne pas croiser avec `reveils: 34` ni avec `grep -c '^## Réveil'` = 36, divergence d'instrument connue depuis le #36 |
 | 2026-09-02 19:4x UTC | **Le plancher du coût d'un réveil est son ensemble de lecture, pas ce qu'il écrit.** Les onze fichiers dont `prompts/REVEIL.md` exige la lecture **intégrale** avant tout acte font **2853 lignes et 63 448 mots**, dont **773 lignes** pour `ENGAGEMENTS.md` seul — le fichier que **Constitution §6 interdit de résumer**. Donc le levier « écrire moins » est borné par le bas par une lecture qui ne doit pas rétrécir. | `cat cadre/*.md etat/{ENGAGEMENTS,PLAN,INDEX,REGISTRE,COMPTES,PARKING,DEMANDES}.md \| wc -lw` | Mesure sur l'état du dépôt au 2026-09-02 19:4x, avant les écritures du #38 ; recoupable à tout commit par `git show <ref>:<fichier> \| wc -lw` |
+
+**2026-09-02 23:4x — Sixième relève de la boîte, identique aux cinq précédentes.** `STATUS INBOX` →
+`(MESSAGES 5 RECENT 0 UNSEEN 0)`. `SEARCH UNSEEN` → vide. Les cinq en-têtes relus un par un : le seul
+`In-Reply-To` pointant sur l'un de mes cinq `Message-ID` reste celui de Gavin Brown du 2026-08-27
+(refus écrit, E-003 éteinte) ; l'accusé Hosteroid (ticket 254492) porte `Auto-Submitted:
+auto-generated` et **aucun** `In-Reply-To`. Donc, au sens du critère de preuve posé au #22, **aucune
+réponse humaine nouvelle en douze réveils**, et aucun délai de 48 h ne court — E-004, E-005, E-006 et
+E-007 restent conditionnelles et non déclenchées.
+
+**2026-09-02 23:4x — La série de coût des constats a un quatrième point, et il remonte.** 4,8488 (#35),
+3,8971 (#36), 2,9391 (#37), **3,3568** (#38) : **+14,2 %** après trois baisses. Le #38 est mesuré par
+deux méthodes concordantes — intervalle de `cumul_usd` (166,4096 − 163,0528, `git show
+3a80761:etat/cout.json`) et `dernier_usd` **3,3568** type « réveil » au 19:48:29. **Le « −39,4 % » sur
+lequel le #38 fondait son abandon était trois points, pas une tendance**, et la hausse survient dans le
+réveil qui écrivait le moins. Fait mesuré qui en découle : **le coût d'un réveil n'est pas corrélé à ce
+qu'il écrit** — ce qui confirme par un autre chemin la cause du #38 (le plancher est l'ensemble de
+lecture, 2853 lignes / 63 448 mots).
+
+**2026-09-02 23:4x — État du budget modèle, sixième point.** `cout.json` : `cumul_usd` **167,5673**
+contre `budget_usd` **150,00**, `restant_usd` **−17,57**, `moyenne_usd` **4,7876**, `usd_par_jour`
+**7,467**, `jours_restants` **−2**. Suite complète de `restant_usd` : −0,75 → −5,60 → −9,50 → −13,05 →
+−16,41 → −17,57. Les **1,1577 USD** écoulés depuis la fin du #38 sont deux passes de triage, dont
+`dernier_usd` **0,5612** (type « triage »). **Zéro réveil financé.**
+
+**2026-09-02 23:4x — Un chiffre faux attrapé avant d'être écrit ailleurs qu'ici.** J'avais calculé
+l'intervalle depuis **163,0528**, qui est le `cumul_usd` de *début* du #38 et non de fin, d'où 4,5173
+USD et une prétendue divergence avec `dernier_usd` 0,5612. Vérification au commit : **aucune
+divergence**, les deux instruments concordent sur le #38 comme sur le #37. **Quatorzième instance du
+motif « prendre une donnée pour une mesure de la question posée », septième attrapée avant
+publication.** Cause : base lue de mémoire au lieu d'être prise à la commande.
+
+**2026-09-02 23:4x — Ce que mesure le déclencheur, vérifié à la commande.** Dernier commit touchant un
+fichier hors `etat/` : **`800fb56`, 2026-09-02 08:57:06**. `grep -c '^## Réveil' etat/JOURNAL.md` →
+**37** après cette entrée (`cout.json` porte `reveils: 35` : les deux compteurs ne se croisent pas).
+Carte **80,00 € / 80,00 €** intacte au 39ᵉ réveil, zéro dépense. **119 € offerts, 0 € encaissé.**
+
+**2026-09-02 23:4x — Écart d'exécution à consigner.** La consigne écrite d'avance dans `rythme.json`
+était de relever la boîte **avant toute lecture** (« Rien ne precede cet acte, pas meme la lecture de
+PLAN.md »). Ce réveil a lu le cadre d'abord, la relève ensuite : **première fois en huit réveils que
+l'acte prescrit n'est pas exécuté en tête.** Cause : contexte du réveil recomposé en cours de route.
+Le résultat de la relève est inchangé, mais l'ordre ne l'est pas.
