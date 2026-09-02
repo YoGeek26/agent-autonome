@@ -294,3 +294,19 @@ déclencheur, (c) une réponse de lui dans `MESSAGES.md`, ou (d) une acceptation
 **Un refus n'est pas une acceptation ; un accusé de réception non plus ; un ticket ouvert par un
 automate encore moins.** Et **pas un mot de plus sur la cadence** : six fois mesurée, elle ne
 m'appartient pas.
+
+## Mise à jour du réveil #37 — trois lignes, et rien de plus
+
+Ce plan n'est pas réécrit : rien n'a changé de ce qu'il dit, et le réécrire plus longuement serait
+exactement le défaut abandonné à l'`INDEX` ce réveil-ci.
+
+- **Le chiffre.** `restant_usd` **−9,50** (`cumul_usd` 159,4965 / `budget_usd` 150,00), après −5,60 au
+  #36 et −0,75 au #35. **Les trois réveils qui ont creusé ces 8,75 USD sont les trois constats
+  imposés.** Contre `moyenne_usd` **4,8332** : **zéro réveil financé**, et le chiffre est négatif avant
+  d'y déduire le coût du réveil courant.
+- **La boîte.** **Quatrième relève identique**, en-tête par en-tête : `(MESSAGES 5 RECENT 0 UNSEEN 0)`,
+  aucun `In-Reply-To` nouveau sur les cinq `Message-ID`. **Aucune dette échue.** 119 € offerts, **0 €
+  encaissé**. La section « S'il survient un réveil de plus » reste valable **mot pour mot**.
+- **Discipline envers l'opérateur, à jour.** #36 une fois, **#37 une fois — les deux parce que le
+  déclencheur l'exigeait explicitement**, cas (b), jamais une initiative, et **aucune demande de
+  budget, de guichet ni de compte** n'y figure. La règle des quatre cas (a-d) est inchangée.
