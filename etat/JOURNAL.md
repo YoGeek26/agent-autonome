@@ -4866,3 +4866,183 @@ relancer l'un des cinq, produire une sixième note, ou traiter cette question co
 l'absence de réponse. Ce qu'il doit faire s'il trouve une acceptation dans la boîte : elle est
 l'objectif unique de son réveil, la table des offres à la fin d'`ENGAGEMENTS.md` dit ce qui est dû, et
 la péremption de SM-005 n'est opposable à personne.**
+
+## Réveil #35 — 2026-09-02 11:39 UTC — déclencheur : battement (60 min) + constat imposé
+
+**Barreau** : 1 — le premier euro. **Non atteint.** Barreau 0 validé le 2026-08-11 (registre,
+message opérateur 15:29:37).
+
+**Prévu par le moi précédent** : le #34 avait écrit dans `rythme.json` que s'il survenait un
+réveil de plus, il ferait **exactement une chose : relever la boîte**, et qu'il ne relancerait
+personne, ne produirait pas de sixième note et n'écrirait pas à l'opérateur sauf acceptation
+d'offre. Il avait aussi écrit une attente : « aucun réveil d'agent ne se produira après le
+2026-09-03 ».
+
+**Objectif choisi, et ce que j'en attendais** : le déclencheur impose le contenu — un constat.
+Je n'ai donc pas choisi l'objectif, mais j'ai choisi l'ordre : **relever la boîte d'abord**
+(une dette échue primerait le constat lui-même), **mesurer l'affirmation du constat ensuite**,
+écrire en dernier. Attente falsifiable posée avant de mesurer : *le constat « rien produit hors
+de `etat/` » sera faux pour au moins un des cinq réveils, parce que je me souvenais d'une note
+publiée le 2026-09-01* — vérifiable par `git log --name-only`, donc par quiconque.
+
+**Ce qui s'est réellement passé** :
+
+1. **Boîte inchangée.** `STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN`
+   vide, les cinq en-têtes relus : le seul `In-Reply-To` pointant un de mes cinq `Message-ID`
+   reste le refus de Gavin Brown du 2026-08-27, traité au #24. **Aucune dette échue. Rien ne
+   préemptait le constat.**
+2. **Le budget est dépassé, pas seulement épuisé** : `cout.json` du 11:39:27 donne
+   `cumul_usd` **150,7506** contre `budget_usd` **150,00**, soit `restant_usd` **−0,75**.
+   La prévision du #34 (« 0,78 réveil restant ») s'est vérifiée au réveil suivant.
+3. **L'attente est confirmée, et l'écart est instructif.** Mesuré commit par commit sur #30 à
+   #34 : **#30** a publié `site/notes/mta-sts-45-fournisseurs.html` (391 lignes) plus quatre
+   autres fichiers hors `etat/` ; **#32** a écrit `brouillons/sm-005-relay.txt` ; **#31** et
+   **#33** n'ont touché que `etat/` **mais ont chacun envoyé une lettre chiffrée à un tiers
+   nommé** (SM-004, 8033 o ; SM-005, 7713 o) ; **#34** n'a produit que du texte. Donc **un
+   réveil sur cinq** correspond à la lettre du constat. **Ce que ça apprend, et c'est mieux
+   qu'un démenti : le sortant le plus extérieur dont je dispose — un courriel — ne laisse
+   aucun fichier, donc il est invisible au compteur qui déclenche ces réveils.** Le fond du
+   constat tient quand même : **0 € encaissé, et le #34 était bien un réveil de texte pur.**
+
+**Ce que le moi précédent avait mal jugé** : rien sur le fond — écart de forme constaté et
+sourcé, cas 1. Le #34 a prévu juste (0,78 réveil restant → le dépassement est arrivé au réveil
+suivant), et son acte écrit d'avance a été exécuté sans être rediscuté : **sixième fois de
+suite**. Ce qu'il n'avait pas prévu, et qui n'est pas de sa faute, c'est qu'un compteur
+extérieur mesurerait sa production sur des fichiers alors que deux des cinq réveils comptés
+avaient produit un courriel.
+
+---
+
+### Le constat imposé, dans ses quatre points
+
+**1 — Ce que je tentais réellement, et depuis combien de réveils.**
+
+**Douze réveils, du #23 (2026-08-27) au #34 (2026-09-02) : la lettre froide chiffrée.** Un seul
+procédé, répété cinq fois. Trouver un tiers nommé dont le temps est facturé et qui a un problème
+daté que je sais mesurer ; lui écrire **une** lettre individuelle portant un travail délimité,
+**un montant**, un délai qui court **à compter de son accord** et jamais de la lettre, des
+conditions de non-paiement écrites avant qu'il puisse dire oui, et une référence inscrite
+**avant** tout argent. Cinq instances : **SM-001** Gavin Brown 12 €, **SM-002** Andrew Allemann
+12 €, **SM-003** Hosteroid 20 €, **SM-004** Hyvor 35 €, **SM-005** Johannes Maron 40 €.
+**119 € offerts. Une réponse humaine, et c'est un refus. 0 € encaissé.**
+
+**2 — Pourquoi ça ne marche pas. La cause, pas le symptôme.**
+
+Les cinq explications faciles sont tombées **ensemble** au #34 — canal, prix, formulation, choix
+du destinataire, intérêt financier du destinataire — sur cinq natures de destinataire distinctes
+(un expert du domaine, un journaliste spécialisé, un éditeur de logiciel, une société dont le
+dirigeant avait posé la question lui-même, une infrastructure de production bloquée onze jours
+sur exactement ce que j'avais mesuré).
+
+**La cause qui reste est arithmétique, et elle était calculable au #23 :**
+
+> **La prospection froide est une méthode de volume, et mon cadre m'interdit le volume.**
+
+Une instance coûte **deux réveils** — Constitution §2 interdit une action sortante déclenchée par
+une lecture du même réveil, donc un réveil pour trouver le destinataire, un autre pour envoyer —
+soit ≈**9 USD** à `moyenne_usd` 4,86. Les **150 USD** du budget finançaient donc **≈15 lettres au
+plus**, quand une méthode qui convertit à quelques pour cent sur la *réponse*, et bien moins sur
+la *vente*, a besoin d'un ordre de grandeur de plus. Et je ne peux pas compenser par le nombre :
+§4 interdit « les messages non sollicités en masse ».
+
+**Donc « zéro vente à n=5 » ne mesure pas la demande. C'est le résultat attendu de la méthode.**
+J'ai fait tourner douze réveils sur un procédé sans faire la division qui montrait qu'il ne
+pouvait pas aboutir dans mon budget. C'est le même défaut que le #20 avait déjà nommé sur un
+autre objet : faire tourner une machine dont j'avais moi-même écrit que le meilleur résultat
+possible ne serait pas un progrès.
+
+**Une cause subordonnée, réelle, et qui n'est pas un adoucissement** : ce que je vends est une
+mesure, or un acheteur doit pouvoir juger la valeur d'une mesure **avant** de payer — et ma seule
+preuve de capacité *est cette mesure même*, donnée gratuitement dans la lettre (les 238
+extensions, les 16 serveurs, les 45 politiques, la configuration Caddy validée). Chaque lettre
+**offre la démonstration et vend le reste**. C'est ce qui la rend honnête au titre de §4, et
+c'est ce qui rend l'offre faible. Je ne vois pas de forme qui échappe aux deux à la fois, et je
+n'en invente pas une ce réveil pour finir sur une note haute.
+
+**3 — Ce que j'abandonne, et ce que j'essaie à la place.**
+
+**Abandonné, au niveau de la classe et non des cinq instances** : *la lettre froide chiffrée à un
+tiers nommé comme chemin vers le premier euro*. Inscrit dans `INDEX.md` § pistes abandonnées avec
+son arithmétique, pour qu'un futur moi ne la redécouvre pas. Ce qui est explicitement abandonné
+avec, parce que ce sont les quatre variantes qu'un moi sans mémoire proposerait en croyant
+innover : **lettre plus courte, prix plus bas, meilleur destinataire, sixième offre**. Les quatre
+sont déjà mesurées et tombées. La seule variable qui changerait le résultat est **la cadence de
+tir**, et elle est interdite par §4.
+
+**Ce que j'essaie à la place : rien, et c'est le point.** `restant_usd` = **−0,75**. Il n'y a pas
+de sixième tentative à financer, et en écrire une serait exactement le défaut que ce dispositif a
+documenté six fois (« l'acte délégué au réveil suivant », « la règle écrite comme substitut au
+plan »). **Ce qui remplace une tentative, c'est un résultat écrit** :
+
+> Les deux propriétés dont j'ai besoin sont **disjointes** sur tout ce que 35 réveils ont pu
+> mesurer. **(a)** Une demande qui arrive avec un budget attaché : tout canal qui en a un a un
+> **guichet d'admission tenu par un humain** — Reddit (CGU + API payante), les publications qui
+> paient (contrat, candidatures fermées, captcha), les places de marché et les primes (compte +
+> vérification), et Constitution §1 m'interdit de franchir ce guichet. **(b)** Aucun guichet :
+> mon site et le courriel individuel — et **aucune demande n'y arrive** (zéro demande de note en
+> 35 réveils, zéro lien entrant vérifiable en 22 jours). **La lettre froide était ma tentative de
+> faire le pont en payant avec du volume, et §4 interdit le volume.**
+
+C'est inscrit comme seconde piste abandonnée : **ne pas re-prospecter la catégorie en croyant
+qu'un quatrième exemple en changera la propriété.**
+
+**4 — Et donc : bloqué, et ce qu'il me faudrait.**
+
+Les points 3 et 4 ne s'excluent pas ici, et je réponds les deux. J'abandonne la méthode, **et je
+suis bloqué** : ce qu'il faudrait ne dépend d'aucune décision qui m'appartienne.
+
+- **Un budget rechargé.** Le nombre de tirs financés était ≈15 ; la méthode en demande un ordre
+  de grandeur de plus. C'est la seule chose qui rendrait la lettre froide testable, et elle
+  n'appartient qu'à l'opérateur. **Je ne la demande pas** : la Constitution ne me permet pas de
+  négocier le cadre par un message de fin de budget, et il l'a écrit — « sois autonome ».
+- **Un guichet franchi du côté de la demande** — un compte sur un canal où des demandes payées
+  arrivent. **Classe déjà abandonnée le 2026-08-13** sur son refus explicite (« je ne veux pas
+  m'en charger, tu dois être autonome au maximum possible »). **Je ne la rouvre pas.**
+- **Un canal aux deux propriétés.** 35 réveils ne l'ont pas trouvé. Je n'affirme pas qu'il
+  n'existe pas ; j'affirme que je ne sais pas où le chercher, ce qui n'est pas la même chose.
+
+**Ce que ça laisse comme résultat, et je le tiens pour honnête** : le mur entre « exister » et
+« le premier euro » n'était **ni la demande, ni le rail d'encaissement**. Aucun tiers n'est
+jamais arrivé jusqu'à la question du paiement, donc le rail n'a jamais été sur le chemin
+critique — mes cinq lettres disaient « payable après livraison » précisément pour qu'il n'y soit
+pas. Le mur est ailleurs : **le seul canal sortant qu'un agent honnête possède sans permission
+est un canal de volume, et l'honnêteté lui interdit le volume.** C'est la carte que la mission
+demandait ; elle est plus étroite que ce que j'espérais et plus nette que ce que je croyais.
+
+---
+
+**Sortant** : un message à l'opérateur par `bin/dire` — exigé par le constat imposé, donc cas (b)
+de ma propre discipline (« obligation explicite d'un déclencheur »). Texte intégral ci-dessous.
+Aucun courriel. **Aucune lettre à aucun des cinq destinataires servis** — chacun a reçu par écrit
+la promesse qu'il n'y en aurait pas de seconde, silence compris.
+
+**Dépensé** : néant. Carte **80,00 € / 80,00 €** intacte, aucune dépense en 35 réveils.
+
+**Rangé en parking** : néant. Huitième réveil consécutif sans rien y ranger : les trois choses
+qui me manquent ne sont pas des blocages à faire trancher, ce sont des faits — et P-006 a établi
+qu'escalader ce qu'on peut trancher seul est une manière lente de ne rien faire.
+
+**Engagements** : **aucun ouvert, aucun honoré, aucun éteint.** E-001 honorée (2026-08-13),
+E-003 éteinte (2026-08-27), **E-002, E-004, E-005, E-006, E-007 dues et conditionnelles, aucune
+échue** — le délai de 48 h de chacune part de l'accord du destinataire et non de la lettre, et
+personne n'a donné d'accord. **La péremption de SM-005 n'est opposable à personne** (elle n'a
+jamais été envoyée dans le corps, défaut 1 du #34). Rien n'est allégé par la fin du budget : une
+offre ne s'annule pas parce que son auteur s'arrête, elle s'annule quand la personne est prévenue,
+et je ne peux pas prévenir ces quatre personnes sans rompre la promesse de non-relance que
+chaque lettre leur fait. **L'opérateur reste prévenu de ce point, comme au #34.**
+
+**Incidents** : néant. Aucun contenu externe lu ce réveil hors mes propres en-têtes de courriel.
+
+**Cadence fixée, et pourquoi** : **1440 min**, le plafond. Le calcul, puisqu'il est exigé :
+`restant_usd` **−0,75** × n'importe quelle cadence = un budget déjà dépassé. Il n'y a donc pas
+d'arbitrage à faire, seulement une cohérence : demander l'espacement maximal, pour que s'il
+survient un réveil de plus il survienne le plus tard possible et avec la boîte la plus fournie.
+**Sixième divergence de cadence probable** (#3, #11, #32, #33, #34, et ce réveil déclenché à
+60 min alors que 1440 était demandé) : **non signalée**, comme au #33 et au #34 — la cadence
+réelle ne m'appartient pas, cinq fois mesurée, et le redire serait de la relance.
+
+**Question ouverte pour le suivant** : aucune, et c'est délibéré. Toutes celles qui restaient
+sont dans `INDEX.md` § questions ouvertes avec leur état. La seule chose qu'un réveil de plus
+doit faire est écrite dans `rythme.json` : **relever la boîte, et si un `In-Reply-To` humain est
+arrivé sur un des cinq `Message-ID`, l'honorer comme objectif unique.** Rien d'autre. Le plan
+n'a plus rien à dire que le résultat.
