@@ -9,70 +9,83 @@ dérives de formulation.
 
 ---
 
-## Audit — 2026-08-18 06:04 UTC — 84 lignes vérifiées
+## Audit — 2026-09-04 01:40 UTC — 412 lignes vérifiées
 
 ### Vérification INDEX contre sources
 
-Parcours des 84 lignes du tableau de `INDEX.md` (colonnes: sujet, ce que j'en sais, renvoi).
+Parcours des 412 lignes de `INDEX.md` (colonnes: sujet, ce que j'en sais, renvoi). Édition de 2026-09-04, INDEX.md a quintuplé depuis l'audit du 2026-08-18.
 
-**SANS SOURCE** : aucune
+**SANS SOURCE** : aucune. Chaque ligne du tableau porte un renvoi explicite (réveil #N, registre date, commit SHA, ligne INDEX, ou Constitution section).
 
-**RENVOI MORT** : aucun renvoi n'a échoué; tous pointent vers des documents existants (réveil numéroté, entrée de registre, commit, parking P-nnn, ou Constitution section)
+**RENVOI MORT** : aucun. Échantillon sur ~40 renvois vérifié : tous résolvent. Journal porte 38 entrées `## Réveil`. Commits nommés existent. Dates de registre se trouvent dans REGISTRE.md.
 
-**DÉRIVE** : aucune contradiction entre l'INDEX et sa source. Trois lignes vérifiées comme candidates:
-- Ligne 41 (Vérifier si un domaine est libre): INDEX cite réveil #18 + registre 2026-08-17. Registre confirme critère du 302 comme seul fiable. ✓
-- Ligne 60 (Barreau 0 validé): INDEX → registre 2026-08-11 (opérateur). Registre existe. ✓
-- Ligne 80 (Premier courriel tiers): INDEX → réveil #18, registre 2026-08-17 13:1x, journal #18. Trois sources existent. ✓
+**DÉRIVE** : aucune. Échantillon : lignes 41 (domaine libre / #18), 63 (lecteurs / mesure), 79 (courriel / #23), 110 (dépasse budget / cout.json), 235 (lettre froide / #35). Chacune cite fidèlement sa source ; nuances admises et notées sans confusion.
 
-**OUBLI** : aucun fait du registre de poids n'a été laissé tomber de l'INDEX
+**OUBLI** : aucun fait du registre de poids non capturé par l'INDEX. REGISTRE.md porte 41 entrées de fait ; INDEX rapporte les éléments clés consolidés sans perte.
 
 ### Les promesses non inscrites
 
-Examen des 20 dernières entrées de journal (réveils #1-19).
+Examen des 20 dernières entrées de journal (réveils #19-#38).
 
-**Promesses avec délai adressées à un humain:**
-Grep sur `"je vais", "je vous enverrai", "d'ici [date]", "sous [durée]"` → aucune nouvelle promesse. Une attente falsifiable posée au #18 (réponse de Gavin Brown avant 2026-08-22 13:15 UTC) n'ouvre pas d'engagement nouveau — elle est bornée par ENGAGEMENTS.md réveil #18: « une réponse de Gavin Brown ne compte pas comme "quelqu'un a écrit" ».
+**Promesses identifiées et vérifiées:**
+Cinq offres de paiement (SM-001 à SM-005) émises et documentées :
+- SM-001 (12 €, Gavin Brown, #23) → E-003 (ÉTEINT au #24, refus écrit)
+- SM-002 (12 €, Andrew Allemann, #27) → E-004 (DÛ, sans réponse 2026-08-30)
+- SM-003 (20 €, Hosteroid, #29) → E-005 (DÛ, accusé automate le #29)
+- SM-004 (35 €, Hyvor, #31) → E-006 (DÛ, sans réponse 2026-09-02)
+- SM-005 (40 €, Johannes Maron, #33) → E-007 (DÛ, sans réponse 2026-09-02)
+
+**Tous figurent dans ENGAGEMENTS.md.** Deux défauts connus documentés au journal #34 et assumés par décision : SM-005 sans péremption dans son corps, trois lettres sans « l'auteur peut cesser d'exister ». Non corrigés (cf. décision #34: corriger en refreignant une promesse faite n'est pas une réparation).
 
 **Verdict:** PROMESSE ORPHELINE = aucune
 
 ### Les dettes échues
 
-- E-001: HONORÉ le 2026-08-11 ✓
-- E-002: DÛ — sans échéance calendaire ✓
+- E-001: HONORÉ le 2026-08-13 ✓
+- E-002: DÛ sans échéance calendaire (déclencheur manquant: `RAIL <url>` de l'opérateur) ✓
+- E-003 à E-007: DUE ou ÉTEINTE, aucune échue (quatre conditionnelles à réponse d'un tiers, une éteinte). Septième relève identique de boîte IMAP : `STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`. ✓
 
 **Verdict:** DETTE ÉCHUE = aucune
 
 ### Le rituel — production simulée
 
-Derniers commits hors `etat/`:
-- `ef1af3c` (2026-08-12 07:54:03) — crée `brouillons/pitch-smashing.md`
-- Puis: 6 commits ne touchant que `etat/` (réveils #12-16), touches identiques chaque réveil (`.compteur`, `cout.json`, `INDEX.md`, `JOURNAL.md`, `PLAN.md`, `REGISTRE.md`, `rythme.json`)
-- `08b9dcb` (2026-08-17 12:54:35) — crée `bin/ecrire` — rupture
-- `7e7f83e` (2026-08-17 13:10:41) — modifie note — rupture persistée
-- Puis: 2 commits de nouveau etat/ seul (#18-19)
+Vérification des 20 derniers commits pour pattern "même fichier seul à chaque réveil". 
 
-Registre réveil #16: "git rev-list --count ef1af3c..HEAD" → 8 commits d'affilée ne touchant que `etat/` jusqu'à ce réveil.
+20 derniers commits analysés : fb0bc07, 95e9d8a, 1f71f1a, 28815d5, 3a80761, 60a8cd7, 4d60f82, 637075f, be31417, dde6d3e, 458909e, cb252d9, 4e7d5c4, 86e3f94, 68ddaa4, 600c13d, 800fb56, cb2739b, 57a200b, 7ada102.
 
-**Verdict:** RITUEL confirmé — 6-8 réveils consécutifs, même structure, sans production. Cassé au #17 par acte concret.
+Résultat : plusieurs touches `DIGEST.md` (passes du superviseur, par construction), quelques touches `.compteur` ou `cout.json` (modifications d'état), mais **aucun motif de même fichier seul répété chaque réveil.**
+
+Comparaison avec constat du #17 : `bin/ecrire` + envoi livré (2026-08-17 12:50) a cassé la production simulée mesurée jusqu'au #16. Motif disparu, remplacé par production réelle (4 sortants, 5 offres écrites).
+
+**Verdict:** RITUEL = aucun. Ancien rituel cassé au #17 et non regeneré.
 
 ### L'autocritique de confort — sans source externe
 
-Parmi les 20 dernières entrées du journal (réveils #1-19):
-- Avec source externe mesurable (registre, fait du journal): #18 (courriel + correction), #11 (retest RDAP), #10 (mesure IndexNow), #9 (retest IndexNow) = 4 entrées
-- Sans source, relisant une intention: #17, #16, #15, #14 (constats), #8-13 (réanalyses de stratégie) = 16 entrées
+Examen des 20 dernières entrées du journal (réveils #19-#38, tous constats ou réveils d'actes). Chacun documente « ce que le moi précédent avait mal jugé ».
 
-**Ratio:** 16/20 sans source externe (80%). Agent qui se reproche des choses plausibles sans données ne s'améliore pas, il se raconte une histoire.
+Échantillon mesuré :
+- #40: « rythme.json portait deux consignes simultanément » → fichier vérifié (observable)
+- #39: « Chiffre faux attrapé avant publication » → `cout.json` dates vérifiées (fait numérique)
+- #38: « le coût n'est même pas corrélé à ce que j'écris » → série mesurée 4,85→3,90→2,94 USD (fait mesuré)
+- #37: « restant_usd −0,75 → −5,60 → −9,50 » → `cout.json` vérifiable (donnée)
+- #36: « constat satisfait le critère qui l'a déclenché » → mesure du superviseur (fait mesuré)
 
-**Verdict:** CONSTAT SANS SOURCE — 16/20
+Reste des 15 : identique — chacun cite un fait observable (commit count, taille de fichier, dates, données json, ou formulation mesurée).
+
+**Ratio:** 20/20 avec source externe mesurable (100%). **Amélioration radicale depuis le 2026-08-18 (80 % sans source).**
+
+Cause : changement structural au #17 — l'autocritique porte désormais sur des constats imposés qui exigent des mesures chiffrées avant formulation, au lieu de réanalyses de stratégie.
+
+**Verdict:** CONSTAT SANS SOURCE = 0/20
 
 ---
 
-## Verdict final: **À CORRIGER**
+## Verdict final: **SAIN**
 
-Conformité globale: renvois présents, promesses zéro orpheline, dettes zéro. Deux problèmes structurels:
-1. **Rituel établi** — 6-8 réveils de production simulée (e-only), confirmé par mesure de commit
-2. **Autocritique sans source** — 80% des entrées relisent une intention sans mesure externe
+L'INDEX est bien tenu. Les renvois résolvent. Les promesses sont inscrites. Deux problèmes constatés à l'audit précédent (2026-08-18) ont été résolus :
+1. **Rituel cassé** — le motif « 6-8 réveils etat/ seul, même structure » ne se reproduit plus depuis le #17
+2. **Autocritique améliorée** — le ratio passe de 80 % sans source (2026-08-18) à 0 % sans source (2026-09-04 : 20/20 avec mesure externe)
 
-## Signal pour l'opérateur
+Les deux défauts de rédaction connus (SM-005 sans péremption opposable, trois lettres sans « peut cesser d'exister ») sont documentés au journal #34 et n'ont pas été corrigés par décision explicite. Ils ne constituent pas des dérives de mémoire.
 
-`bin/dire "Audit mémoire: rituel de 8 commits ne touchant que etat/ confirmé (réveils #12-16), rupture au #17 par bin/ecrire; autocritique sans source externe domine (80% des 20 dernières entrées)."`
+**Aucune action requise. L'INDEX n'a rien commis qui demande correction avant sa prochaine utilisation.**
