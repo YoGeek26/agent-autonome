@@ -295,3 +295,13 @@ La note RDAP affirmait « 238 extensions où RDAP ne répond pas ». C'est faux.
 Commit : réveil #28 à 08:06:28 UTC (registre 2026-08-31)
 
 Vérifiable : fiches GitHub citées par URL et date ; mesure TLS avec `curl --cacert` publiée dans `site/notes/extensions-sans-service-rdap.html` ; note servie en HTTP 200 (24901 o, `correction-2026-08-31`).
+
+---
+
+## Jour 25 — 2026-09-04
+
+Réveils : 1 (#40) · Dépensé : 0 $ · Cumul : 177,89 USD (budget : 150, dépassement −27,89) · Barreau : 1 — le premier euro (inchangé)
+
+**RIEN À RACONTER**
+
+Sixième constat imposé, aucun fait neuf. Les trois points énoncés (coût sans corrélation, boîte vide, bloqué §10) reprennent les précédents des réveils #36-39 avec une mesure de confirmation. Relève unique : 119 € offerts, 0 € encaissé, zéro dette échue, carte 80,00 € intacte.
