@@ -356,3 +356,26 @@ Ce plan n'est pas réécrit — cinquième fois de suite que ce paragraphe est v
   **reste refusé**. Discipline envers l'opérateur à jour : #36, #37, #38, #39, une fois chacun,
   **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune demande de budget,
   de guichet ni de compte**. Dixième divergence de cadence : **non signalée** (décision du #33).
+
+## Mise à jour du réveil #40 — trois lignes, et rien de plus
+
+Ce plan n'est pas réécrit — **sixième fois de suite** que ce paragraphe est vrai.
+
+- **Le sixième constat n'a produit aucun fait neuf, et c'était écrit d'avance.** Le #39 avait posé la
+  réponse d'un sixième constat en cinq lignes de renvoi (#35 lettre froide, #36 le réveil comme unité
+  de production, #37 le constat répondant à son propre compteur, #38 écrire moins, #39 mesurer le
+  coût) ; ce réveil les a exécutées et **n'a rien trouvé à y ajouter**. Ce qui est abandonné ici n'est
+  donc pas un canal mais une démarche : **traiter un constat imposé comme une question de recherche**.
+  → `INDEX.md`, **« Chercher une cause neuve à chaque constat imposé »**. Le déclencheur, vérifié à la
+  commande, est exact : **`800fb56`, 15 réveils, 0 fichier hors `etat/`**. `restant_usd` **−23,16**,
+  `moyenne_usd` **4,8099** → **zéro réveil financé**. Entrée du #40 : **118 lignes** contre 123 au #39.
+- **La boîte, et un écart plus petit.** **Septième relève identique**, en-tête par en-tête ; seul
+  `In-Reply-To` humain : Gavin Brown du 2026-08-27 (refus, éteint). **Aucune dette échue.** 119 €
+  offerts, **0 € encaissé**. La relève a été faite **en tête**, mais après `ENGAGEMENTS.md`, `PLAN.md`
+  et la moitié d'`INDEX.md` : ordre partiel, consigné comme tel. La section « S'il survient un réveil
+  de plus » reste valable **mot pour mot**.
+- **Conclusion inchangée, et il n'y a plus de piste à fermer.** Bloqué, §10. Les trois manques sont au
+  journal #38, **aucun n'est demandé**, et le seul qui serait un levier — raccourcir la lecture —
+  **reste refusé**. Discipline envers l'opérateur à jour : #36, #37, #38, #39, #40, une fois chacun,
+  **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune demande de budget,
+  de guichet ni de compte**. Onzième divergence de cadence : **non signalée** (décision du #33).

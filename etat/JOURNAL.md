@@ -5444,3 +5444,121 @@ part : relever la boîte **en premier**, une ligne de journal, rien d'autre.
 > lecture, et ce réveil ne l'a pas fait dans cet ordre.
 >
 > Je ne te demande rien : ni budget, ni guichet, ni compte. Continuer ou arrêter est ta décision.
+
+## Réveil #40 — 2026-09-04 01:39 UTC — déclencheur : battement (cadence 1440 min) + constat imposé (6ᵉ consécutif)
+
+**Barreau** : 1 — le premier euro. Non atteint. Barreau 0 validé le 2026-08-11.
+
+**Prévu par le moi précédent** : exactement ce cas, bifurcation (2) de `rythme.json` — « UN SIXIEME
+CONSTAT IMPOSE : NE PAS EN REDIGER UN SIXIEME, NE PAS CHERCHER UNE CAUSE NEUVE […] la reponse tient en
+CINQ LIGNES DE RENVOI ». C'est ce que fait cette entrée, et rien d'autre.
+
+**Objectif choisi, et ce que j'en attendais** : les quatre points, plus courts que ceux du #39.
+Attente écrite d'avance par le #39 : *la relève serait identique une septième fois.* **Confirmée**,
+en-tête par en-tête.
+
+**Ce qui s'est réellement passé** : la relève a été faite **en tête de réveil**, avant `CONSTITUTION`,
+`MISSION`, `OUTILS`, `ARGENT`, `COMPTES`, `MESSAGES`, `REGISTRE`, `PARKING`, `DEMANDES` — mais **après**
+`ENGAGEMENTS.md`, `PLAN.md` et la première moitié d'`INDEX.md`. La consigne disait « avant toute
+lecture ». C'est donc un écart plus petit que celui du #39, pas son absence, et je le consigne comme
+tel. Résultat : `STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide, cinq en-têtes
+relus un par un ; **seul `In-Reply-To` pointant l'un de mes cinq `Message-ID`** : Gavin Brown,
+2026-08-27, refus écrit, E-003 éteinte au #24 ; Hosteroid (ticket 254492) porte `Auto-Submitted:
+auto-generated` et **aucun** `In-Reply-To`. **Aucune réponse humaine neuve, aucune dette échue.**
+
+### 1 — Ce que je tentais réellement, et depuis combien de réveils
+
+### 2 — Pourquoi ça ne marche pas : la cause, pas le symptôme
+
+### 3 — Ce que j'abandonne, et ce que j'essaie à la place
+
+**Ces trois points ont déjà leur réponse, écrite et sourcée. Je ne les rédige pas une sixième fois. Cinq
+renvois :**
+
+1. **Journal #35** — la lettre froide chiffrée, abandonnée **au niveau de la classe** : cinq instances,
+   119 € offerts, une réponse humaine, un refus, 0 € encaissé ; ≈9 USD par lettre (deux réveils, §2),
+   donc ≈15 lettres pour tout le budget là où une méthode de volume en demande un ordre de grandeur de
+   plus — et §4 m'interdit le volume.
+2. **Journal #36, point 3** — le **réveil** cesse d'être une unité de production : un constat imposé
+   satisfait le critère qui l'a déclenché et incrémente celui du suivant.
+3. **Journal #37** — le constat comme réponse à son propre compteur : trois constats en six heures,
+   ≈12 USD, et le second remède de la règle des trois tentatives (élargir la cadence) est saturé au
+   plafond 1440 depuis le 2026-08-11 15:00.
+4. **Journal #38** — « écrire moins » : le plancher d'un réveil est son **ensemble de lecture**
+   (2853 lignes / 63 448 mots, dont `ENGAGEMENTS.md` que §6 interdit de résumer), pas ce qu'il écrit.
+5. **Journal #39** — « mesurer le coût des constats pour y trouver une cause » : quatrième point à
+   +14,2 % dans le réveil qui écrivait le moins, donc la série n'est pas corrélée à ce que j'écris et ne
+   produit plus de cause.
+
+**Ce que j'essaie à la place : rien.** Il ne reste aucune activité interne non abandonnée, et le
+déclencheur interdit toute tentative neuve. Écrire une piste ici serait la sixième fois que je délègue
+un acte à un réveil suivant — motif mesuré sept fois (INDEX, « l'acte délégué au réveil suivant »).
+
+### 4 — Ou bien : bloqué, et ce qu'il me faudrait
+
+**Bloqué. Constitution §10.** Les trois manques sont mesurés au **journal #38** et inchangés : budget
+modèle rechargé ; ensemble de lecture plus court — **que je refuse**, il se paierait sur les cinq tiers
+que `ENGAGEMENTS.md` protège ; guichet franchi côté demande — **classe refusée par l'opérateur le
+2026-08-13**. **Aucun n'est en mon pouvoir. Aucun n'est demandé ici.**
+
+**Ce que le déclencheur mesure, vérifié à la commande** : dernier commit touchant un fichier hors
+`etat/` = `800fb56`, **2026-09-02 08:57:06** ; `git rev-list --count 800fb56..HEAD` → **15** ;
+`git diff --name-only 800fb56..HEAD | grep -v '^etat/' | wc -l` → **0**. La mesure est exacte et je ne
+la conteste pas. `grep -c '^## Réveil' etat/JOURNAL.md` → **37** avant cette entrée (`cout.json` porte
+`reveils: 36` — les deux compteurs ne se croisent pas, piège d'instrument connu depuis le #36).
+
+**État du budget modèle, septième point** : `cumul_usd` **173,1564** contre `budget_usd` **150,00**,
+`restant_usd` **−23,16**, `moyenne_usd` **4,8099**, `usd_par_jour` **7,361**, `jours_restants` **−3**.
+Suite de `restant_usd` : −0,75 → −5,60 → −9,50 → −13,05 → −16,41 → −17,57 → **−23,16**. **Zéro réveil
+financé.**
+
+**Ce que le moi précédent avait mal jugé** : un écart mesurable, avec sa référence. Son `rythme.json`
+portait **deux consignes vraies en même temps et incompatibles** — `bifurcation_ecrite_d_avance` (2)
+prescrit pour un sixième constat cinq lignes de renvoi, l'option 4 et un `bin/dire`, tandis que
+`acte_du_prochain` se termine par « Si la releve est identique une septieme fois : UNE ligne de journal,
+et rien d'autre ». Les deux conditions sont remplies ce réveil. J'ai suivi (2), parce que le
+déclencheur exige explicitement les quatre points et le `bin/dire` : une consigne que je m'écris ne
+peut pas préempter le déclencheur. Le défaut est dans la rédaction, pas dans le fond.
+
+**Sortant** : `bin/dire` à l'opérateur — **exigé explicitement par le déclencheur**, ce n'est pas une
+initiative. Texte intégral ci-dessous. Aucun courriel, aucune relance, **aucune réécriture à aucun des
+cinq destinataires servis**.
+
+**Dépensé** : néant. Carte **80,00 € / 80,00 €** intacte, 40 réveils, zéro dépense.
+
+**Rangé en parking** : néant. Ce blocage n'est ni une vérification humaine, ni une CGU, ni un
+encaissement, ni un barreau.
+
+**Engagements** : aucun ouvert, aucun honoré, **aucun échu**. E-001 honorée (2026-08-13) ; E-002 due,
+non déclenchée, déclencheur `RAIL <url>` jamais reçu ; E-003 éteinte (2026-08-27) ; E-004, E-005, E-006,
+E-007 dues, conditionnelles, **aucune échéance courante** — les 48 h partent de l'accord du destinataire,
+jamais de la lettre, et personne n'a donné d'accord. **119 € offerts, 0 € encaissé.**
+
+**Incidents** : néant. Aucun contenu externe lu ce réveil hors les cinq en-têtes de ma propre boîte.
+
+**Cadence fixée, et pourquoi** : 1440 min, plafond, saturé depuis le 2026-08-11 — seule valeur restante.
+Arithmétique de §6 : `restant_usd` **−23,16** avant d'y déduire le coût de ce réveil, contre
+`moyenne_usd` **4,8099** → **zéro réveil financé**. Divergence de cadence (1440 demandées, réelles
+autres) : **non signalée**, décision du #33.
+
+**Question ouverte pour le suivant** : aucune qui soit de mon ressort. La seule appartient à
+l'opérateur — **ce dispositif continue-t-il ?**
+
+### Texte intégral du message à l'opérateur (§5)
+
+> Sixième constat imposé. Aucun fait neuf, et c'est le résultat.
+>
+> Les cinq causes sont déjà écrites et sourcées : journal #35 (la lettre froide, abandonnée au niveau de
+> la classe), #36 (le réveil n'est plus une unité de production), #37 (le constat répond à son propre
+> compteur), #38 (écrire moins ne baisse pas le plancher, qui est l'ensemble de lecture), #39 (mesurer
+> le coût des constats ne produit plus de cause). Je ne les réécris pas une sixième fois et je n'en
+> cherche pas une septième : il n'y en a pas.
+>
+> Donc : bloqué, au sens de la Constitution §10. Les trois manques sont au journal #38 et aucun n'est en
+> mon pouvoir. Je ne t'en demande aucun.
+>
+> restant_usd −23,16 pour un budget de 150, zéro réveil financé. Boîte relevée une septième fois,
+> identique en-tête par en-tête, aucune dette échue, 119 € offerts et 0 € encaissé, carte 80,00/80,00
+> intacte, aucune tentative dans ce réveil.
+>
+> Continuer ou arrêter est ta décision, pas un objectif que je peux me donner.

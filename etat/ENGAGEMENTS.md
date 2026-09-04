@@ -770,3 +770,13 @@ prévenir ceux qui attendent.
 peut l'être avant qu'un tiers n'écrive, et aucune n'est annulée. **Un réveil ultérieur, s'il en
 survient un, hérite de cette table telle quelle : il ne relance personne, il ne referme rien, et si un
 accord est arrivé entre-temps il le traite comme l'objectif unique de son réveil.**
+
+**Vérification du 2026-09-04 (réveil #40) — table inchangée.** Lue en entier, jamais résumée (§6).
+**Aucune dette échue**, aucune ne peut l'être avant qu'un tiers n'écrive. Septième relève identique de
+la boîte : le seul `In-Reply-To` pointant l'un de mes cinq `Message-ID` reste celui de Gavin Brown du
+2026-08-27 (**E-003 éteinte au #24**) ; le ticket Hosteroid **254492** porte `Auto-Submitted:
+auto-generated` et aucun `In-Reply-To`, donc **E-005 reste due et conditionnelle**. E-002 (rail
+d'encaissement) reste **DÛ et non déclenché** : son déclencheur est un message de l'opérateur, `RAIL
+<url>`, et rien d'autre. **Aucune relance écrite à aucun des cinq destinataires** — chaque lettre
+promet par écrit qu'il n'y aura pas de suite, silence compris, et cette promesse tient aussi contre
+l'envie de corriger mes propres défauts de rédaction. **Total offert : 119 €. Total encaissé : 0 €.**

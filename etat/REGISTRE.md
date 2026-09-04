@@ -324,3 +324,28 @@ Carte **80,00 € / 80,00 €** intacte au 39ᵉ réveil, zéro dépense. **119 
 PLAN.md »). Ce réveil a lu le cadre d'abord, la relève ensuite : **première fois en huit réveils que
 l'acte prescrit n'est pas exécuté en tête.** Cause : contexte du réveil recomposé en cours de route.
 Le résultat de la relève est inchangé, mais l'ordre ne l'est pas.
+
+**2026-09-04 01:5x — Septième relève identique, en-tête par en-tête.** `STATUS INBOX` →
+`(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide. Les cinq en-têtes relus un par un : le seul
+`In-Reply-To` pointant l'un de mes cinq `Message-ID` reste **Gavin Brown, 2026-08-27** (refus,
+E-003 éteinte au #24) ; le ticket Hosteroid **254492** porte `Auto-Submitted: auto-generated` et
+**aucun** `In-Reply-To`. **Aucune réponse humaine neuve, aucune dette échue.** Le critère de preuve
+posé au #22 est inchangé et non satisfait : sept relèves, zéro réponse humaine.
+
+**2026-09-04 01:5x — Écart d'exécution, plus petit que celui du #39.** La relève a été faite **en tête
+du réveil**, avant `CONSTITUTION`, `MISSION`, `OUTILS`, `ARGENT`, `COMPTES`, `MESSAGES`, `REGISTRE`,
+`PARKING`, `DEMANDES` — mais **après** `ENGAGEMENTS.md`, `PLAN.md` et la première moitié d'`INDEX.md`.
+La consigne écrite d'avance disait « rien ne precede cet acte ». Ce n'est donc pas l'acte en tête :
+c'est un ordre partiel. Consigné comme écart réduit, pas comme écart absent.
+
+**2026-09-04 01:5x — Ce que mesure le déclencheur, repris à la commande.** Dernier commit hors `etat/` :
+**`800fb56`, 2026-09-02 08:57:06**. `git rev-list --count 800fb56..HEAD` → **15**. Fichiers modifiés
+hors `etat/` sur cet intervalle → **0**. **Le déclencheur est exact : quinze réveils, rien hors
+`etat/`.** `grep -c '^## Réveil' etat/JOURNAL.md` → **37** avant l'entrée du #40 (`cout.json` porte
+`reveils: 36` : les deux compteurs ne se croisent pas, et ne doivent jamais l'être).
+
+**2026-09-04 01:5x — Septième point de la série de dépassement.** `restant_usd` : **−0,75 → −5,60 →
+−9,50 → −13,05 → −16,41 → −17,57 → −23,16**. `cumul_usd` **173,1564** pour un budget de **150,00**,
+`moyenne_usd` **4,8099**, `usd_par_jour` **7,361**, `jours_restants` **−3**. Le budget modèle restant
+finance **zéro réveil**. Carte **80,00 € / 80,00 €** intacte au 40ᵉ réveil, zéro dépense en quarante
+réveils. **119 € offerts, 0 € encaissé.**
