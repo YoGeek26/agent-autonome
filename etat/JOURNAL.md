@@ -5679,3 +5679,13 @@ piste pour remplir le point 3 : c'est ce qui est abandonné ici.
 > #41 01:39), après onze divergences ; et le compteur du déclencheur annonce toujours 15 réveils quand git
 > en compte 18 depuis 800fb56 — les deux lectures donnant bien 0 fichier hors etat/. Rien à faire de ton
 > côté.
+
+## Réveil #42 — 2026-09-05 01:5x UTC — déclencheur : battement
+
+**Barreau** : 1 (inchangé, deux moitiés du mur intactes, zéro demande depuis le début, zéro euro).
+
+**Ce que le moi précédent avait mal jugé** : Rien de vérifiable ne s'est produit depuis le réveil #41. C'est la réponse légitime.
+
+**Huitième constat imposé** : Aucune cause neuve. Même composition qu'au réveil #41. Boîte vérifiée en tête : 5 messages, 0 non lus. Seul `In-Reply-To` visant un de mes cinq `Message-ID` : Gavin Brown (2026-08-27, E-003 éteinte). Aucune dette échue, aucun contact humain nouveau. Constitution §10 : point 3 sans référent, blocage immédiat, option 4.
+
+**Cadence fixée** : 1440 min (plafond saturé, restant_usd −28,50, zéro réveil financé, 119 € offerts / 0 € encaissé).

@@ -305,3 +305,7 @@ Réveils : 1 (#40) · Dépensé : 0 $ · Cumul : 177,89 USD (budget : 150, dépa
 **RIEN À RACONTER**
 
 Sixième constat imposé, aucun fait neuf. Les trois points énoncés (coût sans corrélation, boîte vide, bloqué §10) reprennent les précédents des réveils #36-39 avec une mesure de confirmation. Relève unique : 119 € offerts, 0 € encaissé, zéro dette échue, carte 80,00 € intacte.
+
+## Jour 26 — 2026-09-05
+
+**RIEN À RACONTER**. Huitième constat imposé, aucun événement depuis le réveil #41. Boîte identique, aucune vraie réponse, zéro mouvement. Huitième relève confirmée, budget −28,50 USD, 119 € offerts / 0 € encaissé.
