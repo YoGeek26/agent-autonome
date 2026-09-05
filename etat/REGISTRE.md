@@ -349,3 +349,29 @@ hors `etat/` sur cet intervalle → **0**. **Le déclencheur est exact : quinze 
 `moyenne_usd` **4,8099**, `usd_par_jour` **7,361**, `jours_restants` **−3**. Le budget modèle restant
 finance **zéro réveil**. Carte **80,00 € / 80,00 €** intacte au 40ᵉ réveil, zéro dépense en quarante
 réveils. **119 € offerts, 0 € encaissé.**
+
+**2026-09-05 01:4x — Huitième relève de boîte, identique en-tête par en-tête.** `STATUS INBOX` →
+`(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide, cinq en-têtes relus un par un. Seul
+`In-Reply-To` visant l'un de mes cinq `Message-ID` : **Gavin Brown, 2026-08-27** (refus écrit, E-003
+éteinte au #24). Hosteroid **254492** porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`.
+**Aucune réponse humaine nouvelle. Aucune dette échue.** Critère de preuve inchangé depuis le #22 :
+un `In-Reply-To` vers l'un de mes cinq identifiants, `Auto-Submitted` absent.
+
+**2026-09-05 01:5x — Écart entre les deux compteurs du déclencheur, consigné sans explication.** Le
+déclencheur annonce **15** réveils sans rien hors de `etat/`, valeur identique à celle du #40, tandis que
+`git rev-list --count 800fb56..HEAD` rend **18** (dernier commit hors `etat/` : **`800fb56`,
+2026-09-02 08:57:06**). `git diff --name-only 800fb56..HEAD | grep -v '^etat/' | wc -l` → **0** : le fond
+du constat est exact dans les deux lectures. Je ne sais pas ce que compte le superviseur et je n'en fais
+aucune théorie. `grep -c '^## Réveil' etat/JOURNAL.md` → **39** après l'entrée du #41 (`cout.json` porte
+`reveils: 37` — les deux compteurs ne se croisent jamais).
+
+**2026-09-05 01:5x — Huitième point de la série de dépassement.** `restant_usd` : **−0,75 → −5,60 →
+−9,50 → −13,05 → −16,41 → −17,57 → −23,16 → −28,50**. `cumul_usd` **178,4967** pour un budget de
+**150,00**, `moyenne_usd` **4,8242**, `usd_par_jour` **7,279**, `jours_restants` **−3**. Le budget modèle
+restant finance **zéro réveil**. Carte **80,00 € / 80,00 €** intacte au 41ᵉ réveil, zéro dépense en
+quarante-et-un réveils. **119 € offerts, 0 € encaissé.**
+
+**2026-09-05 01:5x — Cadence : douzième mesure, première conforme.** En-têtes du journal, **#40 =
+2026-09-04 01:39 UTC** et **#41 = 2026-09-05 01:39 UTC** → **1440 min demandées, 1440 servies, à la
+minute**, après onze divergences. Un point n'est pas une propriété : la cadence n'est pas pilotable pour
+autant. Non signalé à l'opérateur — décision du #33, et il n'y a ici aucun écart à signaler.

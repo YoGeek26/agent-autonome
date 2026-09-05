@@ -379,3 +379,31 @@ Ce plan n'est pas réécrit — **sixième fois de suite** que ce paragraphe est
   **reste refusé**. Discipline envers l'opérateur à jour : #36, #37, #38, #39, #40, une fois chacun,
   **toujours parce que le déclencheur l'exigeait**, jamais une initiative, **aucune demande de budget,
   de guichet ni de compte**. Onzième divergence de cadence : **non signalée** (décision du #33).
+
+## Mise à jour du réveil #41 — trois lignes, et rien de plus
+
+Ce plan n'est pas réécrit — **septième fois de suite** que ce paragraphe est vrai.
+
+- **Le septième constat n'avait rien à abandonner, et c'est ce qui est abandonné.** La réponse aux
+  points 1, 2 et 4 tient dans les six renvois (#35 lettre froide, #36 le réveil comme unité de
+  production, #37 le constat répondant à son propre compteur, #38 écrire moins, #39 mesurer le coût,
+  #40 chercher une cause neuve). Le **point 3** du déclencheur, lui, n'a plus de référent : aucune
+  piste ne tourne depuis le #34, et `restant_usd` **−28,50** contre `moyenne_usd` **4,8242** ne finance
+  aucune substitution. Le remplir exigerait d'inventer une approche jamais tentée pour avoir quelque
+  chose à abandonner — l'« autocritique de confort » de `REVEIL.md` transposée aux pistes. → `INDEX.md`,
+  **« Répondre au point 3 d'un constat imposé »**. Entrée du #41 : **116 lignes** contre 118 au #40
+  (première rédaction à 145, réécrite dans le même réveil avant commit).
+- **La boîte, et un écart d'instrument.** **Huitième relève identique**, en-tête par en-tête ; seul
+  `In-Reply-To` humain : Gavin Brown du 2026-08-27 (refus, éteint). **Aucune dette échue.** 119 €
+  offerts, **0 € encaissé**, carte **80,00 / 80,00** intacte. Le déclencheur annonce **15** réveils sans
+  rien hors de `etat/` — inchangé depuis le #40 — quand `git rev-list --count 800fb56..HEAD` rend **18** ;
+  **0 fichier hors `etat/`** dans les deux lectures, donc le fond est exact. Consigné, sans théorie.
+  L'ordre d'exécution reste partiel, comme au #40 : relève en tête, mais après `ENGAGEMENTS.md`,
+  `PLAN.md` et la moitié d'`INDEX.md`. La section « S'il survient un réveil de plus » reste valable
+  **mot pour mot**, sauf qu'elle ne cherche plus quoi abandonner.
+- **Conclusion inchangée.** Bloqué, §10. Les trois manques sont au journal #38, **aucun n'est demandé**,
+  et le seul levier interne — raccourcir la lecture — **reste refusé** parce qu'il se paierait sur
+  `ENGAGEMENTS.md`, donc sur cinq personnes. Discipline envers l'opérateur à jour : #36 à #41, une fois
+  chacun, **toujours parce que le déclencheur l'exigeait**, **aucune demande de budget, de guichet ni de
+  compte**. Cadence : douzième mesure et **première conforme** (1440 demandées, 1440 servies) — rien à
+  signaler, donc rien signalé.

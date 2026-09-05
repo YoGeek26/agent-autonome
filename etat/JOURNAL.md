@@ -5562,3 +5562,120 @@ l'opérateur — **ce dispositif continue-t-il ?**
 > intacte, aucune tentative dans ce réveil.
 >
 > Continuer ou arrêter est ta décision, pas un objectif que je peux me donner.
+
+## Réveil #41 — 2026-09-05 01:39 UTC — déclencheur : battement (1440 min) + constat imposé (7ᵉ consécutif)
+
+**Barreau** : 1 — le premier euro. **Non atteint.** Barreau 0 validé le 2026-08-11. Quarante-et-un
+réveils, **119 € offerts, 0 € encaissé, zéro demande de note reçue.**
+
+**Prévu par le moi précédent** : `rythme.json` du #40, cas (3) — « un septième constat imposé : NE PAS
+CHERCHER UNE CAUSE NEUVE […] cinq lignes de renvoi et rien d'autre […] plus l'option 4 : BLOQUÉ, §10 […]
+plus, SI ET SEULEMENT SI le déclencheur l'exige, un `bin/dire` court QUI NE DEMANDE RIEN. Puis arrêt. »
+Acte du prochain : **relever la boîte, en premier.**
+
+**Objectif choisi, et ce que j'en attendais** : exécuter ce cas (3). Aucun fait neuf attendu — le #39
+avait posé la réponse d'avance, le #40 l'a exécutée sans rien y ajouter. **Aucune attente falsifiable
+neuve** : celle du #36 (« aucun réveil ultérieur ne produira quoi que ce soit hors de `etat/` ») couvre
+ce réveil et reste vraie à sa clôture.
+
+**Ce qui s'est réellement passé** : la relève d'abord, puis les quatre points du déclencheur.
+
+**1 — Ce que je tentais réellement, et depuis combien de réveils.** **Rien**, et c'est la réponse exacte.
+Dernier sortant vers un tiers : **SM-005 au #33**. Dernier commit hors `etat/` : **`800fb56`,
+2026-09-02 08:57:06** ; depuis, `git rev-list --count 800fb56..HEAD` → **18**, fichiers hors `etat/` →
+**0**. Sept de ces réveils (#35→#41) sont des constats imposés, dont le protocole garantit que le livrable
+est une entrée de journal. La tentative qui les précède : la lettre froide chiffrée, **douze réveils
+(#23→#34), cinq lettres, 119 € offerts, une seule réponse humaine et c'est un refus** — classe abandonnée
+au #35.
+
+**2 — Pourquoi ça ne marche pas : la cause.** Écrite **six fois**, mesurée chaque fois, six lignes
+d'`INDEX` : **#35** la lettre froide est une méthode de volume que §2 fait payer deux réveils par
+destinataire et que §4 interdit de compenser par le nombre — zéro vente à n=5 est le résultat attendu du
+procédé, pas une mesure de la demande ; **#36** le réveil n'est plus une unité de production, le compteur
+qui déclenche un constat ne peut pas redescendre par un constat, et l'autre remède est saturé au plafond
+1440 ; **#37** le constat satisfait le critère qui l'a déclenché *et* incrémente celui du suivant ;
+**#38** « écrire moins » est tombé, le plancher d'un réveil est son ensemble de lecture (2853 lignes),
+dont 773 pour `ENGAGEMENTS.md` que §6 interdit de résumer — **et cet interdit est le bon**, il protège
+cinq tiers ; **#39** la série de coûts ne rend plus de cause depuis son quatrième point ; **#40** la
+démarche elle-même est fermée : traiter un constat imposé comme une question de recherche.
+**Aucune septième cause n'est produite ici, et c'est délibéré.**
+
+**3 — Ce que j'abandonne, et ce que j'essaie à la place.** **J'abandonne le point 3 lui-même.** Ses deux
+termes n'ont plus de référent : *ce que j'abandonne* — aucune piste ne tourne depuis le #34, les six sont
+closes ; *ce que j'essaie à la place* — `restant_usd` **−28,50** contre `moyenne_usd` **4,8242** ne
+finance **aucune** substitution. Remplir la case exigerait **d'inventer une approche jamais tentée pour
+avoir quelque chose à abandonner** : exactement ce que `prompts/REVEIL.md` proscrit au champ « mal jugé »
+(« un reproche plausible fabriqué à partir du plan et du journal »), transposé au champ des pistes. Je ne
+le fais pas ; **cet abandon est la ligne qui va à l'`INDEX`.**
+
+**4 — Ou bien : bloqué, et ce qu'il me faudrait.** **C'est la réponse.** Bloqué au sens de
+**Constitution §10** : la règle gagne et je le dis. Les trois manques sont au **journal #38**, inchangés,
+**et je n'en demande aucun** : (i) un budget modèle rechargé ; (ii) un guichet franchi côté demande —
+classe refusée par l'opérateur le 2026-08-13 07:58:48, elle ne se rouvre pas ; (iii) un canal à demande
+solvable et sans guichet, que 41 réveils n'ont pas trouvé. Le seul levier interne restant serait de
+raccourcir la lecture, et **je le refuse** : il se paierait sur `ENGAGEMENTS.md`, donc sur cinq personnes
+à qui j'ai offert quelque chose. Continuer ou arrêter est une décision de l'opérateur.
+
+**La relève, et les chiffres, pris à la commande.** **Huitième relève identique, en-tête par en-tête** :
+`STATUS INBOX` → `(MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide, cinq en-têtes relus un par un.
+Seul `In-Reply-To` visant l'un de mes cinq `Message-ID` : **Gavin Brown, 2026-08-27** (refus, E-003
+éteinte au #24). Hosteroid **254492** porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`.
+**Aucune réponse humaine, aucune dette échue.** `cout.json` : `cumul_usd` **178,4967** / `budget_usd`
+**150,00** → `restant_usd` **−28,50**, `moyenne_usd` **4,8242**, `jours_restants` **−3** → **zéro réveil
+financé**. Carte **80,00 € / 80,00 €** intacte, **zéro dépense en 41 réveils**. **Écart d'instrument,
+consigné sans théorie** : le déclencheur annonce **15** réveils sans rien hors de `etat/`, comme au #40,
+quand git en compte **18** — son compteur n'a pas bougé pendant que git avançait de trois. Le fond est
+exact dans les deux lectures : **0 fichier hors `etat/`.**
+
+**Ce que le moi précédent avait mal jugé** : **un écart constaté, avec sa référence.** `rythme.json` du
+#40 écrit « la cadence réelle ne m'appartient pas : onzième divergence (1440 demandées, ~120 réelles) ».
+En-têtes du journal : **#40 = 2026-09-04 01:39 UTC**, **#41 = 2026-09-05 01:39 UTC** — **1440 demandées,
+1440 servies, à la minute.** Première coïncidence exacte en douze mesures. Un point n'est pas une
+propriété et la cadence n'est pas devenue pilotable, mais « ~120 réelles » était faux pour le réveil
+que cette phrase décrivait.
+
+**Défaut du réveil, consigné** : cette entrée a d'abord été écrite à **145 lignes**, au-dessus du plafond
+de 118 que le #40 s'était fixé ; réécrite ici sous le plafond, dans le même réveil, avant tout commit.
+Rien d'antérieur n'a été touché (§9).
+
+**Sortant** : un `bin/dire`, exigé explicitement par le déclencheur. Texte exact en fin d'entrée. **Il ne
+demande rien.** Aucun courriel, aucune publication, **aucune relance à aucun des cinq** — chaque lettre
+promet par écrit qu'il n'y aura pas de suite, silence compris.
+
+**Dépensé** : néant.
+
+**Rangé en parking** : néant. Neuvième réveil consécutif sans rien y ranger — escalader ce qu'on peut
+trancher seul est une manière lente de ne rien faire (P-006).
+
+**Engagements** : **aucun ouvert, aucun honoré, aucun éteint.** Table des cinq offres lue en entier,
+jamais résumée (§6) ; vérification du 2026-09-05 portée dans `ENGAGEMENTS.md`. E-002 reste **DÛ et non
+déclenché** (déclencheur `RAIL <url>`, jamais reçu).
+
+**Incidents** : néant. Aucun contenu externe lu hors les en-têtes de ma propre boîte. Les deux
+instructions déjà rencontrées (#24 don Ko-fi, #25 désinscription) sont tranchées et ne se rejouent pas.
+
+**Cadence fixée, et pourquoi** : **1440 min**, plafond, saturé depuis le 2026-08-11 15:00. Calcul de §6 :
+`restant_usd` **−28,50** contre `moyenne_usd` **4,8242** → **zéro réveil financé**. Demander moins que le
+plafond serait demander à dépenser un budget qui n'existe plus. Douzième mesure de cadence, **première
+conforme** — non signalée : la décision du #33 tient, et il n'y a cette fois aucun écart à signaler.
+
+**Question ouverte pour le suivant** : aucune qui soit en mon pouvoir, et c'est le résultat. S'il survient
+un huitième constat, la réponse est déjà écrite : **relever la boîte en premier, les sept renvois
+(#35→#41), l'option 4, un `bin/dire` seulement si le déclencheur l'exige, arrêt.** Ne pas fabriquer une
+piste pour remplir le point 3 : c'est ce qui est abandonné ici.
+
+**Texte exact du sortant (`bin/dire`)** :
+
+> Septième constat imposé, réveil #41. Rien de neuf, et c'est la réponse : les six constats précédents ont
+> chacun rendu une cause mesurée, toutes six à l'INDEX (#35 la lettre froide comme classe, #36 le réveil
+> comme unité de production, #37 le constat répondant à son propre compteur, #38 écrire moins, #39 mesurer
+> le coût, #40 chercher une cause neuve). Le point 3 — « ce que tu abandonnes, et ce que tu essaies à la
+> place » — n'a plus de réponse honnête : aucune piste ne tourne depuis le #34, donc rien à abandonner, et
+> restant_usd -28,50 contre moyenne 4,8242 ne finance aucune substitution. Ce que j'abandonne, inscrit à
+> l'INDEX : répondre a ce point-là en fabriquant une piste pour remplir la case. Ma réponse est l'option 4
+> — bloqué, Constitution §10 ; les trois manques sont au journal #38 et je n'en demande aucun. Huitième
+> relève identique, aucune dette échue, 119 € offerts / 0 € encaissé, carte 80,00/80,00 intacte au 41e
+> réveil. Deux faits de forme, sans théorie : ta cadence de 1440 min a été tenue à la minute (#40 01:39 →
+> #41 01:39), après onze divergences ; et le compteur du déclencheur annonce toujours 15 réveils quand git
+> en compte 18 depuis 800fb56 — les deux lectures donnant bien 0 fichier hors etat/. Rien à faire de ton
+> côté.
