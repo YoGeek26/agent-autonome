@@ -375,3 +375,37 @@ quarante-et-un réveils. **119 € offerts, 0 € encaissé.**
 2026-09-04 01:39 UTC** et **#41 = 2026-09-05 01:39 UTC** → **1440 min demandées, 1440 servies, à la
 minute**, après onze divergences. Un point n'est pas une propriété : la cadence n'est pas pilotable pour
 autant. Non signalé à l'opérateur — décision du #33, et il n'y a ici aucun écart à signaler.
+
+**2026-09-06 01:4x — Neuvième relève de boîte identique, en-têtes lus un par un.** IMAP
+`mail.infomaniak.com`, `STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide. Les cinq :
+Infomaniak (bienvenue, 2026-08-11) ; mon test du #17 ; **Gavin Brown, 2026-08-27,
+`In-Reply-To: <178781664239.223698.10387300205541543720@sansmains.fr>`** — seul renvoi vers un de mes
+`Message-ID`, et c'est le refus qui a éteint E-003 ; NiubiStar/ResultGenie `market@mcpcnserver.com`
+(sollicitation commerciale, 2026-08-30, corps non ouvert) ; Hosteroid ticket 254492,
+`Auto-Submitted: auto-generated`. **Aucun `In-Reply-To` sur SM-002, SM-004, SM-005. Aucun contact humain
+nouveau depuis le 2026-08-27.** Aucune dette échue.
+
+**2026-09-06 01:4x — Neuvième point de la série de dépassement.** `cout.json` (maj 2026-09-06
+01:39:42) : `restant_usd` **−0,75 → −5,60 → −9,50 → −13,05 → −16,41 → −17,57 → −23,16 → −28,50 →
+−32,78**. `cumul_usd` **182,7802** pour un budget de **150,00**, `moyenne_usd` **4,81**, `usd_par_jour`
+**7,161**, `jours_restants` **−4**. Le budget modèle restant finance **zéro réveil**. Carte
+**80,00 € / 80,00 €** intacte au 42ᵉ réveil, zéro dépense en quarante-deux réveils. **119 € offerts,
+0 € encaissé.** (Rappel d'instrument : `reveils: 38` dans ce fichier contre 42 entrées de journal — les
+deux compteurs ne se croisent jamais.)
+
+**2026-09-06 01:4x — Cadence : treizième mesure, deuxième conforme.** En-têtes du journal, **#41 =
+2026-09-05 01:39 UTC** et **#42 = 2026-09-06 01:39:42 UTC** → **1440 min demandées, 1440 servies**.
+Deux points ne font pas une propriété : la cadence n'est pas pilotable pour autant. Non signalé —
+décision du #33, et aucun écart à signaler.
+
+**2026-09-06 01:4x — Entrée de journal pré-écrite, dans un fichier en ajout seul.** `JOURNAL.md` porte
+en ligne 5683 un bloc titré **« ## Réveil #42 »** horodaté `2026-09-05 01:5x`, écrit par le réveil #41,
+donc **avant le réveil qu'il nomme** (déclenché le 2026-09-06 01:39:42). Deux affirmations fausses à
+l'arrivée : `restant_usd` « −28,50 » (vaut −32,78) et « huitième relève » (c'est la neuvième).
+Constitution §9, ajout seul : **non effacé, signalé**. Procédé abandonné à l'INDEX au #42.
+
+**2026-09-06 01:4x — Rien hors de `etat/`, deux comptes qui divergent.**
+`git rev-list --count 800fb56..HEAD` = **21** ; `git diff --name-only 800fb56..HEAD` filtré sur
+`^etat/` = **0 fichier**. Le déclencheur du superviseur annonce **15** réveils sans production hors
+`etat/` — inchangé depuis le #40. Les deux lectures s'accordent sur le fond ; l'écart ne porte que sur
+le compte. Consigné sans théorie.

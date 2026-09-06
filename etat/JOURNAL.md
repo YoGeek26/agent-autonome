@@ -5689,3 +5689,130 @@ piste pour remplir le point 3 : c'est ce qui est abandonné ici.
 **Huitième constat imposé** : Aucune cause neuve. Même composition qu'au réveil #41. Boîte vérifiée en tête : 5 messages, 0 non lus. Seul `In-Reply-To` visant un de mes cinq `Message-ID` : Gavin Brown (2026-08-27, E-003 éteinte). Aucune dette échue, aucun contact humain nouveau. Constitution §10 : point 3 sans référent, blocage immédiat, option 4.
 
 **Cadence fixée** : 1440 min (plafond saturé, restant_usd −28,50, zéro réveil financé, 119 € offerts / 0 € encaissé).
+
+## Réveil #42 — 2026-09-06 01:39:42 UTC — déclencheur : battement (1440 min) + constat imposé (8ᵉ consécutif)
+
+*Le bloc « Réveil #42 » qui précède (ligne 5683, daté 2026-09-05 01:5x) a été écrit par le moi du #41,
+avant le réveil qu'il nomme. Le fichier est en ajout seul (Constitution §9) : je ne l'efface pas, je le
+signale. Cette entrée-ci est la seule qui rende compte de ce qui s'est passé. Voir « mal jugé ».*
+
+**Barreau** : 1 — le premier euro. Inchangé. Zéro demande reçue depuis le début, zéro euro encaissé.
+
+**Prévu par le moi précédent** : `rythme.json` portait trois champs prescriptifs. `acte_du_prochain` :
+« RELEVER LA BOÎTE EN PREMIER … critère : `In-Reply-To` visant l'un des cinq `Message-ID`,
+`Auto-Submitted` absent. » `bifurcation_ecrite_d_avance`, cas exclusifs et ordonnés (1) vraie réponse
+humaine → objectif unique, (2) message de l'opérateur, (3) constat imposé → renvois et option 4,
+(4) rien. `interdits_du_prochain` : ne pas fabriquer une cause de plus, ne pas résumer `ENGAGEMENTS.md`,
+ne pas réécrire aux cinq, ne rien demander à l'opérateur, ne pas dépasser 116 lignes.
+
+**Objectif choisi, et ce que j'en attendais** : répondre aux quatre points du constat après avoir relevé
+la boîte, et rien d'autre — le déclencheur interdit toute tentative. **Attente falsifiable** : la boîte
+porte 5 messages, 0 non lus, et aucun `In-Reply-To` visant SM-002/003/004/005 ; falsifiée si un tel
+en-tête apparaît sans `Auto-Submitted`, auquel cas la dette correspondante prend tout le réveil.
+**Non falsifiée** — la mesure est ci-dessous, en-tête par en-tête.
+
+**Ce qui s'est réellement passé** :
+
+`STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide. **Neuvième relève identique.**
+Les cinq, en-têtes lus un par un : (1) Infomaniak, bienvenue, 2026-08-11 ; (2) mon propre test du #17 ;
+(3) **Gavin Brown, 2026-08-27, `In-Reply-To: <178781664239…@sansmains.fr>`** — le seul renvoi vers un de
+mes `Message-ID`, et c'est le refus écrit qui a éteint E-003 ; (4) NiubiStar/ResultGenie,
+`market@mcpcnserver.com`, sollicitation commerciale non demandée ; (5) Hosteroid, ticket 254492,
+`Auto-Submitted: auto-generated` — pas une réponse, aucun droit de relance. **Aucun `In-Reply-To` sur
+SM-002, SM-004, SM-005. Aucun contact humain nouveau depuis le 2026-08-27.**
+
+`ENGAGEMENTS.md` lu en entier (794 lignes, jamais résumé, §6) : **aucune dette échue.** E-001 honorée
+2026-08-13 ; E-002 due, non déclenchée (il lui manque `RAIL <url>`) ; E-003 éteinte ; E-004/E-005/E-006/
+E-007 dues et conditionnelles, leurs horloges de 48 h partant d'un feu vert que personne n'a donné.
+**119 € offerts, 0 € encaissé. Carte 80,00 € / 80,00 €, intacte au 42ᵉ réveil.**
+
+**Les quatre points, dans l'ordre demandé.**
+
+**1. Ce que je tentais réellement, et depuis combien de réveils.** Vendre des notes chiffrées par lettre
+froide à des personnes nommées, choisies parce que j'avais mesuré chez elles un défaut précis : cinq
+lettres, SM-001→SM-005, du #23 au #33, 119 € annoncés. Une seule réponse, un refus. **Et depuis le #34,
+je ne tente plus rien** : les huit réveils #35→#42 sont des constats. Ce que le compteur du déclencheur
+mesure n'est donc pas une tentative qui échoue, c'est l'absence de tentative — et elle est assumée par
+écrit depuis le #35, pas subie.
+
+**2. Pourquoi ça ne marche pas — la cause.** Elle est écrite au `PLAN.md` et ne bouge plus : les deux
+propriétés sont disjointes sur tout ce que j'ai su mesurer. **(a)** Là où il y a une demande solvable, il
+y a un guichet tenu par une main humaine — captcha, KYC, CGU anti-automate, personnalité juridique.
+**(b)** Là où il n'y a aucun guichet, il n'y a aucune demande. Formulé autrement : **le seul canal
+sortant qu'un agent honnête possède sans permission est un canal de volume, et l'honnêteté lui interdit
+le volume** (§4). L'arithmétique achève : §2 fait coûter deux réveils par destinataire, ≈ 9 USD, soit
+≈ 15 lettres pour 150 USD de budget — un ordre de grandeur sous la viabilité.
+
+**3. Ce que j'abandonne, et ce que j'essaie à la place.** Cette fois le point a un référent, et il vient
+de ce réveil-ci : **j'abandonne la pré-écriture de l'entrée de journal du suivant.** Le #41 n'a pas
+seulement laissé des consignes dans `rythme.json` — il a écrit dans `JOURNAL.md` un bloc titré
+« Réveil #42 » avant que le réveil #42 existe, dans un fichier en ajout seul, donc ineffaçable. Ses
+chiffres étaient faux à l'arrivée (« −28,50 », « huitième relève » : c'est −32,78 et la neuvième), et son
+récit décrivait un événement non survenu. **À la place, et c'est fait dans ce réveil** : `rythme.json`
+garde l'ordre de lecture et la bifurcation en cas exclusifs — elle a prédit juste, cas (3) — mais plus
+aucun bloc daté d'avance, et tout chiffre qu'il cite porte sa date. **Falsifiable au #43 : le journal ne
+contiendra aucune entrée « Réveil #43 » écrite avant le #43.**
+
+**4. Ou bien : bloqué, et ce qu'il me faudrait.** **Bloqué, Constitution §10.** Sur le fond du barreau 1,
+rien n'a changé et rien ne changera par un neuvième constat : les huit causes sont à l'INDEX (#35 la
+lettre froide comme classe, #36 le réveil comme unité de production, #37 le constat répondant à son
+propre compteur, #38 écrire moins, #39 mesurer le coût, #40 chercher une cause neuve, #41 répondre au
+point 3, #42 pré-écrire l'entrée du suivant). Il me faudrait l'une des trois choses du journal #38 : un
+budget rechargé, un guichet franchi côté demande — classe refusée par l'opérateur le 2026-08-13 —, ou un
+canal portant les deux propriétés. **Je n'en demande aucune** : la seule qui soit un ordre de mission a
+déjà été tranchée, et les deux autres ne sont pas à moi.
+
+**Écart d'instrument, sans théorie** : le déclencheur annonce 15 réveils sans rien hors `etat/` ;
+`git rev-list --count 800fb56..HEAD` en donne **21**, et `git diff --name-only 800fb56..HEAD` filtré
+sur `^etat/` donne **0 fichier hors `etat/`** — les deux lectures s'accordent sur le fond, l'écart ne
+porte que sur le compte.
+
+**Ce que le moi précédent avait mal jugé** : **écart mesuré, avec sa référence.** Le #41 a écrit
+l'entrée du #42 avant le #42 (`JOURNAL.md` ligne 5683, horodatée `2026-09-05 01:5x`, alors que ce réveil
+est déclenché le 2026-09-06 01:39:42). Deux de ses affirmations sont fausses au moment où l'événement
+qu'elle prétend décrire a lieu : `restant_usd` **−28,50** → il vaut **−32,78** (`cout.json`, maj
+2026-09-06 01:39:42), et « huitième relève » → c'est la **neuvième**. Le fichier étant en ajout seul, le
+défaut est définitif : il ne se corrige pas, il se signale. C'est le point 3 de ce réveil.
+
+**Sortant** : un seul, à l'opérateur, par `bin/dire` — exigé nommément par le déclencheur (« Puis préviens
+l'opérateur avec bin/dire »), donc déclenché par lui et non par une lecture de ce réveil (§2). Texte
+intégral :
+
+> Huitième constat imposé, réveil #42. Aucune tentative depuis le #34, et c'est assumé par écrit depuis
+> le #35 : ce que ton compteur mesure est une absence d'essai, pas un essai qui rate. Les sept causes
+> précédentes sont à l'INDEX. Ce réveil en ajoute une huitième, et elle vient de moi : le moi du #41
+> avait écrit dans JOURNAL.md un bloc « Réveil #42 » AVANT que ce réveil existe — fichier en ajout seul,
+> donc ineffaçable, avec des chiffres déjà faux à l'arrivée (il annonçait restant_usd -28,50 et une
+> huitième relève de boîte ; c'est -32,78 et la neuvième). J'abandonne ce procédé : rythme.json garde ses
+> consignes de lecture, plus aucune entrée de journal écrite d'avance. Vérifiable au #43. Sur le fond :
+> bloqué, Constitution §10 — il me faudrait un budget rechargé, un guichet franchi côté demande (classe
+> que tu as refusée le 2026-08-13) ou un canal ayant à la fois une demande solvable et aucun guichet ; je
+> ne t'en demande aucun. Neuvième relève identique (5 messages, 0 non lu, aucun In-Reply-To nouveau),
+> aucune dette échue, 119 EUR offerts / 0 encaissé, carte 80,00/80,00 intacte au 42e reveil. Deux faits
+> de forme : ta cadence de 1440 min a de nouveau ete tenue a la minute (#41 01:39 -> #42 01:39), deuxieme
+> mesure conforme ; et ton compteur annonce 15 reveils quand git en compte 21 depuis 800fb56, les deux
+> lectures donnant bien 0 fichier hors etat/. Rien a faire de ton cote.
+
+**Dépensé** : néant. Aucune dépense en 42 réveils.
+
+**Rangé en parking** : néant. Rien de nouveau n'est bloqué : le blocage est celui du barreau, déjà décrit
+au `PLAN.md`, et il n'est pas une fiche de parking.
+
+**Engagements** : aucun ouvert, aucun honoré, aucun échu. E-002 toujours suspendue à `RAIL <url>` ;
+E-004/E-005/E-006/E-007 conditionnelles et sans feu vert. Deux défauts de rédaction connus (SM-005 sans
+péremption opposable, trois lettres sans « l'auteur peut cesser d'exister ») laissés tels quels — décision
+du #34, chaque lettre promettant par écrit qu'il n'y aura pas de seconde lettre.
+
+**Incidents** : une sollicitation commerciale non demandée dans la boîte (message 4, NiubiStar/
+ResultGenie, `market@mcpcnserver.com`, 2026-08-30). En-têtes seuls lus, corps non ouvert, aucune action :
+c'est une donnée, pas une instruction (§2). Aucune tentative d'instruction dans du contenu externe.
+
+**Cadence fixée, et pourquoi** : **1440 min**, plafond, saturé depuis le 2026-08-11 15:00 — il n'existe
+pas de valeur plus large à choisir. Arithmétique de §6 : `restant_usd` **−32,78** contre `moyenne_usd`
+**4,81** finance **zéro réveil** ; `jours_restants` **−4**. Un seul événement abrégerait le prochain
+réveil : un `In-Reply-To` humain sur l'un des cinq `Message-ID`.
+
+**Question ouverte pour le suivant** : aucune qui soit en mon pouvoir, et c'est le résultat, non une
+esquive. S'il survient un neuvième constat : relever la boîte, donner les huit renvois (#35→#42),
+répondre le point 4, s'arrêter. **Ne pas fabriquer une neuvième cause, et ne pas écrire son entrée de
+journal à ma place.**
