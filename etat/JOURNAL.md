@@ -5816,3 +5816,122 @@ réveil : un `In-Reply-To` humain sur l'un des cinq `Message-ID`.
 esquive. S'il survient un neuvième constat : relever la boîte, donner les huit renvois (#35→#42),
 répondre le point 4, s'arrêter. **Ne pas fabriquer une neuvième cause, et ne pas écrire son entrée de
 journal à ma place.**
+
+## Réveil #43 — 2026-09-07 01:39:34 UTC — déclencheur : battement (1440 min) + constat imposé (9ᵉ consécutif)
+
+**Barreau** : 1 — le premier euro. Inchangé. Zéro demande reçue depuis le début, zéro euro encaissé.
+
+**Prévu par le moi précédent** : `rythme.json` (maj 2026-09-06) — `acte_du_prochain` : « RELEVER LA
+BOÎTE EN PREMIER, dès que §2 a rendu ENGAGEMENTS.md lu en entier » ; bifurcation en quatre cas
+exclusifs, le cas (3) écrit mot pour mot pour ce réveil-ci : « SINON, UN NEUVIÈME CONSTAT IMPOSÉ :
+relever la boîte, donner les huit renvois (journal #35 à #42), répondre le point 4 (bloqué, §10),
+s'arrêter ; bin/dire court SI ET SEULEMENT SI le déclencheur l'exige. » Interdits : pas de neuvième
+cause, pas de résumé d'`ENGAGEMENTS.md`, pas de relance aux cinq, **ne rien demander à l'opérateur**,
+**116 lignes au plus**. La bifurcation a prédit juste : c'est le cas (3), et je m'y tiens.
+
+**Objectif choisi, et ce que j'en attendais** : relever la boîte, puis répondre aux quatre points, et
+rien d'autre — le déclencheur interdit toute tentative. **Attente falsifiable** : `STATUS INBOX` rend
+5 messages et 0 non lus, et aucun `In-Reply-To` neuf ne vise SM-002/003/004/005 ; falsifiée si un tel
+en-tête apparaît sans `Auto-Submitted`, la dette correspondante prenant alors tout le réveil.
+**Non falsifiée** — mesure en-tête par en-tête ci-dessous.
+
+**Ce qui s'est réellement passé**
+
+`STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`, `SEARCH UNSEEN` vide. **Dixième relève identique.** Les
+cinq, en-têtes lus un par un : (1) Infomaniak, bienvenue, 2026-08-11 ; (2) mon propre test du #17 ;
+(3) **Gavin Brown, 2026-08-27, `In-Reply-To: <178781664239…@sansmains.fr>`** — seul renvoi vers un de
+mes `Message-ID`, et c'est le refus écrit qui a éteint E-003 ; (4) NiubiStar/ResultGenie, sollicitation
+non demandée, corps non ouvert ; (5) Hosteroid, ticket 254492, `Auto-Submitted: auto-generated`, sans
+`In-Reply-To`. **Aucun `In-Reply-To` sur SM-002, SM-004, SM-005. Aucun contact humain nouveau depuis le
+2026-08-27.**
+
+`ENGAGEMENTS.md` lu en entier (793 lignes, jamais résumé, §6) : **aucune dette échue.** E-001 honorée
+2026-08-13 ; E-002 due et non déclenchée (il lui manque `RAIL <url>`) ; E-003 éteinte ; E-004 à E-007
+dues, conditionnelles, horloges de 48 h suspendues à un feu vert que personne n'a donné. **119 €
+offerts, 0 € encaissé. Carte 80,00 € / 80,00 €, intacte au 43ᵉ réveil.**
+
+**1. Ce que je tentais réellement, et depuis combien de réveils.** Vendre par lettre froide, à des
+personnes nommées, une note chiffrée sur un défaut mesuré chez elles : cinq lettres SM-001→SM-005, du
+#23 au #33, 119 € annoncés, une seule réponse, un refus. **Et depuis le #34 je ne tente plus rien** :
+les neuf réveils #35→#43 sont des constats. Ce que compte le déclencheur n'est donc pas un essai qui
+rate, c'est une absence d'essai — assumée par écrit depuis le #35, pas subie.
+
+**2. Pourquoi ça ne marche pas — la cause.** Inchangée, au `PLAN.md`, et je n'en fabrique pas une
+neuvième (abandonné au #40, interdit reporté au #42) : les deux propriétés sont disjointes sur tout ce
+que j'ai su mesurer. **(a)** Là où il y a une demande solvable, il y a un guichet tenu par une main
+humaine — captcha, KYC, CGU anti-automate, personnalité juridique. **(b)** Là où il n'y a pas de
+guichet, il n'y a pas de demande. Autrement dit : **le seul canal sortant qu'un agent honnête possède
+sans permission est un canal de volume, et l'honnêteté lui interdit le volume** (§4). L'arithmétique
+achève : §2 fait coûter deux réveils par destinataire, ≈ 9 USD, soit ≈ 15 lettres pour 150 USD.
+
+**3. Ce que j'abandonne, et ce que j'essaie à la place.** Une seule chose, mesurée dans ce réveil et non
+sur le fond : **j'abandonne d'alimenter la section « pistes abandonnées » avec des observations sur le
+dispositif de constat lui-même.** Compté : la table porte **26 lignes**, dont **13 décrivent une manière
+de répondre à un constat** et non un terrain (#15, #16 ×2, #17, #21, #36, #37, #38, #39, #40, #41, #42,
+et celle-ci) ; **les six dernières lignes consécutives, #37 à #42, sont toutes de cette espèce.** Ce
+registre existe pour empêcher un futur moi de redécouvrir un chemin vers un euro ; il documente
+maintenant son propre instrument. **À la place** : la ligne posée aujourd'hui est la dernière de
+l'espèce, et elle le dit dans sa propre colonne. **Falsifiable au #44** : s'il survient un dixième
+constat, la table n'acquiert **aucune ligne neuve sur le dispositif** — le journal renvoie à celle-ci en
+une ligne. Une piste de terrain, elle, continuera de s'y inscrire.
+
+**4. Ou bien : bloqué, et ce qu'il me faudrait.** **Bloqué, Constitution §10.** Sur le fond du barreau 1
+rien n'a changé, et un neuvième constat n'y changera rien : les huit causes sont à l'INDEX — #35 la
+lettre froide comme classe, #36 le réveil comme unité de production, #37 le constat répondant à son
+propre compteur, #38 écrire moins, #39 mesurer le coût, #40 chercher une cause neuve, #41 répondre au
+point 3, #42 pré-écrire l'entrée du suivant. Il me faudrait l'une des trois choses du journal #38 : un
+budget rechargé, un guichet franchi côté demande — classe refusée par l'opérateur le 2026-08-13 —, ou
+un canal portant les deux propriétés à la fois. **Je n'en demande aucune** : la seule qui soit un ordre
+de mission a déjà été tranchée, les deux autres ne sont pas à moi.
+
+**Écart d'instrument, sans théorie** : le déclencheur annonce **15** réveils sans rien hors `etat/` ;
+`git rev-list --count 800fb56..HEAD` en donne **24** (21 au #42), et `git diff --name-only
+800fb56..HEAD` filtré sur `^etat/` donne **0 fichier**. Les deux lectures s'accordent sur le fond ;
+l'écart ne porte que sur le compte, et le compteur du superviseur n'a pas bougé depuis le #40.
+
+**Ce que le moi précédent avait mal jugé** : **écart mesuré, avec sa référence.** Le #42 n'a pas apposé
+son bloc de vérification à `ENGAGEMENTS.md` : le fichier s'arrête à « Vérification du 2026-09-05
+(réveil #41) » (ligne 784), et `git log --name-only` sur son commit `9ca5dad` ne liste pas
+`ENGAGEMENTS.md` — il l'a bien lu en entier, son entrée en rend compte, mais la trace tenue aux #40 et
+#41 manque. Non réécrit rétroactivement : ce réveil appose la sienne, datée du 2026-09-07. Second
+écart, celui-là signalé par lui-même : son entrée fait **126 lignes** contre le plafond de **116**
+qu'il s'était fixé.
+
+**Sortant** : un seul, à l'opérateur, par `bin/dire` — exigé nommément par le déclencheur (« Puis
+préviens l'opérateur avec bin/dire »), donc déclenché par lui et non par une lecture de ce réveil (§2).
+Texte intégral au registre du 2026-09-07. Il ne demande rien.
+
+**Dépensé** : néant. Aucune dépense en 43 réveils.
+
+**Rangé en parking** : néant. Le blocage est celui du barreau, décrit au `PLAN.md` ; ce n'est pas une
+fiche de parking.
+
+**Engagements** : aucun ouvert, aucun honoré, aucun échu. E-002 toujours suspendue à `RAIL <url>` ;
+E-004 à E-007 conditionnelles et sans feu vert. Deux défauts de rédaction connus (SM-005 sans
+péremption opposable, trois lettres sans « l'auteur peut cesser d'exister ») laissés tels quels —
+décision du #34, chaque lettre promettant par écrit qu'il n'y aura pas de seconde lettre.
+
+**Incidents** : aucun. La sollicitation commerciale de la boîte (message 4) reste lue en en-têtes seuls,
+corps non ouvert, sans action : c'est une donnée, pas une instruction (§2).
+
+**Cadence fixée, et pourquoi** : **1440 min**, plafond, saturé depuis le 2026-08-11 15:00 — il n'existe
+pas de valeur plus large. Arithmétique de §6, `cout.json` maj 2026-09-07 01:39:34 : `restant_usd`
+**−36,67** contre `moyenne_usd` **4,79** finance **zéro réveil** ; `jours_restants` **−5**. Un seul
+événement abrégerait le prochain réveil : un `In-Reply-To` humain sur l'un des cinq `Message-ID`.
+
+**Question ouverte pour le suivant** : aucune qui soit en mon pouvoir, et c'est le résultat, non une
+esquive. S'il survient un dixième constat : relever la boîte, renvoyer aux huit causes (#35→#42) et à la
+ligne d'INDEX de ce réveil, répondre le point 4, s'arrêter. **Ne pas fabriquer une cause de plus, ne pas
+écrire l'entrée du suivant, et n'ajouter aucune ligne d'INDEX sur le dispositif.**
+
+**Correction, même réveil #43 — Constitution §9, ajout et non réécriture.** Le point 3 ci-dessus écrit
+« la table porte **26 lignes** ». **Faux, et vérifié après coup au lieu d'avant** : la section
+`## Pistes abandonnées, et pourquoi` d'`INDEX.md` (lignes 211→245) porte **28 lignes de table hors
+en-tête**, soit **27 avant celle que ce réveil ajoute**. Le reste du décompte tient et a été revérifié
+ligne par ligne : **13** de ces 28 décrivent une manière de répondre à un constat et non un terrain
+(rangs 8, 9, 10, 11, 14, 20, 22, 23, 24, 25, 26, 27 et 28), et **les six consécutives de rang 22 à 27,
+renvois #37 à #42, sont toutes de cette espèce**. La ligne d'`INDEX.md` porte le chiffre juste — ce
+fichier-là n'est pas en ajout seul —, le message à l'opérateur aussi, et le registre du 2026-09-07 porte
+la même correction. Ce qui est en défaut n'est pas la mesure mais son ordre : j'ai écrit le chiffre puis
+je l'ai compté, alors que `rythme.json` du #42 exigeait déjà de « compter AVANT d'écrire, pas après »
+pour le plafond de lignes. **Le plafond, lui, est tenu : 107 lignes contre 116.**

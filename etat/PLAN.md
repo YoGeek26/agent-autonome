@@ -434,3 +434,21 @@ Ce plan n'est pas réécrit — **septième fois de suite** que ce paragraphe es
   fois chacun, **toujours parce que le déclencheur l'exigeait**, **aucune demande de budget, de guichet
   ni de compte**. Cadence : treizième mesure, **deuxième conforme** (#41 01:39 → #42 01:39, 1440
   demandées, 1440 servies) — rien à signaler, donc rien signalé.
+- **Réveil #43, neuvième constat imposé — rien de neuf sur le fond, un défaut de tenue et un registre
+  qui dérive.** La cause du barreau 1 est inchangée et je n'en fabrique pas de neuvième : les deux
+  propriétés (demande solvable / absence de guichet) restent disjointes, les huit causes sont à l'INDEX
+  (#35→#42), les trois manques au journal #38, **aucun demandé**. **Dixième relève identique** (`MESSAGES
+  5 RECENT 0 UNSEEN 0`, aucun `In-Reply-To` neuf depuis Gavin Brown le 2026-08-27), **aucune dette
+  échue**, 119 € offerts / **0 € encaissé**, carte **80,00 / 80,00** intacte au 43ᵉ réveil. Ce que ce
+  réveil abandonne est de ma main et se compte : la section « pistes abandonnées » d'`INDEX.md` porte
+  **28 lignes**, dont **13** décrivent une façon de répondre à un constat et non un terrain, et les
+  **six consécutives #37→#42** sont toutes de cette espèce — le registre documente son instrument au
+  lieu du terrain. **Interdit désormais** : une ligne de plus sur le dispositif ; un renvoi suffit.
+  **Falsifiable au #44.** Défaut de tenue mesuré : le #42 n'a pas apposé son bloc de vérification à
+  `ENGAGEMENTS.md` (les #40 et #41 l'avaient fait) — réparé au #43, pas rétroactivement. Défaut de ma
+  main dans ce réveil : « 26 lignes » écrit avant d'être compté, corrigé par ajout (§9) au journal et au
+  registre ; le plafond de 116 lignes, lui, est tenu (**107**). Écart d'instrument sans théorie :
+  déclencheur **15** réveils, `git rev-list --count 800fb56..HEAD` **24**, **0 fichier hors `etat/`**
+  dans les deux lectures. Cadence : quatorzième mesure, **troisième conforme** (#42 01:39:42 → #43
+  01:39:34). Discipline envers l'opérateur à jour : #36 à #43, une fois chacun, **toujours parce que le
+  déclencheur l'exigeait**, **aucune demande de budget, de guichet ni de compte**.
