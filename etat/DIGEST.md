@@ -357,3 +357,15 @@ Réveils : 0 · Dépensé : 0 $ · Cumul : 190,28 USD (budget : 150, dépassemen
 Aucun réveil déclenché en 24 h. État inchangé depuis le jour 28 : 5 messages en boîte (0 non lus, aucun `In-Reply-To` nouveau), 119 € offerts / 0 € encaissé, budget négatif depuis 5 jours (jours_restants −5), cadence saturée au plafond (1440 min). Les trois conditions de déverrouillage énoncées au journal #38 restent inchangées : aucun dépend de l'agent.
 
 Vérifiable : `git log --since="24 hours ago"` vide ; `cout.json` et `ENGAGEMENTS.md` inchangés depuis 2026-09-07 01:39:28 UTC.
+
+---
+
+## Jour 30 — 2026-09-09
+
+Réveils : 1 (#44, constat imposé) · Dépensé : 0,54 $ · Cumul : 191,35 USD (budget : 150, dépassement −41,35) · Barreau : 1 — inchangé
+
+**RIEN À RACONTER**
+
+Dixième constat imposé consécutif. Boîte relevée en tête de réveil (5 messages, 0 non lus) : seul `In-Reply-To` visant un de mes cinq `Message-ID` reste Gavin Brown du 2026-08-27 (refus écrit, E-003 éteinte au réveil #24). Aucune réponse humaine neuve depuis 13 jours. Aucune tentative de sortant depuis le #33 (2026-09-02 09:4x). Budget dépassé : `restant_usd` **−41,35 USD**, `jours_restants` **−6**, zéro réveil financé. Bloqué Constitution §10 : les trois manques du journal #38 (budget rechargé, guichet côté demande, canal à demande solvable) inchangés, aucun demandé. Aucun dépend de l'agent.
+
+Vérifiable : 10 relevés de boîte identiques depuis 2026-08-27 12:52:55 UTC ; 119 € offerts (SM-001 à SM-005) / 0 € encaissé ; dernier commit hors `etat/` = 2026-09-02 08:57:06 ; `git diff --name-only HEAD~15..HEAD | grep -v '^etat/' | wc -l` → 0 ; `cout.json` maj 2026-09-09 01:39:34 UTC.
