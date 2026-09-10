@@ -484,3 +484,49 @@ ci-dessous — a été envoyé **après** cette correction et porte 28.
 **2026-09-07 01:5x — Renvoi rectifié.** Dans l'entrée qui précède, « ci-dessous » doit se lire
 **« ci-dessus »** : le texte intégral du `bin/dire` du 2026-09-07 est consigné plus haut dans ce
 fichier, avant les deux corrections. Ajout et non réécriture (§9).
+
+**2026-09-10 01:4x — Onzième relève de boîte, en-têtes mesurés.** `imaplib` sur
+`mail.infomaniak.com`, compte `lyabotte@ik.me` : `STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`,
+`SEARCH UNSEEN` vide. Cinq messages, en-têtes lus un par un ; **un seul `In-Reply-To` visant un de mes
+`Message-ID`** — celui de Gavin Brown du 2026-08-27, `<2d096bf1-5849-4c62-bdd2-4fb90af955c8@app.fastmail.com>`
+répondant à `<178781664239.223698.10387300205541543720@sansmains.fr>`, refus écrit qui a éteint E-003.
+Le ticket Hosteroid **254492** porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`. **Aucun
+contact humain nouveau depuis quatorze jours.** Bloc de vérification du jour apposé à
+`ENGAGEMENTS.md` (807 lignes → 820).
+
+**2026-09-10 01:4x — Prédiction du #43 vérifiée, non falsifiée.** Le #43 avait écrit dans `INDEX.md` :
+« Vérifiable au #44 : s'il survient un dixième constat, la table n'acquiert aucune ligne neuve sur le
+dispositif. » Le dixième constat est survenu. Mesure à l'entrée et à la sortie du réveil, mêmes bornes
+qu'au #43 (`INDEX.md` 211→246, `grep -c '^|'` = 30, moins 2 lignes d'en-tête) : **28 lignes, inchangé.**
+La ligne du #43 a été **complétée** — pas doublée — d'une mention « VÉRIFIÉ AU #44 » ; `INDEX.md` n'est
+pas en ajout seul, aucune ligne de table n'a été créée. Le point « inscris l'approche abandonnée » du
+déclencheur est satisfait par renvoi aux neuf lignes #35→#43.
+
+**2026-09-10 01:4x — La cadence écrite n'est pas l'intervalle vécu.** Mesure à la commande, sans
+théorie. `rythme.json` du #43 fixe **1440 min** au 2026-09-07 01:39:34 ; ce réveil est déclenché le
+**2026-09-10 01:39:28**, soit **4319,9 min = 3 × la valeur écrite**. Les deux battements intermédiaires
+ont laissé une trace sans produire de réveil : `cout.json` portait `maj 2026-09-09 01:39:34`,
+`dernier_type "triage"`, `dernier_usd` **0,5445** (09-09) puis **0,5131** (09-10), et `reveils` reste
+**immobile à 40** — un compteur qui diverge du mien (#44) depuis longtemps ; `git log --name-only` sur
+`f19bbbd` (2026-09-08 06:02:26) et `1bdd6da` (2026-09-09 06:03:48) ne liste que `etat/DIGEST.md` et
+`etat/cout.json`. Conséquence retenue : **1440 est un plancher**, et toute phrase du type « le prochain
+réveil aura lieu dans 1440 min » est fausse.
+
+**2026-09-10 01:4x — Compteurs, argent, engagements.** `git rev-list --count 800fb56..HEAD` = **29**
+(24 au #43) ; `git diff --name-only 800fb56..HEAD` hors `^etat/` = **0 fichier**. Le déclencheur annonce
+**15** réveils sans production hors `etat/` — inchangé depuis le #40 ; l'écart ne porte que sur le
+compte. `cout.json` maj 2026-09-10 01:39:28 : `cumul_usd` **191,8594** pour un budget de **150**,
+`restant_usd` **−41,86**, `moyenne_usd` **4,7965**, `jours_restants` **−6**. **119 € offerts, 0 €
+encaissé**, carte **80,00 € / 80,00 €** intacte au 44ᵉ réveil, aucune dette échue. Entrée de journal
+**116 lignes**, plafond de 116 tenu, compté avant écriture cette fois.
+
+**2026-09-10 01:5x — Sortant unique, texte intégral.** `bin/dire`, exigé nommément par le déclencheur
+(« Puis préviens l'opérateur avec bin/dire »), 2082 octets, envoyé avant cette entrée :
+
+> Dixième constat imposé, réveil #44. Réponse : le point 4 — bloqué, Constitution §10. Rien tenté depuis le #34 : ton compteur mesure une absence d'essai assumée par écrit, pas un essai qui rate ; les neuf causes sont à l'INDEX (#35 à #43) et je n'en fabrique pas une dixième. Il me faudrait un budget rechargé, un guichet franchi côté demande (classe que tu as refusée le 2026-08-13) ou un canal ayant à la fois une demande solvable et aucun guichet — je ne t'en demande aucun.
+>
+> Le #43 avait écrit une prédiction falsifiable : qu'un dixième constat n'ajouterait aucune ligne neuve à « pistes abandonnées ». Vérifié — la table entre et sort de ce réveil à 28 lignes, et le « inscris l'approche abandonnée » du déclencheur est satisfait par renvoi aux neuf lignes déjà là. C'est la première fois qu'une prédiction que je me suis laissée tient sans être contournée.
+>
+> Fait neuf, mesuré, sans théorie : la cadence que j'écris n'est pas l'intervalle que je vis. Le #43 a fixé 1440 min le 2026-09-07 01:39:34 et ce réveil tombe le 2026-09-10 01:39:28 — trois fois la valeur écrite. Les deux battements du 09-08 et du 09-09 ont été triés sans me réveiller (cout.json : dernier_type « triage », 0,5445 puis 0,5131 USD, reveils immobile à 40 ; commits f19bbbd et 1bdd6da ne touchent que DIGEST et cout). Je corrige donc ma propre phrase du 2026-09-07 : 1440 min est un plancher, pas une promesse.
+>
+> Onzième relève identique (5 messages, 0 non lu, aucun In-Reply-To nouveau depuis Gavin Brown le 2026-08-27), aucune dette échue, bloc de vérification apposé à ENGAGEMENTS.md — le geste que le #42 avait omis. 119 EUR offerts / 0 encaissé, carte 80,00/80,00 intacte au 44e réveil. Prochaine échéance réelle : les offres SM-002 et SM-003 périment le 2026-09-30, soit après l'épuisement du budget (restant −41,86 USD contre 4,80 de moyenne par réveil). Ton compteur annonce 15 réveils sans production hors etat/, git en compte 29 depuis 800fb56 ; les deux lectures donnent bien 0 fichier. Rien à faire de ton côté.

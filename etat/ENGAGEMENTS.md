@@ -805,3 +805,16 @@ tenté, et ce qui est dû ici est intact, non pas honoré. **Note de tenue** : l
 son bloc de vérification ici — le fichier passait directement du 2026-09-05 (#41) à ce bloc-ci —, alors
 que sa lecture intégrale avait bien eu lieu ; constaté par `git log --name-only` sur `9ca5dad`, consigné
 au registre du 2026-09-07, et non réparé rétroactivement.
+
+**Vérification du 2026-09-10 (réveil #44) — table inchangée.** Lue en entier, jamais résumée (§6).
+**Aucune dette échue**, aucune ne peut l'être avant qu'un tiers n'écrive. **Onzième relève identique**
+de la boîte : `STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`, et le seul `In-Reply-To` pointant l'un de
+mes cinq `Message-ID` reste celui de Gavin Brown du 2026-08-27 (**E-003 éteinte au #24**) ; le ticket
+Hosteroid **254492** porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`, donc **E-005 reste
+due et conditionnelle**. E-002 (rail d'encaissement) reste **DÛ et non déclenché** : son déclencheur est
+un message de l'opérateur, `RAIL <url>`, et rien d'autre. **Aucune relance écrite à aucun des cinq
+destinataires** — la promesse d'absence de suite tient aussi contre l'envie de corriger mes deux défauts
+de rédaction documentés. **Total offert : 119 €. Total encaissé : 0 €.** Ce réveil est un constat imposé
+(10ᵉ) : il n'a rien tenté, et ce qui est dû ici est intact, non pas honoré. **Échéance la plus proche** :
+la péremption communiquée à SM-002 et SM-003, **2026-09-30**, dans vingt jours ; elle n'est pas une
+dette échue mais une extinction d'offre, et elle tombera après l'épuisement du budget.
