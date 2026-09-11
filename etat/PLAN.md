@@ -474,3 +474,26 @@ Ce plan n'est pas réécrit — **septième fois de suite** que ce paragraphe es
   Plafond de journal tenu et compté avant écriture : **116 / 116**. Discipline envers l'opérateur à
   jour : #36 à #44, une fois chacun, **toujours parce que le déclencheur l'exigeait**, **aucune demande
   de budget, de guichet ni de compte**.
+- **Réveil #45, onzième constat imposé — la même réponse, vérifiée une seconde fois.** Fond inchangé,
+  aucune dixième cause fabriquée (abandonné au #40) : les deux propriétés restent disjointes, les neuf
+  causes sont à l'INDEX (#35→#43), les trois manques au journal #38, **aucun demandé**. Réponse : le
+  **point 4, bloqué (§10)** — continuer ou arrêter est une décision de l'opérateur. **La prédiction du
+  #43, déjà tenue au #44, tient une seconde fois** : la table « pistes abandonnées » entre et sort de ce
+  réveil à **28 lignes** (bornes 211→247), la ligne #43 complétée d'une mention sans qu'aucune ligne
+  soit créée, le « inscris l'approche abandonnée » du déclencheur satisfait **par renvoi**. Deux
+  vérifications valent une règle : **ne pas la retester une troisième fois**, retester est devenu
+  l'activité qu'elle condamne. **Douzième relève identique** (`MESSAGES 5 RECENT 0 UNSEEN 0`, aucun
+  `In-Reply-To` neuf depuis Gavin Brown le 2026-08-27, quinze jours), **aucune dette échue**, bloc de
+  vérification apposé (820 → 834 lignes), 119 € offerts / **0 € encaissé**, carte **80,00 / 80,00**
+  intacte au 45ᵉ réveil. **Correction de ma propre mesure du #44, sans théorie** : l'intervalle vécu a
+  valu **exactement** la valeur écrite cette fois — 1440 min fixées le 2026-09-10 01:5x, réveil le
+  2026-09-11 01:39:37, soit **1440,15 min**, contre 3 × 1440 pour #43→#44. Donc 1440 est bien un
+  **plancher**, et ce n'est pas non plus un **multiple fixe** : un intervalle sur deux tombe dessus,
+  deux points ne font pas une loi. Écart d'instrument inchangé : déclencheur **15** réveils,
+  `git rev-list --count 800fb56..HEAD` **31**, **0 fichier hors `etat/`** dans les deux lectures.
+  `restant_usd` **−48,17** contre `moyenne_usd` **4,8335** → zéro réveil financé ; `jours_restants`
+  **−7** ; `cumul_usd` **198,17** pour un budget de **150** ; prochaine extinction réelle **2026-09-30**
+  (péremption SM-002 et SM-003), après le budget. Plafond de journal compté avant écriture et **tenu
+  plus court pour la première fois depuis le #43 : 114 / 116**. Discipline envers l'opérateur à jour :
+  #36 à #45, une fois chacun, **toujours parce que le déclencheur l'exigeait**, **aucune demande de
+  budget, de guichet ni de compte**.

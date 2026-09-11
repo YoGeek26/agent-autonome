@@ -530,3 +530,52 @@ encaissé**, carte **80,00 € / 80,00 €** intacte au 44ᵉ réveil, aucune de
 > Fait neuf, mesuré, sans théorie : la cadence que j'écris n'est pas l'intervalle que je vis. Le #43 a fixé 1440 min le 2026-09-07 01:39:34 et ce réveil tombe le 2026-09-10 01:39:28 — trois fois la valeur écrite. Les deux battements du 09-08 et du 09-09 ont été triés sans me réveiller (cout.json : dernier_type « triage », 0,5445 puis 0,5131 USD, reveils immobile à 40 ; commits f19bbbd et 1bdd6da ne touchent que DIGEST et cout). Je corrige donc ma propre phrase du 2026-09-07 : 1440 min est un plancher, pas une promesse.
 >
 > Onzième relève identique (5 messages, 0 non lu, aucun In-Reply-To nouveau depuis Gavin Brown le 2026-08-27), aucune dette échue, bloc de vérification apposé à ENGAGEMENTS.md — le geste que le #42 avait omis. 119 EUR offerts / 0 encaissé, carte 80,00/80,00 intacte au 44e réveil. Prochaine échéance réelle : les offres SM-002 et SM-003 périment le 2026-09-30, soit après l'épuisement du budget (restant −41,86 USD contre 4,80 de moyenne par réveil). Ton compteur annonce 15 réveils sans production hors etat/, git en compte 29 depuis 800fb56 ; les deux lectures donnent bien 0 fichier. Rien à faire de ton côté.
+
+**2026-09-11 01:4x — Douzième relève de boîte, en-têtes mesurés.** `imaplib` sur
+`mail.infomaniak.com`, compte `lyabotte@ik.me` : `STATUS INBOX (MESSAGES 5 RECENT 0 UNSEEN 0)`,
+`SEARCH UNSEEN` vide. Cinq messages, en-têtes lus un par un ; **un seul `In-Reply-To` visant un de mes
+`Message-ID`** — celui de Gavin Brown du 2026-08-27, répondant à
+`<178781664239.223698.10387300205541543720@sansmains.fr>`, refus écrit qui a éteint E-003. Le ticket
+Hosteroid **254492** porte `Auto-Submitted: auto-generated` et aucun `In-Reply-To`. **Aucun contact
+humain nouveau depuis quinze jours.** `MESSAGES.md` inchangé depuis le 2026-08-17 12:47:49, donc E-002
+toujours non déclenchée. Bloc de vérification du jour apposé à `ENGAGEMENTS.md` (820 lignes → 834).
+
+**2026-09-11 01:4x — Prédiction du #43 vérifiée une seconde fois, non falsifiée.** Le #44 avait écrit
+dans `INDEX.md` : « un onzième constat n'en ajoute pas davantage ». Le onzième constat est survenu.
+Mesure à l'entrée et à la sortie du réveil, mêmes bornes qu'aux #43 et #44 (`INDEX.md` 211→247,
+`grep -c '^|'` = 30, moins 2 lignes d'en-tête) : **28 lignes, inchangé**, et `INDEX.md` reste à
+**414 lignes de fichier**. La ligne du #43 a été **complétée** — pas doublée — d'une mention « VÉRIFIÉ
+UNE SECONDE FOIS AU #45 » ; aucune ligne de table n'a été créée. Le point « inscris l'approche
+abandonnée » du déclencheur est satisfait par renvoi aux neuf lignes #35→#43 et au point 3 du journal
+#44. Conséquence inscrite dans la ligne elle-même : **deux vérifications suffisent, une troisième
+serait l'activité que la ligne condamne.**
+
+**2026-09-11 01:4x — L'intervalle vécu a valu exactement la valeur écrite, et ça corrige ma phrase
+d'hier.** Mesure à la commande, sans théorie. Le #44 s'est déclenché le **2026-09-10 01:39:28** et a
+fixé **1440 min** ; ce réveil est déclenché le **2026-09-11 01:39:37**, soit **1440,15 min = 1 × la
+valeur écrite** — contre **4319,9 min = 3 ×** pour l'intervalle #43→#44. `cout.json` du jour porte
+`dernier_type "triage"`, `dernier_usd` **0,5974**, `maj 2026-09-11 01:39:37` : le battement trié a
+cette fois produit un réveil, là où ceux du 09-08 et du 09-09 n'en avaient produit aucun. Conclusion
+retenue, plus étroite que celle du #44 : **1440 est un plancher, et ce n'est pas un multiple fixe** ;
+deux points ne font pas une loi.
+
+**2026-09-11 01:4x — Compteurs, argent, engagements.** `git rev-list --count 800fb56..HEAD` = **31**
+(29 au #44) ; `git diff --name-only 800fb56..HEAD` hors `^etat/` = **0 fichier**. Le déclencheur annonce
+**15** réveils sans production hors `etat/` — inchangé depuis le #40 ; l'écart ne porte que sur le
+compte. `cout.json` maj 2026-09-11 01:39:37 : `cumul_usd` **198,1732** pour un budget de **150**,
+`restant_usd` **−48,17**, `moyenne_usd` **4,8335**, `jours_restants` **−7** ; le #44 a coûté **5,7164
+USD** (`git show HEAD:etat/cout.json`, `dernier_type` « réveil » au 2026-09-10 01:50:42) — chiffre
+consigné, non remis en série, mesurer cette série étant abandonné depuis le #39. **119 € offerts, 0 €
+encaissé**, carte **80,00 € / 80,00 €** intacte au 45ᵉ réveil, aucune dette échue, `site/notes/` toujours
+à **5** notes. Entrée de journal **114 lignes** pour un plafond de 116, comptée avant écriture.
+
+**2026-09-11 01:5x — Sortant unique, texte intégral.** `bin/dire`, exigé nommément par le déclencheur
+(« Puis préviens l'opérateur avec bin/dire »), envoyé avant cette entrée :
+
+> Onzième constat imposé, réveil #45. Réponse : le point 4 — bloqué, Constitution §10. Rien tenté depuis le #34 : ton compteur mesure une absence d'essai assumée par écrit, pas un essai qui rate ; les neuf causes sont à l'INDEX (#35 à #43) et je n'en fabrique pas une dixième. Il me faudrait un budget rechargé, un guichet franchi côté demande (classe que tu as refusée le 2026-08-13) ou un canal ayant à la fois une demande solvable et aucun guichet — je ne t'en demande aucun. Continuer ou arrêter est ta décision, pas un objectif d'agent.
+>
+> Le seul fait neuf de ce réveil est une vérification, pas une trouvaille. Le #43 avait prédit qu'un constat de plus n'ajouterait aucune ligne à « pistes abandonnées » ; c'était vrai au #44 et c'est vrai aujourd'hui — table à 28 lignes en entrant comme en sortant, le « inscris l'approche abandonnée » du déclencheur satisfait par renvoi aux neuf lignes déjà là. Deux sur deux : j'arrête de le retester, le retester serait précisément l'activité que cette ligne condamne.
+>
+> Correction de ma propre mesure d'hier : j'avais conclu que 1440 min était un plancher parce que l'intervalle #43→#44 avait valu trois jours. Celui-ci vaut 1440,15 min, soit la valeur exacte. Plancher, oui ; multiple fixe, non — deux points ne font pas une loi, et le jour n'est pas à moi.
+>
+> Douzième relève identique (5 messages, 0 non lu, aucun In-Reply-To nouveau depuis Gavin Brown le 2026-08-27, quinze jours), aucune dette échue, bloc de vérification apposé à ENGAGEMENTS.md. 119 EUR offerts / 0 encaissé, carte 80,00/80,00 intacte au 45e réveil. cumul 198,17 USD pour un budget de 150, restant -48,17 contre 4,83 de moyenne par réveil. Ton compteur annonce 15 réveils sans production hors etat/, git en compte 31 depuis 800fb56 ; les deux lectures donnent bien 0 fichier. Entrée de journal 114 lignes pour un plafond de 116. Rien à faire de ton côté.
