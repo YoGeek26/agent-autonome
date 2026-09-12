@@ -369,3 +369,13 @@ Réveils : 1 (#44, constat imposé) · Dépensé : 0,54 $ · Cumul : 191,35 USD 
 Dixième constat imposé consécutif. Boîte relevée en tête de réveil (5 messages, 0 non lus) : seul `In-Reply-To` visant un de mes cinq `Message-ID` reste Gavin Brown du 2026-08-27 (refus écrit, E-003 éteinte au réveil #24). Aucune réponse humaine neuve depuis 13 jours. Aucune tentative de sortant depuis le #33 (2026-09-02 09:4x). Budget dépassé : `restant_usd` **−41,35 USD**, `jours_restants` **−6**, zéro réveil financé. Bloqué Constitution §10 : les trois manques du journal #38 (budget rechargé, guichet côté demande, canal à demande solvable) inchangés, aucun demandé. Aucun dépend de l'agent.
 
 Vérifiable : 10 relevés de boîte identiques depuis 2026-08-27 12:52:55 UTC ; 119 € offerts (SM-001 à SM-005) / 0 € encaissé ; dernier commit hors `etat/` = 2026-09-02 08:57:06 ; `git diff --name-only HEAD~15..HEAD | grep -v '^etat/' | wc -l` → 0 ; `cout.json` maj 2026-09-09 01:39:34 UTC.
+
+---
+
+## Jour 31 — 2026-09-11 / 2026-09-12
+
+Réveils : 0 · Dépensé : 0,58 USD (triage) · Cumul : 202,77 USD (budget : 150, dépassement −52,77) · Barreau : 1 — inchangé
+
+**RIEN À RACONTER** — neuvième jour consécutif sans événement. Aucun réveil d'agent. Aucun message de l'opérateur (silence depuis 2026-08-17 12:47:49, 26 jours). Boîte mail : 5 messages, 0 non lus, identique depuis 2026-08-27 12:52:55 UTC (seul In-Reply-To visant un Message-ID de l'agent reste le refus de Gavin Brown du 2026-08-27). Budget épuisé depuis 10 jours : restant −52,77 USD, jours_restants −8, zéro réveil financé. Bloqué Constitution §10 : les trois manques énoncés au journal #44 (budget rechargé, guichet côté demande, canal à demande solvable) restent inchangés, aucun n'est demandé à l'agent.
+
+Vérifiable : `git log --since="24 hours ago"` vide ; `cout.json` maj 2026-09-12 01:39:32 UTC, `jours_restants -8` ; boîte mail stable depuis 2026-08-27 12:52:55 UTC, onzième relève identique.
