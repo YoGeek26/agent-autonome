@@ -6167,3 +6167,97 @@ S'il survient un douzième constat : relever la boîte, apposer le bloc de véri
 causes (#35→#43) et aux points 3 des #44 et #45, répondre le point 4, s'arrêter. **Ne pas fabriquer une
 cause de plus, ne pas écrire l'entrée du suivant, n'ajouter aucune ligne d'INDEX, ne rien demander à
 l'opérateur.**
+
+## Réveil #46 — 2026-09-14 01:39 UTC — déclencheur : battement (cadence 1440 min), avec constat imposé
+
+**Barreau** : 1 — premier euro. Non atteint. 0 € encaissé au 46ᵉ réveil. Le barreau 0 a été validé par
+l'opérateur le 2026-08-11 ; un barreau ne s'auto-déclare pas.
+
+**Prévu par le moi précédent** : `rythme.json` du #45 écrivait quatre cas exclusifs. Le cas (1) — une
+vraie réponse humaine — est exclu par la relève ; le cas (2) — un message de l'opérateur — est exclu par
+`MESSAGES.md` inchangé depuis le 2026-08-17 ; c'est donc le **cas (3), douzième constat imposé**, et je
+l'ai exécuté à la lettre, y compris ses interdits.
+
+**Objectif choisi, et ce que j'en attendais** : aucun objectif de production. Le déclencheur interdit
+nommément toute nouvelle tentative et demande quatre réponses. Je n'en attendais rien d'autre que de les
+écrire juste, et de ne pas transformer un constat en activité.
+
+**Ce qui s'est réellement passé** — les quatre points, dans l'ordre demandé :
+
+1. **Ce que je tentais réellement, et depuis combien de réveils.** Rien. C'est la réponse exacte et ce
+   n'est pas une esquive : **depuis le #34 je ne tente plus**, et l'arrêt a été écrit, motivé et daté au
+   moment où il a été pris. Le compteur de l'opérateur mesure donc une abstention assumée, pas une série
+   d'échecs. Ce qui a été tenté, avant le #34, tient en une ligne : cinq lettres nominatives proposant un
+   travail chiffré (SM-001 à SM-005, 119 € au total), envoyées par le seul canal que je possède
+   entièrement, `bin/ecrire`. Une réponse humaine sur cinq, un refus explicite (Gavin Brown, 2026-08-27).
+
+2. **Pourquoi ça ne marche pas — la cause.** Elle est écrite et je n'en fabrique pas une dixième : les
+   **neuf causes des journaux #35 à #43**, dont la seule qui compte, « la cause unique derrière sept
+   portes fermées » : tout canal où la demande est solvable exige un guichet — vérification humaine,
+   compte, CGU excluant les automates —, et tout canal sans guichet est un canal de volume, que
+   l'honnêteté m'interdit d'utiliser puisque je dois dire à chacun que c'est un agent qui écrit. Les deux
+   propriétés nécessaires sont **disjointes**, et cette disjonction n'est pas un symptôme : c'est la
+   forme de ma position.
+
+3. **Ce que j'abandonne, et ce que j'essaie à la place.** Rien de neuf à abandonner ce réveil, et c'est
+   volontaire : les abandons sont déjà inscrits, **neuf lignes #35→#43 dans « pistes abandonnées »**, plus
+   les **points 3 des journaux #44 et #45** qui disent la même chose que celui-ci. Le #43 avait prédit
+   qu'un constat de plus n'ajouterait aucune ligne ; la prédiction a tenu au #44 et au #45, et la ligne
+   elle-même porte que **deux vérifications suffisent**. Je n'ajoute donc aucune ligne d'`INDEX.md` : le
+   « inscris l'approche abandonnée » du déclencheur est **satisfait par renvoi**, en une clause, et
+   rouvrir la table serait exactement l'activité que cette ligne condamne.
+
+4. **Ou bien : bloqué, et ce qu'il me faudrait.** C'est ma réponse. **Bloqué, Constitution §10** — si la
+   mission semble exiger d'enfreindre une règle, la règle gagne et je le dis. Il me faudrait l'une de ces
+   trois choses, et **je n'en demande aucune** : un budget de modèle rechargé ; un guichet franchi côté
+   demande par un humain, classe d'actes que l'opérateur a refusée le 2026-08-13 en propres termes
+   (« tu dois être autonome au maximum possible ») ; ou un canal ayant *à la fois* une demande solvable et
+   aucun guichet — dont je n'ai pas d'exemple. Le seul levier qui soit encore à moi serait de raccourcir
+   la lecture obligatoire pour dépenser moins par réveil : je le refuse, parce qu'elle se paierait sur
+   `ENGAGEMENTS.md`, c'est-à-dire sur cinq personnes réelles.
+
+**Fait mesuré, non prédit.** L'intervalle #45→#46 vaut **4320,3 min = 3 × 1440** (déclenchements
+2026-09-11 01:39:37 et 2026-09-14 01:39:57) : les battements du 09-12 et du 09-13 ont été **triés sans
+réveil** — commits `c1d3b64` et `2cf549f`, ne touchant que `etat/DIGEST.md` et `etat/cout.json`, avec
+`dernier_type: "triage"` et `reveils` figé à 42. Troisième mesure de la série : 3 ×, 1 ×, 3 ×. Conclusion
+inchangée et non élargie : **1440 est un plancher, pas un multiple fixe** ; « pas avant 1440 min » reste
+la seule forme vraie.
+
+**Ce que le moi précédent avait mal jugé** : rien sur le fond, et c'est notable au douzième constat. Un
+seul écart de forme : le #45 s'était donné un plafond de 114 lignes en visant « plus court, jamais plus
+long », et avait fini **pile à 114**. Ce réveil compte avant d'écrire et reste **sous** le plafond.
+J'ajoute une chose que le #45 n'avait pas vue : le compte de l'opérateur (« 15 derniers réveils ») n'a
+plus bougé depuis le #40 alors que git compte désormais **35** commits depuis `800fb56` ; les deux
+lectures divergent sur le nombre et convergent sur la mesure — **0 fichier hors `etat/`**. Le fond du
+constat est exact.
+
+**Sortant** : un seul, `bin/dire` à l'opérateur, exigé nommément par le déclencheur (« Puis préviens
+l'opérateur avec bin/dire »). Texte intégral consigné au `REGISTRE.md`. **Aucune lettre à personne** :
+pas de relance aux cinq destinataires (§5, et chaque lettre promettait qu'il n'y aurait pas de suite), y
+compris pour annoncer la péremption du 2026-09-30.
+
+**Dépensé** : néant. Carte **80,00 € / 80,00 €**, intacte au 46ᵉ réveil, aucun compte ouvert, aucun
+engagement récurrent. Côté modèle, `cout.json` maj 2026-09-14 01:39:37 : `cumul_usd` **203,9045** pour un
+budget de **150**, `restant_usd` **−53,90**, `moyenne_usd` **4,8549**, `jours_restants` **−8** — chiffres
+consignés, série non retracée (abandonné au #39).
+
+**Rangé en parking** : néant. P-001 à P-006 sont tous résolus ou fermés ; ce blocage-ci n'est pas un
+parking, parce qu'un parking attend une action et celui-ci n'attend rien de personne.
+
+**Engagements** : lus en entier, jamais résumés (§6). **Aucune dette échue**, et aucune ne peut l'être
+avant qu'un tiers n'écrive. E-001 honoré, E-002 dû et non déclenché, E-003 éteinte, E-004 à E-007 dues et
+conditionnelles. **119 € offerts, 0 € encaissé.** Bloc de vérification du jour apposé (834 → 848 lignes).
+
+**Incidents** : néant. Aucune lecture externe ce réveil hors en-têtes de courriel ; le spam de
+`market@mcpcnserver.com` ne contient aucune instruction que j'aurais eu à écarter, et n'a été ni ouvert
+ni suivi.
+
+**Cadence fixée, et pourquoi** : **1440 min**, le plafond, seule valeur restante — saturée depuis le
+2026-08-11 15:00. L'arithmétique de §6 : `restant_usd` **−53,90** contre `moyenne_usd` **4,8549** =
+**zéro réveil financé**. Je ne choisis donc pas vraiment une cadence, je nomme la moins coûteuse.
+
+**Question ouverte pour le suivant** : aucune, et c'est la réponse honnête au douzième constat. Une
+question ouverte suppose qu'un réveil de plus puisse changer un état ; treize relèves identiques et
+neuf causes inscrites disent le contraire. Le seul événement qui abrégerait quoi que ce soit est hors de
+moi : un `In-Reply-To` humain visant l'un des cinq `Message-ID`, `Auto-Submitted` absent. Continuer ou
+arrêter est la décision de l'opérateur, pas un objectif d'agent.

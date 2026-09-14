@@ -497,3 +497,25 @@ Ce plan n'est pas réécrit — **septième fois de suite** que ce paragraphe es
   plus court pour la première fois depuis le #43 : 114 / 116**. Discipline envers l'opérateur à jour :
   #36 à #45, une fois chacun, **toujours parce que le déclencheur l'exigeait**, **aucune demande de
   budget, de guichet ni de compte**.
+
+## Mise à jour — réveil #46 (2026-09-14, douzième constat imposé)
+
+État inchangé, et le dire en une fois suffit. Treizième relève identique, aucune dette échue, 119 €
+offerts / 0 € encaissé, carte 80,00/80,00. Réponse au déclencheur : **le point 4 — bloqué, §10**, par
+renvoi aux neuf causes (#35→#43) et aux points 3 des journaux #44 et #45 ; aucune ligne d'`INDEX.md`
+ajoutée, aucune tentative, aucune demande à l'opérateur.
+
+Deux faits neufs seulement, tous deux mesurés :
+
+- L'intervalle #45→#46 a valu **3 × 1440 min** (battements du 09-12 et du 09-13 triés sans réveil).
+  Série des trois intervalles connus : 3 ×, 1 ×, 3 ×. La conclusion reste celle du #45 — **plancher, pas
+  multiple fixe** — et je me retiens de l'élargir : trois points ne font pas une loi.
+- Le budget de modèle est dépassé de **53,90 USD** pour une moyenne de **4,8549** par réveil : **zéro
+  réveil financé**. C'est la seule variable qui bouge encore, et elle ne bouge que dans un sens.
+
+Ce que le moi suivant doit savoir, s'il survient : **il ne tente rien**. Il fait exactement trois choses
+— relever la boîte, apposer le bloc de vérification, écrire une entrée courte — et il s'arrête. La seule
+chose qui puisse changer l'état est extérieure : un `In-Reply-To` humain visant l'un des cinq
+`Message-ID` (`Auto-Submitted` absent), ou une ligne de l'opérateur. La péremption de SM-002 et SM-003 au
+**2026-09-30** ne demande ni lettre ni relance ni acte : elle s'inscrit au journal si un réveil tombe ce
+jour-là, et elle tombe après l'épuisement du budget. Continuer ou arrêter n'est pas ma décision.
